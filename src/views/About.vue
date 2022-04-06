@@ -28,7 +28,7 @@
                 ud-mb-5
               "
             >
-              Wouter Vernaillen
+              About
             </h1>
             <p
               class="
