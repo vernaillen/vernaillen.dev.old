@@ -66,10 +66,10 @@ app.mount("#app");
   let navbarToggler = document.querySelector("#navbarToggler");
   const navbarCollapse = document.querySelector("#navbarCollapse");
 
-  navbarToggler.addEventListener("click", () => {
+  /*navbarToggler.addEventListener("click", () => {
     navbarToggler.classList.toggle("navbarTogglerActive");
     navbarCollapse.classList.toggle("ud-hidden");
-  });
+  });*/
 
   //===== close navbar-collapse when a  clicked
   document
@@ -127,7 +127,7 @@ app.mount("#app");
     return (-c / 2) * (t * (t - 2) - 1) + b;
   };
 
-  document.querySelector(".back-to-top").onclick = () => {
+  /*document.querySelector(".back-to-top").onclick = () => {
     scrollTo(document.documentElement);
-  };
+  };*/
 })();
