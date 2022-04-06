@@ -27,7 +27,7 @@ app.mount("#app");
   "use strict";
 
   // ==== darkToggler
-  const darkTogglerCheckbox = document.querySelector("#darkToggler");
+  /*const darkTogglerCheckbox = document.querySelector("#darkToggler");
   const html = document.querySelector("html");
 
   const darkModeToggler = () => {
@@ -37,7 +37,7 @@ app.mount("#app");
   };
   darkModeToggler();
 
-  darkTogglerCheckbox.addEventListener("click", darkModeToggler);
+  darkTogglerCheckbox.addEventListener("click", darkModeToggler);*/
 
   // ======= Sticky
   window.onscroll = function () {
