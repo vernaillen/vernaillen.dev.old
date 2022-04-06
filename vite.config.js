@@ -1,9 +1,36 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import Markdown from "vite-plugin-md";
+import Prism from "markdown-it-prism";
+import Pages from "vite-plugin-pages";
+import Layouts from "vite-plugin-vue-layouts";
 import { resolve } from "path";
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      include: [/\.vue$/, /\.md$/], // <--
+    }),
+    Markdown({
+      // default options passed to markdown-it
+      // see: https://markdown-it.github.io/markdown-it/
+      markdownItOptions: {
+        html: true,
+        linkify: true,
+        typographer: true,
+      },
+      markdownItSetup(md) {
+        // https://prismjs.com/
+        md.use(Prism);
+      },
+    }),
+    Pages({
+      extensions: ["vue", "md"],
+      exclude: ["**/components/*.vue"],
+    }),
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
+  ],
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
