@@ -43,4 +43,12 @@ export default defineConfig({
   server: {
     open: true,
   },
+  // https://github.com/vitest-dev/vitest
+  test: {
+    include: ["src/**/*.spec.js"],
+    environment: "jsdom",
+    deps: {
+      inline: ["@vue", "@vueuse", "vue-demi"],
+    },
+  },
 });
