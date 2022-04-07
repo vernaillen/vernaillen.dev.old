@@ -358,4 +358,11 @@ export default {
     padding-top: 0;
     padding-bottom: 0;
 }
+button#navbarToggler:hover, 
+button#navbarToggler:active, 
+button#navbarToggler:focus {
+    background: inherit;
+    background-color: inherit !important;
+    box-shadow: inherit !important;
+}
 </style>
