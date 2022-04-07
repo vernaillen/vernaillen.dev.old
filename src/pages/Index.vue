@@ -103,7 +103,7 @@
       </div>
     </div>
     <!-- <div> -->
-    <div class="ud-absolute ud-top-0 ud-right-0 ud-z-[-1]">
+    <div class="svg-right ud-absolute ud-top-0 ud-right-0 ud-z-[-1]">
       <svg
         width="450"
         height="556"
@@ -236,7 +236,7 @@
         </defs>
       </svg>
     </div>
-    <div class="ud-absolute ud-bottom-0 ud-left-0 ud-z-[-1]">
+    <div class="svg-left ud-absolute ud-bottom-0 ud-left-0 ud-z-[-1]">
       <svg
         width="364"
         height="201"
@@ -347,3 +347,18 @@
 meta:
   layout: home
 </route>
+
+<style scoped>
+@media (max-width: 959px) {
+  .svg-right svg,
+  .svg-left svg {
+      width: 50%;
+  }
+  .svg-right svg {
+      margin-left: auto;
+  }
+  .svg-left svg {
+      margin-right: auto;
+  }
+}
+</style>
