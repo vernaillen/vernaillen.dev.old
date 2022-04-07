@@ -46,9 +46,12 @@ export default defineConfig({
   // https://github.com/vitest-dev/vitest
   test: {
     include: ["src/**/*.spec.js"],
+    excludeNodeModules: true,
     environment: "jsdom",
-    deps: {
-      inline: ["@vue", "@vueuse", "vue-demi"],
+    coverage: {
+      all: true,
+      include: ["src/**/*.js", "src/**/*.vue"],
     },
+    extension: [".js", ".vue"],
   },
 });

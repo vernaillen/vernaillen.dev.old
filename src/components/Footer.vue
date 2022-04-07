@@ -18,7 +18,7 @@
                 aria-label="social-link"
                 class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
               >
-                <i class="fa-brands fa-linkedin"></i>
+                <span class="fa-brands fa-linkedin"></span>
               </a>
             </div>
           </div>
