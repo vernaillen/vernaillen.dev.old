@@ -4,6 +4,7 @@ import Markdown from "vite-plugin-md";
 import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
+import { VitePWA } from "vite-plugin-pwa";
 import { resolve } from "path";
 
 export default defineConfig({
@@ -30,6 +31,9 @@ export default defineConfig({
     }),
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts(),
+
+    // https://github.com/antfu/vite-plugin-pwa
+    VitePWA(),
   ],
   resolve: {
     alias: {
