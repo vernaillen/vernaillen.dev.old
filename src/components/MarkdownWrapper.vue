@@ -43,25 +43,25 @@ defineProps({
 
           <div class="ud-flex ud-flex-wrap ud-items-center">
             <div v-if="frontmatter.author" class="ud-flex ud-items-center ud-mr-5 ud-mb-5">
-              <div v-if="false"
+              <div v-if="frontmatter.author == 'Wouter Vernaillen'"
                 class="
-                  ud-max-w-[40px]
+                  ud-max-w-[30px]
                   ud-w-full
-                  ud-h-[40px]
+                  ud-h-[30px]
                   ud-rounded-full
                   ud-overflow-hidden
                   ud-mr-4
                 "
               >
                 <img
-                  src="images/blog/author-02.png"
+                  src="/images/wouter.jpg"
                   alt="author"
                   class="ud-w-full"
                 />
               </div>
               <div class="ud-w-full">
                 <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                  <span class="ud-mr-3 fa-solid fa-user-pen"/> {{ frontmatter.author }}
+                  {{ frontmatter.author }}
                 </p>
               </div>
             </div>
