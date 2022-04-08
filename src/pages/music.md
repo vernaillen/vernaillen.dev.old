@@ -1,10 +1,7 @@
 ---
-title: Music
+title: My love for music
 pageName: Music
-desc:
-date:
-author: Wouter
-location: Zottegem
+author: Wouter Vernaillen
 ---
 
 For the last year and a half I've been having a lot of fun with music production and lately I also started having fun with [web audio](https://webaudio.github.io/web-audio-api/#introductory) programming.

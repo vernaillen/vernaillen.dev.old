@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import Markdown from "vite-plugin-md";
+import Markdown, { link, meta } from "vite-plugin-md";
+import Anchor from "markdown-it-anchor";
 import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
-import Layouts from "vite-plugin-vue-layouts";
 import { VitePWA } from "vite-plugin-pwa";
 import { resolve } from "path";
 
@@ -13,24 +13,20 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/], // <--
     }),
     Markdown({
-      // default options passed to markdown-it
-      // see: https://markdown-it.github.io/markdown-it/
-      markdownItOptions: {
-        html: true,
-        linkify: true,
-        typographer: true,
-      },
+      wrapperComponent: "markdownwrapper",
+      wrapperClasses: "prose m-auto",
+      builders: [link(), meta()],
       markdownItSetup(md) {
-        // https://prismjs.com/
+        md.use(Anchor);
         md.use(Prism);
       },
+      headEnabled: true,
+      linkTransforms: link(),
     }),
     Pages({
       extensions: ["vue", "md"],
       exclude: ["**/components/*.vue"],
     }),
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts(),
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA(),

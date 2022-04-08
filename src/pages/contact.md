@@ -1,10 +1,7 @@
 ---
 title: Get in touch
+subtitle: subtitle or description
 pageName: Contact
-desc:
-date:
-author: Wouter
-location: Zottegem
 ---
 
 I decided not to put a contact form on my website any more, cause I'm tired of fighting spam.

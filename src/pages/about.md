@@ -1,11 +1,14 @@
 ---
 title: About Wouter
 pageName: About
-desc:
-date:
-author: Wouter
+date: 04/08/2022
+author: Wouter Vernaillen
 location: Zottegem
+#bgColor: yellow
 ---
+## Hello world
+
+Frontmatter: {{ frontmatter.title }}
 
 I'm an avid traveler, following the sunshine around the world, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
 

@@ -343,11 +343,6 @@
   </section>
 </template>
 
-<route lang="yaml">
-meta:
-  layout: home
-</route>
-
 <style scoped>
 @media (max-width: 959px) {
   .svg-right svg,
