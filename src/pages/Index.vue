@@ -1,4 +1,5 @@
 <template>  
+  <header-component/>
   <section
     id="home"
     class="
@@ -68,34 +69,16 @@
                   ud-px-8
                   hover:ud-bg-opacity-80
                   ud-mx-2
+                  ud-my-8
                   ud-rounded-md
                   ud-transition
                   ud-duration-300
                   ud-ease-in-out
+                  wow fadeInUp
                 "
+                data-wow-delay="1s"
               >
-                Get Started
-              </a>
-              <a
-                href="/about"
-                class="
-                  ud-text-base
-                  ud-font-semibold
-                  ud-text-black
-                  ud-bg-black
-                  ud-bg-opacity-10
-                  dark:ud-text-white dark:ud-bg-white dark:ud-bg-opacity-10
-                  ud-py-4 ud-px-8
-                  hover:ud-bg-opacity-20
-                  dark:hover:ud-bg-opacity-20
-                  ud-mx-2
-                  ud-rounded-md
-                  ud-transition
-                  ud-duration-300
-                  ud-ease-in-out
-                "
-              >
-                Learn More
+                Learn more
               </a>
             </div>
           </div>
@@ -341,7 +324,13 @@
     </div>
     <!-- </div> -->
   </section>
+  <footer-component/>
 </template>
+
+<script setup>
+import HeaderComponent from "@/components/Header.vue"
+import FooterComponent from "@/components/Footer.vue"
+</script>
 
 <style scoped>
 @media (max-width: 959px) {

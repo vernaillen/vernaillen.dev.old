@@ -1,16 +1,15 @@
+<template>
+  <router-view />
+</template>
+
 <script setup>
-  import HeaderComponent from "@/components/Header.vue"
-  import FooterComponent from "@/components/Footer.vue"
   import { useHead } from '@vueuse/head';
+  import WOW from "wow.js";
   useHead({
     title: 'Vernaillen.dev',
     meta: [
-      { name: 'description', content: 'Wouter Vernaillen\'s freelance consultancy website' },
+      { name: 'description', content: 'Wouter Vernaillen - Freelance Full Stack Java & JavaScript Developer' },
     ],
   })
+  new WOW().init();
 </script>
-<template>
-  <header-component/>
-  <router-view />
-  <footer-component/>
-</template>

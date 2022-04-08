@@ -1,11 +1,11 @@
 <template>
   <footer
     class="
-      ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[100px]
+      ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px]
       wow
       fadeInUp
     "
-    data-wow-delay=".1s"
+    data-wow-delay=".5s"
   >
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">

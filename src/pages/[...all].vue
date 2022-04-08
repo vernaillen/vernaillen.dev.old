@@ -1,8 +1,9 @@
 <template>
+  <header-component/>
   <section class="ud-relative ud-z-10 ud-pt-[180px] ud-pb-[120px]">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full ud-px-4">
+        <div class="ud-w-full ud-px-4 wow fadeInUp" data-wow-delay=".1s">
           <div class="ud-max-w-[530px] ud-mx-auto ud-text-center">
             <div class="mx-auto ud-mb-9 ud-text-center">
               <svg
@@ -153,7 +154,7 @@
               deleted or does not exist.
             </p>
             <a
-              href="javascript:void(0)"
+              href="/"
               class="
                 ud-text-base
                 ud-font-bold
@@ -175,7 +176,6 @@
       </div>
     </div>
   </section>
-
   <div>
     <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1]">
     <div
@@ -604,4 +604,10 @@
       </svg>
     </span>
   </div>
+  <footer-component/>
 </template>
+
+<script setup>
+import HeaderComponent from "@/components/Header.vue"
+import FooterComponent from "@/components/Footer.vue"
+</script>

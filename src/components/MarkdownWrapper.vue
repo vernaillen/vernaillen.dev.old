@@ -1,4 +1,6 @@
 <script setup>
+import HeaderComponent from "@/components/Header.vue"
+import FooterComponent from "@/components/Footer.vue"
 import moment from 'moment';
 defineProps({
   frontmatter: {
@@ -9,8 +11,8 @@ defineProps({
 </script>
 
 <template>
+  <header-component/>
 
-  <!-- ====== Page Title Section Start -->
   <section class="ud-relative ud-z-10 ud-pt-[150px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
@@ -187,8 +189,7 @@ defineProps({
       </span>
     </div>
   </section>
-  <!-- ====== Page Title Section End -->
-  <section class="ud-relative ud-z-10 ud-pt-[180px] ud-pb-[120px]">
+  <section class="ud-relative ud-z-10 ud-pt-[80px] ud-pb-[120px]">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full ud-px-4">
@@ -202,7 +203,9 @@ defineProps({
                 ud-text-body-color
                 dark:ud-text-white dark:ud-opacity-90
                 ud-mb-12
+                wow fadeInUp
               "
+              data-wow-delay=".1s"
             >
               <slot />
             </p>
@@ -286,4 +289,5 @@ defineProps({
       </span>
     </div>
   </section>
+  <footer-component/>
 </template>

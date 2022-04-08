@@ -15,9 +15,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "@vueuse/head": "^0.7.5",
+    "animate.css": "^4.1.1",
+    "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.2",
