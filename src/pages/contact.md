@@ -1,9 +1,12 @@
 ---
 title: Get in touch
-subtitle: subtitle or description
+desc: don't be a stranger
 pageName: Contact
 ---
 
-I decided not to put a contact form on my website any more, cause I'm tired of fighting spam.
+I decided not to put a contact form on my website any more, cause fighting spam is not one of favourite hobbies.
 
-But you all know how to use social media platforms, so you can contact me through one of these:
+For the headhunters, I do like to hear from you if you got an extremely interesting opportunity.
+But I hope you understand that, tin order to keep my flow for my current client, I prefer to do any initial contacts asynchronously.  ;)
+
+Feel free to leave me a message on [LinkedIn](https://www.linkedin.com/in/woutervernaillen/).

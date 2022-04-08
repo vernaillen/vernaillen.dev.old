@@ -4,7 +4,11 @@ import App from "./App.vue";
 import routes from "~pages";
 import { createRouter, createWebHistory } from "vue-router";
 import MarkdownWrapper from "./components/MarkdownWrapper.vue";
+import ListPosts from "./components/ListPosts.vue";
 import NProgress from "nprogress";
+import dayjs from "dayjs";
+import LocalizedFormat from "dayjs/plugin/localizedFormat.js";
+import { formatDate } from "@/js/logic";
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -41,6 +45,10 @@ router.afterEach((to, from) => {
 
 app.use(router);
 app.use(head);
+
+dayjs.extend(LocalizedFormat);
+app.config.globalProperties.$formatDate = formatDate;
 app.component("font-awesome-icon", FontAwesomeIcon);
-app.component("markdownwrapper", MarkdownWrapper);
+app.component("markdown-wrapper", MarkdownWrapper);
+app.component("list-posts", ListPosts);
 app.mount("#app");

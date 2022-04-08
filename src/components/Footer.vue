@@ -20,6 +20,14 @@
               >
                 <span class="fa-brands fa-linkedin"></span>
               </a>
+              <a
+                href="https://www.instagram.com/woutervernaillen/"
+                target="_blank"
+                aria-label="social-link"
+                class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
+              >
+                <span class="fa-brands fa-instagram"></span>
+              </a>
             </div>
           </div>
         </div>
@@ -47,7 +55,7 @@
             <ul>
               <li>
                 <a
-                  href="javascript:void(0)"
+                  href="/blog"
                   class="
                     ud-text-base
                     ud-font-medium
@@ -62,22 +70,7 @@
               </li>
               <li>
                 <a
-                  href="javascript:void(0)"
-                  class="
-                    ud-text-base
-                    ud-font-medium
-                    ud-inline-block
-                    ud-text-body-color
-                    ud-mb-4
-                    hover:ud-text-primary
-                  "
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0)"
+                  href="/about"
                   class="
                     ud-text-base
                     ud-font-medium
@@ -88,6 +81,21 @@
                   "
                 >
                   About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  class="
+                    ud-text-base
+                    ud-font-medium
+                    ud-inline-block
+                    ud-text-body-color
+                    ud-mb-4
+                    hover:ud-text-primary
+                  "
+                >
+                  Contact
                 </a>
               </li>
             </ul>
@@ -145,21 +153,6 @@
                   Privacy Policy
                 </a>
               </li>
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  class="
-                    ud-text-base
-                    ud-font-medium
-                    ud-inline-block
-                    ud-text-body-color
-                    ud-mb-4
-                    hover:ud-text-primary
-                  "
-                >
-                  Refund Policy
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -206,21 +199,6 @@
                   Terms of Use
                 </a>
               </li>
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  class="
-                    ud-text-base
-                    ud-font-medium
-                    ud-inline-block
-                    ud-text-body-color
-                    ud-mb-4
-                    hover:ud-text-primary
-                  "
-                >
-                  About
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -235,7 +213,7 @@
             ud-text-base ud-text-center
           "
         >
-          &copy; Wouter Vernaillen - Vernaillen Consulting BVBA
+          &copy; Wouter Vernaillen - Vernaillen Consulting BVBA / Harmonics BV
         </p>
       </div>
     </div>

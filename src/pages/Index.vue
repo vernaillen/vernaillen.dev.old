@@ -39,7 +39,8 @@
                 md:ud-leading-relaxed
                 ud-text-body-color
                 dark:ud-text-white dark:ud-opacity-90
-                ud-mb-12
+                ud-mt-12
+                ud-mb-20
               "
             >
               Freelance Full Stack Developer

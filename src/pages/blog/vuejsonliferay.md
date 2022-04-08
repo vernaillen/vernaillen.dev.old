@@ -5,7 +5,8 @@ date: 02/28/2020
 tag:
 - vue
 - liferay
-author: Wouter
+category: Vue.js
+author: Wouter Vernaillen
 location: Zottegem
 ---
 

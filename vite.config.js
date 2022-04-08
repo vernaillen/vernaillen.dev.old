@@ -6,6 +6,8 @@ import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
 import { VitePWA } from "vite-plugin-pwa";
 import { resolve } from "path";
+import fs from "fs-extra";
+import matter from "gray-matter";
 
 export default defineConfig({
   plugins: [
@@ -13,7 +15,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/], // <--
     }),
     Markdown({
-      wrapperComponent: "markdownwrapper",
+      wrapperComponent: "markdown-wrapper",
       wrapperClasses: "prose m-auto",
       builders: [link(), meta()],
       markdownItSetup(md) {
@@ -26,6 +28,13 @@ export default defineConfig({
     Pages({
       extensions: ["vue", "md"],
       exclude: ["**/components/*.vue"],
+      extendRoute(route) {
+        const path = resolve(__dirname, route.component.slice(1));
+        const md = fs.readFileSync(path, "utf-8");
+        const { data } = matter(md);
+        route.meta = Object.assign(route.meta || {}, { frontmatter: data });
+        return route;
+      },
     }),
 
     // https://github.com/antfu/vite-plugin-pwa

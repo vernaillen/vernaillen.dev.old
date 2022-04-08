@@ -1,13 +1,14 @@
 ---
-title: New Website - CICD
+title: New Website - Markdown & FrontMatter
 desc: Because I wanted to learn more about Vue I decided to rewrite my website using Vue, Quasar, Markdown and FrontMatter.
-date: 02/20/2020
+date: 02/22/2020
 tag:
 - website
-- cicd
-- now
-- circli
-author: Wouter
+- markdown
+- frontmatter
+- vue
+category: Markdown
+author: Wouter Vernaillen
 location: Zottegem
 ---
 

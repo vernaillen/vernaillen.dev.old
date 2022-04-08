@@ -111,7 +111,7 @@
                         </a>
                     </li>
                     <li class="ud-relative ud-group">
-                        <a href="/contact" class="
+                        <a href="/blog" class="
                                 menu-scroll
                                 ud-text-base
                                 text-dark
@@ -123,7 +123,7 @@
                                 lg:ud-mr-0 lg:ud-ml-8
                                 xl:ud-ml-12
                                 ">
-                            Contact
+                            Blog
                         </a>
                     </li>
                     <li class="ud-relative ud-group">
@@ -140,6 +140,22 @@
                                 xl:ud-ml-12
                                 ">
                             Music
+                        </a>
+                    </li>
+                    <li class="ud-relative ud-group">
+                        <a href="/contact" class="
+                                menu-scroll
+                                ud-text-base
+                                text-dark
+                                dark:ud-text-white
+                                group-hover:ud-opacity-70
+                                ud-py-2
+                                lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0
+                                ud-flex ud-mx-8
+                                lg:ud-mr-0 lg:ud-ml-8
+                                xl:ud-ml-12
+                                ">
+                            Contact
                         </a>
                     </li>
                     <li class="ud-relative ud-group">

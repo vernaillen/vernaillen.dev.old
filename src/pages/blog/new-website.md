@@ -1,7 +1,7 @@
 ---
 title: New Website
 desc: Because I wanted to learn more about Vue I decided to rewrite my website using Vue, Quasar, Markdown and FrontMatter.
-date: 04/03/2022
+date: 04/08/2022
 tag:
 - website
 - vue
@@ -9,7 +9,8 @@ tag:
 - vercel
 - markdown
 - all
-author: Wouter
+category: Vue.js
+author: Wouter Vernaillen
 location: Zottegem
 ---
 

@@ -6,7 +6,8 @@ tag:
 - liferay
 - kubernetes
 - digitalocean
-author: Wouter
+category: Kubernetes
+author: Wouter Vernaillen
 location: Zottegem
 ---
 

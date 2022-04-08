@@ -1,10 +1,7 @@
 ---
-title: Fork this website app
+title: Source code
 pageName: Fork
-desc:
-date:
-author: Wouter
-location: Zottegem
+author: Wouter Vernaillen
 ---
 
 Feel free to fork [this website's GitHub repository](https://github.com/vernaillen/vernaillen-website) to create your own version or send me a [pull request](https://github.com/vernaillen/vernaillen-website/compare) if you were able to improve something.

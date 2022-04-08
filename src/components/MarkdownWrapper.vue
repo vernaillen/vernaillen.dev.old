@@ -1,7 +1,11 @@
 <script setup>
 import HeaderComponent from "@/components/Header.vue"
 import FooterComponent from "@/components/Footer.vue"
-import moment from 'moment';
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+
 defineProps({
   frontmatter: {
     type: Object,
@@ -12,7 +16,6 @@ defineProps({
 
 <template>
   <header-component/>
-
   <section class="ud-relative ud-z-10 ud-pt-[150px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
@@ -30,7 +33,7 @@ defineProps({
             >
               {{ frontmatter.title }}
             </h1>
-            <p v-if="frontmatter.subtitle" :style="`background: ${frontmatter.bgColor};`"
+            <p v-if="frontmatter.desc" :style="`background: ${frontmatter.bgColor};`"
               class="
                 ud-font-medium
                 ud-text-base
@@ -39,7 +42,7 @@ defineProps({
                 ud-mb-8
               "
             >
-              {{ frontmatter.subtitle }}
+              {{ frontmatter.desc }}
             </p>
           </div>
 
@@ -69,7 +72,7 @@ defineProps({
             </div>
             <div v-if="frontmatter.date" class="ud-flex ud-items-center ud-mr-5 ud-mb-5">
               <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                <span class="ud-mr-3 fa-solid fa-calendar-days"/> {{ moment(frontmatter.date).format('DD MMM YYYY') }}
+                <span class="ud-mr-3 fa-solid fa-calendar-days"/> {{ $formatDate(frontmatter.date) }}
               </p>
             </div>
             <div v-if="frontmatter.location" class="ud-flex ud-items-centerud-mr-5 ud-mb-5">
@@ -105,8 +108,11 @@ defineProps({
                   "
                 ></span>
               </li>
-              <li class="ud-font-medium ud-text-base ud-text-primary">
+              <li v-if="frontmatter.pageName" class="ud-font-medium ud-text-base ud-text-primary">
                 {{ frontmatter.pageName }}
+              </li>
+              <li v-if="route.path.startsWith('/blog')" class="ud-font-medium ud-text-base ud-text-primary">
+                <a href="/blog">Blog</a>
               </li>
             </ul>
           </div>

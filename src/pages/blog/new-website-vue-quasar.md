@@ -6,7 +6,8 @@ tag:
 - website
 - vue
 - quasar
-author: Wouter
+category: Vue.js
+author: Wouter Vernaillen
 location: Zottegem
 ---
 

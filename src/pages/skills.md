@@ -3,7 +3,7 @@ title: Technical expertise and skills
 pageName: Skills
 desc:
 date:
-author: Wouter
+author: Wouter Vernaillen
 location: Zottegem
 ---
 # Skills

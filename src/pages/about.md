@@ -6,15 +6,12 @@ author: Wouter Vernaillen
 location: Zottegem
 #bgColor: yellow
 ---
-## Hello world
-
-Frontmatter: {{ frontmatter.title }}
 
 I'm an avid traveler, following the sunshine around the world, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
 
 Sound and music is one of my passions, it's a way for me to translate, give and recieve energy. I'm currently following a training as sound healing facilitator.
 
-## career
+## Career
 
 My career as an IT consultant started in 1999. The first 14 years I worked as an employee for several IT service companies, and since 2013 I'm working as a freelancer.
 
@@ -25,11 +22,11 @@ Later, when I decided to start freelancing, I changed my focus to open source an
 On this website you can discover the projects I'm currently involved in, the technologies I specialise in and the way I love to work.
 Or you can check out my LinkedIn profile for a more detailed career path.
 
-If you want to see more details, then check out my [career timeline](/#/career)
+If you want to see more details, then check out my [career timeline](/career)
 
-## about this website
+## About this website
 
-I wrote a [blogpost about it](/#/blog/new-website)
+I wrote a [blogpost about it](/blog/new-website)
 
 Fot those that love some badges with icons and numbers: :D
 
