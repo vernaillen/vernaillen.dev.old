@@ -1,10 +1,10 @@
 ---
-title: My love for music
+title: Sound & music
+desc: Life is music!
 pageName: Music
-author: Wouter Vernaillen
 ---
 
-For the last year and a half I've been having a lot of fun with music production and lately I also started having fun with [web audio](https://webaudio.github.io/web-audio-api/#introductory) programming.
+Recently I've been having a lot of fun with music production as well as [web audio](https://webaudio.github.io/web-audio-api/#introductory) programming.
 
 On this page you can see the 2 coming together:
 

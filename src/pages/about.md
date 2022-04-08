@@ -1,9 +1,7 @@
 ---
 title: About Wouter
+desc: Who is this guy?
 pageName: About
-date: 04/08/2022
-author: Wouter Vernaillen
-location: Zottegem
 #bgColor: yellow
 ---
 

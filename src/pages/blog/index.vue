@@ -44,31 +44,6 @@ function getImageUrl(index) {
               Some thoughts and ramdom writings
             </p>
           </div>
-
-          <div class="ud-flex ud-flex-wrap ud-items-center">
-            <div class="ud-flex ud-items-center ud-mr-5 ud-mb-5">
-              <div class="
-                  ud-max-w-[30px]
-                  ud-w-full
-                  ud-h-[30px]
-                  ud-rounded-full
-                  ud-overflow-hidden
-                  ud-mr-4
-                "
-              >
-                <img
-                  src="/images/wouter.jpg"
-                  alt="author"
-                  class="ud-w-full"
-                />
-              </div>
-              <div class="ud-w-full">
-                <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                  Wouter Vernaillen
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="ud-w-full md:ud-w-4/12 lg:ud-w-5/12 ud-px-4">
           <div class="ud-text-end">
