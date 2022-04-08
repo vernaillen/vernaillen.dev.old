@@ -143,8 +143,8 @@ defineProps({
               y2="-97.1485"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7" />
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0" />
+              <stop stop-color="#9C8E1B" />
+              <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -176,8 +176,8 @@ defineProps({
               y2="37.0429"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7" />
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0" />
+              <stop stop-color="#9C8E1B" />
+              <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_0:1"
@@ -187,8 +187,8 @@ defineProps({
               y2="32.3398"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7" />
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0" />
+              <stop stop-color="#9C8E1B" />
+              <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
             </linearGradient>
           </defs>
         </svg>
