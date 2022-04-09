@@ -14,7 +14,7 @@
         <div class="ud-flex ud-mx-[-16px] ud-justify-between ud-relative">
             <div class="ud-px-4 ud-w-60 ud-max-w-full">
                 <a href="/" class="ud-w-full ud-block header-logo">
-                    <svg viewBox="0 0 754 276" width="130">
+                    <svg viewBox="0 0 754 276" width="100">
                         <g fill="none" opacity="transparent">
                             <path id="logo-w" d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z" />
                             <path id="logo-v" d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z" />
@@ -184,8 +184,7 @@
                     <label
                     for="darkToggler"
                     class="
-                        ud-cursor-pointer ud-w-9 ud-h-9
-                        md:ud-w-14 md:ud-h-14
+                        ud-cursor-pointer ud-w-14 ud-h-14
                         ud-rounded-full
                         ud-flex
                         ud-items-center
@@ -390,6 +389,11 @@ export default {
 }
 .ud-dark .header-logo svg path#logo-v {
     fill: #FFFFFF;
+}
+@media (min-width: 960px) {
+    .ud-dark .header-logo svg {
+        width: 130px;
+    }
 }
 button#navbarToggler:hover, 
 button#navbarToggler:active, 
