@@ -5,7 +5,7 @@
       wow
       fadeInUp
     "
-    data-wow-delay=".5s"
+    data-wow-delay=".3s"
   >
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">

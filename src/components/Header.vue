@@ -329,7 +329,6 @@ export default {
   },
   computed: {
       isDark() { 
-          console.log(this.preferences.dark);
           return this.preferences.dark;
       },
       navbarTogglerClass() {
@@ -346,7 +345,10 @@ export default {
       }
   },
   mounted() {
-
+    if (document.documentElement.scrollTop > 0) {
+        this.scrollToTop();
+    }
+    
     window.onscroll = function () {
         const ud_header = document.querySelector(".header");
         const sticky = ud_header.offsetTop;
