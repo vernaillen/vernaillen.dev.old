@@ -16,8 +16,8 @@
                 <a href="/" class="ud-w-full ud-block header-logo">
                     <svg viewBox="0 0 754 276" width="100">
                         <g fill="none" opacity="transparent">
-                            <path id="logo-w" d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z" />
-                            <path id="logo-v" d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z" />
+                            <path class="fill-black dark:fill-primary" d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z" />
+                            <path class="fill-primary dark:fill-white" d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z" />
                         </g>
                     </svg>
                 </a>
@@ -378,20 +378,8 @@ export default {
     padding-top: 0;
     padding-bottom: 0;
 }
-.header-logo svg path#logo-w {
-    fill: #231f20;
-}
-.header-logo svg path#logo-v {
-    fill: #9c8e1b;
-}
-.ud-dark .header-logo svg path#logo-w {
-    fill: #9c8e1b;
-}
-.ud-dark .header-logo svg path#logo-v {
-    fill: #FFFFFF;
-}
 @media (min-width: 960px) {
-    .ud-dark .header-logo svg {
+    .header-logo svg {
         width: 130px;
     }
 }

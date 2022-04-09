@@ -54,7 +54,7 @@ input#checkboxLabel:checked ~ .box span {
 }
 
 #nprogress .bar {
-  background: #9C8E1B;
+  @apply ud-bg-primary;
   opacity: 0.75;
   position: fixed;
   z-index: 1031;
@@ -62,4 +62,16 @@ input#checkboxLabel:checked ~ .box span {
   left: 0;
   width: 100%;
   height: 2px;
+}
+
+@layer utilities {
+  .fill-primary {
+    fill: #9C8E1B;
+  }
+  .fill-black {
+    fill: #231F20;
+  }
+  .fill-white {
+    fill: #FFFFFF;
+  }
 }
