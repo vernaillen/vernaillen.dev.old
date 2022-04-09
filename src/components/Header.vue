@@ -345,9 +345,9 @@ export default {
       }
   },
   mounted() {
-    if (document.documentElement.scrollTop > 0) {
+    /*if (document.documentElement.scrollTop > 0) {
         this.scrollToTop();
-    }
+    }*/
     
     window.onscroll = function () {
         const ud_header = document.querySelector(".header");

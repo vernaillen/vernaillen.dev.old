@@ -30,6 +30,10 @@ const head = createHead();
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
 });
 router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.
