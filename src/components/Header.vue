@@ -11,14 +11,16 @@
             ud-items-center
             ">
         <div class="ud-container">
-        <div class="
-                ud-flex ud-mx-[-16px] ud-items-center ud-justify-between ud-relative
-                ">
+        <div class="ud-flex ud-mx-[-16px] ud-justify-between ud-relative">
             <div class="ud-px-4 ud-w-60 ud-max-w-full">
-            <a href="/" class="ud-w-full ud-block header-logo">
-                <img src="../assets/logo-top.png" alt="logo" class="ud-w-full dark:ud-hidden" />
-                <img src="../assets/logo-top.png" alt="logo" class="ud-w-full ud-hidden dark:ud-block" />
-            </a>
+                <a href="/" class="ud-w-full ud-block header-logo">
+                    <svg viewBox="0 0 754 276" width="130">
+                        <g fill="none" opacity="transparent">
+                            <path id="logo-w" d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z" />
+                            <path id="logo-v" d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z" />
+                        </g>
+                    </svg>
+                </a>
             </div>
             <div class="ud-flex ud-px-4 ud-justify-between ud-items-center ud-w-full">
             <div>
@@ -328,6 +330,12 @@ export default {
       }, 
       navbarCollapseClass() {
           return this.showNavbar ? "" : "ud-hidden";
+      },
+      getWColor() {
+          return "#9c8e1b";
+      },
+      getVColor() {
+          return "#FFFFFF";
       }
   },
   mounted() {
@@ -370,6 +378,18 @@ export default {
 .sticky .header-logo {
     padding-top: 0;
     padding-bottom: 0;
+}
+.header-logo svg path#logo-w {
+    fill: #231f20;
+}
+.header-logo svg path#logo-v {
+    fill: #9c8e1b;
+}
+.ud-dark .header-logo svg path#logo-w {
+    fill: #9c8e1b;
+}
+.ud-dark .header-logo svg path#logo-v {
+    fill: #FFFFFF;
 }
 button#navbarToggler:hover, 
 button#navbarToggler:active, 
