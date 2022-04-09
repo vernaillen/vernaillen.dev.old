@@ -1,6 +1,6 @@
 ---
 title: About Wouter
-desc: Who is this guy?
+desc: You might be wondering... who is this guy?
 pageName: About
 #bgColor: yellow
 ---

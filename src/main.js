@@ -9,6 +9,7 @@ import NProgress from "nprogress";
 import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat.js";
 import { formatDate } from "@/js/logic";
+import { createPinia } from "pinia";
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -45,6 +46,7 @@ router.afterEach((to, from) => {
 
 app.use(router);
 app.use(head);
+app.use(createPinia());
 
 dayjs.extend(LocalizedFormat);
 app.config.globalProperties.$formatDate = formatDate;

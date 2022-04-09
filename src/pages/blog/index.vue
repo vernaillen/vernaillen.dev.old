@@ -49,15 +49,15 @@ function getImageUrl(index) {
           <div class="ud-text-end">
             <ul class="ud-flex ud-items-center md:ud-justify-end">
               <li class="ud-flex ud-items-center">
-                <a
-                  href="/"
+                <router-link
+                  to="/"
                   class="
                     ud-font-medium ud-text-base ud-text-body-color ud-pr-1
                     hover:ud-text-primary
                   "
                 >
                   Home
-                </a>
+                </router-link>
                 <span
                   class="
                     ud-block
@@ -170,8 +170,8 @@ function getImageUrl(index) {
             "
             data-wow-delay=".1s"
           >
-            <a
-              :href="post.path"
+            <router-link
+              :to="post.path"
               class="ud-w-full ud-block ud-relative"
             >
               <span v-if="post.meta.frontmatter.category"
@@ -198,7 +198,7 @@ function getImageUrl(index) {
                 alt="image"
                 class="ud-w-full"
               />
-            </a>
+            </router-link>
             <div
               class="
                 ud-p-6
@@ -210,8 +210,8 @@ function getImageUrl(index) {
               "
             >
               <h3>
-                <a
-                  :href="post.path"
+                <router-link
+                  :to="post.path"
                   class="
                     ud-font-bold ud-text-black
                     dark:ud-text-white
@@ -223,7 +223,7 @@ function getImageUrl(index) {
                   "
                 >
                   {{post.meta.frontmatter.title}}
-                </a>
+                </router-link>
               </h3>
               <p
                 class="
@@ -277,8 +277,8 @@ function getImageUrl(index) {
                       "
                     >
                       By
-                      <a
-                        href="javascript:void(0)"
+                      <router-link
+                        to="/about"
                         class="
                           ud-text-dark
                           dark:ud-text-white
@@ -287,7 +287,7 @@ function getImageUrl(index) {
                         "
                       >
                         {{post.meta.frontmatter.author}}
-                      </a>
+                      </router-link>
                     </h4>
                     <p class="ud-text-xs ud-text-body-color">
                       Full Stack Developer

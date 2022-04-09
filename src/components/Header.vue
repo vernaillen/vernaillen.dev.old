@@ -13,14 +13,14 @@
         <div class="ud-container">
         <div class="ud-flex ud-mx-[-16px] ud-justify-between ud-relative">
             <div class="ud-px-4 ud-w-60 ud-max-w-full">
-                <a href="/" class="ud-w-full ud-block header-logo">
+                <router-link to="/" class="ud-w-full ud-block header-logo">
                     <svg viewBox="0 0 754 276" width="100">
                         <g fill="none" opacity="transparent">
                             <path class="fill-black dark:fill-primary" d="M0 0 H92 V184 H172 V0 H264 V184 H344 V0 H436 V276 H0 Z" />
                             <path class="fill-primary dark:fill-white" d="M490 0 H582 V184 H662 V0 H754 V276 H490 Z" />
                         </g>
                     </svg>
-                </a>
+                </router-link>
             </div>
             <div class="ud-flex ud-px-4 ud-justify-between ud-items-center ud-w-full">
             <div>
@@ -65,7 +65,7 @@
                         "></span>
                 </button>
                 <nav
-                    :if="navbarToggler" 
+                    :if="showNavbar" 
                     id="navbarCollapse" 
                     class="
                         ud-absolute ud-py-5
@@ -82,7 +82,7 @@
                     :class="navbarCollapseClass">
                 <ul class="ud-blcok lg:ud-flex">
                     <li class="ud-relative ud-group">
-                        <a href="/" class="
+                        <router-link to="/" class="
                                 menu-scroll
                                 ud-text-base
                                 text-dark
@@ -94,10 +94,10 @@
                                 lg:ud-mr-0
                                 ">
                             Home
-                        </a>
+                        </router-link>
                     </li>
                     <li class="ud-relative ud-group">
-                        <a href="/about" class="
+                        <router-link to="/about" class="
                                 menu-scroll
                                 ud-text-base
                                 text-dark
@@ -110,10 +110,10 @@
                                 xl:ud-ml-12
                                 ">
                             About
-                        </a>
+                        </router-link>
                     </li>
                     <li class="ud-relative ud-group">
-                        <a href="/blog" class="
+                        <router-link to="/blog" class="
                                 menu-scroll
                                 ud-text-base
                                 text-dark
@@ -126,10 +126,10 @@
                                 xl:ud-ml-12
                                 ">
                             Blog
-                        </a>
+                        </router-link>
                     </li>
                     <li class="ud-relative ud-group">
-                        <a href="/music" class="
+                        <router-link to="/music" class="
                                 menu-scroll
                                 ud-text-base
                                 text-dark
@@ -142,10 +142,10 @@
                                 xl:ud-ml-12
                                 ">
                             Music
-                        </a>
+                        </router-link>
                     </li>
                     <li class="ud-relative ud-group">
-                        <a href="/contact" class="
+                        <router-link to="/contact" class="
                                 menu-scroll
                                 ud-text-base
                                 text-dark
@@ -158,10 +158,10 @@
                                 xl:ud-ml-12
                                 ">
                             Contact
-                        </a>
+                        </router-link>
                     </li>
                     <li class="ud-relative ud-group">
-                        <a href="/anyotherurl" class="
+                        <router-link to="/anyotherurl" class="
                                 menu-scroll
                                 ud-text-base
                                 text-dark
@@ -174,7 +174,7 @@
                                 xl:ud-ml-12
                                 ">
                             404
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
                 </nav>
@@ -282,12 +282,16 @@
     </a>
 </template>
 <script>
+import { usePreferences } from '@/stores/preferences'
 export default {
   data() {
     return {
-      showNavbar: false,
-      dark: true
+      showNavbar: false
     }
+  },
+  setup() {
+    const preferences = usePreferences()
+    return { preferences }
   },
   methods: {
     navbarToggler: function(){
@@ -295,10 +299,10 @@ export default {
     },
     darkToggler: function(){
         const html = document.querySelector("html");
-        this.dark
+        this.isDark
             ? html.classList.remove("ud-dark")
             : html.classList.add("ud-dark");
-        this.dark = !this.dark;
+        this.preferences.toggleDark();
     },
     scrollToTop: function(){
         const to = 0, duration = 500;
@@ -324,6 +328,10 @@ export default {
     },
   },
   computed: {
+      isDark() { 
+          console.log(this.preferences.dark);
+          return this.preferences.dark;
+      },
       navbarTogglerClass() {
           return this.showNavbar ? "navbarTogglerActive" : "";
       }, 

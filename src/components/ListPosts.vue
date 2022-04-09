@@ -20,7 +20,7 @@ const posts = router.getRoutes()
         class="item block font-normal mb-6 mt-2 no-underline"
         
       >
-        <a :href="post.path">{{post.name}}</a>
+        <router-link :to="post.path">{{post.name}}</router-link>
       </li>
     </ul>
 </template>

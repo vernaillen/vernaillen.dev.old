@@ -59,8 +59,8 @@
               Java, Spring, Vue, Angular & Liferay
             </p>
             <div class="ud-flex ud-items-center ud-justify-center">
-              <a
-                href="/about"
+              <router-link
+                to="/about"
                 class="
                   ud-text-base
                   ud-font-semibold
@@ -80,7 +80,7 @@
                 data-wow-delay="1s"
               >
                 Learn more
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

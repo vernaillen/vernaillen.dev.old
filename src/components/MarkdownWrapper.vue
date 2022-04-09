@@ -67,7 +67,7 @@ defineProps({
               </div>
               <div class="ud-w-full">
                 <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                  {{ frontmatter.author }}
+                  <router-link to="/about">{{ frontmatter.author }}</router-link>
                 </p>
               </div>
             </div>
@@ -87,15 +87,15 @@ defineProps({
           <div class="ud-text-end">
             <ul class="ud-flex ud-items-center md:ud-justify-end">
               <li class="ud-flex ud-items-center">
-                <a
-                  href="/"
+                <router-link
+                  to="/"
                   class="
                     ud-font-medium ud-text-base ud-text-body-color ud-pr-1
                     hover:ud-text-primary
                   "
                 >
                   Home
-                </a>
+                </router-link>
                 <span
                   class="
                     ud-block
@@ -113,7 +113,7 @@ defineProps({
                 {{ frontmatter.pageName }}
               </li>
               <li v-if="route.path.startsWith('/blog')" class="ud-font-medium ud-text-base ud-text-primary">
-                <a href="/blog">Blog</a>
+                <router-link to="/blog">Blog</router-link>
               </li>
             </ul>
           </div>

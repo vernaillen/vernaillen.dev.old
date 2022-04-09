@@ -54,8 +54,8 @@
             </h2>
             <ul>
               <li>
-                <a
-                  href="/blog"
+                <router-link
+                  to="/blog"
                   class="
                     ud-text-base
                     ud-font-medium
@@ -66,11 +66,11 @@
                   "
                 >
                   Blog
-                </a>
+                </router-link>
               </li>
               <li>
-                <a
-                  href="/about"
+                <router-link
+                  to="/about"
                   class="
                     ud-text-base
                     ud-font-medium
@@ -81,11 +81,11 @@
                   "
                 >
                   About
-                </a>
+                </router-link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <router-link
+                  to="/contact"
                   class="
                     ud-text-base
                     ud-font-medium
@@ -96,7 +96,7 @@
                   "
                 >
                   Contact
-                </a>
+                </router-link>
               </li>
             </ul>
           </div>
