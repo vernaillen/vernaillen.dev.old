@@ -50,7 +50,7 @@ export default defineConfig({
   },
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ["src/**/*.spec.js"],
+    include: ["src/**/*.spec.js","test/**/*.spec.js"],
     excludeNodeModules: true,
     environment: "jsdom",
     coverage: {

@@ -1,7 +1,7 @@
 import { shallowMount } from "@vue/test-utils";
-import { describe, expect, it } from "vitest";
+import { describe, it } from "vitest";
 import { createHead } from "@vueuse/head";
-import App from "../App.vue";
+import App from "./src/App.vue";
 
 describe("App.vue", () => {
   it("should render", () => {
