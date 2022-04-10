@@ -4,31 +4,24 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
+    "build": "vite-ssg build",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/vue-fontawesome": "^3.0.0-5",
-    "@vueuse/head": "^0.7.5",
     "animate.css": "^4.1.1",
     "dayjs": "^1.11.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.13",
     "prism-theme-vars": "^0.2.2",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.14",
-    "wow.js": "^1.2.2"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.2",
     "@vitejs/plugin-vue": "^2.3.0",
     "@vue/test-utils": "^2.0.0-rc.18",
+    "@vueuse/head": "^0.7.5",
     "autoprefixer": "^10.4.4",
     "c8": "^7.11.0",
     "fs-extra": "^10.0.1",
@@ -42,6 +35,8 @@
     "vite-plugin-md": "^0.12.4",
     "vite-plugin-pages": "^0.22.0",
     "vite-plugin-pwa": "^0.11.13",
-    "vitest": "^0.9.0"
+    "vite-ssg": "^0.19.2",
+    "vitest": "^0.9.0",
+    "vue-router": "^4.0.14"
   }
 }

@@ -1,8 +1,5 @@
 <template>
-  <footer
-    class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] wow fadeIn"
-    data-wow-delay=".2s"
-  >
+  <footer class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] animated fadeIn">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full md:ud-w-1/2 lg:ud-w-4/12 xl:ud-w-5/12 ud-px-4">
@@ -435,5 +432,10 @@
     ></span>
   </a>
 </template>
-<script>
+<script setup>
 </script>
+<style scoped>
+footer.animated {
+  animation-duration: 5s;
+}
+</style>

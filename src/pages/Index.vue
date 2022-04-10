@@ -11,10 +11,7 @@
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full ud-px-4">
-          <div
-            class="ud-mx-auto ud-max-w-[570px] ud-text-center wow fadeIn"
-            data-wow-delay=".1s"
-          >
+          <div class="ud-mx-auto ud-max-w-[570px] ud-text-center animated fadeIn">
             <h1
               class="
                 ud-text-black
@@ -74,9 +71,8 @@
                   ud-transition
                   ud-duration-300
                   ud-ease-in-out
-                  wow fadeInLeft
+                  animated fadeInLeft
                 "
-                data-wow-delay="1s"
               >
                 About Wouter
               </router-link>
@@ -98,9 +94,8 @@
                     ud-transition
                     ud-duration-300
                     ud-ease-in-out
-                    wow fadeInRight
+                    animated fadeInRight
                   "
-                  data-wow-delay="1s"
                 >
                   Blog
               </router-link>

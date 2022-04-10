@@ -60,4 +60,8 @@ export default defineConfig({
     },
     extension: [".js", ".vue"],
   },
+  ssgOptions: {
+    formatting: 'minify',
+    format: 'cjs',
+  },
 });

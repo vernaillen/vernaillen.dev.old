@@ -3,7 +3,7 @@
   <section class="ud-relative ud-z-10 ud-pt-[180px] ud-pb-[120px]">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full ud-px-4 wow fadeIn" data-wow-delay=".1s">
+        <div class="ud-w-full ud-px-4 animated fadeIn">
           <div class="ud-max-w-[530px] ud-mx-auto ud-text-center">
             <div class="mx-auto ud-mb-9 ud-text-center">
               <svg
