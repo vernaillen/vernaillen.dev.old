@@ -3,10 +3,9 @@
   <section
     id="home"
     class="
-      ud-relative ud-z-10 ud-pt-[120px] ud-pb-[110px]
-      md:ud-pt-[150px] md:ud-pb-[120px]
-      xl:ud-pt-[180px] xl:ud-pb-[160px]
-      2xl:ud-pt-[210px] 2xl:ud-pb-[200px]
+      ud-relative ud-z-10 ud-pt-[180px] ud-pb-[120px]
+      xl:ud-pt-[210px] xl:ud-pb-[160px]
+      2xl:ud-pt-[240px] 2xl:ud-pb-[200px]
     "
   >
     <div class="ud-container">
@@ -26,7 +25,7 @@
                 ud-leading-tight
                 sm:ud-leading-tight
                 md:ud-leading-tight
-                ud-mb-5
+                ud-mb-20
               "
             >
               Wouter Vernaillen
@@ -39,8 +38,8 @@
                 md:ud-leading-relaxed
                 ud-text-body-color
                 dark:ud-text-white dark:ud-opacity-90
-                ud-mt-12
-                ud-mb-20
+                ud-mt-24
+                ud-mb-10
               "
             >
               Freelance Full Stack Developer
@@ -53,12 +52,12 @@
                 md:ud-leading-relaxed
                 ud-text-body-color
                 dark:ud-text-white dark:ud-opacity-90
-                ud-mb-12
+                ud-mb-10
               "
             >
               Java, Spring, Vue, Angular & Liferay
             </p>
-            <div class="ud-flex ud-items-center ud-justify-center">
+            <div class="ud-flex ud-items-center ud-justify-center ud-mt-10">
               <router-link
                 to="/about"
                 class="
@@ -66,20 +65,44 @@
                   ud-font-semibold
                   ud-text-white
                   ud-bg-primary
-                  ud-py-4
-                  ud-px-8
+                  ud-py-3
+                  ud-px-6
                   hover:ud-bg-opacity-80
                   ud-mx-2
-                  ud-my-8
+                  ud-my-10
                   ud-rounded-md
                   ud-transition
                   ud-duration-300
                   ud-ease-in-out
-                  wow fadeInUp
+                  wow fadeInLeft
                 "
                 data-wow-delay="1s"
               >
-                Learn more
+                About Wouter
+              </router-link>
+              <router-link
+                  to="/blog"
+                  class="
+                    ud-text-base
+                    ud-font-semibold
+                    ud-text-black
+                    ud-bg-black
+                    ud-bg-opacity-10
+                    dark:ud-text-white dark:ud-bg-white dark:ud-bg-opacity-20
+                    ud-py-3 ud-px-6
+                    hover:ud-bg-opacity-20
+                    dark:hover:ud-bg-opacity-20
+                    ud-mx-2
+                    ud-my-10
+                    ud-rounded-md
+                    ud-transition
+                    ud-duration-300
+                    ud-ease-in-out
+                    wow fadeInRight
+                  "
+                  data-wow-delay="1s"
+                >
+                  Blog
               </router-link>
             </div>
           </div>
