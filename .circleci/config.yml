@@ -27,4 +27,4 @@ workflows:
           context: SonarCloud
           post-steps:
             - codecov/upload:
-                file: ./coverage/coverage-final.json
+                file: ./coverage/lcov.info
