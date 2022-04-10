@@ -1,11 +1,7 @@
 <template>
   <footer
-    class="
-      ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px]
-      wow
-      fadeInUp
-    "
-    data-wow-delay=".3s"
+    class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] wow fadeIn"
+    data-wow-delay=".2s"
   >
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
@@ -13,19 +9,21 @@
           <div class="ud-mb-16 ud-max-w-[360px]">
             <div class="ud-flex ud-items-center">
               <a
-                href="https://www.linkedin.com/in/woutervernaillen/"
-                target="_blank"
-                aria-label="social-link"
                 class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
+                aria-label="social-link"
+                href="https://www.linkedin.com/in/woutervernaillen/"
+                rel="noopener"
+                target="_blank"
               >
                 <span class="fa-brands fa-linkedin"></span>
               </a>
-              <a
-                href="https://www.instagram.com/woutervernaillen/"
-                target="_blank"
-                aria-label="social-link"
-                class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
-              >
+             <a
+               class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
+               aria-label="social-link"
+               href="https://www.instagram.com/woutervernaillen/"
+               rel="noopener"
+               target="_blank"
+             >
                 <span class="fa-brands fa-instagram"></span>
               </a>
             </div>
@@ -437,3 +435,5 @@
     ></span>
   </a>
 </template>
+<script>
+</script>

@@ -22,7 +22,7 @@ dom.watch();
 import "./css/main.css";
 import "./css/prose.css";
 import "./css/markdown.css";
-import "./css/animate.css";
+import 'animate.css/animate.compat.css';
 
 const app = createApp(App);
 const head = createHead();
@@ -30,12 +30,12 @@ const head = createHead();
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(_to, _from, _savedPosition) {
     // always scroll to top
     return { top: 0 }
   },
 });
-router.beforeResolve((to, from, next) => {
+router.beforeResolve((to, _from, next) => {
   // If this isn't an initial page load.
   if (to.name) {
     // Start the route progress bar.
@@ -43,7 +43,7 @@ router.beforeResolve((to, from, next) => {
   }
   next();
 });
-router.afterEach((to, from) => {
+router.afterEach((_to, _from) => {
   // Complete the animation of the route progress bar.
   NProgress.done();
 });

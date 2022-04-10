@@ -136,7 +136,7 @@ defineProps({
                 ud-text-body-color
                 dark:ud-text-white dark:ud-opacity-90
                 ud-mb-12
-                wow fadeInUp
+                wow fadeIn
               "
               data-wow-delay=".1s"
             >

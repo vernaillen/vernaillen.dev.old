@@ -165,8 +165,7 @@ function getImageUrl(index) {
               ud-relative ud-bg-white
               dark:ud-bg-dark
               ud-shadow-one ud-rounded-md ud-overflow-hidden ud-mb-10
-              wow
-              fadeInUp
+              wow fadeIn
             "
             data-wow-delay=".1s"
           >

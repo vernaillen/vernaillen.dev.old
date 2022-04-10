@@ -13,8 +13,8 @@
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full ud-px-4">
           <div
-            class="ud-mx-auto ud-max-w-[570px] ud-text-center wow fadeInUp"
-            data-wow-delay=".2s"
+            class="ud-mx-auto ud-max-w-[570px] ud-text-center wow fadeIn"
+            data-wow-delay=".1s"
           >
             <h1
               class="
