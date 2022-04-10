@@ -3,9 +3,9 @@
   <section
     id="home"
     class="
-      ud-relative ud-z-10 ud-pt-[180px] ud-pb-[120px]
-      xl:ud-pt-[210px] xl:ud-pb-[160px]
-      2xl:ud-pt-[240px] 2xl:ud-pb-[200px]
+      ud-relative ud-z-10 ud-pt-[160px] ud-pb-[120px]
+      xl:ud-pt-[190px] xl:ud-pb-[160px]
+      2xl:ud-pt-[220px] 2xl:ud-pb-[200px]
     "
   >
     <div class="ud-container">
