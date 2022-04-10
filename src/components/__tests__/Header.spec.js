@@ -10,7 +10,6 @@ describe("Header.vue", () => {
 
   it("should render", () => {
     const wrapper = mount(Header);
-    wrapper.findComponent({ name: "header" });
     expect(wrapper.find("header").exists()).toBe(true);
     expect(wrapper.text()).toContain('Home');
     expect(wrapper.text()).toContain('About');
