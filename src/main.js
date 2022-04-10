@@ -1,59 +1,24 @@
 import { createApp } from "vue";
 import { createHead } from "@vueuse/head";
-import App from "./App.vue";
-import routes from "~pages";
-import { createRouter, createWebHistory } from "vue-router";
-import MarkdownWrapper from "./components/MarkdownWrapper.vue";
-import ListPosts from "./components/ListPosts.vue";
-import NProgress from "nprogress";
-import dayjs from "dayjs";
-import LocalizedFormat from "dayjs/plugin/localizedFormat.js";
-import { formatDate } from "@/js/logic.js";
 import { createPinia } from "pinia";
+import days from "@/js/days.js";
+import fontAwesome from "@/js/fontAwesome";
+import pagesRouter from "@/js/pagesRouter";
+import MarkdownWrapper from "@/components/MarkdownWrapper.vue";
+import ListPosts from "@/components/ListPosts.vue";
+import App from "@/App.vue";
 
-import { library, dom } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { far } from "@fortawesome/free-regular-svg-icons";
-library.add(fas, far, fab);
-dom.watch();
-
-import "./css/main.css";
-import "./css/prose.css";
-import "./css/markdown.css";
+import "@/css/main.css";
+import "@/css/prose.css";
+import "@/css/markdown.css";
 import 'animate.css/animate.compat.css';
 
 const app = createApp(App);
 app.use(createPinia());
 app.use(createHead());
-
-dayjs.extend(LocalizedFormat);
-app.config.globalProperties.$formatDate = formatDate;
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-  scrollBehavior(_to, _from, _savedPosition) {
-    // always scroll to top
-    return { top: 0 }
-  },
-});
-router.beforeResolve((to, _from, next) => {
-  // If this isn't an initial page load.
-  if (to.name) {
-    // Start the route progress bar.
-    NProgress.start();
-  }
-  next();
-});
-router.afterEach((_to, _from) => {
-  // Complete the animation of the route progress bar.
-  NProgress.done();
-});
-app.use(router);
-
-app.component("font-awesome-icon", FontAwesomeIcon);
+app.use(days);
+app.use(fontAwesome);
+app.use(pagesRouter);
 app.component("markdown-wrapper", MarkdownWrapper);
 app.component("list-posts", ListPosts);
 app.mount("#app");
