@@ -8,7 +8,7 @@ import ListPosts from "./components/ListPosts.vue";
 import NProgress from "nprogress";
 import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat.js";
-import { formatDate } from "@/js/logic";
+import { formatDate } from "@/js/logic.js";
 import { createPinia } from "pinia";
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
@@ -25,7 +25,11 @@ import "./css/markdown.css";
 import 'animate.css/animate.compat.css';
 
 const app = createApp(App);
-const head = createHead();
+app.use(createPinia());
+app.use(createHead());
+
+dayjs.extend(LocalizedFormat);
+app.config.globalProperties.$formatDate = formatDate;
 
 const router = createRouter({
   history: createWebHistory(),
@@ -47,13 +51,8 @@ router.afterEach((_to, _from) => {
   // Complete the animation of the route progress bar.
   NProgress.done();
 });
-
 app.use(router);
-app.use(head);
-app.use(createPinia());
 
-dayjs.extend(LocalizedFormat);
-app.config.globalProperties.$formatDate = formatDate;
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.component("markdown-wrapper", MarkdownWrapper);
 app.component("list-posts", ListPosts);
