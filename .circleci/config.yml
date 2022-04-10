@@ -26,4 +26,5 @@ workflows:
       - test:
           context: SonarCloud
           post-steps:
-            - codecov/upload
+            - codecov/upload:
+                file: ./coverage/coverage-final.json
