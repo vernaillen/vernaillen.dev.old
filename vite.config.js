@@ -54,7 +54,7 @@ export default defineConfig({
     excludeNodeModules: true,
     environment: "jsdom",
     coverage: {
-      all: true,
+      reporter: ['json'],
       include: ["src/**/*.js", "src/**/*.vue"],
     },
     extension: [".js", ".vue"],

@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "test": "vitest run --coverage",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "build": "vite build",
     "preview": "vite preview"
   },

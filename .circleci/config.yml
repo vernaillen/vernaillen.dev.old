@@ -5,28 +5,23 @@ orbs:
   sonarcloud: sonarsource/sonarcloud@1.0.3
   codecov: codecov/codecov@3.2.2
 
-executors:
-  my-executor:
-    docker:
-      - image: cimg/node:16.14
-        auth:
-          username: $DOCKER_HUB_USER
-          password: $DOCKER_HUB_PASSWORD
-
 jobs:
-  build:
-    executor: my-executor
+  test:
+    executor:
+      name: node/default
     steps:
       - checkout
+      - node/install-packages
       - sonarcloud/scan
+      - run:
+          command: npm run build
+      - run:
+          command: npm run coverage
 
 workflows:
   build-test:
     jobs:
-      - build:
+      - test:
           context: SonarCloud
-      - node/test:
           post-steps:
             - codecov/upload
-      - node/run:
-          npm-run: build
