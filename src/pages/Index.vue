@@ -323,7 +323,6 @@
         </defs>
       </svg>
     </div>
-    <!-- </div> -->
   </section>
   <footer-component/>
 </template>

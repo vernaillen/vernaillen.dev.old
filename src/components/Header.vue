@@ -349,7 +349,7 @@ export default {
         const ud_header = document.querySelector(".header");
         const sticky = ud_header.offsetTop;
 
-        if (window.pageYOffset > sticky) {
+        if (window.scrollY > sticky) {
             ud_header.classList.add("sticky");
         } else {
             ud_header.classList.remove("sticky");
