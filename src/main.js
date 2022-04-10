@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import { createHead } from "@vueuse/head";
 import { createPinia } from "pinia";
-import days from "@/js/days.js";
+import days from "@/js/days";
 import fontAwesome from "@/js/fontAwesome";
 import pagesRouter from "@/js/pagesRouter";
 import MarkdownWrapper from "@/components/MarkdownWrapper.vue";

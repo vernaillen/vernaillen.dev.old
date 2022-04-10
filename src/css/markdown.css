@@ -1,15 +1,6 @@
 /* https://github.com/antfu/prism-theme-vars */
 @import 'prism-theme-vars/base.css';
 
-:root {
-  --prism-font-size: 0.9rem;
-  --prism-font-family: 'Fira Code', monospace;
-}
-
-:root {
-  --prism-font-family: 'Input Mono', monospace;
-}
-
 html:not(.ud-dark) .prose {
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;

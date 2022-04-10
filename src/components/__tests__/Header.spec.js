@@ -1,21 +1,18 @@
-import { shallowMount } from "@vue/test-utils";
-import { describe, expect, it } from "vitest";
+import { mount } from "@vue/test-utils";
+import { beforeEach, describe, expect, it } from "vitest";
+import { setActivePinia, createPinia } from "pinia";
 import Header from "../Header.vue";
-import { usePreferences } from '@/stores/preferences';
-import { createPinia } from "pinia";
 
 describe("Header.vue", () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
   it("should render", () => {
-
-    const pinia = createPinia()
-    const preferences = usePreferences(pinia)
-    //jest.spyOn(preferences, 'dark')
-    
-    const wrapper = shallowMount(Header, {
-      pinia
-    });
-
+    const wrapper = mount(Header);
     wrapper.findComponent({ name: "header" });
     expect(wrapper.find("header").exists()).toBe(true);
+    expect(wrapper.text()).toContain('Home');
+    expect(wrapper.text()).toContain('About');
   });
 });
