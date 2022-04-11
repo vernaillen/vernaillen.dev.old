@@ -1,6 +1,6 @@
 ---
 title: New Website
-desc: Because I wanted to learn more about Vue I decided to rewrite my website using Vue, Quasar, Markdown and FrontMatter.
+desc: Because I wanted to learn more about Vue I decided to rewrite my website using Vue 3, Vite, Tailwind and Markdown.
 date: 04/08/2022
 tag:
 - website
@@ -17,7 +17,7 @@ location: Zottegem
 To be honest the most important reason why I wanted to make a new website is because the old one was made in Liferay and I didn't want to keep a Liferay server running only for my personal website. It's overkill.
 And I'm actually focusing less on Liferay these days, but more on pure stack development with Spring micro-services and Angular or Vue.js.
 
-And since I wanted to becpome more skilled in Vue.js anyway, so I decided to rewrite my website using Vue 3, Vite, Tailwind and Markdown.
+And since I wanted to become more skilled in Vue.js anyway, so I decided to rewrite my website using Vue 3, Vite, Tailwind and Markdown.
 
 For the design I decided to use this [Tailwind CSS Template](https://tailwindtemplates.co/templates/startup), cause I'm a developer, not a designer :D
 
