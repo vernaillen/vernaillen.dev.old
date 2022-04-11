@@ -1,9 +1,11 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import Markdown, { link, meta } from "vite-plugin-md";
+import LinkAttributes from 'markdown-it-link-attributes'
 import Anchor from "markdown-it-anchor";
 import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
+import generateSitemap from 'vite-plugin-pages-sitemap'
 import { VitePWA } from "vite-plugin-pwa";
 import { resolve } from "path";
 import fs from "fs-extra";
@@ -21,6 +23,13 @@ export default defineConfig({
       markdownItSetup(md) {
         md.use(Anchor);
         md.use(Prism);
+        md.use(LinkAttributes, {
+          matcher: (link) => /^https?:\/\//.test(link),
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
+        })
       },
       headEnabled: true,
       linkTransforms: link(),
@@ -28,6 +37,7 @@ export default defineConfig({
     Pages({
       extensions: ["vue", "md"],
       exclude: ["**/components/*.vue"],
+      onRoutesGenerated: routes => (generateSitemap({ routes })),
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1));
         const md = fs.readFileSync(path, "utf-8");
