@@ -37,7 +37,10 @@ export default defineConfig({
     Pages({
       extensions: ["vue", "md"],
       exclude: ["**/components/*.vue"],
-      onRoutesGenerated: routes => (generateSitemap({ routes })),
+      onRoutesGenerated: routes => (generateSitemap({ 
+        hostname: 'https://vernaillen.dev/',
+        routes 
+      })),
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1));
         const md = fs.readFileSync(path, "utf-8");
