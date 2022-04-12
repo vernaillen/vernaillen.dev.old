@@ -4,6 +4,8 @@ desc: Life is music!
 pageName: Music
 ---
 
+Besides my passion for web development (which is the main focus of this website), I do have another big passion. Sound & Music.
+
 Recently I've been having a lot of fun with music production as well as [web audio](https://webaudio.github.io/web-audio-api/#introductory) programming.
 
 On this page you can see the 2 coming together:

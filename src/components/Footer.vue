@@ -1,4 +1,5 @@
 <template>
+  <div id="audioMotionContainer"></div>
   <footer class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] animated fadeIn">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
@@ -12,7 +13,7 @@
                 rel="noopener"
                 target="_blank"
               >
-                <span class="fa-brands fa-linkedin"></span>
+                <font-awesome-icon :icon="['fab', 'linkedin']" />
               </a>
              <a
                class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
@@ -21,8 +22,10 @@
                rel="noopener"
                target="_blank"
              >
-                <span class="fa-brands fa-instagram"></span>
+                <font-awesome-icon :icon="['fab', 'instagram']" />
               </a>
+              <br/><br/>
+              <audio id="audio" src="/music/RackNomad-MeditativeMelody.mp3" controls crossorigin="anonymous"></audio>
             </div>
           </div>
         </div>
@@ -433,9 +436,54 @@
   </a>
 </template>
 <script setup>
+import { onMounted } from '@vue/runtime-core';
+import AudioMotionAnalyzer from 'audiomotion-analyzer';
+
+const stopColor = "#9C8E1B";
+
+onMounted(() => {
+    const audioEl = document.getElementById('audio');
+    try {
+      const audioMotion = new AudioMotionAnalyzer(
+        document.getElementById('audioMotionContainer'),
+        { 
+          source: audioEl, // main audio source is the HTML <audio> element
+          audioCtx: new AudioContext(),
+          alphaBars: false,
+          barSpace: 0.5,
+          bgAlpha: 0.5,
+          sensitivity: 4,
+          smoothing: 0.4,
+          showBgColor: false,
+          overlay: true,
+          showLeds: false,
+          showPeaks: false,
+          showScale: false,
+          gradient: 'classic',
+          mode: 1,
+          height: 60,
+          showScaleX: false,
+          showScaleY: false,
+          colorStops: [
+            stopColor,
+            stopColor
+          ]
+        }
+      );
+    }
+    catch( err ) {
+      console.error(err);
+    }
+})
 </script>
 <style scoped>
 footer.animated {
   animation-duration: 5s;
+}
+#audioMotionContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
 }
 </style>

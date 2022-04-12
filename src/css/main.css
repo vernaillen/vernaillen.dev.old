@@ -6,13 +6,17 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #eee;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .agni_slide-text p {
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6, 
+h3 a,
+.agni_slide-text p {
     font-family: 'Roboto Mono',monospace;
     font-weight: 400;
     line-height: 1.6;
-    color: #333;
+    color: #9C8E1B;
 }
 input[type="checkbox"]:checked ~ label span svg {
   @apply ud-inline-flex;

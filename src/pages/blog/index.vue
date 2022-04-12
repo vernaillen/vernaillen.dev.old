@@ -1,6 +1,7 @@
 <script setup>
 import HeaderComponent from "@/components/Header.vue"
 import FooterComponent from "@/components/Footer.vue"
+import BreadcrumbComponent from "@/components/Breadcrumb.vue";
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -16,9 +17,11 @@ function getImageUrl(index) {
 
 <template>
   <HeaderComponent/>
-  <section class="ud-relative ud-z-10 ud-pt-[150px] ud-overflow-hidden">
+  <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
+
+        <breadcrumb-component pageName="Blog" path="/blog"/>
         <div class="ud-w-full md:ud-w-8/12 lg:ud-w-7/12 ud-px-4">
           <div class="ud-max-w-[570px] ud-mb-12 md:ud-mb-0">
             <h1
@@ -43,38 +46,6 @@ function getImageUrl(index) {
             >
               Some thoughts and ramdom writings
             </p>
-          </div>
-        </div>
-        <div class="ud-w-full md:ud-w-4/12 lg:ud-w-5/12 ud-px-4">
-          <div class="ud-text-end">
-            <ul class="ud-flex ud-items-center md:ud-justify-end">
-              <li class="ud-flex ud-items-center">
-                <router-link
-                  to="/"
-                  class="
-                    ud-font-medium ud-text-base ud-text-body-color ud-pr-1
-                    hover:ud-text-primary
-                  "
-                >
-                  Home
-                </router-link>
-                <span
-                  class="
-                    ud-block
-                    ud-w-2
-                    ud-h-2
-                    ud-border-t-2
-                    ud-border-r-2
-                    ud-border-body-color
-                    ud-rotate-45
-                    ud-mr-3
-                  "
-                ></span>
-              </li>
-              <li class="ud-font-medium ud-text-base ud-text-primary">
-                Blog
-              </li>
-            </ul>
           </div>
         </div>
       </div>

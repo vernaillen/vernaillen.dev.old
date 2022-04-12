@@ -12,7 +12,6 @@
 }
 .prose a {
   color: var(--fg-deeper);
-  text-decoration: underline;
   font-weight: 500;
 }
 .prose strong {

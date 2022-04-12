@@ -7,7 +7,7 @@ pageName: About
 
 I'm an avid traveler, following the sunshine around the world, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
 
-Sound and music is one of my passions, it's a way for me to translate, give and recieve energy. I'm currently following a training as sound healing facilitator.
+[Sound and music](/music) is one of my passions, it's a way for me to translate, give and recieve energy. I'm currently following a training as sound healing facilitator.
 
 ## Career
 

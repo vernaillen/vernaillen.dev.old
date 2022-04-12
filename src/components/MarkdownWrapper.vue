@@ -2,12 +2,13 @@
 import HeaderComponent from "@/components/Header.vue"
 import FooterComponent from "@/components/Footer.vue"
 import BackgroundSVG1 from "@/components/BackgroundSVG1.vue";
+import BreadcrumbComponent from "@/components/Breadcrumb.vue";
 import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
 const route = useRoute()
 
-defineProps({
+const props = defineProps({
   frontmatter: {
     type: Object,
     required: true,
@@ -17,11 +18,12 @@ defineProps({
 
 <template>
   <header-component/>
-  <section class="ud-relative ud-z-10 ud-pt-[150px] ud-overflow-hidden">
+  <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
-        <div class="ud-w-full md:ud-w-8/12 lg:ud-w-7/12 ud-px-4">
-          <div v-if="frontmatter.title" class="ud-max-w-[570px] ud-mb-12 md:ud-mb-0">
+        <breadcrumb-component :pageName="frontmatter.pageName ? frontmatter.title : ''" :path="route.path"/>
+        <div class="ud-w-full ud-px-4">
+          <div v-if="frontmatter.title" class="ud-mb-12 md:ud-mb-0">
             <h1
               class="
                 ud-font-bold 
@@ -73,49 +75,14 @@ defineProps({
             </div>
             <div v-if="frontmatter.date" class="ud-flex ud-items-center ud-mr-5 ud-mb-5">
               <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                <span class="ud-mr-3 fa-solid fa-calendar-days"/> {{ $formatDate(frontmatter.date) }}
+                <font-awesome-icon :icon="['fas', 'calendar-days']" /><span class="ud-mr-3 fa-solid fa-calendar-days"/> {{ $formatDate(frontmatter.date) }}
               </p>
             </div>
             <div v-if="frontmatter.location" class="ud-flex ud-items-centerud-mr-5 ud-mb-5">
               <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                <span class="ud-mr-3 fa-solid fa-location-pin"/> {{ frontmatter.location }}
+                <font-awesome-icon :icon="['fas', 'location-pin']" /><span class="ud-mr-3 fa-solid fa-location-pin"/> {{ frontmatter.location }}
               </p>
             </div>
-          </div>
-        </div>
-        <div class="ud-w-full md:ud-w-4/12 lg:ud-w-5/12 ud-px-4">
-          <div class="ud-text-end">
-            <ul class="ud-flex ud-items-center md:ud-justify-end">
-              <li class="ud-flex ud-items-center">
-                <router-link
-                  to="/"
-                  class="
-                    ud-font-medium ud-text-base ud-text-body-color ud-pr-1
-                    hover:ud-text-primary
-                  "
-                >
-                  Home
-                </router-link>
-                <span
-                  class="
-                    ud-block
-                    ud-w-2
-                    ud-h-2
-                    ud-border-t-2
-                    ud-border-r-2
-                    ud-border-body-color
-                    ud-rotate-45
-                    ud-mr-3
-                  "
-                ></span>
-              </li>
-              <li v-if="frontmatter.pageName" class="ud-font-medium ud-text-base ud-text-primary">
-                {{ frontmatter.pageName }}
-              </li>
-              <li v-if="route.path.startsWith('/blog')" class="ud-font-medium ud-text-base ud-text-primary">
-                <router-link to="/blog">Blog</router-link>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
