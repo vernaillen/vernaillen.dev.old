@@ -1,6 +1,6 @@
 ---
 title: Hello World
-desc: Complete website rewrite and redesign
+desc: Introducing my brand new professional website
 date: 04/12/2022
 tag:
 - website
@@ -14,12 +14,11 @@ author: Wouter Vernaillen
 location: Zottegem
 ---
 
-## exit Vernaillen.com
-To be honest the most important reason why I wanted to make a new website is because the old one was made in Liferay and I didn't want to keep a Liferay server running only for my personal website. It's overkill.
-And I'm actually focusing less on Liferay these days, but more on pure stack development with Spring micro-services and Angular or Vue.js.
+## sunset of Vernaillen.com
+To be honest the most important reason why I wanted to make a new website is because [Vernaillen.com](https://www.vernaillen.com) was made in Liferay and I didn't want to keep a Liferay server running only for my personal website. It's definitely overkill.
+And besides that, my main focus as a freelance consultant is not on Liferay any more lately, but more on full stack development with Spring micro-services, Angular or Vue.js, as well as on DevOps with Kubernetes, Jenkins, Sonar, etc.
 
-## enter Vernaillen.dev
-
+## Hello World for Vernaillen.dev
 Since I wanted to become more skilled in Vue.js anyway, I decided to rewrite my website using Vue 3, Vite, Tailwind and Markdown.
 
 For the design I decided to use this [Tailwind CSS Template](https://tailwindtemplates.co/templates/startup), cause I'm a developer, not a designer :D
