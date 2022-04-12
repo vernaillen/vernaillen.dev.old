@@ -435,7 +435,8 @@
     ></span>
   </a>
 </template>
-<script setup>
+<script setup lang="ts">
+
 import { onMounted } from '@vue/runtime-core';
 import AudioMotionAnalyzer from 'audiomotion-analyzer';
 

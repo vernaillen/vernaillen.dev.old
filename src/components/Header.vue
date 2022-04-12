@@ -282,6 +282,7 @@
     </a>
 </template>
 <script>
+
 import { usePreferences } from '@/stores/preferences'
 export default {
   data() {

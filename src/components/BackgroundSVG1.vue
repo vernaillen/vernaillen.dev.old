@@ -1,7 +1,3 @@
-<script setup>
-const stopColor = "#9C8E1B";
-</script>
-
 <template>
     <div>
         <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1]">
@@ -78,3 +74,7 @@ const stopColor = "#9C8E1B";
         </span>
     </div>
 </template>
+
+<script setup lang="ts">
+const stopColor = "#9C8E1B";
+</script>

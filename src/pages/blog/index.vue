@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import HeaderComponent from "@/components/Header.vue"
 import FooterComponent from "@/components/Footer.vue"
 import BreadcrumbComponent from "@/components/Breadcrumb.vue";

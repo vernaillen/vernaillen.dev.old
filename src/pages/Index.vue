@@ -345,7 +345,7 @@
   <footer-component/>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import HeaderComponent from "@/components/Header.vue"
 import FooterComponent from "@/components/Footer.vue"
 </script>

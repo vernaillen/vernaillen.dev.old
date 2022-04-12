@@ -30,8 +30,7 @@
     </div>
 </template>
 
-<script setup>
-import { onMounted } from '@vue/runtime-core';
+<script setup lang="ts">
 
 const props = defineProps({
     pageName: {
@@ -42,10 +41,6 @@ const props = defineProps({
         type: String,
         required: true
     }
-})
-onMounted(() => {
-    console.log('pageName: ' + props.pageName);
-    console.log('path: ' + props.path);
 })
 
 </script>

@@ -63,15 +63,15 @@ export default defineConfig({
   },
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ["src/**/*.spec.js","test/**/*.spec.js"],
+    include: ["src/**/*.test.ts","test/**/*.test.ts"],
     excludeNodeModules: true,
     environment: "jsdom",
     coverage: {
       reporter: ['text', 'lcov'],
       all: true,
-      include: ["src/**/*.js", "src/**/*.vue"],
+      include: ["src/**/*.ts", "src/**/*.vue"],
     },
-    extension: [".js", ".vue"],
+    extension: [".ts", ".vue"],
   },
   ssgOptions: {
     formatting: 'minify',
