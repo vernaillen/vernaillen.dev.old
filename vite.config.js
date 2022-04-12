@@ -69,9 +69,9 @@ export default defineConfig({
     coverage: {
       reporter: ['text', 'lcov'],
       all: true,
-      include: ["src/**/*.ts", "src/**/*.vue"],
+      include: ["src/**/*.vue"],
     },
-    extension: [".ts", ".vue"],
+    extension: [".vue"],
   },
   ssgOptions: {
     formatting: 'minify',
