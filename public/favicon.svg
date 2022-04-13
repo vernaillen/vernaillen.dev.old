@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 914 914" width="32">
+  <style>
+    path.path1 { fill: #231f20; }
+    path.path2 { fill: #9C8E1B; }
+    path.bg { fill: #eeeeee }
+    @media (prefers-color-scheme: dark) {
+      path.path1 { fill: #9C8E1B; }
+      path.path2 { fill: #FFFFFF; }
+      path.bg { fill: #231f20 }
+    }
+  </style>
+  <g fill="none" opacity="transparent">
+      <path class="bg" d="M0 0 H914 V914 H0 V0 Z" />
+      <path class="path1" d="M80 0 H172 V184 H264 V0 H344 V184 H424 V0 H516 V276 H80 Z" />
+      <path class="path2" d="M570 0 H662 V184 H742 V0 H834 V276 H570 Z" />
+  </g>
+</svg>
