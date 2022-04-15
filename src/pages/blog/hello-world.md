@@ -1,6 +1,6 @@
 ---
 title: Hello World
-desc: Happy to introduce my new professional website, built with Vue 3, Vite, Tailwind and Markdown
+desc: Happy to introduce the rewrite of my professional website, now built with Vue 3, Vite, Tailwind and Markdown
 pageName: Hello World
 date: 04/12/2022
 tag:
@@ -12,7 +12,7 @@ tag:
 - all
 category: Vue.js
 author: Wouter Vernaillen
-location: Zottegem
+location: Zottegem, Belgium
 ---
 
 ## Sunset of Vernaillen.com

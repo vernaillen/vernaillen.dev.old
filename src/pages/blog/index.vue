@@ -163,7 +163,8 @@ function getImageUrl(index) {
                 {{post.meta.frontmatter.category}}
               </span>
               <img
-                :src="getImageUrl(index)"
+                v-if="post.meta.frontmatter.thumbnail"
+                :src="'/images/blog' + post.meta.frontmatter.thumbnail"
                 alt="image"
                 class="ud-w-full"
               />

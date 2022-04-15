@@ -1,13 +1,23 @@
+
 <template>
   <div id="audioMotionContainer"></div>
-  <footer class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] animated fadeIn">
+  <footer class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] animated animated-duration-5s fadeIn">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full md:ud-w-1/2 lg:ud-w-4/12 xl:ud-w-5/12 ud-px-4">
           <div class="ud-mb-16 ud-max-w-[360px]">
             <div class="ud-flex ud-items-center">
+             <a
+               class="ud-text-body-color hover:ud-text-primary ud-mr-6"
+               aria-label="social-link"
+               href="https://github.com/vernaillen/"
+               rel="noopener"
+               target="_blank"
+             >
+                <font-awesome-icon :icon="['fab', 'github']" />
+              </a>
               <a
-                class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
+                class="ud-text-body-color hover:ud-text-primary ud-mr-6"
                 aria-label="social-link"
                 href="https://www.linkedin.com/in/woutervernaillen/"
                 rel="noopener"
@@ -16,7 +26,7 @@
                 <font-awesome-icon :icon="['fab', 'linkedin']" />
               </a>
              <a
-               class="ud-text-[#CED3F6] hover:ud-text-primary ud-mr-6"
+               class="ud-text-body-color hover:ud-text-primary ud-mr-6"
                aria-label="social-link"
                href="https://www.instagram.com/woutervernaillen/"
                rel="noopener"
@@ -215,75 +225,7 @@
         </p>
       </div>
     </div>
-    <div class="ud-absolute ud-right-0 ud-top-14 ud-z-[-1]">
-      <svg
-        width="55"
-        height="99"
-        viewBox="0 0 55 99"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
-        <mask
-          id="mask0_94:899"
-          style="mask-type: alpha"
-          maskUnits="userSpaceOnUse"
-          x="0"
-          y="0"
-          width="99"
-          height="99"
-        >
-          <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#9C8E1B" />
-        </mask>
-        <g mask="url(#mask0_94:899)">
-          <circle
-            opacity="0.8"
-            cx="49.5"
-            cy="49.5"
-            r="49.5"
-            fill="url(#paint0_radial_94:899)"
-          />
-          <g opacity="0.8" filter="url(#filter0_f_94:899)">
-            <circle cx="53.8676" cy="26.2061" r="20.3824" fill="white" />
-          </g>
-        </g>
-        <defs>
-          <filter
-            id="filter0_f_94:899"
-            x="12.4852"
-            y="-15.1763"
-            width="82.7646"
-            height="82.7646"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
-            <feGaussianBlur
-              stdDeviation="10.5"
-              result="effect1_foregroundBlur_94:899"
-            />
-          </filter>
-          <radialGradient
-            id="paint0_radial_94:899"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientUnits="userSpaceOnUse"
-            gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
-          >
-            <stop stop-opacity="0.47" />
-            <stop offset="1" stop-opacity="0" />
-          </radialGradient>
-        </defs>
-      </svg>
-    </div>
-    <div class="ud-absolute ud-left-0 ud-bottom-24 ud-z-[-1]">
+    <div class="ud-absolute ud-left-0 ud-bottom-[140px] ud-z-[-1]">
       <svg
         width="79"
         height="94"
@@ -338,8 +280,8 @@
             y2="59.8878"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0.62" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+            <stop :stop-color="stopColor" stop-opacity="0.62" />
+            <stop offset="1" :stop-color="stopColor" stop-opacity="0" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_94:889"
@@ -349,8 +291,8 @@
             y2="20.668"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0.51" />
+            <stop :stop-color="stopColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="stopColor" stop-opacity="0.51" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_94:889"
@@ -360,8 +302,8 @@
             y2="25.1062"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0.62" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+            <stop :stop-color="stopColor" stop-opacity="0.62" />
+            <stop offset="1" :stop-color="stopColor" stop-opacity="0" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_94:889"
@@ -371,8 +313,8 @@
             y2="80.6826"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0.51" />
+            <stop :stop-color="stopColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="stopColor" stop-opacity="0.51" />
           </linearGradient>
           <linearGradient
             id="paint4_linear_94:889"
@@ -382,8 +324,8 @@
             y2="58.2156"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0.62" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+            <stop :stop-color="stopColor" stop-opacity="0.62" />
+            <stop offset="1" :stop-color="stopColor" stop-opacity="0" />
           </linearGradient>
           <linearGradient
             id="paint5_linear_94:889"
@@ -393,15 +335,14 @@
             y2="41.6598"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0.51" />
+            <stop :stop-color="stopColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="stopColor" stop-opacity="0.51" />
           </linearGradient>
         </defs>
       </svg>
     </div>
   </footer>
-  <a
-    href="javascript:void(0)"
+  <a @click="scrollToTop" href="javascript:void(0)"
     class="
       ud-hidden
       ud-items-center
@@ -422,8 +363,7 @@
       ud-shadow-md
     "
   >
-    <span
-      class="
+    <span class="
         ud-w-3
         ud-h-3
         ud-border-t
@@ -435,14 +375,66 @@
     ></span>
   </a>
 </template>
-<script setup lang="ts">
 
-import { onMounted } from '@vue/runtime-core';
-import AudioMotionAnalyzer from 'audiomotion-analyzer';
+<script setup>
+  import { ref, onMounted } from 'vue'
+  import AudioMotionAnalyzer from 'audiomotion-analyzer'
+  const stopColor = ref('#9C8E1B')
 
-const stopColor = "#9C8E1B";
+  function scrollToTop() {
+    console.log('test scrollToTop')
+    const to = 0, duration = 500
+    const element = document.documentElement
+    const start = element.scrollTop
+    const change = to - start
+    const increment = 20
+    let currentTime = 0
+
+    const animateScroll = () => {
+      currentTime += increment
+
+      const val = Math.easeInOutQuad(currentTime, start, change, duration)
+
+      element.scrollTop = val
+
+      if (currentTime < duration) {
+          setTimeout(animateScroll, increment)
+      }
+    }
+    animateScroll()
+  }
+
 
 onMounted(() => {
+    window.onscroll = function () {
+        const ud_header = document.querySelector(".header");
+        const sticky = ud_header.offsetTop;
+
+        if (window.scrollY > sticky) {
+            ud_header.classList.add("sticky");
+        } else {
+            ud_header.classList.remove("sticky");
+        }
+
+        // show or hide the back-top-top button
+        const backToTop = document.querySelector(".back-to-top");
+        if (
+            document.body.scrollTop > 50 ||
+            document.documentElement.scrollTop > 50
+        ) {
+            backToTop.style.display = "flex";
+        } else {
+            backToTop.style.display = "none";
+        }
+    };
+
+    Math.easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+
     const audioEl = document.getElementById('audio');
     try {
       const audioMotion = new AudioMotionAnalyzer(
@@ -477,14 +469,12 @@ onMounted(() => {
     }
 })
 </script>
+
 <style scoped>
-footer.animated {
-  animation-duration: 5s;
-}
-#audioMotionContainer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-}
+  #audioMotionContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  }
 </style>

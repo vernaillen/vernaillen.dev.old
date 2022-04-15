@@ -68,10 +68,8 @@
                   ud-mx-2
                   ud-my-10
                   ud-rounded-md
-                  ud-transition
-                  ud-duration-300
-                  ud-ease-in-out
-                  animated fadeInLeft
+                  animated-duration-3s
+                  animated fadeIn
                 "
               >
                 About Wouter
@@ -91,10 +89,8 @@
                     ud-mx-2
                     ud-my-10
                     ud-rounded-md
-                    ud-transition
-                    ud-duration-300
-                    ud-ease-in-out
-                    animated fadeInRight
+                    animated-duration-3s
+                    animated fadeIn
                   "
                 >
                   Blog
@@ -346,7 +342,7 @@
 </template>
 
 <script setup lang="ts">
-import HeaderComponent from "@/components/Header.vue"
+import HeaderComponent from "@/components/Header.vue";
 import FooterComponent from "@/components/Footer.vue"
 </script>
 

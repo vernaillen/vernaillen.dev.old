@@ -8,7 +8,7 @@ tag:
 - digitalocean
 category: Kubernetes
 author: Wouter Vernaillen
-location: Zottegem
+location: Zottegem, Belgium
 ---
 
 ## Kubernetes

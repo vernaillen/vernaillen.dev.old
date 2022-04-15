@@ -40,4 +40,4 @@ public class Test {
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vernaillen.dev&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vernaillen.dev)
 [![CodeCov](https://badgen.net/codecov/c/github/vernaillen/vernaillen.dev?icon=codecov)](https://codecov.io/gh/vernaillen/vernaillen.dev)
 [![CircleCI](https://badgen.net/circleci/github/vernaillen/vernaillen.dev?icon=circleci)](https://circleci.com/gh/vernaillen/vernaillen.dev)
-[![Uptime](https://badgen.net/uptime-robot/month/m784344425-1a8650bdb79223d01d1a32a1?icon=vercel)](https://stats.uptimerobot.com/5J0vsM4vA)
+[![Uptime](https://badgen.net/uptime-robot/month/m784344425-1a8650bdb79223d01d1a32a1?icon=uptime)](https://stats.uptimerobot.com/5J0vsM4vA)

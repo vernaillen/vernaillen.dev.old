@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import Markdown, { link, meta } from "vite-plugin-md";
 import LinkAttributes from 'markdown-it-link-attributes'
 import Anchor from "markdown-it-anchor";
@@ -13,6 +14,7 @@ import matter from "gray-matter";
 
 export default defineConfig({
   plugins: [
+    vueJsx(), 
     vue({
       include: [/\.vue$/, /\.md$/], // <--
     }),

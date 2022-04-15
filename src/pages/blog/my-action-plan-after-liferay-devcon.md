@@ -1,13 +1,15 @@
 ---
 title: My action plan after Liferay DevCon
 desc: feeling excited
+pageName: Liferay DevCon
 date: 11/16/2015
 tag:
 - liferay
 - devcon
 category: Liferay
 author: Wouter Vernaillen
-location: Zottegem
+location: Darmstadt, Germany
+thumbnail: /devcon/devcon.jpg
 ---
 
 A few weeks ago I went to the Liferay Developer Conference in Darmstadt. Needless to say there were many new features of Liferay 7 presented and lot's of exciting stuff happened at the conference.

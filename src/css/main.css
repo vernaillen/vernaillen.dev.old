@@ -79,3 +79,10 @@ input#checkboxLabel:checked ~ .box span {
     fill: #FFFFFF;
   }
 }
+
+.animated.animated-duration-3s {
+  animation-duration: 3s;
+}
+.animated.animated-duration-5s {
+  animation-duration: 5s;
+}
