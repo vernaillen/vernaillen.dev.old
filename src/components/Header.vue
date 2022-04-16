@@ -65,7 +65,7 @@
                         "></span>
                 </button>
                 <nav
-                    :if="showNavbar" 
+                    :if="navbar.show" 
                     id="navbarCollapse" 
                     class="
                         ud-absolute ud-py-5
@@ -184,6 +184,31 @@
                     <label
                     for="darkToggler"
                     class="
+                        ud-cursor-pointer 
+                        dark:ud-bg-dark-bg
+                        ud-text-black
+                        dark:ud-text-white
+                    "
+                    @click="audioPlayer.play()"
+                    >
+                        <font-awesome-icon :icon="['fas', 'play']" />
+                    </label>
+                    <label
+                    for="darkToggler"
+                    class="
+                        ud-cursor-pointer 
+                        dark:ud-bg-dark-bg
+                        ud-text-black
+                        dark:ud-text-white
+                    "
+                    @click="audioPlayer.stop()"
+                    >
+                        <font-awesome-icon :icon="['fas', 'stop']" />
+                    </label>
+                    <a href="#" @click="audioMotion.toggleFullscreen()">FS</a>
+                    <label
+                    for="darkToggler"
+                    class="
                         ud-cursor-pointer ud-w-14 ud-h-14
                         ud-rounded-full
                         ud-flex
@@ -197,6 +222,7 @@
                     @click="darkToggler"
                     >
                         <svg
+                            id="svgDarkSun"
                             viewBox="0 0 23 23"
                             class="
                             ud-stroke-current
@@ -214,6 +240,7 @@
                             />
                         </svg>
                         <svg
+                            id="svgDarkMoon"
                             viewBox="0 0 25 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -245,50 +272,33 @@
         </div>
     </header>
 </template>
-<script>
-
+<script setup>
+import { computed, inject, reactive, ref } from 'vue'
 import { usePreferences } from '@/stores/preferences'
-export default {
-  data() {
-    return {
-      showNavbar: false
-    }
-  },
-  setup() {
-    const preferences = usePreferences()
-    return { preferences }
-  },
-  methods: {
-    navbarToggler: function(){
-        this.showNavbar = !this.showNavbar;
-    },
-    darkToggler: function(){
-        const html = document.querySelector("html");
-        this.isDark
-            ? html.classList.remove("ud-dark")
-            : html.classList.add("ud-dark");
-        this.preferences.toggleDark();
-    },
-  },
-  computed: {
-      isDark() { 
-          return this.preferences.dark;
-      },
-      navbarTogglerClass() {
-          return this.showNavbar ? "navbarTogglerActive" : "";
-      }, 
-      navbarCollapseClass() {
-          return this.showNavbar ? "" : "ud-hidden";
-      },
-      getWColor() {
-          return "#9c8e1b";
-      },
-      getVColor() {
-          return "#FFFFFF";
-      }
-  }
+const audioPlayer = inject('audioPlayer')
+const audioMotion = inject('audioMotion')
+
+const navbar = reactive({
+    show: false
+})
+const preferences = usePreferences()
+function navbarToggler(){
+    navbar.show = !navbar.show;
+}
+function darkToggler(){
+    const html = document.querySelector("html")
+    preferences.dark
+        ? html.classList.remove("ud-dark")
+        : html.classList.add("ud-dark")
+    preferences.toggleDark()
 }
 
+const navbarTogglerClass = computed(() => { 
+    return navbar.show ? "navbarTogglerActive" : "";
+})
+const navbarCollapseClass = computed(() => { 
+    return navbar.show ? "" : "ud-hidden";
+})
 </script>
 
 <style scoped>
@@ -308,5 +318,9 @@ button#navbarToggler:focus {
     background: inherit;
     background-color: inherit !important;
     box-shadow: inherit !important;
+}
+#svgDarkSun:hover path,
+#svgDarkMoon:hover path {
+    @apply stroke-primary
 }
 </style>

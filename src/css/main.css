@@ -68,7 +68,7 @@ input#checkboxLabel:checked ~ .box span {
   height: 2px;
 }
 
-@layer utilities {
+@layer components {
   .fill-primary {
     fill: #9C8E1B;
   }
@@ -77,6 +77,15 @@ input#checkboxLabel:checked ~ .box span {
   }
   .fill-white {
     fill: #FFFFFF;
+  }
+  .stroke-primary {
+    stroke: #9C8E1B;
+  }
+  .stroke-black {
+    stroke: #231F20;
+  }
+  .stroke-white {
+    stroke: #FFFFFF;
   }
 }
 

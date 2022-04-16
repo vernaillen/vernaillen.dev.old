@@ -1,6 +1,4 @@
-
 <template>
-  <div id="audioMotionContainer"></div>
   <footer class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] animated animated-duration-5s fadeIn">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
@@ -34,8 +32,6 @@
              >
                 <font-awesome-icon :icon="['fab', 'instagram']" />
               </a>
-              <br/><br/>
-              <audio id="audio" src="/music/RackNomad-MeditativeMelody.mp3" controls crossorigin="anonymous"></audio>
             </div>
           </div>
         </div>
@@ -376,34 +372,31 @@
   </a>
 </template>
 
-<script setup>
-  import { ref, onMounted } from 'vue'
-  import AudioMotionAnalyzer from 'audiomotion-analyzer'
-  const stopColor = ref('#9C8E1B')
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+const stopColor = ref('#9C8E1B')
 
-  function scrollToTop() {
-    console.log('test scrollToTop')
-    const to = 0, duration = 500
-    const element = document.documentElement
-    const start = element.scrollTop
-    const change = to - start
-    const increment = 20
-    let currentTime = 0
+function scrollToTop() {
+  const to = 0, duration = 500
+  const element = document.documentElement
+  const start = element.scrollTop
+  const change = to - start
+  const increment = 20
+  let currentTime = 0
 
-    const animateScroll = () => {
-      currentTime += increment
+  const animateScroll = () => {
+    currentTime += increment
 
-      const val = Math.easeInOutQuad(currentTime, start, change, duration)
+    const val = Math.easeInOutQuad(currentTime, start, change, duration)
 
-      element.scrollTop = val
+    element.scrollTop = val
 
-      if (currentTime < duration) {
-          setTimeout(animateScroll, increment)
-      }
+    if (currentTime < duration) {
+        setTimeout(animateScroll, increment)
     }
-    animateScroll()
   }
-
+  animateScroll()
+}
 
 onMounted(() => {
     window.onscroll = function () {
@@ -434,47 +427,5 @@ onMounted(() => {
         t--;
         return (-c / 2) * (t * (t - 2) - 1) + b;
     };
-
-    const audioEl = document.getElementById('audio');
-    try {
-      const audioMotion = new AudioMotionAnalyzer(
-        document.getElementById('audioMotionContainer'),
-        { 
-          source: audioEl, // main audio source is the HTML <audio> element
-          audioCtx: new AudioContext(),
-          alphaBars: false,
-          barSpace: 0.5,
-          bgAlpha: 0.5,
-          sensitivity: 4,
-          smoothing: 0.4,
-          showBgColor: false,
-          overlay: true,
-          showLeds: false,
-          showPeaks: false,
-          showScale: false,
-          gradient: 'classic',
-          mode: 1,
-          height: 60,
-          showScaleX: false,
-          showScaleY: false,
-          colorStops: [
-            stopColor,
-            stopColor
-          ]
-        }
-      );
-    }
-    catch( err ) {
-      console.error(err);
-    }
 })
 </script>
-
-<style scoped>
-  #audioMotionContainer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-  }
-</style>
