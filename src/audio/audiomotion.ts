@@ -44,6 +44,16 @@ export default function () {
             options.audioCtx = Tone.getContext()
             this.options = { ...this.defaultOptions, ...options }
             this.audioMotionObj = new AudioMotionAnalyzer(el, options);
+
+            const gradientOptions = {
+                bgColor: '#000000',
+                colorStops: [
+                    { pos: 0, color: '#9C8E1B' },
+                    { pos: 1, color: '#9C8E1B' },
+                ]
+            }
+            this.audioMotionObj.registerGradient('my-gradient', gradientOptions);
+            this.audioMotionObj.setOptions({ "gradient": "my-gradient" })
         }
         getAnalyzer () {
             return this.audioMotionObj._analyzer

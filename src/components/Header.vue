@@ -101,19 +101,25 @@
             <div>
               <label
                 for="darkToggler"
-                class="ud-cursor-pointer dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
+                class="ud-p-2 ud-cursor-pointer dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
                 @click="audioPlayer.play()"
               >
                 <font-awesome-icon :icon="['fas', 'play']" />
               </label>
               <label
                 for="darkToggler"
-                class="ud-cursor-pointer dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
+                class="ud-p-2 ud-cursor-pointer dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
                 @click="audioPlayer.stop()"
               >
                 <font-awesome-icon :icon="['fas', 'stop']" />
               </label>
-              <a href="#" @click="audioMotion.toggleFullscreen()">FS</a>
+              <label
+                for="darkToggler"
+                class="ud-p-2 ud-cursor-pointer dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
+                @click="audioPlayer.stop()"
+              >
+                <a href="#" @click="audioMotion.toggleFullscreen()">FS</a>
+              </label>
               <label
                 for="darkToggler"
                 class="ud-cursor-pointer ud-w-14 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"

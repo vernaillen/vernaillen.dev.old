@@ -6,7 +6,7 @@ export default function () {
             this.audioPlayer = new Tone.Player("/music/RackNomad-MeditativeMelody.mp3").toDestination()
         }
         play () {
-            this.audioPlayer.volume.value = 0.6
+            this.audioPlayer.volume.value = 0.1
             this.audioPlayer.start()
         }
         stop () {
