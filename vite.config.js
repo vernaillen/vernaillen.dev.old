@@ -16,7 +16,7 @@ export default defineConfig({
   plugins: [
     vueJsx(), 
     vue({
-      include: [/\.vue$/, /\.md$/], // <--
+      include: [/\.vue$/, /\.md$/],
     }),
     Markdown({
       wrapperComponent: "markdown-wrapper",

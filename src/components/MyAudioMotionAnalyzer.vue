@@ -9,7 +9,7 @@ const audioPlayer = inject('audioPlayer')
 
 const options = 
   { 
-    alphaBars: true,
+    alphaBars: false,
     barSpace: 0.5,
     bgAlpha: 0.5,
     sensitivity: 2,
