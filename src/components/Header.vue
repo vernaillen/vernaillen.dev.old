@@ -98,7 +98,7 @@
             </nav>
           </div>
           <div class="ud-flex ud-justify-end ud-items-center ud-pr-16 lg:ud-pr-0">
-            <ul class="ud-block lg:ud-flex">
+            <ul class="ud-block ud-flex">
               <li class="ud-relative ud-group">
                 <player-controls />
               </li>
