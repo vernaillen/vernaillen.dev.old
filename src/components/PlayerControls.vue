@@ -24,12 +24,13 @@
 <script setup>
 import { computed, inject, watch, ref } from "vue";
 const audioPlayer = inject("audioPlayer");
-const isLoaded = ref(null);
+let isLoaded = ref(false);
 let isPlaying = ref(false);
-let state = ref(audioPlayer.state());
+let state = ref("stopped");
 
 async function checkIsBufferLoaded() {
-  isLoaded.value = await audioPlayer.isLoaded();
+  await audioPlayer.isLoaded();
+  isLoaded.value = true;
 }
 async function checkState() {
   state.value = await audioPlayer.state();
@@ -37,5 +38,7 @@ async function checkState() {
 }
 checkIsBufferLoaded();
 checkState();
-watch(state, checkState);
+watch(state, (newState, oldState) => {
+  console.log("player " + state.value);
+});
 </script>
