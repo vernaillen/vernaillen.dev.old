@@ -26,7 +26,7 @@ import { computed, inject, watch, ref } from "vue";
 const audioPlayer = inject("audioPlayer");
 let isLoaded = ref(false);
 let isPlaying = ref(false);
-let state = ref("stopped");
+let state = ref(audioPlayer.state());
 
 async function checkIsBufferLoaded() {
   await audioPlayer.isLoaded();
