@@ -99,20 +99,7 @@
           </div>
           <div class="ud-flex ud-justify-end ud-items-center ud-pr-16 lg:ud-pr-0">
             <div>
-              <label
-                for="darkToggler"
-                class="ud-p-2 ud-cursor-pointer dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
-                @click="audioPlayer.play()"
-              >
-                <font-awesome-icon :icon="['fas', 'play']" />
-              </label>
-              <label
-                for="darkToggler"
-                class="ud-p-2 ud-cursor-pointer dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
-                @click="audioPlayer.stop()"
-              >
-                <font-awesome-icon :icon="['fas', 'stop']" />
-              </label>
+              <player-controls />
               <label
                 for="darkToggler"
                 class="ud-cursor-pointer ud-w-14 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
@@ -160,8 +147,7 @@
 <script setup>
 import { computed, inject, reactive, ref } from "vue";
 import { usePreferences } from "@/stores/preferences";
-const audioPlayer = inject("audioPlayer");
-const audioMotion = inject("audioMotion");
+import PlayerControls from "./PlayerControls.vue";
 
 const navbar = reactive({
   show: false,

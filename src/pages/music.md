@@ -8,6 +8,8 @@ Besides my passion for web development (which is the main focus of this website)
 
 Recently I've been having a lot of fun with music production as well as [web audio](https://webaudio.github.io/web-audio-api/#introductory) programming.
 
+<player-controls></player-controls>
+
 On this page you can see the 2 coming together:
 
 * Played around with [Ableton Live](https://www.ableton.com/en/live/), [Arturia Mini V](https://www.arturia.com/products/analog-classics/mini-v/overview), [GSi VB3-II](https://www.genuinesoundware.com/?a=showproduct&b=44) and [Roland TR-8S](https://www.roland.com/global/products/tr-8s/) and uploaded 2 test tracks to [SoundCloud](https://soundcloud.com/woutervernaillen).
