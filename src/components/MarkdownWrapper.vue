@@ -1,110 +1,101 @@
 <script setup>
-import HeaderComponent from "@/components/Header.vue"
-import FooterComponent from "@/components/Footer.vue"
+import HeaderComponent from "@/components/Header.vue";
+import FooterComponent from "@/components/Footer.vue";
 import BackgroundSVG1 from "@/components/BackgroundSVG1.vue";
 import BreadcrumbComponent from "@/components/Breadcrumb.vue";
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter, useRoute } from "vue-router";
 
-const router = useRouter()
-const route = useRoute()
+const router = useRouter();
+const route = useRoute();
 
 const props = defineProps({
   frontmatter: {
     type: Object,
     required: true,
   },
-})
+});
 </script>
 
 <template>
-  <header-component/>
+  <header-component />
   <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
-        <breadcrumb-component :pageName="frontmatter.pageName ? frontmatter.title : ''" :path="route.path"/>
+        <breadcrumb-component
+          :pageName="frontmatter.pageName ? frontmatter.title : ''"
+          :path="route.path"
+        />
         <div class="ud-w-full ud-px-4">
           <div v-if="frontmatter.title" class="ud-mb-12 md:ud-mb-0">
             <h1
-              class="
-                ud-font-bold 
-                ud-text-black
-                dark:ud-text-white
-                ud-text-2xl
-                sm:ud-text-3xl
-                ud-mb-5
-              "
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5"
             >
               {{ frontmatter.title }}
             </h1>
-            <p v-if="frontmatter.desc" :style="`background: ${frontmatter.bgColor};`"
-              class="
-                ud-font-medium
-                ud-text-base
-                ud-text-body-color
-                ud-leading-relaxed
-                ud-mb-8
-              "
+            <p
+              v-if="frontmatter.desc"
+              :style="`background: ${frontmatter.bgColor};`"
+              class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
             >
               {{ frontmatter.desc }}
             </p>
           </div>
 
           <div class="ud-flex ud-flex-wrap ud-items-center">
-            <div v-if="frontmatter.author" class="ud-flex ud-items-center ud-mr-5 ud-mb-5">
-              <div v-if="frontmatter.author == 'Wouter Vernaillen'"
-                class="
-                  ud-max-w-[30px]
-                  ud-w-full
-                  ud-h-[30px]
-                  ud-rounded-full
-                  ud-overflow-hidden
-                  ud-mr-4
-                "
+            <div
+              v-if="frontmatter.author"
+              class="ud-flex ud-items-center ud-mr-5 ud-mb-5"
+            >
+              <div
+                v-if="frontmatter.author == 'Wouter Vernaillen'"
+                class="ud-max-w-[20px] ud-w-full ud-h-[20px] ud-rounded-full ud-overflow-hidden ud-mr-2"
               >
-                <img
-                  src="/images/wouter.jpg"
-                  alt="author"
-                  class="ud-w-full"
-                />
+                <img src="/images/wouter.jpg" alt="author" class="ud-w-full" />
               </div>
               <div class="ud-w-full">
-                <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
+                <p
+                  class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-small ud-mr-2"
+                >
                   <router-link to="/about">{{ frontmatter.author }}</router-link>
                 </p>
               </div>
             </div>
-            <div v-if="frontmatter.date" class="ud-flex ud-items-center ud-mr-5 ud-mb-5">
-              <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                <font-awesome-icon :icon="['fas', 'calendar-days']" /><span class="ud-mr-3 fa-solid fa-calendar-days"/> {{ $formatDate(frontmatter.date) }}
+            <div v-if="frontmatter.date" class="ud-flex ud-items-center ud-mr-2 ud-mb-5">
+              <p
+                class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-medium ud-mr-3"
+              >
+                <font-awesome-icon :icon="['fas', 'calendar-days']" /><span
+                  class="ud-mr-2 fa-solid fa-calendar-days"
+                />
+                {{ $formatDate(frontmatter.date) }}
               </p>
             </div>
-            <div v-if="frontmatter.location" class="ud-flex ud-items-centerud-mr-5 ud-mb-5">
-              <p class="ud-flex ud-items-center ud-text-base ud-text-body-color ud-font-medium ud-mr-3">
-                <font-awesome-icon :icon="['fas', 'location-pin']" /><span class="ud-mr-3 fa-solid fa-location-pin"/> {{ frontmatter.location }}
+            <div
+              v-if="false && frontmatter.location"
+              class="ud-flex ud-items-center ud-mr-2 ud-mb-5"
+            >
+              <p
+                class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-medium ud-mr-2"
+              >
+                <font-awesome-icon :icon="['fas', 'location-pin']" /><span
+                  class="ud-mr-2 fa-solid fa-location-pin"
+                />
+                {{ frontmatter.location }}
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <BackgroundSVG1/>
+    <BackgroundSVG1 />
   </section>
-  <section class="ud-relative ud-z-10 ud-pt-[80px] ud-pb-[120px]">
+  <section class="ud-relative ud-z-10 ud-pt-[20px] ud-pb-[100px]">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full ud-px-4">
+        <div class="ud-w-full ud-py-4 ud-px-8 md:ud-px-12">
           <div class="ud-mx-auto">
             <p
-              class="
-                ud-font-medium ud-text-lg
-                md:ud-text-xl
-                ud-leading-relaxed
-                md:ud-leading-relaxed
-                ud-text-body-color
-                dark:ud-text-white dark:ud-opacity-90
-                ud-mb-12
-                animated fadeIn
-              "
+              class="ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 ud-mb-12 animated fadeIn"
             >
               <slot />
             </p>
@@ -113,5 +104,5 @@ const props = defineProps({
       </div>
     </div>
   </section>
-  <footer-component/>
+  <footer-component />
 </template>

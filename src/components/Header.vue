@@ -105,7 +105,7 @@
               <li>
                 <label
                   for="darkToggler"
-                  class="ud-cursor-pointer ud-w-14 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
+                  class="ud-cursor-pointer ud-w-10 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
                   @click="darkToggler"
                 >
                   <svg

@@ -1,48 +1,38 @@
 <script setup lang="ts">
-import HeaderComponent from "@/components/Header.vue"
-import FooterComponent from "@/components/Footer.vue"
+import HeaderComponent from "@/components/Header.vue";
+import FooterComponent from "@/components/Footer.vue";
 import BreadcrumbComponent from "@/components/Breadcrumb.vue";
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router";
 
-const router = useRouter()
-const posts = router.getRoutes()
-  .filter(i => i.path.startsWith('/blog/') && i.meta.frontmatter.date)
-  .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date))
+const router = useRouter();
+const posts = router
+  .getRoutes()
+  .filter((i) => i.path.startsWith("/blog/") && i.meta.frontmatter.date)
+  .sort(
+    (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date)
+  );
 
 function getImageUrl(index) {
-  const imgNr = index%3 + 1;
-  return '/images/blog/blog-0' + imgNr + '.jpg'
+  const imgNr = (index % 3) + 1;
+  return "/images/blog/blog-0" + imgNr + ".jpg";
 }
 </script>
 
 <template>
-  <HeaderComponent/>
+  <HeaderComponent />
   <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
-
-        <breadcrumb-component pageName="Blog" path="/blog"/>
+        <breadcrumb-component pageName="Blog" path="/blog" />
         <div class="ud-w-full md:ud-w-8/12 lg:ud-w-7/12 ud-px-4">
           <div class="ud-max-w-[570px] ud-mb-12 md:ud-mb-0">
             <h1
-              class="
-                ud-font-bold 
-                ud-text-black
-                dark:ud-text-white
-                ud-text-2xl
-                sm:ud-text-3xl
-                ud-mb-5
-              "
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5"
             >
               Blog
             </h1>
-            <p class="
-                ud-font-medium
-                ud-text-base
-                ud-text-body-color
-                ud-leading-relaxed
-                ud-mb-8
-              "
+            <p
+              class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
             >
               Some thoughts and ramdom writings
             </p>
@@ -126,41 +116,25 @@ function getImageUrl(index) {
       </span>
     </div>
   </section>
-  <section class="ud-pt-[80px] ud-pb-[120px]">
+  <section class="ud-pt-[20px] ud-pb-[100px]">
     <div class="ud-container">
-      <div class="ud-flex ud-flex-wrap ud-mx-[-16px] ud-justify-center">
-        <div v-for="(post, index) in posts" :key="post.path"
-         class="ud-w-full md:ud-w-2/3 lg:ud-w-1/2 xl:ud-w-1/3 ud-px-4">
+      <div
+        class="ud-flex ud-flex-wrap ud-mx-[-16px] ud-justify-center ud-py-4 ud-px-2 md:ud-px-6"
+      >
+        <div
+          v-for="(post, index) in posts"
+          :key="post.path"
+          class="ud-w-full md:ud-w-2/3 lg:ud-w-1/2 xl:ud-w-1/3 ud-px-4"
+        >
           <div
-            class="
-              ud-relative ud-bg-white
-              dark:ud-bg-dark
-              ud-shadow-one ud-rounded-md ud-overflow-hidden ud-mb-10
-              animated fadeIn
-            "
+            class="ud-relative ud-bg-white dark:ud-bg-dark ud-shadow-one ud-rounded-md ud-overflow-hidden ud-mb-10 animated fadeIn"
           >
-            <router-link
-              :to="post.path"
-              class="ud-w-full ud-block ud-relative"
-            >
-              <span v-if="post.meta.frontmatter.category"
-                class="
-                  ud-absolute
-                  ud-top-6
-                  ud-right-6
-                  ud-bg-primary
-                  ud-rounded-full
-                  ud-inline-flex
-                  ud-items-center
-                  ud-justify-center
-                  ud-py-2
-                  ud-px-4
-                  ud-font-semibold
-                  ud-text-sm
-                  ud-text-white
-                "
+            <router-link :to="post.path" class="ud-w-full ud-block ud-relative">
+              <span
+                v-if="post.meta.frontmatter.category"
+                class="ud-absolute ud-top-6 ud-right-6 ud-bg-primary ud-rounded-full ud-inline-flex ud-items-center ud-justify-center ud-py-2 ud-px-4 ud-font-semibold ud-text-sm ud-text-white"
               >
-                {{post.meta.frontmatter.category}}
+                {{ post.meta.frontmatter.category }}
               </span>
               <img
                 v-if="post.meta.frontmatter.thumbnail"
@@ -170,102 +144,51 @@ function getImageUrl(index) {
               />
             </router-link>
             <div
-              class="
-                ud-p-6
-                sm:ud-p-8
-                md:ud-py-8 md:ud-px-6
-                lg:ud-p-8
-                xl:ud-py-8 xl:ud-px-5
-                2xl:ud-p-8
-              "
+              class="ud-p-6 sm:ud-p-8 md:ud-py-8 md:ud-px-6 lg:ud-p-8 xl:ud-py-8 xl:ud-px-5 2xl:ud-p-8"
             >
               <h3>
                 <router-link
                   :to="post.path"
-                  class="
-                    ud-font-bold ud-text-black
-                    dark:ud-text-white
-                    ud-text-xl
-                    sm:ud-text-2xl
-                    ud-block ud-mb-4
-                    hover:ud-text-primary
-                    dark:hover:ud-text-primary
-                  "
+                  class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl sm:ud-text-2xl ud-block ud-mb-4 hover:ud-text-primary dark:hover:ud-text-primary"
                 >
-                  {{post.meta.frontmatter.title}}
+                  {{ post.meta.frontmatter.title }}
                 </router-link>
               </h3>
               <p
-                class="
-                  ud-text-base
-                  ud-text-body-color
-                  ud-font-medium
-                  ud-pb-6
-                  ud-mb-6
-                  ud-border-b
-                  ud-border-body-color
-                  ud-border-opacity-10
-                  dark:ud-border-white dark:ud-border-opacity-10
-                "
+                class="ud-text-base ud-text-body-color ud-font-medium ud-pb-6 ud-mb-6 ud-border-b ud-border-body-color ud-border-opacity-10 dark:ud-border-white dark:ud-border-opacity-10"
               >
-                {{post.meta.frontmatter.desc}}
+                {{ post.meta.frontmatter.desc }}
               </p>
               <div class="ud-flex">
                 <div
-                  class="
-                    ud-flex ud-items-center ud-pr-5 ud-mr-5
-                    xl:ud-pr-3
-                    2xl:ud-pr-5
-                    xl:ud-mr-3
-                    2xl:ud-mr-5
-                    ud-border-r ud-border-body-color ud-border-opacity-10
-                    dark:ud-border-white dark:ud-border-opacity-10
-                  "
+                  class="ud-flex ud-pr-5 ud-mr-5 xl:ud-pr-3 2xl:ud-pr-5 xl:ud-mr-3 2xl:ud-mr-5 ud-border-r ud-border-body-color ud-border-opacity-10 dark:ud-border-white dark:ud-border-opacity-10"
                 >
                   <div
-                    class="
-                      ud-max-w-[40px]
-                      ud-w-full
-                      ud-h-[40px]
-                      ud-rounded-full
-                      ud-overflow-hidden
-                      ud-mr-4
-                    "
+                    class="ud-max-w-[20px] ud-w-full ud-h-[20px] ud-rounded-full ud-overflow-hidden ud-mr-4"
                   >
-                    <img
-                      src="/images/wouter.jpg"
-                      alt="author"
-                      class="ud-w-full"
-                    />
+                    <img src="/images/wouter.jpg" alt="author" class="ud-w-full" />
                   </div>
                   <div class="ud-w-full">
                     <h4
-                      class="
-                        ud-text-sm ud-font-medium ud-text-dark
-                        dark:ud-text-white
-                        ud-mb-1
-                      "
+                      class="ud-text-xs ud-font-medium ud-text-dark dark:ud-text-white ud-mb-1"
                     >
-                      By
                       <router-link
                         to="/about"
-                        class="
-                          ud-text-dark
-                          dark:ud-text-white
-                          hover:ud-text-primary
-                          dark:hover:ud-text-primary
-                        "
+                        class="ud-text-dark dark:ud-text-white hover:ud-text-primary dark:hover:ud-text-primary"
                       >
-                        {{post.meta.frontmatter.author}}
+                        {{ post.meta.frontmatter.author }}
                       </router-link>
                     </h4>
-                    <p class="ud-text-xs ud-text-body-color">
-                      Full Stack Developer
-                    </p>
+                    <p class="ud-text-xs ud-text-body-color">Full Stack Developer</p>
                   </div>
                 </div>
                 <div class="ud-inline-block">
-                  <p class="ud-text-xs ud-text-body-color">{{ $formatDate(post.meta.frontmatter.date) }}</p>
+                  <p class="ud-text-xs ud-text-body-color">
+                    <font-awesome-icon :icon="['fas', 'calendar-days']" /><span
+                      class="ud-mr-2 fa-solid fa-calendar-days"
+                    />
+                    {{ $formatDate(post.meta.frontmatter.date) }}
+                  </p>
                 </div>
               </div>
             </div>
@@ -274,5 +197,5 @@ function getImageUrl(index) {
       </div>
     </div>
   </section>
-  <FooterComponent/>
+  <FooterComponent />
 </template>
