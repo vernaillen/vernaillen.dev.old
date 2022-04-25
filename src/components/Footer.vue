@@ -189,8 +189,8 @@
             y2="59.8878"
             gradientUnits="userSpaceOnUse"
           >
-            <stop :stop-color="stopColor" stop-opacity="0.62" />
-            <stop offset="1" :stop-color="stopColor" stop-opacity="0" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0.62" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_94:889"
@@ -200,8 +200,8 @@
             y2="20.668"
             gradientUnits="userSpaceOnUse"
           >
-            <stop :stop-color="stopColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="stopColor" stop-opacity="0.51" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.51" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_94:889"
@@ -211,8 +211,8 @@
             y2="25.1062"
             gradientUnits="userSpaceOnUse"
           >
-            <stop :stop-color="stopColor" stop-opacity="0.62" />
-            <stop offset="1" :stop-color="stopColor" stop-opacity="0" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0.62" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_94:889"
@@ -222,8 +222,8 @@
             y2="80.6826"
             gradientUnits="userSpaceOnUse"
           >
-            <stop :stop-color="stopColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="stopColor" stop-opacity="0.51" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.51" />
           </linearGradient>
           <linearGradient
             id="paint4_linear_94:889"
@@ -233,8 +233,8 @@
             y2="58.2156"
             gradientUnits="userSpaceOnUse"
           >
-            <stop :stop-color="stopColor" stop-opacity="0.62" />
-            <stop offset="1" :stop-color="stopColor" stop-opacity="0" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0.62" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
           </linearGradient>
           <linearGradient
             id="paint5_linear_94:889"
@@ -244,8 +244,8 @@
             y2="41.6598"
             gradientUnits="userSpaceOnUse"
           >
-            <stop :stop-color="stopColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="stopColor" stop-opacity="0.51" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.51" />
           </linearGradient>
         </defs>
       </svg>
@@ -264,7 +264,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-const stopColor = ref("#9C8E1B");
+import { usePreferences } from "@/stores/preferences";
+const preferences = usePreferences();
 
 function scrollToTop() {
   const to = 0,

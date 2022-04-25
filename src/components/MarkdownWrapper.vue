@@ -1,7 +1,7 @@
 <script setup>
 import HeaderComponent from "@/components/Header.vue";
 import FooterComponent from "@/components/Footer.vue";
-import BackgroundSVG1 from "@/components/BackgroundSVG1.vue";
+import BackgroundSVG1 from "@/components/svg/BackgroundSVG1.vue";
 import BreadcrumbComponent from "@/components/Breadcrumb.vue";
 import { useRouter, useRoute } from "vue-router";
 

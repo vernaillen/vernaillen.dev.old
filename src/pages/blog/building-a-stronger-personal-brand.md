@@ -10,7 +10,7 @@ tag:
 category: Branding
 author: Wouter Vernaillen
 location: Bali, Indonesia
-thumbnail: /personal-brand/balivolcanosunset_thumb.png
+thumbnail: /balivolcanosunset_thumb.png
 ---
 
 January 2017 was a month that I will always remember. I left Belgium on January 6th for what would be a 2,5 months journey in Asia. For the first leg of my trip, I decided to spend 6 weeks in Bali because I wanted to focus on some side projects and get stuff done.

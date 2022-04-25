@@ -1,99 +1,40 @@
-<template>  
-  <header-component/>
+<template>
+  <header-component />
   <section
     id="home"
-    class="
-      ud-relative ud-z-10 ud-pt-[160px] ud-pb-[120px]
-      xl:ud-pt-[190px] xl:ud-pb-[160px]
-      2xl:ud-pt-[220px] 2xl:ud-pb-[200px]
-    "
+    class="ud-relative ud-z-10 ud-pt-[160px] ud-pb-[120px] xl:ud-pt-[190px] xl:ud-pb-[160px] 2xl:ud-pt-[220px] 2xl:ud-pb-[200px]"
   >
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full ud-px-4">
           <div class="ud-mx-auto ud-max-w-[570px] ud-text-center animated fadeIn">
             <h1
-              class="
-                ud-text-black
-                dark:ud-text-white
-                ud-font-bold ud-text-3xl
-                sm:ud-text-4xl
-                md:ud-text-5xl
-                ud-leading-tight
-                sm:ud-leading-tight
-                md:ud-leading-tight
-                ud-mb-20
-              "
+              class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl sm:ud-text-4xl md:ud-text-5xl ud-leading-tight sm:ud-leading-tight md:ud-leading-tight ud-mb-20"
             >
               Wouter Vernaillen
             </h1>
             <p
-              class="
-                ud-font-medium ud-text-lg
-                md:ud-text-xl
-                ud-leading-relaxed
-                md:ud-leading-relaxed
-                ud-text-body-color
-                dark:ud-text-white dark:ud-opacity-90
-                ud-mt-24
-                ud-mb-10
-              "
+              class="ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 ud-mt-24 ud-mb-10"
             >
               Freelance Full Stack Developer
             </p>
             <p
-              class="
-                ud-font-medium ud-text-md
-                md:ud-text-lg
-                ud-leading-relaxed
-                md:ud-leading-relaxed
-                ud-text-body-color
-                dark:ud-text-white dark:ud-opacity-90
-                ud-mb-10
-              "
+              class="ud-font-medium ud-text-md md:ud-text-lg ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 ud-mb-10"
             >
               Java, Spring, Vue, Angular & Liferay
             </p>
             <div class="ud-flex ud-items-center ud-justify-center ud-mt-10">
               <router-link
                 to="/about"
-                class="
-                  ud-text-base
-                  ud-font-semibold
-                  ud-text-white
-                  ud-bg-primary
-                  ud-py-3
-                  ud-px-6
-                  hover:ud-bg-opacity-80
-                  ud-mx-2
-                  ud-my-10
-                  ud-rounded-md
-                  animated-duration-3s
-                  animated fadeIn
-                "
+                class="ud-text-base ud-font-semibold ud-text-white ud-bg-primary ud-py-3 ud-px-6 hover:ud-bg-opacity-80 ud-mx-2 ud-my-10 ud-rounded-md animated-duration-3s animated fadeIn"
               >
                 About Wouter
               </router-link>
               <router-link
-                  to="/blog"
-                  class="
-                    ud-text-base
-                    ud-font-semibold
-                    ud-text-black
-                    ud-bg-black
-                    ud-bg-opacity-10
-                    dark:ud-text-white dark:ud-bg-white dark:ud-bg-opacity-20
-                    ud-py-3 ud-px-6
-                    hover:ud-bg-opacity-20
-                    dark:hover:ud-bg-opacity-20
-                    ud-mx-2
-                    ud-my-10
-                    ud-rounded-md
-                    animated-duration-3s
-                    animated fadeIn
-                  "
-                >
-                  Blog
+                to="/blog"
+                class="ud-text-base ud-font-semibold ud-text-black ud-bg-black ud-bg-opacity-10 dark:ud-text-white dark:ud-bg-white dark:ud-bg-opacity-20 ud-py-3 ud-px-6 hover:ud-bg-opacity-20 dark:hover:ud-bg-opacity-20 ud-mx-2 ud-my-10 ud-rounded-md animated-duration-3s animated fadeIn"
+              >
+                Blog
               </router-link>
             </div>
           </div>
@@ -110,18 +51,8 @@
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
-        <circle
-          cx="17.9997"
-          cy="182"
-          r="18"
-          fill="url(#paint1_radial_25:217)"
-        />
-        <circle
-          cx="76.9997"
-          cy="288"
-          r="34"
-          fill="url(#paint2_radial_25:217)"
-        />
+        <circle cx="17.9997" cy="182" r="18" fill="url(#paint1_radial_25:217)" />
+        <circle cx="76.9997" cy="288" r="34" fill="url(#paint2_radial_25:217)" />
         <circle
           cx="325.486"
           cy="302.87"
@@ -162,8 +93,8 @@
             y2="288"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+            <stop :stop-color="preferences.primaryColor" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
           </linearGradient>
           <radialGradient
             id="paint1_radial_25:217"
@@ -173,8 +104,12 @@
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
           >
-            <stop offset="0.145833" stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0.08" />
+            <stop
+              offset="0.145833"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.08" />
           </radialGradient>
           <radialGradient
             id="paint2_radial_25:217"
@@ -184,8 +119,12 @@
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
           >
-            <stop offset="0.145833" stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0.08" />
+            <stop
+              offset="0.145833"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.08" />
           </radialGradient>
           <linearGradient
             id="paint3_linear_25:217"
@@ -195,8 +134,8 @@
             y2="351.421"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+            <stop :stop-color="preferences.primaryColor" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
           </linearGradient>
           <linearGradient
             id="paint4_linear_25:217"
@@ -206,7 +145,7 @@
             y2="448.882"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" />
+            <stop :stop-color="preferences.primaryColor" />
             <stop offset="1" stop-color="white" stop-opacity="0" />
           </linearGradient>
           <linearGradient
@@ -217,7 +156,7 @@
             y2="470"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" />
+            <stop :stop-color="preferences.primaryColor" />
             <stop offset="1" stop-color="white" stop-opacity="0" />
           </linearGradient>
           <linearGradient
@@ -228,8 +167,8 @@
             y2="338.63"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+            <stop :stop-color="preferences.primaryColor" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -276,8 +215,8 @@
             y2="212.24"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="preferences.primaryColor" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_25:218"
@@ -287,8 +226,8 @@
             y2="212.24"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="preferences.primaryColor" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_25:218"
@@ -298,8 +237,8 @@
             y2="212.24"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="preferences.primaryColor" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_25:218"
@@ -309,8 +248,8 @@
             y2="210.214"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" stop-opacity="0" />
-            <stop offset="1" stop-color="#9C8E1B" />
+            <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop offset="1" :stop-color="preferences.primaryColor" />
           </linearGradient>
           <linearGradient
             id="paint4_linear_25:218"
@@ -320,8 +259,8 @@
             y2="99.5816"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#9C8E1B" />
-            <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+            <stop :stop-color="preferences.primaryColor" />
+            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
           </linearGradient>
           <radialGradient
             id="paint5_radial_25:218"
@@ -338,25 +277,27 @@
       </svg>
     </div>
   </section>
-  <footer-component/>
+  <footer-component />
 </template>
 
 <script setup lang="ts">
 import HeaderComponent from "@/components/Header.vue";
-import FooterComponent from "@/components/Footer.vue"
+import FooterComponent from "@/components/Footer.vue";
+import { usePreferences } from "@/stores/preferences";
+const preferences = usePreferences();
 </script>
 
 <style scoped>
 @media (max-width: 959px) {
   .svg-right svg,
   .svg-left svg {
-      width: 50%;
+    width: 50%;
   }
   .svg-right svg {
-      margin-left: auto;
+    margin-left: auto;
   }
   .svg-left svg {
-      margin-right: auto;
+    margin-right: auto;
   }
 }
 </style>

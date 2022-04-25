@@ -6,7 +6,7 @@ date: 07/24/2016
 category: Liferay
 author: Wouter Vernaillen
 location: Zottegem, Belgium
-thumbnail: /devnomads/devnomads.png
+thumbnail: /devnomads_thumb.png
 ---
 
 Since I wrote the previous article on this blog, about my plans after Liferay DevCon last year, I've been testing every alpha, beta, rc and ga release of the new Liferay 7.

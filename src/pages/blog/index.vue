@@ -3,6 +3,7 @@ import HeaderComponent from "@/components/Header.vue";
 import FooterComponent from "@/components/Footer.vue";
 import BreadcrumbComponent from "@/components/Breadcrumb.vue";
 import { useRouter } from "vue-router";
+import { usePreferences } from "@/stores/preferences";
 
 const router = useRouter();
 const posts = router
@@ -12,10 +13,20 @@ const posts = router
     (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date)
   );
 
-function getImageUrl(index) {
-  const imgNr = (index % 3) + 1;
-  return "/images/blog/blog-0" + imgNr + ".jpg";
-}
+const preferences = usePreferences();
+const imageUrl = (post) => {
+  const imagePath: string = "/images/blog";
+  if (post.meta.frontmatter.thumbnail_dark && post.meta.frontmatter.thumbnail_light) {
+    if (preferences.dark) {
+      return imagePath + post.meta.frontmatter.thumbnail_light;
+    } else {
+      return imagePath + post.meta.frontmatter.thumbnail_dark;
+    }
+  }
+  if (post.meta.frontmatter.thumbnail) {
+    return imagePath + post.meta.frontmatter.thumbnail;
+  }
+};
 </script>
 
 <template>
@@ -34,7 +45,7 @@ function getImageUrl(index) {
             <p
               class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
             >
-              Some thoughts and ramdom writings
+              Occasional thoughts and writings
             </p>
           </div>
         </div>
@@ -64,8 +75,8 @@ function getImageUrl(index) {
               y2="-97.1485"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#9C8E1B" />
-              <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+              <stop :stop-color="preferences.primaryColor" />
+              <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -97,8 +108,8 @@ function getImageUrl(index) {
               y2="37.0429"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#9C8E1B" />
-              <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+              <stop :stop-color="preferences.primaryColor" />
+              <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_0:1"
@@ -108,8 +119,8 @@ function getImageUrl(index) {
               y2="32.3398"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#9C8E1B" />
-              <stop offset="1" stop-color="#9C8E1B" stop-opacity="0" />
+              <stop :stop-color="preferences.primaryColor" />
+              <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -119,7 +130,7 @@ function getImageUrl(index) {
   <section class="ud-pt-[20px] ud-pb-[100px]">
     <div class="ud-container">
       <div
-        class="ud-flex ud-flex-wrap ud-mx-[-16px] ud-justify-center ud-py-4 ud-px-2 md:ud-px-6"
+        class="ud-flex ud-flex-wrap ud-mx-[-16px] ud-justify-start ud-py-4 ud-px-2 md:ud-px-6"
       >
         <div
           v-for="(post, index) in posts"
@@ -137,8 +148,8 @@ function getImageUrl(index) {
                 {{ post.meta.frontmatter.category }}
               </span>
               <img
-                v-if="post.meta.frontmatter.thumbnail"
-                :src="'/images/blog' + post.meta.frontmatter.thumbnail"
+                v-if="imageUrl(post)"
+                :src="imageUrl(post)"
                 alt="image"
                 class="ud-w-full"
               />

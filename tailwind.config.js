@@ -31,7 +31,6 @@ module.exports = {
         black: "#231f20",
         dark: "#161314",
         primary: "#9C8E1B",
-        yellow: "#FBB040",
         "body-color": "#999999",
       },
       boxShadow: {
