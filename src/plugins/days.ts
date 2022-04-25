@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat.js";
 import type { UserModule } from '~/types'
 
-function formatDate (d) {
+function formatDate (d: string) {
   const date = dayjs(d)
   return date.format('D MMM YYYY')
 }

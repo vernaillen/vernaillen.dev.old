@@ -149,9 +149,9 @@
   </header>
 </template>
 <script setup>
-import { computed, inject, reactive, ref } from "vue";
-import { usePreferences } from "@/stores/preferences";
-import PlayerControls from "./PlayerControls.vue";
+import { computed, reactive } from "vue";
+import { usePreferences } from "~/stores/preferences";
+import PlayerControls from "~/components/PlayerControls.vue";
 
 const navbar = reactive({
   show: false,

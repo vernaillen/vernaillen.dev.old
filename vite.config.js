@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from '@vitejs/plugin-vue-jsx';
@@ -85,7 +86,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src"),
+      "~": resolve(__dirname, "src"),
     },
   },
   server: {
@@ -102,6 +103,7 @@ export default defineConfig({
       include: ["src/**/*.vue"],
     },
     extension: [".vue"],
+    globals: true
   },
   ssgOptions: {
     formatting: 'minify',

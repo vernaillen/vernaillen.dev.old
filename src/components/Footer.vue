@@ -263,8 +263,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import { usePreferences } from "@/stores/preferences";
+import { onMounted } from "vue";
+import { usePreferences } from "~/stores/preferences";
 const preferences = usePreferences();
 
 function scrollToTop() {

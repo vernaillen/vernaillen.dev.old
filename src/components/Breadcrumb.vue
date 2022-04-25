@@ -1,3 +1,16 @@
+<script setup lang="ts">
+defineProps({
+  pageName: {
+    type: String,
+    required: true,
+  },
+  path: {
+    type: String,
+    required: true,
+  },
+});
+</script>
+
 <template>
   <div class="ud-w-full ud-px-4 ud-mb-10">
     <div class="ud-text-end">
@@ -37,16 +50,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-  pageName: {
-    type: String,
-    required: true,
-  },
-  path: {
-    type: String,
-    required: true,
-  },
-});
-</script>

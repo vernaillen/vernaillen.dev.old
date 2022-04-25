@@ -2,7 +2,7 @@
   <vueAudioMotionAnalyzer :options="options" />
 </template>
 <script setup lang="ts">
-import { inject, onMounted, ref } from "vue";
+import { inject, onMounted } from "vue";
 const audioMotion = inject("audioMotion");
 const audioPlayer = inject("audioPlayer");
 

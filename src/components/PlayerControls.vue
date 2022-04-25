@@ -1,3 +1,24 @@
+<script setup>
+import { inject, ref } from "vue";
+import { usePlayerState } from "~/stores/playerState";
+
+const playerState = usePlayerState();
+const audioPlayer = inject("audioPlayer");
+let isLoaded = ref(false);
+let state = ref(audioPlayer.state());
+
+async function checkIsBufferLoaded() {
+  await audioPlayer.isLoaded();
+  isLoaded.value = true;
+}
+async function checkState() {
+  state.value = await audioPlayer.state();
+  playerState.updatePlaying(state.value == "started");
+}
+checkIsBufferLoaded();
+checkState();
+</script>
+
 <template>
   <label
     v-if="!isLoaded"
@@ -20,24 +41,3 @@
     <font-awesome-icon :icon="['fas', 'stop']" />
   </label>
 </template>
-
-<script setup>
-import { computed, inject, watch, ref } from "vue";
-import { usePlayerState } from "@/stores/playerState";
-
-const playerState = usePlayerState();
-const audioPlayer = inject("audioPlayer");
-let isLoaded = ref(false);
-let state = ref(audioPlayer.state());
-
-async function checkIsBufferLoaded() {
-  await audioPlayer.isLoaded();
-  isLoaded.value = true;
-}
-async function checkState() {
-  state.value = await audioPlayer.state();
-  playerState.updatePlaying(state.value == "started");
-}
-checkIsBufferLoaded();
-checkState();
-</script>

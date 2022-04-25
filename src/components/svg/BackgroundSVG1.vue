@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { usePreferences } from "~/stores/preferences";
+const preferences = usePreferences();
+</script>
+
 <template>
   <div>
     <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1]">
@@ -74,8 +79,3 @@
     </span>
   </div>
 </template>
-
-<script setup lang="ts">
-import { usePreferences } from "@/stores/preferences";
-const preferences = usePreferences();
-</script>

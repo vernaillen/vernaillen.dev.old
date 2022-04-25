@@ -1,20 +1,24 @@
 <script setup lang="ts">
-import HeaderComponent from "@/components/Header.vue";
-import FooterComponent from "@/components/Footer.vue";
-import BreadcrumbComponent from "@/components/Breadcrumb.vue";
-import { useRouter } from "vue-router";
-import { usePreferences } from "@/stores/preferences";
+import HeaderComponent from "~/components/Header.vue";
+import FooterComponent from "~/components/Footer.vue";
+import BreadcrumbComponent from "~/components/Breadcrumb.vue";
+import { useRouter, RouteRecordNormalized } from "vue-router";
+import { usePreferences } from "~/stores/preferences";
 
 const router = useRouter();
 const posts = router
   .getRoutes()
-  .filter((i) => i.path.startsWith("/blog/") && i.meta.frontmatter.date)
+  .filter(
+    (route: RouteRecordNormalized) =>
+      route.path.startsWith("/blog/") && route.meta.frontmatter.date
+  )
   .sort(
-    (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date)
+    (routeA: RouteRecordNormalized, routeB: RouteRecordNormalized) =>
+      +new Date(routeB.meta.frontmatter.date) - +new Date(routeA.meta.frontmatter.date)
   );
 
 const preferences = usePreferences();
-const imageUrl = (post) => {
+const imageUrl = (post: RouteRecordNormalized) => {
   const imagePath: string = "/images/blog";
   if (post.meta.frontmatter.thumbnail_dark && post.meta.frontmatter.thumbnail_light) {
     if (preferences.dark) {
@@ -133,7 +137,7 @@ const imageUrl = (post) => {
         class="ud-flex ud-flex-wrap ud-mx-[-16px] ud-justify-start ud-py-4 ud-px-2 md:ud-px-6"
       >
         <div
-          v-for="(post, index) in posts"
+          v-for="post in posts"
           :key="post.path"
           class="ud-w-full md:ud-w-2/3 lg:ud-w-1/2 xl:ud-w-1/3 ud-px-4"
         >
