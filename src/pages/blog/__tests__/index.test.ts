@@ -3,7 +3,7 @@ import { describe, it } from "vitest";
 import { createTestingPinia } from '@pinia/testing'
 import { expect } from "chai";
 import days from "@/plugins/days";
-import index from "@/index.vue";
+import index from "@/pages/blog/index.vue";
 
 describe("blog/index.vue", () => {
   it("should render", () => {

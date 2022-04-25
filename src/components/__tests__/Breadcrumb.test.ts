@@ -1,6 +1,6 @@
 import { mount, RouterLinkStub } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import Breadcrumb from "@/Breadcrumb.vue";
+import Breadcrumb from "@/components/Breadcrumb.vue";
 
 describe("Breadcrumb.vue", () => {
   it("should render only 2 items", () => {

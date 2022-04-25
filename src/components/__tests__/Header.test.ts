@@ -2,7 +2,7 @@ import { mount, RouterLinkStub } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
 import { createTestingPinia } from '@pinia/testing'
 import { usePlayerState } from "@/stores/playerState";
-import Header from "@/Header.vue";
+import Header from "@/components/Header.vue";
 
 describe("Header.vue", () => {
   it("should render", () => {
