@@ -57,4 +57,4 @@ You can read more about it on the [Helm quickstart page](https://helm.sh/docs/in
 k8s-liferay$ helm create liferay
 ```
 
-![liferay helm chart](/images/blog/k8s-liferay/liferay-helmchart.png)
+![liferay helm chart](/images/blog/liferay-helmchart.png)
