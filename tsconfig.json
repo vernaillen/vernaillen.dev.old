@@ -22,11 +22,11 @@
       "vite-plugin-pages/client"
     ],
     "paths": {
-      "~/*": [
-        "src/*"
+      "@/*": [
+        "./src/*",
+        "./dist/*"
       ]
     },
-    "allowJs": true,
     "jsx": "preserve"
   },
   "exclude": [

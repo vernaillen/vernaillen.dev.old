@@ -1,7 +1,7 @@
-import type { UserModule } from '~/types'
-import AudioMotion from '../audio/audiomotion'
-import AudioPlayer from '../audio/player'
-import VueAudioMotionComponent from '../components/VueAudioMotionComponent.vue'
+import type { UserModule } from '@/types'
+import AudioMotion from '@/audio/audiomotion'
+import AudioPlayer from '@/audio/player'
+import VueAudioMotionComponent from '@/components/VueAudioMotionComponent.vue'
 
 export const install: UserModule = ({ app, isClient }) => {
     app.component('vueAudioMotionAnalyzer', VueAudioMotionComponent)

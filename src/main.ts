@@ -1,9 +1,9 @@
 import { ViteSSG } from 'vite-ssg'
-import App from "~/App.vue";
+import App from "@/App.vue";
 import routes from "~pages";
-import "~/css/markdown.css";
-import "~/css/main.css";
-import "~/css/prose.css";
+import "@/css/markdown.css";
+import "@/css/main.css";
+import "@/css/prose.css";
 import 'animate.css/animate.compat.css';
 
 const scrollBehavior = (_to: any, _from: any, _savedPosition: any) => {

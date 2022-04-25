@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useHead } from "@vueuse/head";
-import MyAudioMotionAnalyzer from "~/components/MyAudioMotionAnalyzer.vue";
+import MyAudioMotionAnalyzer from "@/components/MyAudioMotionAnalyzer.vue";
 
 useHead({
   title: "Vernaillen.dev",

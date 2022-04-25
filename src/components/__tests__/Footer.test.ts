@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
 import { createTestingPinia } from '@pinia/testing'
-import Footer from "../Footer.vue";
+import Footer from "@/Footer.vue";
 
 describe("Footer.vue", () => {
   it("should render", () => {

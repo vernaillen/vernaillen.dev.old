@@ -1,3 +1,29 @@
+<script setup lang="ts">
+import { computed, reactive } from "vue";
+import { usePreferences } from "@/stores/preferences";
+import PlayerControls from "@/components/PlayerControls.vue";
+
+const navbar = reactive({
+  show: false,
+});
+const preferences = usePreferences();
+function navbarToggler() {
+  navbar.show = !navbar.show;
+}
+function darkToggler() {
+  const html = document.querySelector("html");
+  preferences.dark ? html.classList.remove("ud-dark") : html.classList.add("ud-dark");
+  preferences.toggleDark();
+}
+
+const navbarTogglerClass = computed(() => {
+  return navbar.show ? "navbarTogglerActive" : "";
+});
+const navbarCollapseClass = computed(() => {
+  return navbar.show ? "" : "ud-hidden";
+});
+</script>
+
 <template>
   <header
     class="header ud-bg-transparent ud-absolute ud-top-0 ud-left-0 ud-z-40 ud-w-full ud-flex ud-items-center"
@@ -86,19 +112,11 @@
                     Contact
                   </router-link>
                 </li>
-                <li class="ud-relative ud-group">
-                  <router-link
-                    to="/anyotherurl"
-                    class="menu-scroll ud-text-base text-dark dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
-                  >
-                    404
-                  </router-link>
-                </li>
               </ul>
             </nav>
           </div>
           <div class="ud-flex ud-justify-end ud-items-center ud-pr-16 lg:ud-pr-0">
-            <ul class="ud-block ud-flex">
+            <ul class="ud-flex">
               <li class="ud-relative ud-group">
                 <player-controls />
               </li>
@@ -148,31 +166,6 @@
     </div>
   </header>
 </template>
-<script setup>
-import { computed, reactive } from "vue";
-import { usePreferences } from "~/stores/preferences";
-import PlayerControls from "~/components/PlayerControls.vue";
-
-const navbar = reactive({
-  show: false,
-});
-const preferences = usePreferences();
-function navbarToggler() {
-  navbar.show = !navbar.show;
-}
-function darkToggler() {
-  const html = document.querySelector("html");
-  preferences.dark ? html.classList.remove("ud-dark") : html.classList.add("ud-dark");
-  preferences.toggleDark();
-}
-
-const navbarTogglerClass = computed(() => {
-  return navbar.show ? "navbarTogglerActive" : "";
-});
-const navbarCollapseClass = computed(() => {
-  return navbar.show ? "" : "ud-hidden";
-});
-</script>
 
 <style scoped>
 .header-logo,

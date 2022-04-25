@@ -523,8 +523,8 @@
 </template>
 
 <script setup lang="ts">
-import HeaderComponent from "~/components/Header.vue";
-import FooterComponent from "~/components/Footer.vue";
-import { usePreferences } from "~/stores/preferences";
+import HeaderComponent from "@/components/Header.vue";
+import FooterComponent from "@/components/Footer.vue";
+import { usePreferences } from "@/stores/preferences";
 const preferences = usePreferences();
 </script>

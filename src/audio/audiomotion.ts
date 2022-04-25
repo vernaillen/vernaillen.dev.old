@@ -3,6 +3,9 @@ import * as Tone from 'tone'
 
 export default function () {
     return class AudioMotion {
+        audioMotionObj: undefined;
+        options: undefined;
+        defaultOptions: { audioCtx: undefined; barSpace: number; bgAlpha: number; fftSize: number; fillAlpha: number; gradient: string; height: undefined; lineWidth: number; loRes: boolean; lumiBars: boolean; maxDecibels: number; maxFreq: number; minDecibels: number; minFreq: number; mode: number; onCanvasDraw: undefined; onCanvasResize: undefined; overlay: boolean; reflexAlpha: number; reflexFit: boolean; reflexRatio: number; showBgColor: boolean; showFPS: boolean; showLeds: boolean; showPeaks: boolean; showScale: boolean; smoothing: number; source: undefined; start: boolean; width: undefined; frozen: boolean; };
         constructor() {
             this.audioMotionObj = undefined
             this.options = undefined

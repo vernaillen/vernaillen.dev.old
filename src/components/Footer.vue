@@ -1,3 +1,60 @@
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { usePreferences } from "@/stores/preferences";
+const preferences = usePreferences();
+
+function scrollToTop() {
+  const to = 0,
+    duration = 500;
+  const element = document.documentElement;
+  const start = element.scrollTop;
+  const change = to - start;
+  const increment = 20;
+  let currentTime = 0;
+
+  const animateScroll = () => {
+    currentTime += increment;
+
+    const val = Math.easeInOutQuad(currentTime, start, change, duration);
+
+    element.scrollTop = val;
+
+    if (currentTime < duration) {
+      setTimeout(animateScroll, increment);
+    }
+  };
+  animateScroll();
+}
+
+onMounted(() => {
+  window.onscroll = function () {
+    const ud_header = document.querySelector(".header");
+    const sticky = ud_header.offsetTop;
+
+    if (window.scrollY > sticky) {
+      ud_header.classList.add("sticky");
+    } else {
+      ud_header.classList.remove("sticky");
+    }
+
+    // show or hide the back-top-top button
+    const backToTop = document.querySelector(".back-to-top");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      backToTop.style.display = "flex";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+});
+</script>
+
 <template>
   <footer
     class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] animated animated-duration-5s fadeIn"
@@ -261,60 +318,3 @@
     ></span>
   </a>
 </template>
-
-<script setup lang="ts">
-import { onMounted } from "vue";
-import { usePreferences } from "~/stores/preferences";
-const preferences = usePreferences();
-
-function scrollToTop() {
-  const to = 0,
-    duration = 500;
-  const element = document.documentElement;
-  const start = element.scrollTop;
-  const change = to - start;
-  const increment = 20;
-  let currentTime = 0;
-
-  const animateScroll = () => {
-    currentTime += increment;
-
-    const val = Math.easeInOutQuad(currentTime, start, change, duration);
-
-    element.scrollTop = val;
-
-    if (currentTime < duration) {
-      setTimeout(animateScroll, increment);
-    }
-  };
-  animateScroll();
-}
-
-onMounted(() => {
-  window.onscroll = function () {
-    const ud_header = document.querySelector(".header");
-    const sticky = ud_header.offsetTop;
-
-    if (window.scrollY > sticky) {
-      ud_header.classList.add("sticky");
-    } else {
-      ud_header.classList.remove("sticky");
-    }
-
-    // show or hide the back-top-top button
-    const backToTop = document.querySelector(".back-to-top");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
-    }
-  };
-
-  Math.easeInOutQuad = function (t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  };
-});
-</script>

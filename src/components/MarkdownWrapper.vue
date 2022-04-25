@@ -1,14 +1,14 @@
-<script setup>
-import HeaderComponent from "~/components/Header.vue";
-import FooterComponent from "~/components/Footer.vue";
-import BackgroundSVG1 from "~/components/svg/BackgroundSVG1.vue";
-import BreadcrumbComponent from "~/components/Breadcrumb.vue";
+<script setup lang="ts">
+import HeaderComponent from "@/components/Header.vue";
+import FooterComponent from "@/components/Footer.vue";
+import BackgroundSVG1 from "@/components/svg/BackgroundSVG1.vue";
+import BreadcrumbComponent from "@/components/Breadcrumb.vue";
 import { useRouter, useRoute } from "vue-router";
 
-const router = useRouter();
+useRouter();
 const route = useRoute();
 
-const props = defineProps({
+defineProps({
   frontmatter: {
     type: Object,
     required: true,

@@ -1,6 +1,3 @@
-<template>
-  <vueAudioMotionAnalyzer :options="options" />
-</template>
 <script setup lang="ts">
 import { inject, onMounted } from "vue";
 const audioMotion = inject("audioMotion");
@@ -30,6 +27,10 @@ onMounted(() => {
   audioPlayer.connectAnalyzer(audioMotion.getAnalyzer()[0]);
 });
 </script>
+
+<template>
+  <vueAudioMotionAnalyzer :options="options" />
+</template>
 
 <style scoped>
 #audioMotionAnalyzer {

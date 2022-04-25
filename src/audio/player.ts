@@ -3,6 +3,7 @@ import * as Tone from 'tone'
 export default function () {
 
     return class AudioPlayer {
+        audioPlayer: Tone.Player
         constructor() {
             this.audioPlayer = new Tone.Player("/music/RackNomad-MeditativeMelody.mp3").toDestination()
         }
@@ -21,7 +22,7 @@ export default function () {
         async state () {
             return Tone.Transport.state;
         }
-        connectAnalyzer (analyzer) {
+        connectAnalyzer (analyzer: Tone.InputNode) {
             this.audioPlayer.fan(analyzer)
         }
     }

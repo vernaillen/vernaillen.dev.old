@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
 import { createTestingPinia } from '@pinia/testing'
-import BackgroundSVG1 from "../BackgroundSVG1.vue";
+import BackgroundSVG1 from "@/BackgroundSVG1.vue";
 
 describe("BackgroundSVG1.vue", () => {
   it("should render", () => {

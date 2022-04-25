@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat.js";
-import type { UserModule } from '~/types'
+import type { UserModule } from '@/types'
 
 function formatDate (d: string) {
   const date = dayjs(d)

@@ -1,4 +1,4 @@
-import type { UserModule } from '~/types'
+import type { UserModule } from '@/types'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCalendarDays, faLocationPin, faPlay, faSpinner, faStop } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'

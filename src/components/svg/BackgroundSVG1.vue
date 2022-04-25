@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { usePreferences } from "~/stores/preferences";
+import { usePreferences } from "@/stores/preferences";
 const preferences = usePreferences();
 </script>
 

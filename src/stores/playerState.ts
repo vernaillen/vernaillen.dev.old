@@ -5,7 +5,7 @@ export const usePlayerState = defineStore("playerState", {
     isPlaying: false,
   }),
   actions: {
-    updatePlaying (isPlaying) {
+    updatePlaying (isPlaying: boolean) {
       this.isPlaying = isPlaying
     },
   },

@@ -9,6 +9,7 @@ import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
 import generateSitemap from 'vite-plugin-pages-sitemap'
 import { VitePWA } from "vite-plugin-pwa";
+import { fileURLToPath, URL } from "url";
 import { resolve } from "path";
 import fs from "fs-extra";
 import matter from "gray-matter";
@@ -86,7 +87,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "~": resolve(__dirname, "src"),
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   server: {
