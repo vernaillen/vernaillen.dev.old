@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { AudioMotion } from "@/audio/audioMotion";
+import { AudioPlayer } from "@/audio/audioPlayer";
 import { inject, onMounted } from "vue";
-const audioMotion = inject("audioMotion");
-const audioPlayer = inject("audioPlayer");
+const audioMotion: AudioMotion = inject("audioMotion");
+const audioPlayer: AudioPlayer = inject("audioPlayer");
 
 const options = {
   alphaBars: false,

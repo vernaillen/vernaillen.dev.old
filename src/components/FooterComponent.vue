@@ -3,6 +3,18 @@ import { onMounted } from "vue";
 import { usePreferences } from "@/stores/preferences";
 const preferences = usePreferences();
 
+function easeInOutQuad(
+  currentTime: number,
+  start: number,
+  change: number,
+  duration: number
+) {
+  currentTime /= duration / 2;
+  if (currentTime < 1) return (change / 2) * currentTime * currentTime + start;
+  currentTime--;
+  return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start;
+}
+
 function scrollToTop() {
   const to = 0,
     duration = 500;
@@ -15,7 +27,7 @@ function scrollToTop() {
   const animateScroll = () => {
     currentTime += increment;
 
-    const val = Math.easeInOutQuad(currentTime, start, change, duration);
+    const val = easeInOutQuad(currentTime, start, change, duration);
 
     element.scrollTop = val;
 
@@ -28,29 +40,27 @@ function scrollToTop() {
 
 onMounted(() => {
   window.onscroll = function () {
-    const ud_header = document.querySelector(".header");
-    const sticky = ud_header.offsetTop;
+    const ud_header = document.querySelector(".header") as HTMLElement;
+    if (ud_header) {
+      const sticky = ud_header.offsetTop;
 
-    if (window.scrollY > sticky) {
-      ud_header.classList.add("sticky");
-    } else {
-      ud_header.classList.remove("sticky");
+      if (window.scrollY > sticky) {
+        ud_header.classList.add("sticky");
+      } else {
+        ud_header.classList.remove("sticky");
+      }
+
+      // show or hide the back-top-top button
+      const backToTop = document.querySelector(".back-to-top") as HTMLElement;
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        backToTop.style.display = "flex";
+      } else {
+        backToTop.style.display = "none";
+      }
     }
-
-    // show or hide the back-top-top button
-    const backToTop = document.querySelector(".back-to-top");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
-    }
-  };
-
-  Math.easeInOutQuad = function (t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
   };
 });
 </script>
@@ -97,9 +107,13 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="ud-w-full sm:ud-w-1/2 md:ud-w-1/2 lg:ud-w-2/12 xl:ud-w-2/12 ud-px-4">
+        <div
+          class="ud-w-full sm:ud-w-1/2 md:ud-w-1/2 lg:ud-w-2/12 xl:ud-w-2/12 ud-px-4"
+        >
           <div class="ud-mb-16">
-            <h2 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10">
+            <h2
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10"
+            >
               Useful Links
             </h2>
             <ul>
@@ -131,9 +145,13 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="ud-w-full sm:ud-w-1/2 md:ud-w-1/2 lg:ud-w-2/12 xl:ud-w-2/12 ud-px-4">
+        <div
+          class="ud-w-full sm:ud-w-1/2 md:ud-w-1/2 lg:ud-w-2/12 xl:ud-w-2/12 ud-px-4"
+        >
           <div class="ud-mb-16">
-            <h2 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10">
+            <h2
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10"
+            >
               Terms
             </h2>
             <ul>
@@ -159,7 +177,9 @@ onMounted(() => {
 
         <div class="ud-w-full md:ud-w-1/2 lg:ud-w-4/12 xl:ud-w-3/12 ud-px-4">
           <div class="ud-mb-16">
-            <h2 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10">
+            <h2
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10"
+            >
               Support & Help
             </h2>
             <ul>
@@ -186,7 +206,9 @@ onMounted(() => {
     </div>
     <div class="ud-py-8 ud-bg-primary ud-bg-opacity-10">
       <div class="ud-container">
-        <p class="ud-text-body-color dark:ud-text-white ud-text-base ud-text-center">
+        <p
+          class="ud-text-body-color dark:ud-text-white ud-text-base ud-text-center"
+        >
           &copy; Wouter Vernaillen - Vernaillen Consulting BVBA / Harmonics BV
         </p>
       </div>
@@ -247,7 +269,11 @@ onMounted(() => {
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" stop-opacity="0.62" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint1_linear_94:889"
@@ -258,7 +284,11 @@ onMounted(() => {
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.51" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0.51"
+            />
           </linearGradient>
           <linearGradient
             id="paint2_linear_94:889"
@@ -269,7 +299,11 @@ onMounted(() => {
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" stop-opacity="0.62" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint3_linear_94:889"
@@ -280,7 +314,11 @@ onMounted(() => {
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.51" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0.51"
+            />
           </linearGradient>
           <linearGradient
             id="paint4_linear_94:889"
@@ -291,7 +329,11 @@ onMounted(() => {
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" stop-opacity="0.62" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint5_linear_94:889"
@@ -302,7 +344,11 @@ onMounted(() => {
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.51" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0.51"
+            />
           </linearGradient>
         </defs>
       </svg>

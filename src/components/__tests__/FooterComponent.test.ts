@@ -1,13 +1,13 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
-import { createTestingPinia } from '@pinia/testing'
-import Footer from "@/components/Footer.vue";
+import { createTestingPinia } from "@pinia/testing";
+import FooterComponent from "@/components/FooterComponent.vue";
 
-describe("Footer.vue", () => {
+describe("FooterComponent.vue", () => {
   it("should render", () => {
-    const wrapper = mount(Footer, {
+    const wrapper = mount(FooterComponent, {
       global: {
-        plugins: [createTestingPinia()]
+        plugins: [createTestingPinia()],
       },
     });
     expect(wrapper.text()).toContain("Wouter Vernaillen");

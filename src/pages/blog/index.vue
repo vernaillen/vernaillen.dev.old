@@ -1,36 +1,13 @@
 <script setup lang="ts">
-import HeaderComponent from "@/components/Header.vue";
-import FooterComponent from "@/components/Footer.vue";
-import BreadcrumbComponent from "@/components/Breadcrumb.vue";
-import { useRouter, RouteRecordNormalized } from "vue-router";
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 import { usePreferences } from "@/stores/preferences";
-
-const router = useRouter();
-const posts = router
-  .getRoutes()
-  .filter(
-    (route: RouteRecordNormalized) =>
-      route.path.startsWith("/blog/") && route.meta.frontmatter.date
-  )
-  .sort(
-    (routeA: RouteRecordNormalized, routeB: RouteRecordNormalized) =>
-      +new Date(routeB.meta.frontmatter.date) - +new Date(routeA.meta.frontmatter.date)
-  );
+import { getBlogPosts, getImageUrl } from "@/logics/blog";
+import { Post } from "@/types";
 
 const preferences = usePreferences();
-const imageUrl = (post: RouteRecordNormalized) => {
-  const imagePath: string = "/images/blog";
-  if (post.meta.frontmatter.thumbnail_dark && post.meta.frontmatter.thumbnail_light) {
-    if (preferences.dark) {
-      return imagePath + post.meta.frontmatter.thumbnail_light;
-    } else {
-      return imagePath + post.meta.frontmatter.thumbnail_dark;
-    }
-  }
-  if (post.meta.frontmatter.thumbnail) {
-    return imagePath + post.meta.frontmatter.thumbnail;
-  }
-};
+const posts: Post[] = getBlogPosts();
 </script>
 
 <template>
@@ -80,7 +57,11 @@ const imageUrl = (post: RouteRecordNormalized) => {
               gradientUnits="userSpaceOnUse"
             >
               <stop :stop-color="preferences.primaryColor" />
-              <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+              <stop
+                offset="1"
+                :stop-color="preferences.primaryColor"
+                stop-opacity="0"
+              />
             </linearGradient>
           </defs>
         </svg>
@@ -113,7 +94,11 @@ const imageUrl = (post: RouteRecordNormalized) => {
               gradientUnits="userSpaceOnUse"
             >
               <stop :stop-color="preferences.primaryColor" />
-              <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+              <stop
+                offset="1"
+                :stop-color="preferences.primaryColor"
+                stop-opacity="0"
+              />
             </linearGradient>
             <linearGradient
               id="paint1_linear_0:1"
@@ -124,7 +109,11 @@ const imageUrl = (post: RouteRecordNormalized) => {
               gradientUnits="userSpaceOnUse"
             >
               <stop :stop-color="preferences.primaryColor" />
-              <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+              <stop
+                offset="1"
+                :stop-color="preferences.primaryColor"
+                stop-opacity="0"
+              />
             </linearGradient>
           </defs>
         </svg>
@@ -146,14 +135,14 @@ const imageUrl = (post: RouteRecordNormalized) => {
           >
             <router-link :to="post.path" class="ud-w-full ud-block ud-relative">
               <span
-                v-if="post.meta.frontmatter.category"
+                v-if="post.category"
                 class="ud-absolute ud-top-6 ud-right-6 ud-bg-primary ud-rounded-full ud-inline-flex ud-items-center ud-justify-center ud-py-2 ud-px-4 ud-font-semibold ud-text-sm ud-text-white"
               >
-                {{ post.meta.frontmatter.category }}
+                {{ post.category }}
               </span>
               <img
-                v-if="imageUrl(post)"
-                :src="imageUrl(post)"
+                v-if="getImageUrl(post)"
+                :src="getImageUrl(post)"
                 alt="image"
                 class="ud-w-full"
               />
@@ -166,13 +155,13 @@ const imageUrl = (post: RouteRecordNormalized) => {
                   :to="post.path"
                   class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl sm:ud-text-2xl ud-block ud-mb-4 hover:ud-text-primary dark:hover:ud-text-primary"
                 >
-                  {{ post.meta.frontmatter.title }}
+                  {{ post.title }}
                 </router-link>
               </h3>
               <p
                 class="ud-text-base ud-text-body-color ud-font-medium ud-pb-6 ud-mb-6 ud-border-b ud-border-body-color ud-border-opacity-10 dark:ud-border-white dark:ud-border-opacity-10"
               >
-                {{ post.meta.frontmatter.desc }}
+                {{ post.desc }}
               </p>
               <div class="ud-flex">
                 <div
@@ -181,7 +170,11 @@ const imageUrl = (post: RouteRecordNormalized) => {
                   <div
                     class="ud-max-w-[20px] ud-w-full ud-h-[20px] ud-rounded-full ud-overflow-hidden ud-mr-4"
                   >
-                    <img src="/images/wouter.jpg" alt="author" class="ud-w-full" />
+                    <img
+                      src="/images/wouter.jpg"
+                      alt="author"
+                      class="ud-w-full"
+                    />
                   </div>
                   <div class="ud-w-full">
                     <h4
@@ -191,10 +184,12 @@ const imageUrl = (post: RouteRecordNormalized) => {
                         to="/about"
                         class="ud-text-dark dark:ud-text-white hover:ud-text-primary dark:hover:ud-text-primary"
                       >
-                        {{ post.meta.frontmatter.author }}
+                        {{ post.author }}
                       </router-link>
                     </h4>
-                    <p class="ud-text-xs ud-text-body-color">Full Stack Developer</p>
+                    <p class="ud-text-xs ud-text-body-color">
+                      Full Stack Developer
+                    </p>
                   </div>
                 </div>
                 <div class="ud-inline-block">
@@ -202,7 +197,7 @@ const imageUrl = (post: RouteRecordNormalized) => {
                     <font-awesome-icon :icon="['fas', 'calendar-days']" /><span
                       class="ud-mr-2 fa-solid fa-calendar-days"
                     />
-                    {{ $formatDate(post.meta.frontmatter.date) }}
+                    {{ $formatDate(post.date) }}
                   </p>
                 </div>
               </div>

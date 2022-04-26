@@ -24,7 +24,7 @@ defineProps({
           </router-link>
           <span
             class="ud-block ud-w-2 ud-h-2 ud-border-t-2 ud-border-r-2 ud-border-body-color ud-rotate-45 ud-mr-3"
-          ></span>
+          />
         </li>
         <li
           v-if="path.startsWith('/blog/')"
@@ -33,12 +33,13 @@ defineProps({
           <router-link
             to="/blog"
             class="ud-font-medium ud-text-base ud-text-body-color ud-pr-2 hover:ud-text-primary"
-            >Blog</router-link
           >
+            Blog
+          </router-link>
           <span
             v-if="path.startsWith('/blog')"
             class="ud-block ud-w-2 ud-h-2 ud-border-t-2 ud-border-r-2 ud-border-body-color ud-rotate-45 ud-mr-3"
-          ></span>
+          />
         </li>
         <li
           v-if="pageName"

@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
-
-const router = useRouter();
-const posts = router
-  .getRoutes()
-  .filter((i) => i.path.startsWith("/blog/") && i.meta.frontmatter.date)
-  .sort(
-    (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date)
-  );
+import { getBlogPosts } from "@/logics/blog";
+import { Post } from "@/types";
+const posts: Post[] = getBlogPosts();
 </script>
 
 <template>
@@ -20,7 +14,7 @@ const posts = router
       :key="post.path"
       class="item block font-normal mb-6 mt-2 no-underline"
     >
-      <router-link :to="post.path">{{ post.name }}</router-link>
+      <router-link :to="post.path">{{ post.title }}</router-link>
     </li>
   </ul>
 </template>

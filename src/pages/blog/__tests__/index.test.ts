@@ -1,6 +1,6 @@
 import { mount, RouterLinkStub } from "@vue/test-utils";
 import { describe, it } from "vitest";
-import { createTestingPinia } from '@pinia/testing'
+import { createTestingPinia } from "@pinia/testing";
 import { expect } from "chai";
 import days from "@/plugins/days";
 import index from "@/pages/blog/index.vue";
@@ -12,9 +12,9 @@ describe("blog/index.vue", () => {
         stubs: {
           RouterLink: RouterLinkStub,
         },
-        plugins: [days, createTestingPinia()]
-      }
+        plugins: [days, createTestingPinia()],
+      },
     });
-    expect(wrapper.vm.imageUrl()).toBe('');
+    expect(wrapper.vm.imageUrl()).toBe("");
   });
 });

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HeaderComponent from "@/components/Header.vue";
-import FooterComponent from "@/components/Footer.vue";
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 import BackgroundSVG1 from "@/components/svg/BackgroundSVG1.vue";
-import BreadcrumbComponent from "@/components/Breadcrumb.vue";
+import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 import { useRouter, useRoute } from "vue-router";
 
 useRouter();
@@ -22,7 +22,7 @@ defineProps({
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
         <breadcrumb-component
-          :pageName="frontmatter.pageName ? frontmatter.title : ''"
+          :page-name="frontmatter.pageName ? frontmatter.title : ''"
           :path="route.path"
         />
         <div class="ud-w-full ud-px-4">
@@ -56,11 +56,16 @@ defineProps({
                 <p
                   class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-small ud-mr-2"
                 >
-                  <router-link to="/about">{{ frontmatter.author }}</router-link>
+                  <router-link to="/about">
+                    {{ frontmatter.author }}
+                  </router-link>
                 </p>
               </div>
             </div>
-            <div v-if="frontmatter.date" class="ud-flex ud-items-center ud-mr-2 ud-mb-5">
+            <div
+              v-if="frontmatter.date"
+              class="ud-flex ud-items-center ud-mr-2 ud-mb-5"
+            >
               <p
                 class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-medium ud-mr-3"
               >

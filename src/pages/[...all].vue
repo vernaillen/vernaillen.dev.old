@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+import { usePreferences } from "@/stores/preferences";
+const preferences = usePreferences();
+</script>
+
 <template>
   <header-component />
   <section class="ud-relative ud-z-10 ud-pt-[180px] ud-pb-[120px]">
@@ -58,7 +65,12 @@
                     fill="url(#paint2_radial_116:1137)"
                   />
                   <g opacity="0.8" filter="url(#filter0_f_116:1137)">
-                    <circle cx="233.543" cy="49.2645" r="28.2059" fill="white" />
+                    <circle
+                      cx="233.543"
+                      cy="49.2645"
+                      r="28.2059"
+                      fill="white"
+                    />
                   </g>
                 </g>
                 <path
@@ -97,7 +109,10 @@
                     y2="27.0837"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+                    <stop
+                      :stop-color="preferences.primaryColor"
+                      stop-opacity="0"
+                    />
                     <stop offset="1" :stop-color="preferences.primaryColor" />
                   </linearGradient>
                   <linearGradient
@@ -108,7 +123,10 @@
                     y2="-2.91631"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop :stop-color="preferences.primaryColor" stop-opacity="0" />
+                    <stop
+                      :stop-color="preferences.primaryColor"
+                      stop-opacity="0"
+                    />
                     <stop offset="1" :stop-color="preferences.primaryColor" />
                   </linearGradient>
                   <radialGradient
@@ -133,8 +151,8 @@
             <p
               class="ud-font-medium ud-text-body-color ud-text-base sm:ud-text-lg ud-leading-relaxed sm:ud-leading-relaxed ud-mb-10"
             >
-              The page you were looking for appears to have been moved, deleted or does
-              not exist.
+              The page you were looking for appears to have been moved, deleted
+              or does not exist.
             </p>
             <router-link
               to="/"
@@ -146,7 +164,9 @@
         </div>
       </div>
     </div>
-    <div class="ud-hidden sm:ud-block ud-absolute ud-left-0 ud-bottom-0 ud-z-[-1]">
+    <div
+      class="ud-hidden sm:ud-block ud-absolute ud-left-0 ud-bottom-0 ud-z-[-1]"
+    >
       <svg
         width="406"
         height="286"
@@ -239,7 +259,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint2_linear_116:1140"
@@ -261,7 +285,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint4_linear_116:1140"
@@ -283,7 +311,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint6_linear_116:1140"
@@ -305,7 +337,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint8_linear_116:1140"
@@ -327,12 +363,18 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
         </defs>
       </svg>
     </div>
-    <div class="ud-hidden sm:ud-block ud-absolute ud-top-0 ud-right-0 ud-z-[-1]">
+    <div
+      class="ud-hidden sm:ud-block ud-absolute ud-top-0 ud-right-0 ud-z-[-1]"
+    >
       <svg
         width="406"
         height="286"
@@ -425,7 +467,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint2_linear_116:1151"
@@ -447,7 +493,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint4_linear_116:1151"
@@ -469,7 +519,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint6_linear_116:1151"
@@ -491,7 +545,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint8_linear_116:1151"
@@ -513,7 +571,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
         </defs>
       </svg>
@@ -521,10 +583,3 @@
   </section>
   <footer-component />
 </template>
-
-<script setup lang="ts">
-import HeaderComponent from "@/components/Header.vue";
-import FooterComponent from "@/components/Footer.vue";
-import { usePreferences } from "@/stores/preferences";
-const preferences = usePreferences();
-</script>

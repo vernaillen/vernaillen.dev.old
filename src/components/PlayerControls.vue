@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { inject, ref } from "vue";
 import { usePlayerState } from "@/stores/playerState";
+import { AudioPlayer } from "@/audio/audioPlayer";
 
 const playerState = usePlayerState();
-const audioPlayer = inject("audioPlayer");
-let isLoaded = ref(false);
+const audioPlayer: AudioPlayer = inject("audioPlayer");
 let state = ref(audioPlayer.state());
+let isLoaded = ref(false);
 
 async function checkIsBufferLoaded() {
   await audioPlayer.isLoaded();

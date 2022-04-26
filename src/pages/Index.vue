@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+import { usePreferences } from "@/stores/preferences";
+const preferences = usePreferences();
+</script>
+
 <template>
   <header-component />
   <section
@@ -7,7 +14,9 @@
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full ud-px-4">
-          <div class="ud-mx-auto ud-max-w-[570px] ud-text-center animated fadeIn">
+          <div
+            class="ud-mx-auto ud-max-w-[570px] ud-text-center animated fadeIn"
+          >
             <h1
               class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl sm:ud-text-4xl md:ud-text-5xl ud-leading-tight sm:ud-leading-tight md:ud-leading-tight ud-mb-20"
             >
@@ -51,8 +60,18 @@
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
-        <circle cx="17.9997" cy="182" r="18" fill="url(#paint1_radial_25:217)" />
-        <circle cx="76.9997" cy="288" r="34" fill="url(#paint2_radial_25:217)" />
+        <circle
+          cx="17.9997"
+          cy="182"
+          r="18"
+          fill="url(#paint1_radial_25:217)"
+        />
+        <circle
+          cx="76.9997"
+          cy="288"
+          r="34"
+          fill="url(#paint2_radial_25:217)"
+        />
         <circle
           cx="325.486"
           cy="302.87"
@@ -94,7 +113,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <radialGradient
             id="paint1_radial_25:217"
@@ -109,7 +132,11 @@
               :stop-color="preferences.primaryColor"
               stop-opacity="0"
             />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.08" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0.08"
+            />
           </radialGradient>
           <radialGradient
             id="paint2_radial_25:217"
@@ -124,7 +151,11 @@
               :stop-color="preferences.primaryColor"
               stop-opacity="0"
             />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0.08" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0.08"
+            />
           </radialGradient>
           <linearGradient
             id="paint3_linear_25:217"
@@ -135,7 +166,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint4_linear_25:217"
@@ -168,7 +203,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
         </defs>
       </svg>
@@ -260,7 +299,11 @@
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <radialGradient
             id="paint5_radial_25:218"
@@ -279,13 +322,6 @@
   </section>
   <footer-component />
 </template>
-
-<script setup lang="ts">
-import HeaderComponent from "@/components/Header.vue";
-import FooterComponent from "@/components/Footer.vue";
-import { usePreferences } from "@/stores/preferences";
-const preferences = usePreferences();
-</script>
 
 <style scoped>
 @media (max-width: 959px) {

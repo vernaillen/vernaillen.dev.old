@@ -28,7 +28,11 @@ const preferences = usePreferences();
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
         </defs>
       </svg>
@@ -61,7 +65,11 @@ const preferences = usePreferences();
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
           <linearGradient
             id="paint1_linear_0:1"
@@ -72,7 +80,11 @@ const preferences = usePreferences();
             gradientUnits="userSpaceOnUse"
           >
             <stop :stop-color="preferences.primaryColor" />
-            <stop offset="1" :stop-color="preferences.primaryColor" stop-opacity="0" />
+            <stop
+              offset="1"
+              :stop-color="preferences.primaryColor"
+              stop-opacity="0"
+            />
           </linearGradient>
         </defs>
       </svg>

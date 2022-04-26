@@ -8,6 +8,7 @@ import Anchor from "markdown-it-anchor";
 import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
 import generateSitemap from 'vite-plugin-pages-sitemap'
+import eslintPlugin from 'vite-plugin-eslint';
 import { VitePWA } from "vite-plugin-pwa";
 import { fileURLToPath, URL } from "url";
 import { resolve } from "path";
@@ -84,6 +85,7 @@ export default defineConfig({
         ],
       },
     }),
+    eslintPlugin(),
   ],
   resolve: {
     alias: {

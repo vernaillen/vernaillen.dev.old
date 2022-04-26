@@ -11,8 +11,10 @@ function navbarToggler() {
   navbar.show = !navbar.show;
 }
 function darkToggler() {
-  const html = document.querySelector("html");
-  preferences.dark ? html.classList.remove("ud-dark") : html.classList.add("ud-dark");
+  const html = document.querySelector("html") as HTMLElement;
+  preferences.dark
+    ? html.classList.remove("ud-dark")
+    : html.classList.add("ud-dark");
   preferences.toggleDark();
 }
 
@@ -46,7 +48,9 @@ const navbarCollapseClass = computed(() => {
             </svg>
           </router-link>
         </div>
-        <div class="ud-flex ud-px-4 ud-justify-between ud-items-center ud-w-full">
+        <div
+          class="ud-flex ud-px-4 ud-justify-between ud-items-center ud-w-full"
+        >
           <div>
             <button
               id="navbarToggler"
@@ -115,7 +119,9 @@ const navbarCollapseClass = computed(() => {
               </ul>
             </nav>
           </div>
-          <div class="ud-flex ud-justify-end ud-items-center ud-pr-16 lg:ud-pr-0">
+          <div
+            class="ud-flex ud-justify-end ud-items-center ud-pr-16 lg:ud-pr-0"
+          >
             <ul class="ud-flex">
               <li class="ud-relative ud-group">
                 <player-controls />
