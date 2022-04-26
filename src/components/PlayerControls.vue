@@ -39,6 +39,6 @@ checkState();
     class="ud-cursor-pointer ud-w-10 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
     @click="audioPlayer.stop(), checkState()"
   >
-    <font-awesome-icon :icon="['fas', 'stop']" />
+    <font-awesome-icon :icon="['fas', 'pause']" />
   </label>
 </template>

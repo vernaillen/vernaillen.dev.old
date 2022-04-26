@@ -3,9 +3,9 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faCalendarDays,
   faLocationPin,
+  faPause,
   faPlay,
   faSpinner,
-  faStop,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
@@ -16,9 +16,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 library.add(
   faCalendarDays,
   faLocationPin,
+  faPause,
   faPlay,
   faSpinner,
-  faStop,
   faInstagram,
   faLinkedin,
   faGithub
