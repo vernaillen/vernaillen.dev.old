@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { AudioMotion } from "@/audio/audioMotion";
-import { AudioPlayer } from "@/audio/audioPlayer";
+import { AudioMotion, AudioPlayer } from "@/classes/audio";
 import { inject, onMounted } from "vue";
 const audioMotion: AudioMotion = inject("audioMotion");
 const audioPlayer: AudioPlayer = inject("audioPlayer");

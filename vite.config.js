@@ -1,14 +1,14 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import vueJsx from "@vitejs/plugin-vue-jsx";
 import Markdown, { link, meta } from "vite-plugin-md";
-import LinkAttributes from 'markdown-it-link-attributes'
+import LinkAttributes from "markdown-it-link-attributes";
 import Anchor from "markdown-it-anchor";
 import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
-import generateSitemap from 'vite-plugin-pages-sitemap'
-import eslintPlugin from 'vite-plugin-eslint';
+import generateSitemap from "vite-plugin-pages-sitemap";
+import eslintPlugin from "vite-plugin-eslint";
 import { VitePWA } from "vite-plugin-pwa";
 import { fileURLToPath, URL } from "url";
 import { resolve } from "path";
@@ -17,7 +17,7 @@ import matter from "gray-matter";
 
 export default defineConfig({
   plugins: [
-    vueJsx(), 
+    vueJsx(),
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
@@ -31,10 +31,10 @@ export default defineConfig({
         md.use(LinkAttributes, {
           matcher: (link) => /^https?:\/\//.test(link),
           attrs: {
-            target: '_blank',
-            rel: 'noopener',
+            target: "_blank",
+            rel: "noopener",
           },
-        })
+        });
       },
       headEnabled: true,
       linkTransforms: link(),
@@ -42,10 +42,11 @@ export default defineConfig({
     Pages({
       extensions: ["vue", "md"],
       exclude: ["**/components/*.vue"],
-      onRoutesGenerated: routes => (generateSitemap({ 
-        hostname: 'https://vernaillen.dev/',
-        routes 
-      })),
+      onRoutesGenerated: (routes) =>
+        generateSitemap({
+          hostname: "https://vernaillen.dev/",
+          routes,
+        }),
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1));
         const md = fs.readFileSync(path, "utf-8");
@@ -57,30 +58,30 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
+      registerType: "autoUpdate",
+      includeAssets: ["favicon.svg", "apple-touch-icon.png"],
       manifest: {
-        name: 'Wouter Vernaillen',
-        short_name: 'Vernaillen.dev',
-        description: 'Full Stack Java & JavaScript Developer',
-        theme_color: '#ffffff',
-        background_color: '#231f20',
+        name: "Wouter Vernaillen",
+        short_name: "Vernaillen.dev",
+        description: "Full Stack Java & JavaScript Developer",
+        theme_color: "#ffffff",
+        background_color: "#231f20",
         icons: [
           {
-            src: '/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
+            src: "/pwa-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
           },
           {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
+            src: "/pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
           },
           {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
+            src: "/pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
           },
         ],
       },
@@ -97,19 +98,19 @@ export default defineConfig({
   },
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ["src/**/*.test.ts","test/**/*.test.ts"],
+    include: ["src/**/*.test.ts", "test/**/*.test.ts"],
     excludeNodeModules: true,
     environment: "jsdom",
     coverage: {
-      reporter: ['text', 'lcov'],
+      reporter: ["text", "lcov"],
       all: true,
       include: ["src/**/*.vue"],
     },
     extension: [".vue"],
-    globals: true
+    globals: true,
   },
   ssgOptions: {
-    formatting: 'minify',
-    format: 'cjs',
+    formatting: "minify",
+    format: "cjs",
   },
 });

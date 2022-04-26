@@ -3,7 +3,7 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 import { usePreferences } from "@/stores/preferences";
-import blog from "@/logics/blog";
+import blog from "@/classes/blog";
 import { Post } from "@/types";
 
 const preferences = usePreferences();

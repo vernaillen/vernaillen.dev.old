@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { inject, ref } from "vue";
 import { usePlayerState } from "@/stores/playerState";
-import { AudioPlayer } from "@/audio/audioPlayer";
+import { AudioPlayer } from "@/classes/audio";
 
 const playerState = usePlayerState();
 const audioPlayer: AudioPlayer = inject("audioPlayer");

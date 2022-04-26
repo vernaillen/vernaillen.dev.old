@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import blog from "@/logics/blog";
+import blog from "@/classes/blog";
 import { Post } from "@/types";
 const posts: Post[] = blog.getPosts();
 </script>
