@@ -7,7 +7,7 @@ import * as Tone from "tone";
 export class AudioMotion {
   private audioMotionObj: AudioMotionAnalyzer | undefined;
   init(el: HTMLAudioElement, options: Options) {
-    const toneAudioCtx: AudioContext = Tone.getContext();
+    const toneAudioCtx: AudioContext = Tone.getContext().rawContext;
     const extOptions = { audioCtx: toneAudioCtx, ...options };
     this.audioMotionObj = new AudioMotionAnalyzer(el, extOptions);
 
@@ -22,7 +22,7 @@ export class AudioMotion {
     this.audioMotionObj.setOptions({ gradient: "my-gradient" });
   }
   getAnalyzer() {
-    return this.audioMotionObj._analyzer;
+    if (this.audioMotionObj) return this.audioMotionObj._analyzer;
   }
   /*setOptions(options: Options) {
     this.audioMotionObj.setOptions(options);

@@ -3,11 +3,11 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 import { usePreferences } from "@/stores/preferences";
-import { getBlogPosts, getImageUrl } from "@/logics/blog";
+import blog from "@/logics/blog";
 import { Post } from "@/types";
 
 const preferences = usePreferences();
-const posts: Post[] = getBlogPosts();
+const posts: Post[] = blog.getPosts();
 </script>
 
 <template>
@@ -141,8 +141,8 @@ const posts: Post[] = getBlogPosts();
                 {{ post.category }}
               </span>
               <img
-                v-if="getImageUrl(post)"
-                :src="getImageUrl(post)"
+                v-if="post.thumbnail"
+                :src="post.thumbnail"
                 alt="image"
                 class="ud-w-full"
               />

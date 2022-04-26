@@ -25,7 +25,7 @@ describe("BreadcrumbComponent.vue", () => {
     expect(wrapper.findAll("li")[1].text()).toContain("Hello world");
   });
   it("should render 3 items with blog link", () => {
-    const wrapper = mount(Breadcrumb, {
+    const wrapper = mount(BreadcrumbComponent, {
       props: {
         pageName: "Blog post",
         path: "/blog/post",

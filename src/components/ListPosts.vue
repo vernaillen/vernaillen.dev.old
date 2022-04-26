@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { getBlogPosts } from "@/logics/blog";
+import blog from "@/logics/blog";
 import { Post } from "@/types";
-const posts: Post[] = getBlogPosts();
+const posts: Post[] = blog.getPosts();
 </script>
 
 <template>
