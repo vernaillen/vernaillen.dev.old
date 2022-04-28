@@ -1,12 +1,19 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import SVGBackgroundLeft1 from "@/assets/svg/background-left-1.svg";
-import SVGBackgroundRight1 from "@/assets/svg/background-right-1.svg";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 import blog from "@/classes/blog";
 import { Post } from "@/types";
 
+const FooterComponent = defineAsyncComponent(
+  () => import("@/components/FooterComponent.vue")
+);
+const SVGBackgroundLeft1 = defineAsyncComponent(
+  () => import("@/assets/svg/background-left-1.svg")
+);
+const SVGBackgroundRight1 = defineAsyncComponent(
+  () => import("@/assets/svg/background-right-1.svg")
+);
 const posts: Post[] = blog.getPosts();
 </script>
 

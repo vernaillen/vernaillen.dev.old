@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import SVGFooter from "@/assets/svg/footer.svg";
+import { defineAsyncComponent, onMounted } from "vue";
+
+const SVGFooter = defineAsyncComponent(() => import("@/assets/svg/footer.svg"));
 
 function easeInOutQuad(
   currentTime: number,

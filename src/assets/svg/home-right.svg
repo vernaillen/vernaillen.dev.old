@@ -4,6 +4,7 @@
     viewBox="0 0 450 556"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    class="animated fadeIn"
     >
     <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
     <circle

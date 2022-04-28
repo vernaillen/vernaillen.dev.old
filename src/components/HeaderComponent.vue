@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { computed, reactive, defineAsyncComponent } from "vue";
+import { computed, reactive } from "vue";
 import { usePreferences } from "@/stores/preferences";
 import PlayerControls from "@/components/PlayerControls.vue";
-
-const SVGLogo = defineAsyncComponent(() => import("@/assets/svg/logo.svg"));
-const SVGDarkToggler = defineAsyncComponent(
-  () => import("@/assets/svg/darkToggler.svg")
-);
+import SVGLogo from "@/assets/svg/logo.svg";
+import SVGDarkToggler from "@/assets/svg/darkToggler.svg";
 
 const navbar = reactive({
   show: false,

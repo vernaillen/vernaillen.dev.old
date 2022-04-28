@@ -2,9 +2,11 @@
 import { defineAsyncComponent } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import HeaderComponent from "@/components/HeaderComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 
+const FooterComponent = defineAsyncComponent(
+  () => import("@/components/FooterComponent.vue")
+);
 const SVGBackgroundLeft1 = defineAsyncComponent(
   () => import("@/assets/svg/background-left-1.svg")
 );
@@ -100,10 +102,10 @@ defineProps({
       </div>
     </div>
     <div>
-      <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1]">
+      <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1] animated fadeIn">
         <SVGBackgroundLeft1 />
       </span>
-      <span class="ud-absolute ud-right-0 ud-top-0 ud-z-[-1]">
+      <span class="ud-absolute ud-right-0 ud-top-0 ud-z-[-1] animated fadeIn">
         <SVGBackgroundRight1 />
       </span>
     </div>

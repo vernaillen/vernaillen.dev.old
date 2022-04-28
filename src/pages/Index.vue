@@ -1,8 +1,16 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import SVGHomeLeft from "@/assets/svg/home-left.svg";
-import SVGHomeRight from "@/assets/svg/home-right.svg";
+
+const FooterComponent = defineAsyncComponent(
+  () => import("@/components/FooterComponent.vue")
+);
+const SVGHomeLeft = defineAsyncComponent(
+  () => import("@/assets/svg/home-left.svg")
+);
+const SVGHomeRight = defineAsyncComponent(
+  () => import("@/assets/svg/home-right.svg")
+);
 </script>
 
 <template>
