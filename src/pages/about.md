@@ -24,7 +24,7 @@ If you want to see more details, then check out my [career timeline](/career)
 
 ## About this website
 
-I wrote a [blogpost about it](/blog/new-website)
+I wrote a [blogpost about it](/blog/hello-world-vernaillen-dev)
 
 Fot those that love some badges with icons and numbers: :D
 
