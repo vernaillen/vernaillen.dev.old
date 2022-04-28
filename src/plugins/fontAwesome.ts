@@ -5,6 +5,7 @@ import {
   faLocationPin,
   faPause,
   faPlay,
+  faRss,
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -18,6 +19,7 @@ library.add(
   faLocationPin,
   faPause,
   faPlay,
+  faRss,
   faSpinner,
   faInstagram,
   faLinkedin,

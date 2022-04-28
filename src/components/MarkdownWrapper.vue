@@ -1,18 +1,5 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import HeaderComponent from "@/components/HeaderComponent.vue";
-import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
-
-const FooterComponent = defineAsyncComponent(
-  () => import("@/components/FooterComponent.vue")
-);
-const SVGBackgroundLeft1 = defineAsyncComponent(
-  () => import("@/assets/svg/background-left-1.svg")
-);
-const SVGBackgroundRight1 = defineAsyncComponent(
-  () => import("@/assets/svg/background-right-1.svg")
-);
 
 useRouter();
 const route = useRoute();
@@ -103,10 +90,10 @@ defineProps({
     </div>
     <div>
       <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1] animated fadeIn">
-        <SVGBackgroundLeft1 />
+        <svg-background-left1 />
       </span>
       <span class="ud-absolute ud-right-0 ud-top-0 ud-z-[-1] animated fadeIn">
-        <SVGBackgroundRight1 />
+        <svg-background-right1 />
       </span>
     </div>
   </section>

@@ -2,24 +2,16 @@
 import { computed, reactive } from "vue";
 import { usePreferences } from "@/stores/preferences";
 import PlayerControls from "@/components/PlayerControls.vue";
-import SVGLogo from "@/assets/svg/logo.svg";
-import SVGDarkToggler from "@/assets/svg/darkToggler.svg";
+import svgLogo from "@/assets/svg/logo.svg";
+import svgDarkToggler from "@/assets/svg/darkToggler.svg";
 
+const preferences = usePreferences();
 const navbar = reactive({
   show: false,
 });
-const preferences = usePreferences();
 function navbarToggler() {
   navbar.show = !navbar.show;
 }
-function darkToggler() {
-  const html = document.querySelector("html") as HTMLElement;
-  preferences.dark
-    ? html.classList.remove("ud-dark")
-    : html.classList.add("ud-dark");
-  preferences.toggleDark();
-}
-
 const navbarTogglerClass = computed(() => {
   return navbar.show ? "navbarTogglerActive" : "";
 });
@@ -36,7 +28,7 @@ const navbarCollapseClass = computed(() => {
       <div class="ud-flex ud-mx-[-16px] ud-justify-between ud-relative">
         <div class="ud-px-4 ud-w-60 ud-max-w-full">
           <router-link to="/" class="ud-w-full ud-block header-logo">
-            <SVGLogo />
+            <svg-logo />
           </router-link>
         </div>
         <div
@@ -70,7 +62,7 @@ const navbarCollapseClass = computed(() => {
                 <li class="ud-relative ud-group">
                   <router-link
                     to="/"
-                    class="menu-scroll ud-text-base text-dark dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0"
+                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0"
                   >
                     Home
                   </router-link>
@@ -78,15 +70,23 @@ const navbarCollapseClass = computed(() => {
                 <li class="ud-relative ud-group">
                   <router-link
                     to="/about"
-                    class="menu-scroll ud-text-base text-dark dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
+                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
                   >
                     About
                   </router-link>
                 </li>
                 <li class="ud-relative ud-group">
                   <router-link
+                    to="/career"
+                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
+                  >
+                    Career
+                  </router-link>
+                </li>
+                <li class="ud-relative ud-group">
+                  <router-link
                     to="/blog"
-                    class="menu-scroll ud-text-base text-dark dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
+                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
                   >
                     Blog
                   </router-link>
@@ -94,7 +94,7 @@ const navbarCollapseClass = computed(() => {
                 <li class="ud-relative ud-group">
                   <router-link
                     to="/music"
-                    class="menu-scroll ud-text-base text-dark dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
+                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
                   >
                     Music
                   </router-link>
@@ -102,7 +102,7 @@ const navbarCollapseClass = computed(() => {
                 <li class="ud-relative ud-group">
                   <router-link
                     to="/contact"
-                    class="menu-scroll ud-text-base text-dark dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
+                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
                   >
                     Contact
                   </router-link>
@@ -119,11 +119,21 @@ const navbarCollapseClass = computed(() => {
               </li>
               <li>
                 <label
-                  for="darkToggler"
+                  for="toggleDark"
                   class="ud-cursor-pointer ud-w-10 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
-                  @click="darkToggler"
+                  @click="preferences.toggleDark()"
                 >
-                  <SVGDarkToggler />
+                  <svg-dark-toggler />
+                </label>
+              </li>
+              <li class="ud-relative ud-group">
+                <label
+                  for="toggleDark"
+                  class="ud-cursor-pointer ud-w-10 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
+                >
+                  <a href="/feed.xml" target="_blank">
+                    <font-awesome-icon :icon="['fas', 'rss']" />
+                  </a>
                 </label>
               </li>
             </ul>

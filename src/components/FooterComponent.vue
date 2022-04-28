@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { defineAsyncComponent, onMounted } from "vue";
+import PlayerControls from "./PlayerControls.vue";
 
-const SVGFooter = defineAsyncComponent(() => import("@/assets/svg/footer.svg"));
+const svgFooter = defineAsyncComponent(() => import("@/assets/svg/footer.svg"));
 
 function easeInOutQuad(
   currentTime: number,
@@ -67,154 +68,56 @@ onMounted(() => {
 
 <template>
   <footer
-    class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[80px] animated animated-duration-5s fadeIn"
+    class="ud-relative ud-z-10 ud-bg-primary ud-bg-opacity-5 ud-pt-[20px] animated animated-duration-5s fadeIn"
   >
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full md:ud-w-1/2 lg:ud-w-4/12 xl:ud-w-5/12 ud-px-4">
-          <div class="ud-mb-16 ud-max-w-[360px]">
-            <div class="ud-flex ud-items-center">
-              <a
-                class="ud-text-body-color hover:ud-text-primary ud-mr-6"
-                aria-label="social-link"
-                href="https://github.com/vernaillen/"
-                rel="noopener"
-                target="_blank"
-              >
-                <font-awesome-icon :icon="['fab', 'github']" />
-              </a>
-              <a
-                class="ud-text-body-color hover:ud-text-primary ud-mr-6"
-                aria-label="social-link"
-                href="https://www.linkedin.com/in/woutervernaillen/"
-                rel="noopener"
-                target="_blank"
-              >
-                <font-awesome-icon :icon="['fab', 'linkedin']" />
-              </a>
-              <a
-                class="ud-text-body-color hover:ud-text-primary ud-mr-6"
-                aria-label="social-link"
-                href="https://www.instagram.com/woutervernaillen/"
-                rel="noopener"
-                target="_blank"
-              >
-                <font-awesome-icon :icon="['fab', 'instagram']" />
-              </a>
-              <br />
-              <player-controls />
-            </div>
+        <div class="ud-w-full ud-px-4">
+          <div class="ud-flex ud-mb-4 ud-justify-center">
+            <PlayerControls />
           </div>
-        </div>
-
-        <div
-          class="ud-w-full sm:ud-w-1/2 md:ud-w-1/2 lg:ud-w-2/12 xl:ud-w-2/12 ud-px-4"
-        >
-          <div class="ud-mb-16">
-            <h2
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10"
+          <div class="ud-flex ud-mb-8 ud-justify-center">
+            <a
+              class="ud-text-body-color hover:ud-text-primary ud-mx-3"
+              aria-label="social-link"
+              href="https://github.com/vernaillen/"
+              rel="noopener"
+              target="_blank"
             >
-              Useful Links
-            </h2>
-            <ul>
-              <li>
-                <router-link
-                  to="/blog"
-                  class="ud-text-base ud-font-medium ud-inline-block ud-text-body-color ud-mb-4 hover:ud-text-primary"
-                >
-                  Blog
-                </router-link>
-              </li>
-              <li>
-                <router-link
-                  to="/about"
-                  class="ud-text-base ud-font-medium ud-inline-block ud-text-body-color ud-mb-4 hover:ud-text-primary"
-                >
-                  About
-                </router-link>
-              </li>
-              <li>
-                <router-link
-                  to="/contact"
-                  class="ud-text-base ud-font-medium ud-inline-block ud-text-body-color ud-mb-4 hover:ud-text-primary"
-                >
-                  Contact
-                </router-link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          class="ud-w-full sm:ud-w-1/2 md:ud-w-1/2 lg:ud-w-2/12 xl:ud-w-2/12 ud-px-4"
-        >
-          <div class="ud-mb-16">
-            <h2
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10"
+              <font-awesome-icon :icon="['fab', 'github']" />
+            </a>
+            <a
+              class="ud-text-body-color hover:ud-text-primary ud-mx-3"
+              aria-label="social-link"
+              href="https://www.linkedin.com/in/woutervernaillen/"
+              rel="noopener"
+              target="_blank"
             >
-              Terms
-            </h2>
-            <ul>
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  class="ud-text-base ud-font-medium ud-inline-block ud-text-body-color ud-mb-4 hover:ud-text-primary"
-                >
-                  TOS
-                </a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  class="ud-text-base ud-font-medium ud-inline-block ud-text-body-color ud-mb-4 hover:ud-text-primary"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="ud-w-full md:ud-w-1/2 lg:ud-w-4/12 xl:ud-w-3/12 ud-px-4">
-          <div class="ud-mb-16">
-            <h2
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-xl ud-mb-10"
+              <font-awesome-icon :icon="['fab', 'linkedin']" />
+            </a>
+            <a
+              class="ud-text-body-color hover:ud-text-primary ud-mx-3"
+              aria-label="social-link"
+              href="https://www.instagram.com/woutervernaillen/"
+              rel="noopener"
+              target="_blank"
             >
-              Support & Help
-            </h2>
-            <ul>
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  class="ud-text-base ud-font-medium ud-inline-block ud-text-body-color ud-mb-4 hover:ud-text-primary"
-                >
-                  Open Support Ticket
-                </a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  class="ud-text-base ud-font-medium ud-inline-block ud-text-body-color ud-mb-4 hover:ud-text-primary"
-                >
-                  Terms of Use
-                </a>
-              </li>
-            </ul>
+              <font-awesome-icon :icon="['fab', 'instagram']" />
+            </a>
           </div>
         </div>
       </div>
     </div>
     <div class="ud-py-8 ud-bg-primary ud-bg-opacity-10">
       <div class="ud-container">
-        <p
-          class="ud-text-body-color dark:ud-text-white ud-text-base ud-text-center"
-        >
-          &copy; Wouter Vernaillen - Vernaillen Consulting BVBA / Harmonics BV
+        <p class="ud-text-body-color ud-text-base ud-text-center">
+          &copy; 2022 Wouter Vernaillen - Vernaillen Consulting BVBA - Harmonics
+          BV
         </p>
       </div>
     </div>
-    <div class="ud-absolute ud-left-0 ud-bottom-[140px] ud-z-[-1]">
-      <SVGFooter />
+    <div class="ud-absolute ud-left-0 ud-bottom-[110px] ud-z-[-1]">
+      <svg-footer />
     </div>
   </footer>
   <a

@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 coverage/
 **/*.spec.js.snap
+
+.vite-ssg-temp

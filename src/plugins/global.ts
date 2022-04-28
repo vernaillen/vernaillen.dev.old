@@ -1,12 +1,28 @@
 import { defineAsyncComponent } from "vue";
 import MarkdownWrapper from "@/components/MarkdownWrapper.vue";
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 
 export const install: UserModule = ({ app }) => {
   /* declare global components */
   app.component("markdown-wrapper", MarkdownWrapper);
+  app.component("header-component", HeaderComponent);
+  app.component("breadcrumb-component", BreadcrumbComponent);
   app.component(
     "player-controls",
     defineAsyncComponent(() => import("@/components/PlayerControls.vue"))
+  );
+  app.component(
+    "footer-component",
+    defineAsyncComponent(() => import("@/components/FooterComponent.vue"))
+  );
+  app.component(
+    "svg-background-left1",
+    defineAsyncComponent(() => import("@/assets/svg/background-left-1.svg"))
+  );
+  app.component(
+    "svg-background-right1",
+    defineAsyncComponent(() => import("@/assets/svg/background-right-1.svg"))
   );
 
   /* declare global properties */

@@ -1,24 +1,12 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
-import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
-import blog from "@/classes/blog";
+import blog, { getImageUrl } from "@/classes/blog";
 import { Post } from "@/types";
 
-const FooterComponent = defineAsyncComponent(
-  () => import("@/components/FooterComponent.vue")
-);
-const SVGBackgroundLeft1 = defineAsyncComponent(
-  () => import("@/assets/svg/background-left-1.svg")
-);
-const SVGBackgroundRight1 = defineAsyncComponent(
-  () => import("@/assets/svg/background-right-1.svg")
-);
 const posts: Post[] = blog.getPosts();
 </script>
 
 <template>
-  <HeaderComponent />
+  <header-component />
   <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
@@ -42,10 +30,10 @@ const posts: Post[] = blog.getPosts();
 
     <div>
       <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1]">
-        <SVGBackgroundLeft1 />
+        <svg-background-left1 />
       </span>
       <span class="ud-absolute ud-right-0 ud-top-0 ud-z-[-1]">
-        <SVGBackgroundRight1 />
+        <svg-background-right1 />
       </span>
     </div>
   </section>
@@ -70,8 +58,8 @@ const posts: Post[] = blog.getPosts();
                 {{ post.category }}
               </span>
               <img
-                v-if="post.thumbnail"
-                :src="post.thumbnail"
+                v-if="getImageUrl(post)"
+                :src="getImageUrl(post)"
                 alt="image"
                 class="ud-w-full"
               />
@@ -136,5 +124,5 @@ const posts: Post[] = blog.getPosts();
       </div>
     </div>
   </section>
-  <FooterComponent />
+  <footer-component />
 </template>

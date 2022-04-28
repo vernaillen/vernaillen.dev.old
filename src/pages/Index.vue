@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
-
-const FooterComponent = defineAsyncComponent(
-  () => import("@/components/FooterComponent.vue")
-);
 const SVGHomeLeft = defineAsyncComponent(
   () => import("@/assets/svg/home-left.svg")
 );

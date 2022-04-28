@@ -1,4 +1,4 @@
-import { RouteRecordNormalized, useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 import { usePreferences } from "@/stores/preferences";
 
 export interface Post {
@@ -11,6 +11,8 @@ export interface Post {
   duration?: string;
   category?: string;
   thumbnail?: string;
+  thumbnail_dark?: string;
+  thumbnail_light?: string;
 }
 
 export class Blog {
@@ -42,20 +44,17 @@ export class Blog {
 const blog = new Blog();
 export default blog;
 
-function getImageUrl(post: RouteRecordNormalized) {
+export function getImageUrl(post: Post) {
   const preferences = usePreferences();
   const imagePath = "/images/blog";
-  if (
-    post.meta.frontmatter.thumbnail_dark &&
-    post.meta.frontmatter.thumbnail_light
-  ) {
+  if (post.thumbnail_dark && post.thumbnail_light) {
     if (preferences.dark) {
-      return imagePath + post.meta.frontmatter.thumbnail_light;
+      return imagePath + post.thumbnail_light;
     } else {
-      return imagePath + post.meta.frontmatter.thumbnail_dark;
+      return imagePath + post.thumbnail_dark;
     }
   }
-  if (post.meta.frontmatter.thumbnail) {
-    return imagePath + post.meta.frontmatter.thumbnail;
+  if (post.thumbnail) {
+    return imagePath + post.thumbnail;
   }
 }
