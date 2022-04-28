@@ -46,20 +46,23 @@ async function buildBlogRSS() {
         .map(async (i) => {
           const raw = await fs.readFile(i, "utf-8");
           const { data, content } = matter(raw);
-          console.log(" - " + data.title);
+          console.log(data);
 
           const html = markdown
             .render(content)
             .replace('src="/', `src="${DOMAIN}/`);
 
-          if (data.image?.startsWith("/")) data.image = DOMAIN + data.image;
+          if (data.thumbnail_dark?.startsWith("/"))
+            data.image = DOMAIN + "/images/blog" + data.thumbnail_dark;
+          else if (data.thumbnail?.startsWith("/"))
+            data.image = DOMAIN + "/images/blog" + data.thumbnail;
 
           return {
             ...data,
             date: new Date(data.date),
             content: html,
             author: [AUTHOR],
-            link: DOMAIN + i.replace(/^pages(.+)\.md$/, "$1"),
+            link: DOMAIN + i.replace(/^src\/pages(.+)\.md$/, "$1"),
           };
         })
     )

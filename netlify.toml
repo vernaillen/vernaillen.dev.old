@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/*"
-  to = "/"
-  status = 404
+  from = "/rss"
+  to = "/feed.xml"
+  status = 200

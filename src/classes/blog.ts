@@ -35,7 +35,7 @@ export class Blog {
         lang: i.meta.frontmatter.lang,
         duration: i.meta.frontmatter.duration,
         category: i.meta.frontmatter.category,
-        thumbnail: getImageUrl(i),
+        thumbnail: i.meta.frontmatter.thumbnail,
         thumbnail_dark: i.meta.frontmatter.thumbnail_dark,
         thumbnail_light: i.meta.frontmatter.thumbnail_light,
       }));
