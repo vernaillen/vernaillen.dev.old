@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
@@ -14,6 +15,19 @@ import { fileURLToPath, URL } from "url";
 import { resolve } from "path";
 import fs from "fs-extra";
 import matter from "gray-matter";
+import svgLoader from "vite-svg-loader";
+
+import "prismjs/components/prism-regex";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-xml-doc";
+import "prismjs/components/prism-yaml";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-markdown";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-javadoclike";
+import "prismjs/components/prism-javadoc";
+import "prismjs/components/prism-jsdoc";
 
 export default defineConfig({
   plugins: [
@@ -87,14 +101,14 @@ export default defineConfig({
       },
     }),
     eslintPlugin(),
+    svgLoader({
+      svgo: false,
+    }),
   ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
-  },
-  server: {
-    open: true,
   },
   // https://github.com/vitest-dev/vitest
   test: {

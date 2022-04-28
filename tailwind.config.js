@@ -1,8 +1,5 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx,svg}"],
   mode: "jit",
   darkMode: "class", // or 'media' or 'class'
   theme: {
@@ -43,5 +40,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  prefix: "ud-"
-}
+  prefix: "ud-",
+};

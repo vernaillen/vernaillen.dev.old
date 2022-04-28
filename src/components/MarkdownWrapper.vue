@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-import BackgroundSVG1 from "@/components/svg/BackgroundSVG1.vue";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
-import { useRouter, useRoute } from "vue-router";
+
+const SVGBackgroundLeft1 = defineAsyncComponent(
+  () => import("@/assets/svg/background-left-1.svg")
+);
+const SVGBackgroundRight1 = defineAsyncComponent(
+  () => import("@/assets/svg/background-right-1.svg")
+);
 
 useRouter();
 const route = useRoute();
@@ -92,7 +99,14 @@ defineProps({
         </div>
       </div>
     </div>
-    <BackgroundSVG1 />
+    <div>
+      <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1]">
+        <SVGBackgroundLeft1 />
+      </span>
+      <span class="ud-absolute ud-right-0 ud-top-0 ud-z-[-1]">
+        <SVGBackgroundRight1 />
+      </span>
+    </div>
   </section>
   <section class="ud-relative ud-z-10 ud-pt-[20px] ud-pb-[100px]">
     <div class="ud-container">

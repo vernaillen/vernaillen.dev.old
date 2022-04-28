@@ -7,4 +7,6 @@ export const install: UserModule = ({ app }) => {
   app.component("markdown-wrapper", MarkdownWrapper);
   app.component("list-posts", ListPosts);
   app.component("player-controls", PlayerControls);
+  /* declare global properties */
+  app.config.globalProperties.$primaryColor = "#9C8E1B";
 };
