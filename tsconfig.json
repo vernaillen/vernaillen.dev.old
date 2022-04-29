@@ -18,6 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "vite/client",
+      "vite-plugin-pwa/client",
       "vue/ref-macros",
       "vite-plugin-pages/client"
     ],
@@ -25,10 +26,11 @@
       "@/*": [
         "./src/*",
         "./dist/*"
-      ]
+      ],
     },
     "jsx": "preserve"
   },
+  "include": ["node_modules/**/*.d.ts"],
   "exclude": [
     "dist",
     "node_modules",

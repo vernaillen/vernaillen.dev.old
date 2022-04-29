@@ -18,8 +18,5 @@ useHead({
   <router-view />
   <client-only>
     <my-audio-motion-analyzer />
-    <Suspense>
-      <reload-prompt />
-    </Suspense>
   </client-only>
 </template>
