@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { isDark } from "@/logics";
 import blog, { getImageUrl } from "@/classes/blog";
 import { Post } from "@/types";
 
@@ -58,8 +59,8 @@ const posts: Post[] = blog.getPosts();
                 {{ post.category }}
               </span>
               <img
-                v-if="getImageUrl(post)"
-                :src="getImageUrl(post)"
+                v-if="getImageUrl(post, isDark)"
+                :src="getImageUrl(post, isDark)"
                 alt="image"
                 class="ud-w-full"
               />

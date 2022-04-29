@@ -54,6 +54,7 @@
     "esno": "^0.14.1",
     "feed": "^4.2.2",
     "fs-extra": "^10.0.1",
+    "gray-matter": "^4.0.3",
     "jsdom": "^19.0.0",
     "markdown-it": "^13.0.0",
     "markdown-it-anchor": "^8.5.0",

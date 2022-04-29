@@ -1,5 +1,4 @@
 import { useRouter } from "vue-router";
-import { usePreferences } from "@/stores/preferences";
 
 export interface Post {
   path: string;
@@ -44,11 +43,10 @@ export class Blog {
 const blog = new Blog();
 export default blog;
 
-export function getImageUrl(post: Post) {
-  const preferences = usePreferences();
+export function getImageUrl(post: Post, isDark: boolean) {
   const imagePath = "/images/blog";
   if (post.thumbnail_dark && post.thumbnail_light) {
-    if (preferences.dark) {
+    if (isDark) {
       return imagePath + post.thumbnail_light;
     } else {
       return imagePath + post.thumbnail_dark;

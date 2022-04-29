@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { computed, reactive } from "vue";
-import { usePreferences } from "@/stores/preferences";
+import { computed, reactive, watch } from "vue";
 import PlayerControls from "@/components/PlayerControls.vue";
 import svgLogo from "@/assets/svg/logo.svg";
 import svgDarkToggler from "@/assets/svg/darkToggler.svg";
+import { isDark } from "@/logics";
+import { useToggle } from "@vueuse/core";
 
-const preferences = usePreferences();
+const toggleDark = useToggle(isDark);
+
 const navbar = reactive({
   show: false,
 });
@@ -121,7 +123,7 @@ const navbarCollapseClass = computed(() => {
                 <label
                   for="toggleDark"
                   class="ud-cursor-pointer ud-w-10 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
-                  @click="preferences.toggleDark()"
+                  @click="toggleDark"
                 >
                   <svg-dark-toggler />
                 </label>

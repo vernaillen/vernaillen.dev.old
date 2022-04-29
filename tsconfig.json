@@ -19,8 +19,9 @@
     "types": [
       "vite/client",
       "vite-plugin-pwa/client",
+      "vite-plugin-pages/client",
+      "vitest/globals",
       "vue/ref-macros",
-      "vite-plugin-pages/client"
     ],
     "paths": {
       "@/*": [
