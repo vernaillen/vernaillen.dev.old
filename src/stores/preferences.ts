@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { useDark, useToggle } from "@vueuse/core";
+import { useDark, usePreferredDark, useToggle } from "@vueuse/core";
 
 const isDark = useDark({
   valueDark: "ud-dark",
@@ -9,7 +9,7 @@ const toggleUseDark = useToggle(isDark);
 
 export const usePreferences = defineStore("preferences", {
   state: () => ({
-    dark: isDark.value,
+    dark: usePreferredDark().value,
   }),
   actions: {
     toggleDark() {
