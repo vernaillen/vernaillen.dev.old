@@ -123,7 +123,13 @@ export default defineConfig({
     extension: [".vue"],
     globals: true,
   },
+  build: {
+    rollupOptions: {
+      external: ["virtual:pwa-register"],
+    },
+  },
   ssgOptions: {
+    script: "async",
     formatting: "minify",
     format: "cjs",
   },
