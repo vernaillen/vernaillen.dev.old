@@ -32,6 +32,9 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
       - run:
+          name: Install pnpm
+          command: curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm
+      - run:
           name: Build
           command: |
             pnpm run build
@@ -50,6 +53,9 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install pnpm
+          command: curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm
       - run:
           name: Test and Lint
           command: pnpm run lint && pnpm test
