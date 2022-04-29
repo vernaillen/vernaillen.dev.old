@@ -36,7 +36,7 @@ async function buildBlogRSS() {
     feedLinks: {
       json: "https://vernaillen.dev/feed.json",
       atom: "https://vernaillen.dev/feed.atom",
-      rss: "https://vernaillen.deve/feed.xml",
+      rss: "https://vernaillen.dev/feed.xml",
     },
   };
   const posts: any[] = (
@@ -61,6 +61,7 @@ async function buildBlogRSS() {
             ...data,
             date: new Date(data.date),
             content: html,
+            description: html,
             author: [AUTHOR],
             link: DOMAIN + i.replace(/^src\/pages(.+)\.md$/, "$1"),
           };

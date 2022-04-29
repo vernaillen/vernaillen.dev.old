@@ -125,7 +125,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ["virtual:pwa-register"],
+      external: ["virtual:pwa-register/vue"],
     },
   },
   ssgOptions: {
