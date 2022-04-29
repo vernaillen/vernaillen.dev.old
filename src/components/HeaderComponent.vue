@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, watch } from "vue";
+import { computed, reactive } from "vue";
 import PlayerControls from "@/components/PlayerControls.vue";
 import svgLogo from "@/assets/svg/logo.svg";
 import svgDarkToggler from "@/assets/svg/darkToggler.svg";

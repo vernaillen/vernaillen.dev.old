@@ -17,7 +17,7 @@ import fs from "fs-extra";
 import matter from "gray-matter";
 import svgLoader from "vite-svg-loader";
 
-import "prismjs/components/prism-regex";
+/*import "prismjs/components/prism-regex";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-xml-doc";
@@ -27,7 +27,7 @@ import "prismjs/components/prism-markdown";
 import "prismjs/components/prism-java";
 import "prismjs/components/prism-javadoclike";
 import "prismjs/components/prism-javadoc";
-import "prismjs/components/prism-jsdoc";
+import "prismjs/components/prism-jsdoc";*/
 
 export default defineConfig({
   plugins: [
@@ -112,7 +112,7 @@ export default defineConfig({
   },
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ["src/**/*.test.ts", "test/**/*.test.ts"],
+    include: ["test/**/*.test.ts"],
     excludeNodeModules: true,
     environment: "jsdom",
     coverage: {

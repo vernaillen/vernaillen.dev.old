@@ -5,7 +5,6 @@ import matter from "gray-matter";
 import MarkdownIt from "markdown-it";
 import type { FeedOptions, Item } from "feed";
 import { Feed } from "feed";
-import { slugify } from "./slugify";
 
 const DOMAIN = "https://vernaillen.dev";
 const AUTHOR = {
@@ -39,7 +38,7 @@ async function buildBlogRSS() {
       rss: "https://vernaillen.dev/feed.xml",
     },
   };
-  const posts: any[] = (
+  const posts = (
     await Promise.all(
       files
         .filter((i) => !i.includes("index"))

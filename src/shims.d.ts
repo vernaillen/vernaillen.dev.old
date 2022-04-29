@@ -42,6 +42,9 @@ declare module "*.svg" {
 
 declare module "vite-svg-loader" {
   import { Plugin } from "vite";
-  function svgLoader(options?: { svgoConfig?: Object; svgo?: boolean }): Plugin;
+  function svgLoader(options?: {
+    svgoConfig?: Record<string, unknown>;
+    svgo?: boolean;
+  }): Plugin;
   export default svgLoader;
 }

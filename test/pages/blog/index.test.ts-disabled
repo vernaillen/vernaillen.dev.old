@@ -1,0 +1,22 @@
+import "/test/mocks/matchMedia.mock";
+import "/test/mocks/blog.ts";
+import { shallowMount } from "@vue/test-utils";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { createTestingPinia } from "@pinia/testing";
+import days from "@/plugins/days";
+import index from "@/pages/blog/index.vue";
+
+describe("blog/index.vue", () => {
+  beforeEach(() => {
+    vi.resetAllMocks();
+  });
+
+  it("should render", () => {
+    shallowMount(index, {
+      global: {
+        plugins: [days, createTestingPinia()],
+      },
+    });
+    expect(getPosts).toHaveBeenCalledTimes(1);
+  });
+});
