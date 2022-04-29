@@ -13,8 +13,8 @@ export const usePreferences = defineStore("preferences", {
   }),
   actions: {
     toggleDark() {
-      this.dark = !this.dark;
       toggleUseDark();
+      this.dark = isDark.value;
     },
   },
 });
