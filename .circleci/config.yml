@@ -22,6 +22,7 @@ jobs:
       - save_cache:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
           paths:
+            - ~/.nvm
             - node_modules
   build:
     executor:
