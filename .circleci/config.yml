@@ -1,17 +1,21 @@
 version: 2.1
 
 orbs:
+  node: circleci/node@5.0.2
   sonarcloud: sonarsource/sonarcloud@1.0.3
   codecov: codecov/codecov@3.2.2
 
 jobs:
   setup:
-    docker:
-      - image: znck/pnpm:latest
+    executor:
+      name: node/default
     steps:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install pnpm
+          command: curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm
       - run:
           name: Install
           command: pnpm install --frozen-lockfile
@@ -20,18 +24,27 @@ jobs:
           paths:
             - node_modules
   build:
-    docker:
-      - image: znck/pnpm:latest
+    executor:
+      name: node/default
     steps:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: Build
-          command: pnpm run build
+          command: |
+            pnpm run build
+            ls dist
+      - save_cache:
+          key: build-output-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - dist
+      - store_artifacts:
+          path: dist
+          destination: dist
   test:
-    docker:
-      - image: znck/pnpm:latest
+    executor:
+      name: node/default
     steps:
       - checkout
       - restore_cache:
