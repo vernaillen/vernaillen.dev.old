@@ -14,8 +14,8 @@ defineProps({
 <template>
   <div class="ud-w-full ud-px-4 ud-mb-10">
     <div class="ud-text-end">
-      <ul class="ud-flex ud-items-center md:ud-justify-end">
-        <li class="ud-flex ud-items-center">
+      <ul class="ud-flex md:ud-justify-end">
+        <li class="ud-flex">
           <router-link
             to="/"
             class="ud-font-medium ud-text-base ud-text-body-color ud-pr-2 hover:ud-text-primary"
@@ -23,12 +23,12 @@ defineProps({
             Home
           </router-link>
           <span
-            class="ud-block ud-w-2 ud-h-2 ud-border-t-2 ud-border-r-2 ud-border-body-color ud-rotate-45 ud-mr-3"
+            class="ud-block ud-w-2 ud-h-2 ud-border-t-2 ud-border-r-2 ud-border-body-color ud-rotate-45 ud-mt-2 ud-mr-3"
           />
         </li>
         <li
           v-if="path.startsWith('/blog/')"
-          class="ud-flex ud-items-center ud-font-medium ud-text-base ud-text-primary"
+          class="ud-flex ud-font-medium ud-text-base ud-text-primary"
         >
           <router-link
             to="/blog"
@@ -38,12 +38,12 @@ defineProps({
           </router-link>
           <span
             v-if="path.startsWith('/blog')"
-            class="ud-block ud-w-2 ud-h-2 ud-border-t-2 ud-border-r-2 ud-border-body-color ud-rotate-45 ud-mr-3"
+            class="ud-block ud-w-2 ud-h-2 ud-border-t-2 ud-border-r-2 ud-border-body-color ud-rotate-45 ud-mt-2 ud-mr-3"
           />
         </li>
         <li
           v-if="pageName"
-          class="ud-flex ud-items-center ud-font-medium ud-text-base ud-text-primary"
+          class="ud-flex ud-font-medium ud-text-base ud-text-primary"
         >
           {{ pageName }}
         </li>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { defineAsyncComponent, onMounted } from "vue";
-import PlayerControls from "./PlayerControls.vue";
 
 const svgFooter = defineAsyncComponent(() => import("@/assets/svg/footer.svg"));
 
@@ -74,36 +73,10 @@ onMounted(() => {
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full ud-px-4">
           <div class="ud-flex ud-mb-4 ud-justify-center">
-            <PlayerControls />
+            <player-controls />
           </div>
           <div class="ud-flex ud-mb-8 ud-justify-center">
-            <a
-              class="ud-text-body-color hover:ud-text-primary ud-mx-3"
-              aria-label="social-link"
-              href="https://github.com/vernaillen/"
-              rel="noopener"
-              target="_blank"
-            >
-              <font-awesome-icon :icon="['fab', 'github']" />
-            </a>
-            <a
-              class="ud-text-body-color hover:ud-text-primary ud-mx-3"
-              aria-label="social-link"
-              href="https://www.linkedin.com/in/woutervernaillen/"
-              rel="noopener"
-              target="_blank"
-            >
-              <font-awesome-icon :icon="['fab', 'linkedin']" />
-            </a>
-            <a
-              class="ud-text-body-color hover:ud-text-primary ud-mx-3"
-              aria-label="social-link"
-              href="https://www.instagram.com/woutervernaillen/"
-              rel="noopener"
-              target="_blank"
-            >
-              <font-awesome-icon :icon="['fab', 'instagram']" />
-            </a>
+            <social-icons />
           </div>
         </div>
       </div>

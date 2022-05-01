@@ -1,6 +1,7 @@
 import type { UserModule } from "@/types";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
+  faBackwardStep,
   faCalendarDays,
   faLocationPin,
   faPause,
@@ -12,9 +13,11 @@ import {
   faInstagram,
   faLinkedin,
   faGithub,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 library.add(
+  faBackwardStep,
   faCalendarDays,
   faLocationPin,
   faPause,
@@ -23,7 +26,8 @@ library.add(
   faSpinner,
   faInstagram,
   faLinkedin,
-  faGithub
+  faGithub,
+  faTwitter
 );
 
 export const install: UserModule = ({ app }) => {

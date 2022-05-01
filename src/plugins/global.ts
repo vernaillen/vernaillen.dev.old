@@ -13,6 +13,10 @@ export const install: UserModule = ({ app }) => {
     defineAsyncComponent(() => import("@/components/PlayerControls.vue"))
   );
   app.component(
+    "social-icons",
+    defineAsyncComponent(() => import("@/components/SocialIcons.vue"))
+  );
+  app.component(
     "footer-component",
     defineAsyncComponent(() => import("@/components/FooterComponent.vue"))
   );

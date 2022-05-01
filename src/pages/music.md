@@ -8,7 +8,7 @@ Besides my passion for web development (which is the main focus of this website)
 
 Recently I've been having a lot of fun with music production as well as [web audio](https://webaudio.github.io/web-audio-api/#introductory) programming.
 
-<player-controls></player-controls>
+<player-controls extended />
 
 On this page you can see the 2 coming together:
 

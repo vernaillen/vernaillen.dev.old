@@ -3,6 +3,43 @@ import AudioMotionAnalyzer, {
   Options,
 } from "audiomotion-analyzer";
 import * as Tone from "tone";
+import { usePlayerState } from "@/stores/playerState";
+
+export class AudioPlayer {
+  private tonePlayer: Tone.Player;
+  constructor() {
+    this.tonePlayer = new Tone.Player("/music/RackNomad-MeditativeMelody.mp3")
+      .toDestination()
+      .sync()
+      .start(0);
+  }
+  play() {
+    Tone.start();
+    this.tonePlayer.volume.value = -6;
+    Tone.Transport.start();
+    setInterval(() => {
+      usePlayerState().updateTime(Tone.Transport.seconds.toFixed(2));
+    }, 100);
+    usePlayerState().updatePlaying(true);
+  }
+  stop() {
+    Tone.Transport.stop();
+    usePlayerState().updatePlaying(false);
+  }
+  pause() {
+    Tone.Transport.pause();
+    usePlayerState().updatePlaying(false);
+  }
+  async isLoaded() {
+    return Tone.ToneAudioBuffer.loaded();
+  }
+  now() {
+    return Tone.now();
+  }
+  connectAnalyzer(analyzer: Tone.InputNode) {
+    this.tonePlayer.fan(analyzer);
+  }
+}
 
 export class AudioMotion {
   private audioMotionObj: AudioMotionAnalyzer | undefined;
@@ -29,32 +66,5 @@ export class AudioMotion {
   }
   toggleAnalyzer() {
     if (this.audioMotionObj) this.audioMotionObj.toggleAnalyzer();
-  }
-}
-
-export class AudioPlayer {
-  private tonePlayer: Tone.Player;
-  constructor() {
-    this.tonePlayer = new Tone.Player(
-      "/music/RackNomad-MeditativeMelody.mp3"
-    ).toDestination();
-  }
-  play() {
-    this.tonePlayer.volume.value = 0.1;
-    this.tonePlayer.start();
-    Tone.Transport.start();
-  }
-  stop() {
-    this.tonePlayer.stop();
-    Tone.Transport.stop();
-  }
-  async isLoaded() {
-    return Tone.ToneAudioBuffer.loaded();
-  }
-  async state() {
-    return Tone.Transport.state;
-  }
-  connectAnalyzer(analyzer: Tone.InputNode) {
-    this.tonePlayer.fan(analyzer);
   }
 }

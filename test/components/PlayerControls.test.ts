@@ -7,7 +7,6 @@ describe("PlayerControls.vue", () => {
   it("should render", () => {
     const pinia = createTestingPinia();
     const audioPlayer = {
-      state: vi.fn(),
       isLoaded: vi.fn(),
     };
     const usePlayerState = {
@@ -27,8 +26,6 @@ describe("PlayerControls.vue", () => {
     });
     //expect(wrapper.findComponent("font-awesome-icon").exists()).toBe(true);
 
-    expect(audioPlayer.state).toHaveBeenCalledTimes(2);
-    expect(audioPlayer.isLoaded).toHaveBeenCalledTimes(1);
     expect(usePlayerState.isPlaying).toHaveBeenCalledTimes(0);
     expect(usePlayerState.updatePlaying).toHaveBeenCalledTimes(0);
   });
