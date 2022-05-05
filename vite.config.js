@@ -100,7 +100,11 @@ export default defineConfig({
         ],
       },
     }),
-    eslintPlugin(),
+    eslintPlugin({
+      exclude: ["/node_modules/", "**/vue-audiomotion-analyzer/dist/*.js"],
+      failOnWarning: false,
+      failOnError: false,
+    }),
     svgLoader({
       svgo: false,
     }),

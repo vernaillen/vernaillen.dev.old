@@ -15,4 +15,8 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: [
+    "**/vue3-typescript-plugin/*.js",
+    "@dbetka/vue3-typescript-plugin",
+  ],
 };
