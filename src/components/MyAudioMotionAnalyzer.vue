@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { AudioMotion, AudioPlayer } from "@/classes/audio";
+import { AudioPlayer } from "@/classes/audio";
 import { inject, onMounted } from "vue";
-const audioMotion: AudioMotion = inject("audioMotion");
 const audioPlayer: AudioPlayer = inject("audioPlayer");
 
 const options = {
@@ -24,13 +23,21 @@ const options = {
   showScaleY: false,
 };
 
+let analyzer;
+const getAnalyzer = (a) => {
+  analyzer = a;
+};
 onMounted(() => {
-  audioPlayer.connectAnalyzer(audioMotion.getAnalyzer()[0]);
+  if (analyzer) audioPlayer.connectAnalyzer(analyzer);
 });
 </script>
 
 <template>
-  <vueAudioMotionAnalyzer :options="options" />
+  <vue-audiomotion-analyzer
+    :options="options"
+    :audioCtx="audioPlayer.getAudioContext()"
+    @analyzer="getAnalyzer"
+  />
 </template>
 
 <style scoped>
