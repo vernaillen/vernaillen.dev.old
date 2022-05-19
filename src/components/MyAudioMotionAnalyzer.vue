@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { AudioPlayer } from "@/classes/audio";
-import { createToaster } from "@meforma/vue-toaster";
 import { inject } from "vue";
 const audioPlayer: AudioPlayer = inject("audioPlayer");
 
@@ -23,10 +22,6 @@ const options = {
   showScaleX: false,
   showScaleY: false,
 };
-
-const toaster = createToaster({ queue: true });
-toaster.show(`Welcome to Vernaillen.dev!`);
-toaster.show(`Hit play on the top right to listen to a song I made`);
 </script>
 
 <template>
