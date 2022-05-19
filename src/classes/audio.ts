@@ -38,4 +38,7 @@ export class AudioPlayer {
   getAudioContext() {
     return Tone.getContext().rawContext;
   }
+  getAudioNode() {
+    return this.tonePlayer;
+  }
 }
