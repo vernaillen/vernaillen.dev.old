@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
+import { formatDate } from "@/logics";
 
 useRouter();
 const route = useRoute();
@@ -68,7 +69,7 @@ defineProps({
                 <font-awesome-icon :icon="['fas', 'calendar-days']" /><span
                   class="ud-mr-2 fa-solid fa-calendar-days"
                 />
-                {{ $formatDate(frontmatter.date) }}
+                {{ formatDate(frontmatter.date) }}
               </p>
             </div>
             <div

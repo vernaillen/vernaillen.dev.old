@@ -14,7 +14,9 @@ export class AudioPlayer {
     this.tonePlayer.volume.value = -6;
     Tone.Transport.start();
     setInterval(() => {
-      usePlayerState().updateTime(Tone.Transport.seconds.toFixed(2));
+      usePlayerState().updateTime(
+        parseFloat(Tone.Transport.seconds.toFixed(2))
+      );
     }, 100);
     usePlayerState().updatePlaying(true);
   }

@@ -1,4 +1,5 @@
 import "vue-router";
+import type { AudioPlayer } from "@/classes/audio";
 
 declare module "vue-router" {
   interface RouteMeta {
@@ -47,4 +48,10 @@ declare module "vite-svg-loader" {
     svgo?: boolean;
   }): Plugin;
   export default svgLoader;
+}
+
+declare module "@vue/runtime-core" {
+  interface ComponentCustomProperties {
+    audioPlayer: AudioPlayer;
+  }
 }

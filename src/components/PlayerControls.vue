@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { inject, ref } from "vue";
 import { usePlayerState } from "@/stores/playerState";
-import { AudioPlayer } from "@/classes/audio";
+import type { AudioPlayer } from "@/classes/audio";
 
 const props = defineProps({
   extended: {
@@ -12,7 +12,8 @@ const props = defineProps({
 });
 
 const playerState = usePlayerState();
-const audioPlayer: AudioPlayer = inject("audioPlayer");
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const audioPlayer: AudioPlayer = inject("audioPlayer")!;
 let isLoaded = ref(false);
 
 async function checkIsBufferLoaded() {

@@ -11,10 +11,10 @@ export const install: UserModule = ({ isClient, router }) => {
     console.log("useRegisterSW: " + useRegisterSW);
     useRegisterSW({
       immediate: true,
-      onRegistered(r: ServiceWorkerRegistration) {
-        r &&
+      onRegistered(registration: ServiceWorkerRegistration | undefined) {
+        registration &&
           setInterval(() => {
-            r.update();
+            registration.update();
           }, intervalMS);
       },
     });

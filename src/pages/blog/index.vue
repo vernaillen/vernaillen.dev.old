@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { isDark } from "@/logics";
+import { formatDate, isDark } from "@/logics";
 import blog, { getImageUrl } from "@/classes/blog";
-import { Post } from "@/types";
+import type { Post } from "@/types";
 
 const posts: Post[] = blog.getPosts();
 </script>
@@ -115,7 +115,7 @@ const posts: Post[] = blog.getPosts();
                     <font-awesome-icon :icon="['fas', 'calendar-days']" /><span
                       class="ud-mr-2 fa-solid fa-calendar-days"
                     />
-                    {{ $formatDate(post.date) }}
+                    {{ formatDate(post.date) }}
                   </p>
                 </div>
               </div>

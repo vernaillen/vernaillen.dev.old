@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { AudioPlayer } from "@/classes/audio";
+import type { AudioPlayer } from "@/classes/audio";
 import { inject } from "vue";
-const audioPlayer: AudioPlayer = inject("audioPlayer");
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const audioPlayer: AudioPlayer = inject("audioPlayer")!;
 
 const options = {
   alphaBars: false,

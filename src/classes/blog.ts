@@ -1,5 +1,5 @@
 import { useRouter } from "vue-router";
-import { Post } from "@/types";
+import type { Post } from "@/types";
 
 export class Blog {
   getPosts() {

@@ -1,4 +1,5 @@
 import { defineAsyncComponent } from "vue";
+import type { UserModule } from "@/types";
 import MarkdownWrapper from "@/components/MarkdownWrapper.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
