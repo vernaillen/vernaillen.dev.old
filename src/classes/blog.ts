@@ -1,18 +1,5 @@
 import { useRouter } from "vue-router";
-
-export interface Post {
-  path: string;
-  title: string;
-  desc: string;
-  author: string;
-  date: string;
-  lang?: string;
-  duration?: string;
-  category?: string;
-  thumbnail?: string;
-  thumbnail_dark?: string;
-  thumbnail_light?: string;
-}
+import { Post } from "@/types";
 
 export class Blog {
   getPosts() {
