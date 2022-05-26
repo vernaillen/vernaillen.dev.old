@@ -26,10 +26,9 @@ const options = {
 </script>
 
 <template>
-  <vue-audiomotion-analyzer
+  <VueAudioMotionAnalyzer
     :options="options"
-    :audioCtx="audioPlayer.getAudioContext()"
-    :audioNode="audioPlayer.getAudioNode()"
+    :source="audioPlayer.getAudioNode()"
   />
 </template>
 
