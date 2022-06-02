@@ -1,19 +1,10 @@
 <script setup lang="ts">
 import { computed, reactive } from "vue";
 import PlayerControls from "@/components/PlayerControls.vue";
-import NavItem from "./NavItem.vue";
+import NavBar from "./NavBar.vue";
 import svgLogo from "@/assets/svg/logo.svg";
 import svgDarkToggler from "@/assets/svg/darkToggler.svg";
 import { useDark, useToggle } from "@vueuse/core";
-
-const navItems = [
-  { path: "/", title: "Home" },
-  { path: "/about", title: "About" },
-  //{ path: "/career", title: "Career" },
-  { path: "/blog", title: "Blog" },
-  { path: "/music", title: "Music" },
-  { path: "/contact", title: "Contact" },
-];
 
 const isDark = useDark({
   valueDark: "ud-dark",
@@ -73,14 +64,7 @@ const navbarCollapseClass = computed(() => {
               class="ud-absolute ud-py-5 lg:ud-py-0 lg:ud-px-4 xl:ud-px-6 ud-bg-white dark:ud-bg-dark lg:dark:ud-bg-transparent lg:ud-bg-transparent ud-shadow-lg ud-rounded-lg ud-max-w-[250px] ud-w-full lg:ud-max-w-full lg:ud-w-full ud-right-4 ud-top-full lg:ud-block lg:ud-static lg:ud-shadow-none"
               :class="navbarCollapseClass"
             >
-              <ul class="ud-block lg:ud-flex">
-                <nav-item
-                  v-for="(item, index) in navItems"
-                  :key="index"
-                  :path="item.path"
-                  :title="item.title"
-                />
-              </ul>
+              <nav-bar />
             </nav>
           </div>
           <div
