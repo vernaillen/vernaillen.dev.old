@@ -17,24 +17,13 @@ I have strongly specialised in full stack java development on portal platforms.
 Since 2006 this was focussed on IBM WebSphere Portal, as I was working for IBM.
 Later, when I decided to start freelancing, I changed my focus to open source and [Liferay Portal](https://www.liferay.com/).
 
-On this website you can discover the projects I'm currently involved in, the technologies I specialise in and the way I love to work.
-Or you can check out my LinkedIn profile for a more detailed career path.
-
-If you want to see more details, then check out my [career timeline](/career)
+Feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/woutervernaillen/) for a more detailed career path.
 
 ## About this website
 
-I wrote a [blogpost about it](/blog/hello-world-vernaillen-dev)
+I wrote a [blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this website
 
-Fot those that love some badges with icons and numbers: :D
-
-Here is some *code*:
-
-```java
-public class Test {
-  public void foo() {}
-}
-```
+### Some stats and badges
 
 [![Last Commit](https://badgen.net/github/last-commit/vernaillen/vernaillen.dev?icon=github)](https://github.com/vernaillen/vernaillen.dev/commits/master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vernaillen.dev&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vernaillen.dev)

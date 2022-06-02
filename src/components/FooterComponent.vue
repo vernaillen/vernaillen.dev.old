@@ -85,7 +85,9 @@ onMounted(() => {
       <div class="ud-container">
         <p class="ud-text-body-color ud-text-base ud-text-center">
           &copy; 2022 Wouter Vernaillen - Vernaillen Consulting BV -
-          <a href="https://harmonics.be" target="_blank">Harmonics BV</a>
+          <a href="https://harmonics.be" target="_blank" rel="noopener"
+            >Harmonics BV</a
+          >
         </p>
       </div>
     </div>
