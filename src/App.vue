@@ -7,8 +7,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content:
-        "Wouter Vernaillen - Freelance Full Stack Java & JavaScript Developer",
+      content: "Wouter Vernaillen - Freelance Full Stack Java & Vue Developer",
     },
   ],
 });

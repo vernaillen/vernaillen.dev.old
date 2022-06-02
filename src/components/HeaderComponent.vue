@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import { computed, reactive } from "vue";
 import PlayerControls from "@/components/PlayerControls.vue";
+import NavItem from "./NavItem.vue";
 import svgLogo from "@/assets/svg/logo.svg";
 import svgDarkToggler from "@/assets/svg/darkToggler.svg";
 import { useDark, useToggle } from "@vueuse/core";
+
+const navItems = [
+  { path: "/", title: "Home" },
+  { path: "/about", title: "About" },
+  //{ path: "/career", title: "Career" },
+  { path: "/blog", title: "Blog" },
+  { path: "/music", title: "Music" },
+  { path: "/contact", title: "Contact" },
+];
 
 const isDark = useDark({
   valueDark: "ud-dark",
@@ -64,54 +74,12 @@ const navbarCollapseClass = computed(() => {
               :class="navbarCollapseClass"
             >
               <ul class="ud-block lg:ud-flex">
-                <li class="ud-relative ud-group">
-                  <router-link
-                    to="/"
-                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0"
-                  >
-                    Home
-                  </router-link>
-                </li>
-                <li class="ud-relative ud-group">
-                  <router-link
-                    to="/about"
-                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
-                  >
-                    About
-                  </router-link>
-                </li>
-                <li class="ud-relative ud-group">
-                  <router-link
-                    to="/career"
-                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
-                  >
-                    Career
-                  </router-link>
-                </li>
-                <li class="ud-relative ud-group">
-                  <router-link
-                    to="/blog"
-                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
-                  >
-                    Blog
-                  </router-link>
-                </li>
-                <li class="ud-relative ud-group">
-                  <router-link
-                    to="/music"
-                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
-                  >
-                    Music
-                  </router-link>
-                </li>
-                <li class="ud-relative ud-group">
-                  <router-link
-                    to="/contact"
-                    class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-py-6 lg:ud-inline-flex lg:ud-px-0 ud-flex ud-mx-8 lg:ud-mr-0 lg:ud-ml-8 xl:ud-ml-12"
-                  >
-                    Contact
-                  </router-link>
-                </li>
+                <nav-item
+                  v-for="(item, index) in navItems"
+                  :key="index"
+                  :path="item.path"
+                  :title="item.title"
+                />
               </ul>
             </nav>
           </div>

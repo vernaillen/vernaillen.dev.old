@@ -33,7 +33,7 @@ const SVGHomeRight = defineAsyncComponent(
             <p
               class="ud-font-medium ud-text-md md:ud-text-lg ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 ud-mb-10"
             >
-              Java, Spring, Vue, Angular & Liferay
+              Java, Spring, Vue & Liferay
             </p>
             <div class="ud-flex ud-items-center ud-justify-center ud-mt-10">
               <router-link

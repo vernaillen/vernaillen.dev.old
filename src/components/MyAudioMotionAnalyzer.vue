@@ -33,7 +33,7 @@ const options = {
 </template>
 
 <style scoped>
-#audioMotionAnalyzer {
+#vueAudioMotionAnalyzer {
   position: fixed;
   bottom: 0;
   left: 0;

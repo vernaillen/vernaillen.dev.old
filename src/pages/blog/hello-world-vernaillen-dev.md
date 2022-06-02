@@ -2,7 +2,7 @@
 title: Hello World Vernaillen.dev
 desc: Happy to introduce the rewrite of my professional website, now built with Vue 3, Vite, Tailwind and Markdown
 pageName: Hello World
-date: 04/25/2022
+date: 06/02/2022
 tag:
 - website
 - vue
@@ -10,7 +10,7 @@ tag:
 - netlify
 - markdown
 - all
-category: Vue.js
+category: Vue
 author: Wouter Vernaillen
 location: Zottegem, Belgium
 thumbnail_dark: /hello-world_dark.png
@@ -31,13 +31,3 @@ It was fun to port into the Vue app. And after changing the main colors to match
 
 The fun for me is in learning the new features of Vue 3, learning how to use Vite and Tailwind, and most of all create functionality blog system based on simple markdown files.
 As well as setting up continuous integration with CircleCI & code checks with SonarCloud. I'm also testing 2 app hosting platforms, Netlify & Vercel.
-
-## Vue & Vite
-
-## Markdown & FrontMatter
-
-## Tailwind
-
-## Netlify
-
-## Circle CI
