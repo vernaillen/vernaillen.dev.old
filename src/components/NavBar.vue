@@ -21,10 +21,10 @@ import { useRoute } from "vue-router";
 
 const navItems = [
   { path: "/", title: "Home" },
-  { path: "/about", title: "About" },
   //{ path: "/career", title: "Career" },
   { path: "/blog", title: "Blog" },
   { path: "/music", title: "Music" },
+  { path: "/about", title: "About" },
   { path: "/contact", title: "Contact" },
 ];
 

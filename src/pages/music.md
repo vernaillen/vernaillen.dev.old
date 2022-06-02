@@ -16,11 +16,10 @@ On this website you can see the love for sound & music and the interest in web d
 
     <player-controls extended />
 
-* created [vue-audiomotion-analyzer](https://vue-audiomotion-analyzer.dev/), a Vue plugin to wrap the [audioMotion-analyzer](https://audiomotion.dev/)
-* learned Pinia to control the state of the Tone.player, so the play/pause button is updated automatically in all 3 locations (header, footer and this page)
+* created [vue-audiomotion-analyzer](https://vue-audiomotion-analyzer.dev/), a Vue plugin to wrap [Henrique Vianna](https://github.com/hvianna)'s [audioMotion-analyzer](https://audiomotion.dev/)
+* learned [Pinia](https://pinia.vuejs.org/) to control the state of the [Tone.player](https://tonejs.github.io/docs/14.7.77/Player), so the play/pause button is updated automatically in all 3 locations (header, footer and this page)
 
 ## Modular
 
-This past year I also started builing a Eurorack modular synthesizer. For the case I decided to go for a [Erica Synths 2x104HP Carbon Fiber Travel Case](https://www.ericasynths.lv/shop/enclosures/carbon/2x104hp-carbon-fiber-travel-case-lid/) and already bought a few modules :D
-
+This past year I also started builing a Eurorack modular synthesizer.
 You can find some videos of jams on my [RackNomad Instagram account](https://www.instagram.com/racknomad/) or [YouTube Channel](https://www.youtube.com/channel/UCmlPhwe54sHvnK_HOL_-SlA)
