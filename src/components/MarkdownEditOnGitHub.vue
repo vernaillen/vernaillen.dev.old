@@ -2,7 +2,7 @@
   <section class="ud-relative ud-overflow-hidden ud-py-8 ud-mb-10">
     <div class="ud-container">
       <div
-        class="ud-text-gray-400 ud-flex ud-flex-wrap ud-items-center ud-justify-end ud-mx-[-16px]"
+        class="ud-text-gray-400 ud-flex ud-flex-wrap ud-items-center ud-justify-end ud-px-8"
       >
         <a :href="editLink" target="_blank">[Edit on GitHub]</a>
       </div>
