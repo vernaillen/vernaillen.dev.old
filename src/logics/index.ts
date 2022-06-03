@@ -18,6 +18,5 @@ export function currentYear() {
 }
 export function yearsOfExperience() {
   const startYear: number = parseInt(dayjs("01/02/1999").format("YYYY"));
-  const currentYear: number = parseInt(dayjs().format("YYYY"));
-  return currentYear - startYear;
+  return parseInt(currentYear()) - startYear;
 }
