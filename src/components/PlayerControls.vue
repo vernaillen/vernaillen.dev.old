@@ -9,6 +9,11 @@ const props = defineProps({
     default: false,
     required: false,
   },
+  smaller: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
 });
 
 const playerState = usePlayerState();
@@ -31,13 +36,16 @@ const back = () => {
 };
 
 const labelBase =
-  "ud-cursor-pointer ud-w-10 ud-h-14 ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white";
+  "ud-cursor-pointer ud-w-10 ud-h-14 ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white ud-ml-2";
 const labelClass = props.extended
-  ? labelBase + " ud-inline-block"
-  : labelBase + " ud-flex";
+  ? labelBase + " ud-inline"
+  : labelBase + " ud-flex ";
 
-const iconClass =
-  "ud-rounded-full ud-bg-primary ud-bg-opacity-10 dark:ud-bg-opacity-20 ud-p-2 ud-w-4 ud-h-4";
+const iconBase =
+  "ud-rounded-full ud-bg-primary ud-bg-opacity-10 dark:ud-bg-opacity-20";
+const iconClass = props.smaller
+  ? iconBase + " ud-p-2 ud-w-3 ud-h-3 ud-mt-[-8px]"
+  : iconBase + " ud-p-2 ud-w-4 ud-h-4 ";
 </script>
 
 <template>
