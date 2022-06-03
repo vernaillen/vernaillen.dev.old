@@ -1,9 +1,7 @@
 ---
-
 title: About Wouter
 desc: You might be wondering... who is this guy?
 pageName: About
-# bgColor: yellow
 ---
 
 I'm an avid traveler, following the sunshine around the world, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
@@ -23,7 +21,7 @@ Feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/wouterv
 
 ## About this website
 
-I wrote a [blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this website. I still plan to add a list of implemented features to that blog post. 
+I wrote a [blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this website. I still plan to add a list of implemented features to that blog post.
 
 ### Some stats and badges
 
