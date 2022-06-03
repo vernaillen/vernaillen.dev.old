@@ -23,7 +23,7 @@ Feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/wouterv
 
 ## About this website
 
-I wrote a [blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this website
+I wrote a [blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this website. I still plan to add a list of implemented features to that blog post. 
 
 ### Some stats and badges
 
