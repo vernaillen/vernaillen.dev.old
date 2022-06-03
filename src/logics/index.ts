@@ -14,7 +14,6 @@ export function formatDate(d: string) {
 }
 export function currentYear() {
   const date = dayjs();
-  console.log(date);
   return date.format("YYYY");
 }
 export function yearsOfExperience() {

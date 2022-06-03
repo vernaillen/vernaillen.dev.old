@@ -1,3 +1,4 @@
+import "../matchMedia.mock";
 import { shallowMount } from "@vue/test-utils";
 import { describe, expect, it } from "vitest";
 import { createTestingPinia } from "@pinia/testing";
@@ -8,6 +9,9 @@ describe("FooterComponent.vue", () => {
     const wrapper = shallowMount(FooterComponent, {
       global: {
         plugins: [createTestingPinia()],
+        mocks: {
+          matchMedia,
+        },
       },
     });
     expect(wrapper.text()).toContain("Wouter Vernaillen");

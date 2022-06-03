@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
 import { formatDate } from "@/logics";
-import MarkdownEditOnGitHub from "./MarkdownEditOnGitHub.vue";
+import MarkdownGitHub from "./MarkdownGitHub.vue";
 
 useRouter();
 const route = useRoute();
@@ -73,6 +73,7 @@ defineProps({
                 {{ formatDate(frontmatter.date) }}
               </p>
             </div>
+            <MarkdownGitHub />
             <div
               v-if="false && frontmatter.location"
               class="ud-flex ud-items-center ud-mr-2 ud-mb-5"
@@ -114,6 +115,5 @@ defineProps({
       </div>
     </div>
   </section>
-  <MarkdownEditOnGitHub />
   <footer-component />
 </template>

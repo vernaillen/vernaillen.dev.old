@@ -5,7 +5,6 @@ import PlayerControls from "@/components/PlayerControls.vue";
 
 describe("PlayerControls.vue", () => {
   it("should render", () => {
-    const pinia = createTestingPinia();
     const audioPlayer = {
       isLoaded: vi.fn(),
     };
@@ -15,7 +14,7 @@ describe("PlayerControls.vue", () => {
     };
     shallowMount(PlayerControls, {
       global: {
-        plugins: [pinia],
+        plugins: [createTestingPinia()],
         mocks: {
           usePlayerState,
         },
