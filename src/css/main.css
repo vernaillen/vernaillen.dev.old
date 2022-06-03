@@ -88,14 +88,6 @@ input#checkboxLabel:checked ~ .box span {
     stroke: #FFFFFF;
   }
 }
-nav ul li a {
-  border-top: 3px solid transparent;
-}
-@media (min-width: 960px) {
-  nav ul li a.router-link-active {
-    border-top: 3px solid #9C8E1B;
-  }
-}
 
 .animated.animated-duration-3s {
   animation-duration: 3s;

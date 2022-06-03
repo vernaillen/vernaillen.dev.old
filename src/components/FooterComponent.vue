@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { defineAsyncComponent, onMounted } from "vue";
+import { currentYear } from "@/logics";
 
 const svgFooter = defineAsyncComponent(() => import("@/assets/svg/footer.svg"));
 
@@ -84,7 +85,8 @@ onMounted(() => {
     <div class="ud-py-8 ud-bg-primary ud-bg-opacity-10">
       <div class="ud-container">
         <p class="ud-text-body-color ud-text-base ud-text-center">
-          &copy; 2022 Wouter Vernaillen - Vernaillen Consulting BV -
+          &copy; {{ currentYear() }} Wouter Vernaillen - Vernaillen Consulting
+          BV -
           <a href="https://harmonics.be" target="_blank" rel="noopener"
             >Harmonics BV</a
           >

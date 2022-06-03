@@ -37,16 +37,16 @@ const SVGHomeRight = defineAsyncComponent(
             </p>
             <div class="ud-flex ud-items-center ud-justify-center ud-mt-10">
               <router-link
-                to="/about"
+                to="/blog"
                 class="ud-text-base ud-font-semibold ud-text-white ud-bg-primary ud-py-3 ud-px-6 hover:ud-bg-opacity-80 ud-mx-2 ud-my-10 ud-rounded-md animated-duration-3s animated fadeIn"
               >
-                About Wouter
+                Blog
               </router-link>
               <router-link
-                to="/blog"
+                to="/about"
                 class="ud-text-base ud-font-semibold ud-text-black ud-bg-black ud-bg-opacity-10 dark:ud-text-white dark:ud-bg-white dark:ud-bg-opacity-20 ud-py-3 ud-px-6 hover:ud-bg-opacity-20 dark:hover:ud-bg-opacity-20 ud-mx-2 ud-my-10 ud-rounded-md animated-duration-3s animated fadeIn"
               >
-                Blog
+                About Wouter
               </router-link>
             </div>
           </div>

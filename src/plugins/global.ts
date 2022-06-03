@@ -3,12 +3,14 @@ import type { UserModule } from "@/types";
 import MarkdownWrapper from "@/components/MarkdownWrapper.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
+import YearsOfExperience from "@/components/YearsOfExperience.vue";
 
 export const install: UserModule = ({ app }) => {
   /* declare global components */
   app.component("markdown-wrapper", MarkdownWrapper);
   app.component("header-component", HeaderComponent);
   app.component("breadcrumb-component", BreadcrumbComponent);
+  app.component("years-of-experience", YearsOfExperience);
   app.component(
     "player-controls",
     defineAsyncComponent(() => import("@/components/PlayerControls.vue"))

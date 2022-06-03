@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
 import { formatDate } from "@/logics";
+import MarkdownEditOnGitHub from "./MarkdownEditOnGitHub.vue";
 
 useRouter();
 const route = useRoute();
@@ -98,13 +99,13 @@ defineProps({
       </span>
     </div>
   </section>
-  <section class="ud-relative ud-z-10 ud-pt-[20px] ud-pb-[100px]">
+  <section class="ud-relative ud-z-10 ud-py-8">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full ud-py-4 ud-px-8 md:ud-px-12">
           <div class="ud-mx-auto">
             <p
-              class="ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 ud-mb-12 animated fadeIn"
+              class="ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 animated fadeIn"
             >
               <slot />
             </p>
@@ -113,5 +114,6 @@ defineProps({
       </div>
     </div>
   </section>
+  <MarkdownEditOnGitHub />
   <footer-component />
 </template>

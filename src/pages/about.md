@@ -1,8 +1,9 @@
 ---
+
 title: About Wouter
 desc: You might be wondering... who is this guy?
 pageName: About
-#bgColor: yellow
+# bgColor: yellow
 ---
 
 I'm an avid traveler, following the sunshine around the world, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
@@ -11,10 +12,11 @@ I'm an avid traveler, following the sunshine around the world, always open to le
 
 ## Career
 
-My career as an IT consultant started in 1999. The first 14 years I worked as an employee for several IT service companies, and since 2013 I'm working as a freelancer.
+My career as an IT consultant started in 1999. The first 14 years I worked as an employee for several IT service companies, and since 2013 I'm working as a freelancer.\
+By now I have build up more then <years-of-experience/> years of experience in web development and full stack development.
 
 I have strongly specialised in full stack java development on portal platforms.
-Since 2006 this was focussed on IBM WebSphere Portal, as I was working for IBM.
+Since 2006 this was focussed on IBM WebSphere Portal, as I was working for IBM.\
 Later, when I decided to start freelancing, I changed my focus to open source and [Liferay Portal](https://www.liferay.com/).
 
 Feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/woutervernaillen/) for a more detailed career path.
