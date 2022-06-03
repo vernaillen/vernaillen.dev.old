@@ -4,6 +4,7 @@ import MarkdownWrapper from "@/components/MarkdownWrapper.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 import YearsOfExperience from "@/components/YearsOfExperience.vue";
+import DarkToggler from "@/components/DarkToggler.vue";
 
 export const install: UserModule = ({ app }) => {
   /* declare global components */
@@ -11,6 +12,7 @@ export const install: UserModule = ({ app }) => {
   app.component("header-component", HeaderComponent);
   app.component("breadcrumb-component", BreadcrumbComponent);
   app.component("years-of-experience", YearsOfExperience);
+  app.component("dark-toggler", DarkToggler);
   app.component(
     "player-controls",
     defineAsyncComponent(() => import("@/components/PlayerControls.vue"))

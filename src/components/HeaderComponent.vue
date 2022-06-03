@@ -3,14 +3,6 @@ import { computed, reactive } from "vue";
 import PlayerControls from "@/components/PlayerControls.vue";
 import NavBar from "./NavBar.vue";
 import svgLogo from "@/assets/svg/logo.svg";
-import svgDarkToggler from "@/assets/svg/darkToggler.svg";
-import { useDark, useToggle } from "@vueuse/core";
-
-const isDark = useDark({
-  valueDark: "ud-dark",
-  valueLight: "ud-light",
-});
-const toggleDark = useToggle(isDark);
 
 const navbar = reactive({
   show: false,
@@ -75,17 +67,11 @@ const navbarCollapseClass = computed(() => {
                 <player-controls />
               </li>
               <li>
-                <label
-                  for="toggleDark"
-                  class="ud-cursor-pointer ud-w-10 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
-                  @click="toggleDark()"
-                >
-                  <svg-dark-toggler />
-                </label>
+                <dark-toggler />
               </li>
               <li class="ud-relative ud-group">
                 <label
-                  for="toggleDark"
+                  for="rss"
                   class="ud-cursor-pointer ud-w-10 ud-h-14 ud-rounded-full ud-flex ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white"
                 >
                   <a href="/feed.xml" target="_blank">

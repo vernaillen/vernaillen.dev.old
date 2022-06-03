@@ -8,7 +8,7 @@
       >&nbsp; last updated:&nbsp;
       <a :href="viewLink" target="_blank">{{ lastUpdated }}</a
       >&nbsp;-&nbsp;
-      <a :href="editLink" target="_blank">[edit markdown]</a>
+      <a :href="editLink" target="_blank">[edit]</a>
     </p>
   </div>
 </template>

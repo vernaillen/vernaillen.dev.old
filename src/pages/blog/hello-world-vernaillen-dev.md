@@ -32,15 +32,17 @@ It was fun to port into the Vue app. And after changing the main colors to match
 The fun for me is in learning the new features of Vue 3, learning how to use Vite and Tailwind, and most of all create functionality blog system based on simple markdown files.
 As well as setting up continuous integration with CircleCI & code checks with SonarCloud. I'm also testing 2 app hosting platforms, Netlify & Vercel.
 
-## Features
+## Website Features
 
 * Built with [Vue 3](https://vuejs.org/), [TypeScript](https://vuejs.org/guide/typescript/overview.html), [Vite](https://vitejs.dev/) and [Tailwind CSS](https://tailwindcss.com/)
 * Static Site Generation with [vite-ssg](https://github.com/antfu/vite-ssg)
 * [Markdown](https://daringfireball.net/projects/markdown/) support with [vite-plugin-md](https://github.com/antfu/vite-plugin-md) and [markdown-it](https://markdown-it.github.io/)
 * SVG support in Vue with [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader), used for the background graphics
 * <font-awesome-icon :icon="['fas', 'rss']" /> [RSS](https://vernaillen.dev/feed.xml) & [Atom](https://vernaillen.dev/feed.xml) for newreaders.  And yes, I still use a [newsreader](https://feedly.com) myself too ;)
-* [Tone.js](https://tonejs.github.io/) and audio visualisation with [audioMotion-analyzer](https://audiomotion.dev/):
- <player-controls extended smaller />
+* Dark and Light style: <dark-toggler inline/>
+* [Tone.js](https://tonejs.github.io/) and audio visualisation with [vue-audiomotion-analyzer](https://vue-audiomotion-analyzer.dev/):
+ <player-controls extended />
+* [Pinia](https://pinia.vuejs.org/) is used to keep track of the audio player state
 * Automated deployments / auto publishing on [Netlify](https://www.netlify.com/)
 * Continous integration with [CircleCI](https://app.circleci.com/pipelines/github/vernaillen/vernaillen.dev?filter=all)
 * Code quality check with [SonarCloud](https://sonarcloud.io/summary/new_code?id=vernaillen.dev)
