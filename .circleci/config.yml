@@ -54,6 +54,13 @@ jobs:
           name: Test and Lint
           command: pnpm run lint && pnpm test
       - sonarcloud/scan
+  trigger-deploy:
+    executor: 
+      name: node/default
+    steps:
+      - run:
+          name: Trigger Netlify Deploy
+          command: curl -X POST -d {} ${NETLIFY_HOOK}
 
 workflows:
   version: 2
@@ -65,8 +72,16 @@ workflows:
             - setup
       - test:
           requires:
-            - setup
+            - build
           context: SonarCloud
           post-steps:
             - codecov/upload:
                 file: ./coverage/lcov.info
+      - trigger-deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - main
+
