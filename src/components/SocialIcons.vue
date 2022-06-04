@@ -1,7 +1,6 @@
 <template>
   <a
     class="ud-text-body-color hover:ud-text-primary ud-mx-3"
-    aria-label="social-link"
     href="https://github.com/vernaillen/"
     rel="noopener"
     target="_blank"
@@ -10,7 +9,6 @@
   </a>
   <a
     class="ud-text-body-color hover:ud-text-primary ud-mx-3"
-    aria-label="social-link"
     href="https://www.linkedin.com/in/woutervernaillen/"
     rel="noopener"
     target="_blank"
@@ -19,7 +17,6 @@
   </a>
   <a
     class="ud-text-body-color hover:ud-text-primary ud-mx-3"
-    aria-label="social-link"
     href="https://www.instagram.com/woutervernaillen/"
     rel="noopener"
     target="_blank"
@@ -28,7 +25,6 @@
   </a>
   <a
     class="ud-text-body-color hover:ud-text-primary ud-mx-3"
-    aria-label="social-link"
     href="https://twitter.com/vernaillen"
     rel="noopener"
     target="_blank"

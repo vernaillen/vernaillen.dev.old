@@ -35,7 +35,6 @@ const navbarCollapseClass = computed(() => {
           <div>
             <button
               id="navbarToggler"
-              aria-label="Mobile Menu"
               class="ud-block ud-absolute ud-right-4 ud-top-1/2 ud-translate-y-[-50%] lg:ud-hidden focus:ud-ring-2 ud-ring-primary ud-px-3 ud-py-[6px] ud-rounded-lg"
               @click="navbarToggler"
               :class="navbarTogglerClass"
@@ -51,7 +50,6 @@ const navbarCollapseClass = computed(() => {
               ></span>
             </button>
             <nav
-              :if="navbar.show"
               id="navbarCollapse"
               class="ud-absolute ud-py-5 lg:ud-py-0 lg:ud-px-4 xl:ud-px-6 ud-bg-white dark:ud-bg-dark lg:dark:ud-bg-transparent lg:ud-bg-transparent ud-shadow-lg ud-rounded-lg ud-max-w-[250px] ud-w-full lg:ud-max-w-full lg:ud-w-full ud-right-4 ud-top-full lg:ud-block lg:ud-static lg:ud-shadow-none"
               :class="navbarCollapseClass"
