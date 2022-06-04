@@ -6,55 +6,27 @@ orbs:
   codecov: codecov/codecov@3.2.2
 
 jobs:
-  setup:
-    executor:
-      name: node/default
+  build_and_test:
+    docker:
+      - image: vernaillen/circleci-pnpm:18.2.0
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
-      - run:
-          name: Install pnpm
-          command: curl -L https://pnpm.js.org/pnpm.js | node - add --global pnpm
       - run:
           name: Install packages
           command: pnpm install --frozen-lockfile
-      - save_cache:
-          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
-          paths:
-            - ~/.nvm
-            - node_modules
-  build:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Lint
+          command: pnpm run lint
+      - run:
+          name: Test
+          command: pnpm test
+      - sonarcloud/scan
       - run:
           name: Build
           command: |
             pnpm run build
             ls dist
-      - save_cache:
-          key: build-output-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - dist
-      - store_artifacts:
-          path: dist
-          destination: dist
-  test:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
-      - run:
-          name: Test and Lint
-          command: pnpm run lint && pnpm test
-      - sonarcloud/scan
-  trigger-deploy:
+  trigger_deploy:
     executor: 
       name: node/default
     steps:
@@ -66,20 +38,14 @@ workflows:
   version: 2
   build_test_deploy:
     jobs:
-      - setup
-      - build:
-          requires:
-            - setup
-      - test:
-          requires:
-            - build
+      - build_and_test:
           context: SonarCloud
           post-steps:
             - codecov/upload:
                 file: ./coverage/lcov.info
-      - trigger-deploy:
+      - trigger_deploy:
           requires:
-            - test
+            - build_and_test
           filters:
             branches:
               only:
