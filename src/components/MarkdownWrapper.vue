@@ -73,7 +73,9 @@ defineProps({
                 {{ formatDate(frontmatter.date) }}
               </p>
             </div>
-            <MarkdownGitHub />
+            <client-only>
+              <MarkdownGitHub />
+            </client-only>
             <div
               v-if="false && frontmatter.location"
               class="ud-flex ud-items-center ud-mr-2 ud-mb-5"
