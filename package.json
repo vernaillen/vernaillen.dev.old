@@ -29,7 +29,7 @@
     "prism-theme-vars": "^0.2.3",
     "tone": "^14.7.77",
     "vue": "^3.2.36",
-    "vue-audiomotion-analyzer": "^0.4.4",
+    "vue-audiomotion-analyzer": "^0.5.0",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
