@@ -5,8 +5,7 @@ import type { GradientOptions } from "vue-audiomotion-analyzer";
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const audioPlayer: AudioPlayer = inject("audioPlayer")!;
-
-const options = {
+let options = {
   alphaBars: true,
   ledBars: false,
   barSpace: 0.1,
@@ -17,12 +16,15 @@ const options = {
   overlay: true,
   showPeaks: true,
   showScale: false,
-  mode: 4,
+  mode: 3,
   fftSize: 8192,
-  height: 130,
+  height: 100,
   showScaleX: false,
   showScaleY: false,
 };
+if (window.innerWidth < 960) {
+  options = { ...options, mode: 6 };
+}
 const gradientOptions: GradientOptions = {
   bgColor: "#FFFFFF",
   colorStops: [
