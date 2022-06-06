@@ -7,21 +7,19 @@ import type { GradientOptions } from "vue-audiomotion-analyzer";
 const audioPlayer: AudioPlayer = inject("audioPlayer")!;
 
 const options = {
-  alphaBars: false,
-  ledBars: true,
-  barSpace: 0,
+  alphaBars: true,
+  ledBars: false,
+  barSpace: 0.1,
   bgAlpha: 0.5,
   sensitivity: 2,
-  smoothing: 0.5,
+  smoothing: 0.3,
   showBgColor: false,
   overlay: true,
-  showLeds: false,
   showPeaks: true,
   showScale: false,
-  gradient: "classic",
-  mode: 2,
+  mode: 4,
   fftSize: 8192,
-  height: 100,
+  height: 130,
   showScaleX: false,
   showScaleY: false,
 };
