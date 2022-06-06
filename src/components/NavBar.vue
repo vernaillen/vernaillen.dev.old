@@ -30,7 +30,6 @@ const navItems = [
 
 const addClasses = (path: string) => {
   const currentRoute = useRoute().path;
-  console.log(currentRoute);
   let classToAdd = "";
   if (path != "/" && currentRoute.startsWith(path))
     classToAdd = "router-link-active";
