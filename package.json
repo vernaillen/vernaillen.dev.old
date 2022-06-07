@@ -79,6 +79,6 @@
     "vite-ssg": "^0.20.1",
     "vite-svg-loader": "^3.3.0",
     "vitest": "^0.14.1",
-    "vue-tsc": "~0.36.1"
+    "vue-tsc": "~0.37.0"
   }
 }
