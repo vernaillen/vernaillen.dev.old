@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { formatDate, isDark } from "@/logics";
+import { formatDate } from "@/logics";
 import blog, { getImageUrl } from "@/classes/blog";
 import type { Post } from "@/types";
+import { usePreferences } from "@/stores/preferences";
 
+const preferences = usePreferences();
 const posts: Post[] = blog.getPosts();
 </script>
 
@@ -59,8 +61,8 @@ const posts: Post[] = blog.getPosts();
                 {{ post.category }}
               </span>
               <img
-                v-if="getImageUrl(post, isDark)"
-                :src="getImageUrl(post, isDark)"
+                v-if="getImageUrl(post, preferences.dark)"
+                :src="getImageUrl(post, preferences.dark)"
                 alt="image"
                 class="ud-w-full"
               />
