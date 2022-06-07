@@ -34,7 +34,7 @@ specifiers:
   dayjs: ^1.11.3
   diacritics: ^1.3.0
   eslint: ^8.17.0
-  eslint-plugin-vue: ^8.7.1
+  eslint-plugin-vue: ~8.7.1
   esno: ^0.16.3
   feed: ^4.2.2
   fs-extra: ^10.1.0
@@ -64,7 +64,7 @@ specifiers:
   vue: ^3.2.37
   vue-audiomotion-analyzer: ^0.5.0
   vue-router: ^4.0.15
-  vue-tsc: ^0.36.1
+  vue-tsc: ~0.36.1
 
 dependencies:
   '@fortawesome/fontawesome-svg-core': 6.1.1
@@ -228,7 +228,7 @@ packages:
       '@babel/compat-data': 7.17.10
       '@babel/core': 7.18.2
       '@babel/helper-validator-option': 7.16.7
-      browserslist: 4.20.3
+      browserslist: 4.20.4
       semver: 6.3.0
     dev: true
 
@@ -2399,7 +2399,7 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.20.3
+      browserslist: 4.20.4
       caniuse-lite: 1.0.30001349
       fraction.js: 4.2.0
       normalize-range: 0.1.2
@@ -2527,8 +2527,8 @@ packages:
     resolution: {integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==}
     dev: true
 
-  /browserslist/4.20.3:
-    resolution: {integrity: sha512-NBhymBQl1zM0Y5dQT/O+xiLP9/rzOIQdKM/eMJBAq7yBgaB6krIYLGejrwVYnSHZdqjscB1SPuAjHwxjvN6Wdg==}
+  /browserslist/4.20.4:
+    resolution: {integrity: sha512-ok1d+1WpnU24XYN7oC3QWgTyMhY/avPJ/r9T00xxvUOIparA/gc+UPUMaod3i+G6s+nI2nUb9xZ5k794uIwShw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
@@ -2805,7 +2805,7 @@ packages:
   /core-js-compat/3.22.8:
     resolution: {integrity: sha512-pQnwg4xtuvc2Bs/5zYQPaEYYSuTxsF7LBWF0SvnVhthZo/Qe+rJpcEekrdNK5DWwDJ0gv0oI9NNX5Mppdy0ctg==}
     dependencies:
-      browserslist: 4.20.3
+      browserslist: 4.20.4
       semver: 7.0.0
     dev: true
 
