@@ -35,7 +35,7 @@ jobs:
       - slack/notify:
           channel: circleci
           event: pass
-          template: success_tagged_deploy_1
+          template: basic_success_1
 
 workflows:
   version: 2
