@@ -21,9 +21,9 @@ Feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/wouterv
 
 ## About this website
 
-I wrote a [blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this website. I still plan to add a list of implemented features to that blog post.
+I wrote [this blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this new version of this website.
 
-### Some stats and badges
+### Some stats and badges if anyone is interested :D
 
 [![Last Commit](https://badgen.net/github/last-commit/vernaillen/vernaillen.dev?icon=github)](https://github.com/vernaillen/vernaillen.dev/commits/master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vernaillen.dev&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vernaillen.dev)
