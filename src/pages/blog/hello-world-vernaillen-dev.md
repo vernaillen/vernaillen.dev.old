@@ -2,14 +2,14 @@
 title: Hello World Vernaillen.dev
 desc: Happy to introduce the rewrite of my professional website, now built with Vue 3, Vite, Tailwind and Markdown
 pageName: Hello World
-date: 06/02/2022
+date: 06/11/2022
 tag:
 - website
 - vue
 - vite
 - netlify
+- circleci
 - markdown
-- all
 category: Vue
 author: Wouter Vernaillen
 location: Zottegem, Belgium
