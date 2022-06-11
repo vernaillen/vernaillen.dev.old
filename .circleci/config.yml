@@ -28,14 +28,8 @@ jobs:
             pnpm run build
             ls dist
       - slack/notify:
-          channel: circleci
-          event: fail
-          template: basic_fail_1
-          mentions: '@wouter'
-      - slack/notify:
-          channel: circleci
-          event: pass
-          template: basic_success_1
+          channel: circleci-netlify
+          event: always
 
 workflows:
   version: 2
