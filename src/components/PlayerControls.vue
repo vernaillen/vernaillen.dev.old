@@ -14,7 +14,7 @@ const props = defineProps({
 const playerState = usePlayerState();
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const audioPlayer: AudioPlayer = inject("audioPlayer")!;
-let isLoaded = ref(false);
+const isLoaded = ref(false);
 
 async function checkIsBufferLoaded() {
   (await audioPlayer) && (await audioPlayer.isLoaded());
