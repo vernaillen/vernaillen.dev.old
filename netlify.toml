@@ -6,11 +6,6 @@
   publish = "dist"
   command = "npx pnpm install --frozen-lockfile --store=node_modules/.pnpm-store && npx pnpm run build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
