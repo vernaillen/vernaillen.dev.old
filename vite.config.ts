@@ -10,7 +10,6 @@ import Prism from "markdown-it-prism";
 import Pages from "vite-plugin-pages";
 import generateSitemap from "vite-plugin-pages-sitemap";
 import eslintPlugin from "vite-plugin-eslint";
-import { VitePWA } from "vite-plugin-pwa";
 import { fileURLToPath, URL } from "url";
 import { resolve } from "path";
 import fs from "fs-extra";
@@ -70,36 +69,6 @@ export default defineConfig({
       },
     }),
 
-    // https://github.com/antfu/vite-plugin-pwa
-    VitePWA({
-      registerType: "autoUpdate",
-      includeAssets: ["favicon.svg", "apple-touch-icon.png"],
-      manifest: {
-        name: "Wouter Vernaillen",
-        short_name: "Vernaillen.dev",
-        description: "Full Stack Java & JavaScript Developer",
-        theme_color: "#ffffff",
-        background_color: "#231f20",
-        icons: [
-          {
-            src: "/pwa-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/pwa-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-          {
-            src: "/pwa-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-            purpose: "any maskable",
-          },
-        ],
-      },
-    }),
     eslintPlugin({
       exclude: ["/node_modules/", "**/vue-audiomotion-analyzer/dist/*.js"],
       failOnWarning: false,
@@ -126,11 +95,6 @@ export default defineConfig({
     },
     extension: [".vue"],
     globals: true,
-  },
-  build: {
-    rollupOptions: {
-      external: ["virtual:pwa-register/vue"],
-    },
   },
   ssgOptions: {
     script: "async",
