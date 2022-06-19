@@ -2,9 +2,6 @@
 import { formatDate } from "@/logics";
 import blog, { getImageUrl } from "@/classes/blog";
 import type { Post } from "@/types";
-import { usePreferences } from "@/stores/preferences";
-
-const preferences = usePreferences();
 const posts: Post[] = blog.getPosts();
 </script>
 
@@ -61,10 +58,14 @@ const posts: Post[] = blog.getPosts();
                 {{ post.category }}
               </span>
               <img
-                v-if="getImageUrl(post, preferences.dark)"
-                :src="getImageUrl(post, preferences.dark)"
+                :src="getImageUrl(post, true)"
                 alt="image"
-                class="ud-w-full"
+                class="ud-w-full light:ud-hidden"
+              />
+              <img
+                :src="getImageUrl(post, false)"
+                alt="image"
+                class="ud-w-full dark:ud-hidden"
               />
             </router-link>
             <div

@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import svgDarkToggler from "@/assets/svg/darkToggler.svg";
-import { usePreferences } from "@/stores/preferences";
+import { useDark, useToggle } from "@vueuse/core";
 
-const preferences = usePreferences();
+const isDark = useDark({
+  valueDark: "ud-dark",
+  valueLight: "ud-light",
+});
+const toggleDark = useToggle(isDark);
 const props = defineProps({
   inline: {
     type: Boolean,
@@ -15,10 +19,6 @@ const classBase =
 const darkTogglerClass = props.inline
   ? classBase + " ud-inline-block ud-w-5 ud-h-5"
   : classBase + " ud-flex ud-w-10 ud-h-14 ";
-
-const toggleDark = () => {
-  preferences.toggleDark();
-};
 </script>
 <template>
   <label for="toggleDark" :class="darkTogglerClass" @click="toggleDark()">

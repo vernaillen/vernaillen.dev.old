@@ -7,15 +7,9 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 describe("HeaderComponent.vue", () => {
   it("should render", () => {
     const pinia = createTestingPinia();
-    const usePreferences = {
-      toggleDark: vi.fn(),
-    };
     const wrapper = shallowMount(HeaderComponent, {
       global: {
         plugins: [pinia],
-        mocks: {
-          usePreferences,
-        },
         stubs: {
           RouterLink: RouterLinkStub,
         },

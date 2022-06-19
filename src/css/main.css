@@ -95,3 +95,7 @@ input#checkboxLabel:checked ~ .box span {
 .animated.animated-duration-5s {
   animation-duration: 5s;
 }
+
+.ud-light .light\:ud-hidden {
+  display: none;
+}
