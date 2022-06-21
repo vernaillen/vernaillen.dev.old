@@ -21,5 +21,5 @@ On this website you can see the love for sound & music and the interest in web d
 
 ## Modular
 
-This past year I also started builing a Eurorack modular synthesizer.
+This past year I also started building a Eurorack modular synthesizer.
 You can find some videos of jams on my [RackNomad Instagram account](https://www.instagram.com/racknomad/) or [YouTube Channel](https://www.youtube.com/channel/UCmlPhwe54sHvnK_HOL_-SlA)
