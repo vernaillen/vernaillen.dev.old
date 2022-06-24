@@ -1,6 +1,6 @@
 ---
 title: Hello World Vernaillen.dev
-desc: Happy to introduce the rewrite of the website for my freelance business, now built with Vue 3, Vite, Tailwind and Markdown
+desc: Introducing a complete rewrite of the website for my freelance business, now built with Vue 3, Vite, Tailwind and Markdown
 pageName: Hello World
 date: 06/11/2022
 tag:
