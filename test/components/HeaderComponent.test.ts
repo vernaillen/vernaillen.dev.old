@@ -1,6 +1,6 @@
 import "/test/mocks/matchMedia.mock";
 import { shallowMount, RouterLinkStub } from "@vue/test-utils";
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { createTestingPinia } from "@pinia/testing";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 
