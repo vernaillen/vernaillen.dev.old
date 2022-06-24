@@ -1,6 +1,6 @@
 ---
 title: Hello World Vernaillen.dev
-desc: Happy to introduce the rewrite of my professional website, now built with Vue 3, Vite, Tailwind and Markdown
+desc: Happy to introduce the rewrite of the website for my freelance business, now built with Vue 3, Vite, Tailwind and Markdown
 pageName: Hello World
 date: 06/11/2022
 tag:
@@ -36,7 +36,7 @@ The result is a website that is very easy to edit and publish content updates,ca
 
 * Built with [Vue 3](https://vuejs.org/), [TypeScript](https://vuejs.org/guide/typescript/overview.html), [Vite](https://vitejs.dev/) and [Tailwind CSS](https://tailwindcss.com/)
 * Static Site Generation with [vite-ssg](https://github.com/antfu/vite-ssg), so search indexes can crawl the content
-* [Markdown](https://daringfireball.net/projects/markdown/) support with [vite-plugin-md](https://github.com/antfu/vite-plugin-md) and [markdown-it](https://markdown-it.github.io/)
+* All content is created using [Markdown](https://daringfireball.net/projects/markdown/) and rendered with [vite-plugin-md](https://github.com/antfu/vite-plugin-md) and [markdown-it](https://markdown-it.github.io/)
 * SVG support in Vue with [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader), used for the background graphics
 * <font-awesome-icon :icon="['fas', 'rss']" /> [RSS](https://vernaillen.dev/feed.xml) & [Atom](https://vernaillen.dev/feed.xml) for newreaders.  And yes, I still use a [newsreader](https://feedly.com) myself too ;)
 * Dark and Light style: <dark-toggler inline/>
