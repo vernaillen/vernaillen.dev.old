@@ -50,7 +50,10 @@ const posts: Post[] = blog.getPosts();
           <div
             class="ud-relative ud-bg-white dark:ud-bg-dark ud-shadow-one ud-rounded-md ud-overflow-hidden ud-mb-10 animated fadeIn"
           >
-            <router-link :to="post.path" class="ud-w-full ud-block ud-relative">
+            <router-link
+              :to="post.path"
+              class="ud-w-full ud-block ud-relative ud-h-[161px] md:ud-h-[139px] xl:ud-h-[109px] 2xl:ud-h-[128px]"
+            >
               <span
                 v-if="post.category"
                 class="ud-absolute ud-top-6 ud-right-6 ud-bg-primary ud-rounded-full ud-inline-flex ud-items-center ud-justify-center ud-py-2 ud-px-4 ud-font-semibold ud-text-sm ud-text-white"
