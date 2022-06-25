@@ -18,7 +18,7 @@ Object.values(import.meta.globEager("../assets/gallery/**")).forEach(
       imageModule.default &&
       imageModule.default.startsWith("/src/assets/gallery/" + props.folder)
     ) {
-      images.push(imageModule.default.substring);
+      images.push(imageModule.default);
     }
   }
 );
