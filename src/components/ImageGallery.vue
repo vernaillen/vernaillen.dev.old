@@ -11,13 +11,14 @@ const props = defineProps({
   },
 });
 const images: string[] = [];
-Object.values(import.meta.globEager("/src/assets/gallery/**")).forEach(
+Object.values(import.meta.globEager("../assets/gallery/**")).forEach(
   (imageModule) => {
+    console.log(imageModule.default);
     if (
       imageModule.default &&
       imageModule.default.startsWith("/src/assets/gallery/" + props.folder)
     ) {
-      images.push(imageModule.default);
+      images.push(imageModule.default.substring);
     }
   }
 );
