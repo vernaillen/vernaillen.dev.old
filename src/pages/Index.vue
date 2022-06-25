@@ -21,7 +21,7 @@ const SVGHomeRight = defineAsyncComponent(
             class="ud-mx-auto ud-max-w-[570px] ud-text-center animated fadeIn"
           >
             <h1
-              class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl sm:ud-text-4xl md:ud-text-5xl ud-leading-tight sm:ud-leading-tight md:ud-leading-tight ud-mb-20"
+              class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl sm:ud-text-4xl md:ud-text-5xl ud-leading-tight sm:ud-leading-tight md:ud-leading-tight ud-mb-20 animated pulse"
             >
               Wouter Vernaillen
             </h1>
