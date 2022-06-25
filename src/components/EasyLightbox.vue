@@ -20,17 +20,13 @@ const handleHide = () => {
 };
 </script>
 
-<style>
+<style scoped>
 .vel-modal {
   z-index: 9990;
   top: 67px;
 }
 html.ud-dark .vel-modal {
   background: rgba(0, 0, 0, 0.8);
-}
-.vel-toolbar,
-.vel-toolbar .toolbar-btn {
-  z-index: 9999;
 }
 @media only screen and (max-width: 959px) {
   .vel-modal {
