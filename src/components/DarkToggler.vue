@@ -22,6 +22,6 @@ const darkTogglerClass = props.inline
 </script>
 <template>
   <label for="toggleDark" :class="darkTogglerClass" @click="toggleDark()">
-    <svg-dark-toggler />
+    <svgDarkToggler />
   </label>
 </template>

@@ -6,10 +6,12 @@
       :src="image"
       class="ud-w-[380px] ud-h-auto ud-pr-6 ud-cursor-pointer"
       @click="openGallery(index)"
+      :alt="image"
     />
   </div>
   <vue-easy-lightbox
     loop
+    moveDisabled
     :index="index"
     :visible="visible"
     :imgs="images"
@@ -60,6 +62,7 @@ const openGallery = (i: number) => {
 
 <style scoped>
 .vel-modal {
-  background: rgba(0, 0, 0, 0.8);
+  top: 67px;
+  background: rgba(0, 0, 0, 0.6);
 }
 </style>
