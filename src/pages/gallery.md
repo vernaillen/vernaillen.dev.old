@@ -4,6 +4,6 @@ pageName: Gallery
 author: Wouter Vernaillen
 ---
 
-testing a custom developed image gallery.
+testing the image gallery & lightbox.
 
-<image-gallery folder="testGallery" />
+<image-gallery folder="blog" filter="_thumb.png" />

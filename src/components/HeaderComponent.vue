@@ -20,7 +20,7 @@ const navbarCollapseClass = computed(() => {
 
 <template>
   <header
-    class="header ud-bg-transparent ud-absolute ud-top-0 ud-left-0 ud-z-40 ud-w-full ud-flex ud-items-center"
+    class="header ud-bg-transparent ud-absolute ud-top-0 ud-left-0 ud-z-10 ud-w-full ud-flex ud-items-center"
   >
     <div class="ud-container">
       <div class="ud-flex ud-mx-[-16px] ud-justify-between ud-relative">

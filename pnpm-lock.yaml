@@ -63,6 +63,7 @@ specifiers:
   vitest: ^0.15.2
   vue: ^3.2.37
   vue-audiomotion-analyzer: ^0.5.0
+  vue-easy-lightbox: ^1.4.1
   vue-router: ^4.0.16
   vue-tsc: ~0.38.1
 
@@ -83,6 +84,7 @@ dependencies:
   tone: 14.7.77
   vue: 3.2.37
   vue-audiomotion-analyzer: 0.5.0
+  vue-easy-lightbox: 1.4.1_vue@3.2.37
   vue-router: 4.0.16_vue@3.2.37
 
 devDependencies:
@@ -4391,6 +4393,15 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
+
+  /vue-easy-lightbox/1.4.1_vue@3.2.37:
+    resolution: {integrity: sha512-bZHepAokLwiy77qLx45n3WxnLRg4M2gcffpu2Q/H71C7UgSxxXgAmbJdIrtOFni0VwA1rFxkfBBP1Ajn9FY2OA==}
+    engines: {node: '>=10.13.0'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.2.37
+    dev: false
 
   /vue-eslint-parser/9.0.3_eslint@8.18.0:
     resolution: {integrity: sha512-yL+ZDb+9T0ELG4VIFo/2anAOz8SvBdlqEnQnvJ3M7Scq56DvtjY0VY88bByRZB0D4J0u8olBcfrXTVONXsh4og==}

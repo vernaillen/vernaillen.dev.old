@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "rss": "esno ./scripts/rss.ts",
-    "prepushtest": "pnpm run lint && pnpm run typecheck && pnpm run coverage && pnpm run build"
+    "prepushtest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run typecheck && pnpm run coverage && pnpm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -30,6 +30,7 @@
     "tone": "^14.7.77",
     "vue": "^3.2.37",
     "vue-audiomotion-analyzer": "^0.5.0",
+    "vue-easy-lightbox": "^1.4.1",
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
