@@ -9,22 +9,11 @@
       :alt="image"
     />
   </div>
-  <vue-easy-lightbox
-    loop
-    moveDisabled
-    :index="index"
-    :visible="visible"
-    :imgs="images"
-    @hide="handleHide"
-  >
-  </vue-easy-lightbox>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
-const visible = ref(false);
-const index = ref(0);
+import { useLightbox } from "@/stores/lightbox";
+const lightbox = useLightbox();
 const props = defineProps({
   folder: {
     type: String,
@@ -38,7 +27,6 @@ const props = defineProps({
 });
 const images: string[] = [];
 Object.values(import.meta.glob("/public/images/**")).forEach((imageModule) => {
-  console.log(imageModule.name);
   if (
     imageModule.name &&
     imageModule.name.startsWith("/public/images/" + props.folder) &&
@@ -48,21 +36,8 @@ Object.values(import.meta.glob("/public/images/**")).forEach((imageModule) => {
   }
 });
 
-const show = () => {
-  visible.value = true;
-};
-const handleHide = () => {
-  visible.value = false;
-};
 const openGallery = (i: number) => {
-  index.value = i;
-  show();
+  lightbox.setImages(images);
+  lightbox.show(i);
 };
 </script>
-
-<style scoped>
-.vel-modal {
-  top: 67px;
-  background: rgba(0, 0, 0, 0.6);
-}
-</style>
