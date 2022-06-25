@@ -16,7 +16,8 @@ export const useLightbox = defineStore("lightbox", {
             const ud_header = document.querySelector(".header") as HTMLElement;
             ud_header.classList.add("sticky");
             const audioMotion = document.querySelector("#vueAudioMotionAnalyzer") as HTMLElement;
-            audioMotion.classList.add("ud-z-[9991]");
+            audioMotion.classList.remove("ud-z-20");
+            audioMotion.classList.add("ud-z-[9992]");
         },
         hide() {
             this.visible = false;
@@ -25,7 +26,8 @@ export const useLightbox = defineStore("lightbox", {
                 ud_header.classList.remove("sticky");
             }
             const audioMotion = document.querySelector("#vueAudioMotionAnalyzer") as HTMLElement;
-            audioMotion.classList.remove("ud-z-[9991]");
+            audioMotion.classList.remove("ud-z-[9992]");
+            audioMotion.classList.add("ud-z-20");
         }
     },
 });

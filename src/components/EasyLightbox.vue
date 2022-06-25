@@ -24,8 +24,6 @@ const handleHide = () => {
 .vel-modal {
   z-index: 9990;
   top: 67px;
-}
-html.ud-dark .vel-modal {
   background: rgba(0, 0, 0, 0.8);
 }
 @media only screen and (max-width: 959px) {
