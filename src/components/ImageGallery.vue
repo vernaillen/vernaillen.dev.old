@@ -5,12 +5,16 @@
       :key="index"
       class="md:ud-w-2/3 lg:ud-w-1/2 xl:ud-w-1/3 ud-px-4"
     >
-      <img
-        :src="image"
-        class="ud-h-auto ud-cursor-pointer ud-shadow-md ud-shadow-gray-800 hover:ud-shadow-primary hover:ud-opacity-90"
-        @click="openGallery(index)"
-        :alt="image"
-      />
+      <div
+        class="galleryImgWrapper ud-rounded-md ud-overflow-hidden ud-relative ud-mb-8 ud-shadow-md ud-shadow-gray-800"
+      >
+        <img
+          :src="image"
+          class="ud-cursor-pointer ud-rounded-md ud-max-w-full ud-p-0 ud-m-0"
+          @click="openGallery(index)"
+          :alt="image"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -46,3 +50,24 @@ const openGallery = (i: number) => {
   lightbox.show(i);
 };
 </script>
+
+<style>
+.prose .galleryImgWrapper {
+  position: relative;
+  overflow: hidden;
+}
+.prose .galleryImgWrapper img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.galleryImgWrapper:hover img {
+  -moz-transform: scale(1.13);
+  -webkit-transform: scale(1.13);
+  transform: scale(1.13);
+}
+</style>
