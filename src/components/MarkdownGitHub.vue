@@ -7,20 +7,21 @@
         <font-awesome-icon :icon="['fab', 'github']" class="ud-mr-2" />
       </a>
       <a :href="editLink" target="_blank">
-        <font-awesome-icon
-          :icon="['fas', 'pen-to-square']"
-          class="ud-mr-3"
-        /> </a
-      >last updated:&nbsp;
-
+        <font-awesome-icon :icon="['fas', 'pen-to-square']" class="ud-mr-3" />
+      </a>
+      last updated:&nbsp;
       <font-awesome-icon
         v-if="!lastUpdated"
         :icon="['fas', 'spinner']"
         class="fa-spin"
       />
-      <a v-if="lastUpdated" :href="viewLink" target="_blank">{{
-        lastUpdated
-      }}</a>
+      <a
+        v-if="lastUpdated"
+        :href="viewLink"
+        target="_blank"
+        class="animated fadeIn"
+        >{{ lastUpdated }}</a
+      >
     </p>
   </div>
 </template>
@@ -57,7 +58,9 @@ const fetchGitHubInfo = () => {
     )
     .then((response: AxiosResponse) => {
       const lastUpdatedDate = dayjs(response.data[0].commit.author.date);
-      lastUpdated.value = lastUpdatedDate.format("DD/MM/YYYY");
+      setTimeout(() => {
+        lastUpdated.value = lastUpdatedDate.format("DD/MM/YYYY");
+      }, 200);
     });
 };
 fetchGitHubInfo();
