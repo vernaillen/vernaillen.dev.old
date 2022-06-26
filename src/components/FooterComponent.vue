@@ -68,7 +68,7 @@ onMounted(() => {
 
 <template>
   <footer
-    class="ud-relative ud-z-40 ud-bg-primary ud-bg-opacity-5 ud-pt-[20px] animated animated-duration-5s fadeIn"
+    class="ud-relative ud-z-40 ud-bg-primary ud-bg-opacity-5 ud-pt-[20px]"
   >
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
