@@ -18,25 +18,30 @@ defineProps({
   <header-component />
   <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
-      <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
+      <div class="ud-flex ud-flex-wrap">
         <breadcrumb-component
           :page-name="frontmatter.pageName ? frontmatter.title : ''"
           :path="route.path"
         />
-        <div class="ud-w-full ud-px-4">
+        <div class="ud-px-4">
           <div v-if="frontmatter.title" class="ud-mb-12 md:ud-mb-0">
-            <h1
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated fadeInDown"
-            >
-              {{ frontmatter.title }}
-            </h1>
-            <p
-              v-if="frontmatter.desc"
-              :style="`background: ${frontmatter.bgColor};`"
-              class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
-            >
-              {{ frontmatter.desc }}
-            </p>
+            <div class="ud-flex ud-flex-wrap">
+              <h1
+                class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated pulse"
+              >
+                {{ frontmatter.title }}
+              </h1>
+            </div>
+
+            <div class="ud-flex ud-flex-wrap">
+              <p
+                v-if="frontmatter.desc"
+                :style="`background: ${frontmatter.bgColor};`"
+                class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
+              >
+                {{ frontmatter.desc }}
+              </p>
+            </div>
           </div>
 
           <div class="ud-flex ud-flex-wrap ud-items-center">

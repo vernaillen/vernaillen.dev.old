@@ -9,15 +9,17 @@ const posts: Post[] = blog.getPosts();
   <header-component />
   <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
-      <div class="ud-flex ud-flex-wrap ud-items-center ud-mx-[-16px]">
+      <div class="ud-flex ud-flex-wrap">
         <breadcrumb-component pageName="Blog" path="/blog" />
-        <div class="ud-w-full md:ud-w-8/12 lg:ud-w-7/12 ud-px-4">
-          <div class="ud-max-w-[570px] ud-mb-12 md:ud-mb-0">
+        <div class="ud-px-4 ud-mb-12 md:ud-mb-0">
+          <div class="ud-flex ud-flex-wrap">
             <h1
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated fadeInDown"
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated pulse"
             >
               Blog
             </h1>
+          </div>
+          <div class="ud-flex ud-flex-wrapk">
             <p
               class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
             >
