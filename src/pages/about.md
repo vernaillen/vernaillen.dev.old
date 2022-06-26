@@ -1,6 +1,6 @@
 ---
 title: About Wouter
-desc: You might be wondering... who is this guy?
+desc: In case you're wondering... who is this guy?
 pageName: About
 ---
 
