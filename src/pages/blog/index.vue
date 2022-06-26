@@ -14,7 +14,7 @@ const posts: Post[] = blog.getPosts();
         <div class="ud-w-full md:ud-w-8/12 lg:ud-w-7/12 ud-px-4">
           <div class="ud-max-w-[570px] ud-mb-12 md:ud-mb-0">
             <h1
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5"
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated fadeInDown"
             >
               Blog
             </h1>

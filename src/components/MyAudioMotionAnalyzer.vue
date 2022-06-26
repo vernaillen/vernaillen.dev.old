@@ -39,6 +39,7 @@ const gradientOptions: GradientOptions = {
     :options="options"
     :source="audioPlayer.getAudioNode()"
     :gradient="gradientOptions"
+    class="ud-z-20"
   />
 </template>
 

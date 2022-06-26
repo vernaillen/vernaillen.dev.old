@@ -26,7 +26,7 @@ defineProps({
         <div class="ud-w-full ud-px-4">
           <div v-if="frontmatter.title" class="ud-mb-12 md:ud-mb-0">
             <h1
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5"
+              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated fadeInDown"
             >
               {{ frontmatter.title }}
             </h1>
