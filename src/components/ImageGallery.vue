@@ -1,13 +1,17 @@
 <template>
-  <div class="ud-flex ud-flex-wrap">
-    <img
+  <div class="ud-flex ud-flex-wrap ud-justify-start ud-mx-[-16px]">
+    <div
       v-for="(image, index) in images"
       :key="index"
-      :src="image"
-      class="ud-w-[380px] ud-h-auto ud-pr-6 ud-cursor-pointer"
-      @click="openGallery(index)"
-      :alt="image"
-    />
+      class="md:ud-w-2/3 lg:ud-w-1/2 xl:ud-w-1/3 ud-px-4"
+    >
+      <img
+        :src="image"
+        class="ud-h-auto ud-cursor-pointer ud-shadow-md ud-shadow-gray-800 hover:ud-shadow-primary hover:ud-opacity-90"
+        @click="openGallery(index)"
+        :alt="image"
+      />
+    </div>
   </div>
 </template>
 
