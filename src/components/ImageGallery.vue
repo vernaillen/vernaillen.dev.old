@@ -21,7 +21,6 @@ const props = defineProps({
   },
   filter: {
     type: String,
-    default: ".png",
     required: false,
   },
 });
@@ -30,7 +29,9 @@ Object.values(import.meta.glob("/public/images/**")).forEach((imageModule) => {
   if (
     imageModule.name &&
     imageModule.name.startsWith("/public/images/" + props.folder) &&
-    imageModule.name.indexOf(props.filter) > 0
+    (props.filter == null ||
+      props.filter == "" ||
+      imageModule.name.indexOf(props.filter) > 0)
   ) {
     images.push(imageModule.name.substring("/public".length));
   }

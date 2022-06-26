@@ -4,6 +4,6 @@ pageName: Gallery
 author: Wouter Vernaillen
 ---
 
-testing the image gallery & lightbox.
+testing an image gallery & [vue-easy-lightbox](https://onycat.com/vue-easy-lightbox/) functionality
 
-<image-gallery folder="blog" filter="_thumb.png" />
+<image-gallery folder="gallery" />

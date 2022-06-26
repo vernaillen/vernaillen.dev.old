@@ -47,3 +47,4 @@ The result is a website that is very easy to edit and publish content updates,ca
 * Continous integration with [CircleCI](https://app.circleci.com/pipelines/github/vernaillen/vernaillen.dev?filter=all)
 * Code quality check with [SonarCloud](https://sonarcloud.io/summary/new_code?id=vernaillen.dev)
 * Unit tests with [vitest](https://vitest.dev/)
+* Edit: I'm currently also testing a custom Gallery functionality, which just loads all images in a given folder and allows view them using [vue-easy-lightbox](https://onycat.com/vue-easy-lightbox/). Here's the <router-link to="/gallery">test page</router-link>

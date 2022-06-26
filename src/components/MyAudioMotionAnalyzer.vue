@@ -2,11 +2,13 @@
 import type { AudioPlayer } from "@/classes/audio";
 import { inject } from "vue";
 import type { GradientOptions } from "vue-audiomotion-analyzer";
+import { usePlayerState } from "@/stores/playerState";
 
+const playerState = usePlayerState();
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const audioPlayer: AudioPlayer = inject("audioPlayer")!;
 let options = {
-  alphaBars: true,
+  alphaBars: false,
   ledBars: false,
   barSpace: 0.1,
   bgAlpha: 0.5,
@@ -36,10 +38,11 @@ const gradientOptions: GradientOptions = {
 
 <template>
   <VueAudioMotionAnalyzer
+    v-if="playerState.isPlaying"
     :options="options"
     :source="audioPlayer.getAudioNode()"
     :gradient="gradientOptions"
-    class="ud-z-20"
+    class="ud-z-20 ud-bg-transparent"
   />
 </template>
 
