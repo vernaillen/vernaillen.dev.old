@@ -13,8 +13,8 @@ defineProps({
 
 <template>
   <div class="ud-w-full ud-px-4 ud-mb-10">
-    <div class="ud-text-end">
-      <ul class="ud-flex md:ud-justify-end">
+    <div class="">
+      <ul class="ud-flex ud-justify-end">
         <li class="ud-flex">
           <router-link
             to="/"

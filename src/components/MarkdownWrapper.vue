@@ -24,7 +24,7 @@ defineProps({
           :path="route.path"
         />
         <div class="ud-px-4">
-          <div v-if="frontmatter.title" class="ud-mb-12 md:ud-mb-0">
+          <div v-if="frontmatter.title" class="ud-mb-2">
             <div class="ud-flex ud-flex-wrap">
               <h1
                 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated pulse"
