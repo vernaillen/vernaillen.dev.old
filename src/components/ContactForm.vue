@@ -78,7 +78,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { useForm, useField } from "vee-validate";
 import * as yup from "yup";
 
