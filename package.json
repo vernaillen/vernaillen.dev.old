@@ -28,10 +28,12 @@
     "pinia": "^2.0.14",
     "prism-theme-vars": "^0.2.3",
     "tone": "^14.7.77",
+    "vee-validate": "^4.5.11",
     "vue": "^3.2.37",
     "vue-audiomotion-analyzer": "^0.5.0",
     "vue-easy-lightbox": "^1.4.1",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.0.16",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@pinia/testing": "^0.0.12",
@@ -72,7 +74,7 @@
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.4",
     "typescript": "^4.7.4",
-    "vite": "^2.9.12",
+    "vite": "^2.9.13",
     "vite-plugin-eslint": "^1.6.1",
     "vite-plugin-md": "^0.18.1",
     "vite-plugin-pages": "^0.24.2",
@@ -80,6 +82,6 @@
     "vite-ssg": "^0.20.1",
     "vite-svg-loader": "^3.4.0",
     "vitest": "^0.16.0",
-    "vue-tsc": "~0.38.1"
+    "vue-tsc": "~0.38.2"
   }
 }

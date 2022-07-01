@@ -6,6 +6,7 @@ import BreadcrumbComponent from "@/components/BreadcrumbComponent.vue";
 import YearsOfExperience from "@/components/YearsOfExperience.vue";
 import DarkToggler from "@/components/DarkToggler.vue";
 import ImageGallery from "@/components/ImageGallery.vue";
+import ContactForm from "@/components/ContactForm.vue";
 
 export const install: UserModule = ({ app }) => {
   /* declare global components */
@@ -15,6 +16,7 @@ export const install: UserModule = ({ app }) => {
   app.component("years-of-experience", YearsOfExperience);
   app.component("dark-toggler", DarkToggler);
   app.component("image-gallery", ImageGallery);
+  app.component("contact-form", ContactForm);
   app.component(
     "player-controls",
     defineAsyncComponent(() => import("@/components/PlayerControls.vue"))
