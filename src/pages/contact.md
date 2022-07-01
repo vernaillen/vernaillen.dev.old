@@ -2,6 +2,7 @@
 title: Get in touch
 desc: don't be a stranger
 pageName: Contact
+hideGitHub: true
 ---
 
 <contact-form />

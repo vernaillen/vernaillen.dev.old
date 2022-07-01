@@ -79,7 +79,7 @@ defineProps({
               </p>
             </div>
             <client-only>
-              <MarkdownGitHub />
+              <MarkdownGitHub v-if="!frontmatter.hideGitHub" />
             </client-only>
             <div
               v-if="false && frontmatter.location"

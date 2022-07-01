@@ -31,7 +31,10 @@ const navItems = [
 const addClasses = (path: string) => {
   const currentRoute = useRoute().path;
   let classToAdd = "";
-  if (path != "/" && currentRoute.startsWith(path))
+  if (
+    (path != "/" && currentRoute.startsWith(path)) ||
+    (currentRoute == "/thanks" && path == "/contact")
+  )
     classToAdd = "router-link-active";
   return classToAdd;
 };
