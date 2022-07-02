@@ -22,8 +22,8 @@ import { careerSteps } from "@/classes/career";
               <p
                 class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
               >
-                An overview of the projects I worked on and the technologies
-                I've used on those projects
+                An overview of the projects and companies I worked for and the
+                technologies I've used on these projects
               </p>
             </div>
           </div>

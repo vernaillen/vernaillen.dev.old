@@ -12,22 +12,50 @@
     </h4>
   </div>
   <div class="ud-border-l-2 ud-border-primary ud-mt-2">
-    <div class="ud-ml-6 ud-mb-4 ud-pb-4 animated fadeIn">
-      <a
-        href="#!"
-        class="ud-text-primary ud-duration-300 ud-transition ud-ease-in-out ud-text-sm"
-        >{{ careerStep.date }}</a
+    <div
+      class="ud-ml-6 ud-mb-4 ud-pb-4 ud-font-medium ud-text-base ud-text-body-color animated fadeIn"
+    >
+      <div
+        class="ud-ml-1 ud-mb-2 ud-text-primary ud-duration-300 ud-transition ud-ease-in-out ud-text-sm"
       >
-      <p class="ud-font-medium ud-text-base ud-text-body-color ud-mt-2 ud-mb-2">
-        <span class="ud-inline-block ud-w-[62px]">project:</span>
-        {{ careerStep.project }}<br />
-        <span class="ud-inline-block ud-w-[62px]">role:</span>
-        {{ careerStep.role }}<br />
-        <span class="ud-inline-block ud-w-[62px]">stack:</span>
-        {{ careerStep.stack }}<br />
-        <span class="ud-inline-block ud-w-[62px]">contract:</span>
-        {{ careerStep.contract }}<br />
-      </p>
+        {{ careerStep.date }}
+      </div>
+      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
+        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">
+          project:
+        </div>
+        <div
+          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+        >
+          {{ careerStep.project }}
+        </div>
+      </div>
+      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
+        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">role:</div>
+        <div
+          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+        >
+          {{ careerStep.role }}
+        </div>
+      </div>
+      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
+        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">stack:</div>
+        <div
+          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+        >
+          {{ careerStep.stack }}
+        </div>
+      </div>
+      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
+        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">
+          contract:
+        </div>
+        <div
+          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+        >
+          {{ careerStep.contract }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
