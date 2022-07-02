@@ -1,7 +1,7 @@
 <template>
   <div class="ud-flex ud-flex-start ud-items-center">
     <div
-      class="company-img ud-bg-primary ud-drop-shadow-md hover:ud-drop-shadow-lg ud-shadow-light-400 ud-flex ud-items-center ud-justify-center ud-rounded-full ud--ml-4 ud-mr-3 ud--mt-2"
+      class="company-img ud-bg-primary ud-drop-shadow-md hover:ud-drop-shadow-lg ud-shadow-light-400 ud-flex ud-items-center ud-justify-center ud-rounded-full"
     >
       <img v-if="careerStep.imageUrl" :src="careerStep.imageUrl" />
     </div>
@@ -70,16 +70,20 @@ defineProps<{
 <style scoped>
 .company-img {
   position: relative;
-  height: 31px;
-  width: 31px;
+  height: 34px;
+  width: 34px;
+  min-width: 34px;
+  margin-left: -16px;
+  margin-top: -7px;
+  margin-right: 12px;
 }
 .company-img img {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 31px;
-  width: 31px;
+  height: 34px;
+  width: 34px;
   background: currentColor;
   border-radius: 50%;
 }
