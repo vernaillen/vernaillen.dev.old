@@ -21,8 +21,8 @@ import { useRoute } from "vue-router";
 
 const navItems = [
   { path: "/", title: "Home" },
-  //{ path: "/career", title: "Career" },
   { path: "/blog", title: "Blog" },
+  { path: "/career", title: "Career" },
   { path: "/music", title: "Music" },
   { path: "/about", title: "About" },
   { path: "/contact", title: "Contact" },
