@@ -6,12 +6,16 @@ import MarkdownGitHub from "./MarkdownGitHub.vue";
 useRouter();
 const route = useRoute();
 
-defineProps({
+const props = defineProps({
   frontmatter: {
     type: Object,
     required: true,
   },
 });
+const prose = () => {
+  if (props.frontmatter.disableProse) return "";
+  return "prose";
+};
 </script>
 
 <template>
@@ -113,7 +117,8 @@ defineProps({
         <div class="ud-w-full ud-py-4 ud-px-8 md:ud-px-12">
           <div class="ud-mx-auto">
             <p
-              class="ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 animated fadeIn"
+              class="ud-m-auto ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 animated fadeIn"
+              :class="prose()"
             >
               <slot />
             </p>

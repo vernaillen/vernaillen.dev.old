@@ -36,7 +36,6 @@ export default defineConfig({
     }),
     Markdown({
       wrapperComponent: "markdown-wrapper",
-      wrapperClasses: "prose m-auto",
       builders: [link(), meta()],
       markdownItSetup(md) {
         md.use(Anchor);

@@ -6,14 +6,14 @@
       <img v-if="careerStep.imageUrl" :src="careerStep.imageUrl" />
     </div>
     <h4
-      class="ud-text-gray-800 dark:ud-text-white ud-font-semibold ud-text-xl ud--mt-2 animated fadeIn"
+      class="ud-text-gray-800 dark:ud-text-white ud-font-semibold ud-text-xl ud--mt-2"
     >
       {{ careerStep.client }}
     </h4>
   </div>
   <div class="ud-border-l-2 ud-border-primary ud-mt-2">
     <div
-      class="ud-ml-6 ud-mb-4 ud-pb-4 ud-font-medium ud-text-base ud-text-body-color animated fadeIn"
+      class="ud-ml-6 ud-mb-4 ud-pb-4 ud-font-medium ud-text-base ud-text-body-color"
     >
       <div
         class="ud-ml-1 ud-mb-2 ud-text-primary ud-duration-300 ud-transition ud-ease-in-out ud-text-sm"
@@ -86,5 +86,7 @@ defineProps<{
   width: 34px;
   background: currentColor;
   border-radius: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 </style>

@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "rss": "esno ./scripts/rss.ts",
-    "prepushtest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run typecheck && pnpm run coverage && pnpm run build"
+    "prepushtest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run typecheck && pnpm run coverage && pnpm run build && serve dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
