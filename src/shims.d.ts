@@ -1,5 +1,5 @@
 import "vue-router";
-import type { AudioPlayer } from "@/classes/audio";
+import type { AudioPlayer } from "@/logics/audio";
 
 declare module "vue-router" {
   interface RouteMeta {

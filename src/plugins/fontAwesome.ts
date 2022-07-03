@@ -1,4 +1,4 @@
-import type { UserModule } from "@/types";
+import type { UserModule } from "./userModule";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faBackwardStep,

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { formatDate } from "@/logics";
-import blog, { getImageUrl } from "@/classes/blog";
-import type { Post } from "@/types";
+import { formatDate } from "@/logics/dayjs";
+import blog, { getImageUrl, type Post } from "@/logics/blog";
 const posts: Post[] = blog.getPosts();
 </script>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { inject, ref } from "vue";
 import { usePlayerState } from "@/stores/playerState";
-import type { AudioPlayer } from "@/classes/audio";
+import type { AudioPlayer } from "@/logics/audio";
 
 const props = defineProps({
   extended: {

@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import CareerStep from "@/components/CareerStep.vue";
-import { careerSteps } from "@/classes/career";
+import { careerSteps } from "@/logics/career";
 </script>
 
 <style scoped>

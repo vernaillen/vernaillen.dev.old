@@ -5,9 +5,7 @@
     >
       <img v-if="careerStep.imageUrl" :src="careerStep.imageUrl" />
     </div>
-    <h4
-      class="ud-text-gray-800 dark:ud-text-white ud-font-semibold ud-text-xl ud--mt-2"
-    >
+    <h4 class="ud-text-gray-800 dark:ud-text-white ud-font-semibold ud--mt-2">
       {{ careerStep.client }}
     </h4>
   </div>
@@ -61,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CareerStep } from "@/classes/career";
+import type { CareerStep } from "@/logics/career";
 defineProps<{
   careerStep: CareerStep;
 }>();

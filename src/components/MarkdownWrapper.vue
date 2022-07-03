@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
-import { formatDate } from "@/logics";
+import { formatDate } from "@/logics/dayjs";
 import MarkdownGitHub from "./MarkdownGitHub.vue";
 
 useRouter();

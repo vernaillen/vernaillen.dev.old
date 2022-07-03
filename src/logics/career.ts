@@ -10,7 +10,7 @@ export interface CareerStep {
 
 export const careerSteps: CareerStep[] = [
   {
-    client: "Opgroeien / Kind en Gezin",
+    client: "Opgroeien / Kind & Gezin",
     contract: "freelance via Cronos Public Services",
     date: "2019 - present",
     project: "Governmental citizen portal",
@@ -29,7 +29,7 @@ export const careerSteps: CareerStep[] = [
     imageUrl: "/images/career/idewe.png",
   },
   {
-    client: "Kind en Gezin",
+    client: "Kind & Gezin",
     contract: "freelance via Formica (Cronos)",
     date: "2014 - 2017",
     project: "Governmental citizen portal",

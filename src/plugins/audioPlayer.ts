@@ -1,5 +1,5 @@
-import type { UserModule } from "@/types";
-import { AudioPlayer } from "@/classes/audio";
+import type { UserModule } from "./userModule";
+import { AudioPlayer } from "@/logics/audio";
 
 export const install: UserModule = ({ app, isClient }) => {
   if (isClient) {

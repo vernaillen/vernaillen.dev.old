@@ -1,4 +1,4 @@
-import type { UserModule } from "@/types";
+import type { UserModule } from "./userModule";
 import VueAudiomotionAnalyzerPlugin from "vue-audiomotion-analyzer";
 
 export const install: UserModule = ({ app }) => {

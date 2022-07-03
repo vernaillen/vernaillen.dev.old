@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineAsyncComponent, onMounted } from "vue";
-import { currentYear } from "@/logics";
+import { currentYear } from "@/logics/dayjs";
 
 const svgFooter = defineAsyncComponent(() => import("@/assets/svg/footer.svg"));
 

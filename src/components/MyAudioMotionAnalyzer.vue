@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AudioPlayer } from "@/classes/audio";
+import type { AudioPlayer } from "@/logics/audio";
 import { inject } from "vue";
 import type { GradientOptions } from "vue-audiomotion-analyzer";
 import { usePlayerState } from "@/stores/playerState";
