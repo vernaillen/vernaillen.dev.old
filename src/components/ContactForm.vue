@@ -1,11 +1,29 @@
+<script setup>
+import { useField, useForm } from 'vee-validate'
+import * as yup from 'yup'
+
+const schema = yup.object({
+  name: yup.string().required(),
+  email: yup.string().required().email(),
+  message: yup.string().required().min(20),
+})
+
+const { submitForm } = useForm({
+  validationSchema: schema,
+})
+const { value: name, errorMessage: nameError } = useField('name')
+const { value: email, errorMessage: emailError } = useField('email')
+const { value: message, errorMessage: messageError } = useField('message')
+</script>
+
 <template>
   <div
     class="ud-bg-primary ud-bg-opacity-[3%] dark:ud-bg-dark ud-rounded-md ud-p-6 ud-mb-12 lg:ud-mb-5 md:ud-p-8 lg:ud-p-12"
   >
     <form
-      @submit="submitForm"
       action="https://formbold.com/s/6l2G3"
       method="POST"
+      @submit="submitForm"
     >
       <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
         <div class="ud-w-full md:ud-w-1/2 ud-px-4">
@@ -17,11 +35,11 @@
               Your name
             </label>
             <input
+              v-model="name"
               name="name"
               type="text"
-              v-model="name"
               class="ud-w-full ud-border ud-border-transparent dark:ud-bg-black ud-rounded-md ud-shadow-one dark:ud-shadow-signUp ud-py-3 ud-px-6 ud-text-body-color ud-text-base ud-placeholder-body-color ud-outline-none focus-visible:ud-shadow-none focus:ud-border-primary"
-            />
+            >
             <span v-if="nameError" class="ud-text-primary">
               {{ nameError }}
             </span>
@@ -36,11 +54,11 @@
               Your Email
             </label>
             <input
+              v-model="email"
               name="email"
               type="email"
-              v-model="email"
               class="ud-w-full ud-border ud-border-transparent dark:ud-bg-black ud-rounded-md ud-shadow-one dark:ud-shadow-signUp ud-py-3 ud-px-6 ud-text-body-color ud-text-base ud-placeholder-body-color ud-outline-none focus-visible:ud-shadow-none focus:ud-border-primary"
-            />
+            >
             <span v-if="emailError" class="ud-text-primary">
               {{ emailError }}
             </span>
@@ -55,11 +73,11 @@
               Your Message
             </label>
             <textarea
-              name="message"
               v-model="message"
+              name="message"
               rows="5"
               class="ud-w-full ud-border ud-border-transparent dark:ud-bg-black ud-rounded-md ud-shadow-one dark:ud-shadow-signUp ud-py-3 ud-px-6 ud-text-body-color ud-text-base ud-placeholder-body-color ud-outline-none focus-visible:ud-shadow-none focus:ud-border-primary ud-resize-none"
-            ></textarea>
+            />
 
             <span v-if="messageError" class="ud-text-primary">
               {{ messageError }}
@@ -77,21 +95,3 @@
     </form>
   </div>
 </template>
-
-<script setup>
-import { useForm, useField } from "vee-validate";
-import * as yup from "yup";
-
-const schema = yup.object({
-  name: yup.string().required(),
-  email: yup.string().required().email(),
-  message: yup.string().required().min(20),
-});
-
-const { submitForm } = useForm({
-  validationSchema: schema,
-});
-const { value: name, errorMessage: nameError } = useField("name");
-const { value: email, errorMessage: emailError } = useField("email");
-const { value: message, errorMessage: messageError } = useField("message");
-</script>

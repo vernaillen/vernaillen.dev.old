@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import type { AudioPlayer } from "@/logics/audio";
-import { inject } from "vue";
-import type { GradientOptions } from "vue-audiomotion-analyzer";
-import { usePlayerState } from "@/stores/playerState";
+import type { GradientOptions } from 'vue-audiomotion-analyzer'
+import type { AudioPlayer } from '@/logics/audio'
+import { usePlayerState } from '@/stores/playerState'
 
-const playerState = usePlayerState();
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const audioPlayer: AudioPlayer = inject("audioPlayer")!;
+const playerState = usePlayerState()
+
+const audioPlayer: AudioPlayer = inject('audioPlayer')!
 let options = {
   alphaBars: false,
   ledBars: false,
@@ -23,17 +22,17 @@ let options = {
   height: 100,
   showScaleX: false,
   showScaleY: false,
-};
-if (window.innerWidth < 960) {
-  options = { ...options, mode: 6 };
 }
+if (window.innerWidth < 960)
+  options = { ...options, mode: 6 }
+
 const gradientOptions: GradientOptions = {
-  bgColor: "#FFFFFF",
+  bgColor: '#FFFFFF',
   colorStops: [
-    { pos: 0, color: "#9C8E1B" },
-    { pos: 1, color: "#9C8E1B" },
+    { pos: 0, color: '#9C8E1B' },
+    { pos: 1, color: '#9C8E1B' },
   ],
-};
+}
 </script>
 
 <template>

@@ -1,24 +1,24 @@
+<script setup lang="ts">
+import { useLightbox } from '@/stores/lightbox'
+
+const lightbox = useLightbox()
+const handleHide = () => {
+  lightbox.hide()
+}
+</script>
+
 <template>
   <vue-easy-lightbox
     loop
-    moveDisabled
+    move-disabled
     :index="lightbox.index"
     :visible="lightbox.visible"
     :imgs="lightbox.images"
     @hide="handleHide"
   >
-    <template v-slot:toolbar></template>
+    <template #toolbar />
   </vue-easy-lightbox>
 </template>
-
-<script setup lang="ts">
-import { useLightbox } from "@/stores/lightbox";
-const lightbox = useLightbox();
-
-const handleHide = () => {
-  lightbox.hide();
-};
-</script>
 
 <style scoped>
 .vel-modal {

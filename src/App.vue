@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { useHead } from "@vueuse/head";
-import MyAudioMotionAnalyzer from "@/components/MyAudioMotionAnalyzer.vue";
-import EasyLightbox from "@/components/EasyLightbox.vue";
-
 useHead({
-  title: "Vernaillen.dev",
+  title: 'Vernaillen.dev',
   meta: [
     {
-      name: "description",
-      content: "Wouter Vernaillen - Freelance Full Stack Java & Vue Developer",
+      name: 'description',
+      content: 'Wouter Vernaillen - Freelance Full Stack Java & Vue Developer',
     },
   ],
-});
+})
 </script>
 
 <template>

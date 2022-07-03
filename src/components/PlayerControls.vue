@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { inject, ref } from "vue";
-import { usePlayerState } from "@/stores/playerState";
-import type { AudioPlayer } from "@/logics/audio";
+import { usePlayerState } from '@/stores/playerState'
+import type { AudioPlayer } from '@/logics/audio'
 
 const props = defineProps({
   extended: {
@@ -9,42 +8,41 @@ const props = defineProps({
     default: false,
     required: false,
   },
-});
+})
 
-const playerState = usePlayerState();
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const audioPlayer: AudioPlayer = inject("audioPlayer")!;
-const isLoaded = ref(false);
+const playerState = usePlayerState()
+
+const audioPlayer: AudioPlayer = inject('audioPlayer')!
+const isLoaded = ref(false)
 
 async function checkIsBufferLoaded() {
-  (await audioPlayer) && (await audioPlayer.isLoaded());
-  isLoaded.value = true;
+  (await audioPlayer) && (await audioPlayer.isLoaded())
+  isLoaded.value = true
 }
-checkIsBufferLoaded();
+checkIsBufferLoaded()
 
 const back = () => {
-  const wasPlaying = playerState.isPlaying;
-  audioPlayer.stop();
-  if (wasPlaying) {
-    audioPlayer.play();
-  }
-};
+  const wasPlaying = playerState.isPlaying
+  audioPlayer.stop()
+  if (wasPlaying)
+    audioPlayer.play()
+}
 
-const labelBase =
-  "ud-cursor-pointer ud-w-10 ud-h-14 ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white ud-ml-2";
+const labelBase
+  = 'ud-cursor-pointer ud-w-10 ud-h-14 ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white ud-ml-2'
 const labelClass = props.extended
-  ? labelBase + " ud-inline"
-  : labelBase + " ud-flex ";
+  ? `${labelBase} ud-inline`
+  : `${labelBase} ud-flex `
 
-const iconClass =
-  "ud-rounded-full ud-bg-primary ud-bg-opacity-10 dark:ud-bg-opacity-20 ud-p-2 ud-w-4 ud-h-4";
+const iconClass
+  = 'ud-rounded-full ud-bg-primary ud-bg-opacity-10 dark:ud-bg-opacity-20 ud-p-2 ud-w-4 ud-h-4'
 </script>
 
 <template>
   <span class="ud-block">
     <label v-if="props.extended" :class="labelClass">
       <font-awesome-icon
-        v-if="playerState.time == 0"
+        v-if="playerState.time === 0"
         :icon="['fas', 'backward-step']"
         :class="iconClass"
       />

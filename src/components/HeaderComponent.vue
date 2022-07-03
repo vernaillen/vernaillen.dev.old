@@ -1,21 +1,16 @@
 <script setup lang="ts">
-import { computed, reactive } from "vue";
-import PlayerControls from "@/components/PlayerControls.vue";
-import NavBar from "./NavBar.vue";
-import svgLogo from "@/assets/svg/logo.svg";
-
 const navbar = reactive({
   show: false,
-});
+})
 function navbarToggler() {
-  navbar.show = !navbar.show;
+  navbar.show = !navbar.show
 }
 const navbarTogglerClass = computed(() => {
-  return navbar.show ? "navbarTogglerActive" : "";
-});
+  return navbar.show ? 'navbarTogglerActive' : ''
+})
 const navbarCollapseClass = computed(() => {
-  return navbar.show ? "" : "ud-hidden";
-});
+  return navbar.show ? '' : 'ud-hidden'
+})
 </script>
 
 <template>
@@ -36,18 +31,18 @@ const navbarCollapseClass = computed(() => {
             <button
               id="navbarToggler"
               class="ud-block ud-absolute ud-right-4 ud-top-1/2 ud-translate-y-[-50%] lg:ud-hidden focus:ud-ring-2 ud-ring-primary ud-px-3 ud-py-[6px] ud-rounded-lg"
-              @click="navbarToggler"
               :class="navbarTogglerClass"
+              @click="navbarToggler"
             >
               <span
                 class="ud-relative ud-w-[30px] ud-h-[2px] ud-my-[6px] ud-block ud-bg-dark dark:ud-bg-white"
-              ></span>
+              />
               <span
                 class="ud-relative ud-w-[30px] ud-h-[2px] ud-my-[6px] ud-block ud-bg-dark dark:ud-bg-white"
-              ></span>
+              />
               <span
                 class="ud-relative ud-w-[30px] ud-h-[2px] ud-my-[6px] ud-block ud-bg-dark dark:ud-bg-white"
-              ></span>
+              />
             </button>
             <nav
               id="navbarCollapse"

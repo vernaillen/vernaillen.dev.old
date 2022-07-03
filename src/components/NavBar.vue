@@ -1,3 +1,25 @@
+<script setup lang="ts">
+const navItems = [
+  { path: '/', title: 'Home' },
+  { path: '/blog', title: 'Blog' },
+  { path: '/career', title: 'Career' },
+  { path: '/music', title: 'Music' },
+  { path: '/about', title: 'About' },
+  { path: '/contact', title: 'Contact' },
+]
+
+const addClasses = (path: string) => {
+  const currentRoute = useRoute().path
+  let classToAdd = ''
+  if (
+    (path !== '/' && currentRoute.startsWith(path))
+    || (currentRoute === '/thanks' && path === '/contact')
+  )
+    classToAdd = 'router-link-active'
+  return classToAdd
+}
+</script>
+
 <template>
   <ul class="ud-block lg:ud-flex">
     <li
@@ -15,30 +37,6 @@
     </li>
   </ul>
 </template>
-
-<script setup lang="ts">
-import { useRoute } from "vue-router";
-
-const navItems = [
-  { path: "/", title: "Home" },
-  { path: "/blog", title: "Blog" },
-  { path: "/career", title: "Career" },
-  { path: "/music", title: "Music" },
-  { path: "/about", title: "About" },
-  { path: "/contact", title: "Contact" },
-];
-
-const addClasses = (path: string) => {
-  const currentRoute = useRoute().path;
-  let classToAdd = "";
-  if (
-    (path != "/" && currentRoute.startsWith(path)) ||
-    (currentRoute == "/thanks" && path == "/contact")
-  )
-    classToAdd = "router-link-active";
-  return classToAdd;
-};
-</script>
 
 <style scoped>
 nav ul li a {

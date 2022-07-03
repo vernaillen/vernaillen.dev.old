@@ -1,5 +1,4 @@
-import type { UserModule } from "./userModule";
-import { config, library } from "@fortawesome/fontawesome-svg-core";
+import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
   faBackwardStep,
   faCalendarDays,
@@ -9,14 +8,18 @@ import {
   faPlay,
   faRss,
   faSpinner,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons'
 import {
+  faGithub,
   faInstagram,
   faLinkedin,
-  faGithub,
   faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import type { UserModule } from './userModule'
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import '@fortawesome/fontawesome-svg-core/styles.css'
 library.add(
   faBackwardStep,
   faCalendarDays,
@@ -29,14 +32,11 @@ library.add(
   faInstagram,
   faLinkedin,
   faGithub,
-  faTwitter
-);
-// The following import prevents a Font Awesome icon server-side rendering bug,
-// where the icons flash from a very large icon down to a properly sized one:
-import "@fortawesome/fontawesome-svg-core/styles.css";
+  faTwitter,
+)
 // Prevent fontawesome from adding its CSS since we did it manually above:
-config.autoAddCss = false;
+config.autoAddCss = false
 
 export const install: UserModule = ({ app }) => {
-  app.component("font-awesome-icon", FontAwesomeIcon);
-};
+  app.component('FontAwesomeIcon', FontAwesomeIcon)
+}

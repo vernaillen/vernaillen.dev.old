@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { formatDate } from "@/logics/dayjs";
-import blog, { getImageUrl, type Post } from "@/logics/blog";
-const posts: Post[] = blog.getPosts();
+import { formatDate } from '@/logics/dayjs'
+import blog, { type Post, getImageUrl } from '@/logics/blog'
+const posts: Post[] = blog.getPosts()
 </script>
 
 <template>
@@ -9,7 +9,7 @@ const posts: Post[] = blog.getPosts();
   <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
     <div class="ud-container">
       <div class="ud-flex ud-flex-wrap">
-        <breadcrumb-component pageName="Blog" path="/blog" />
+        <breadcrumb-component page-name="Blog" path="/blog" />
         <div class="ud-px-4 ud-mb-12 md:ud-mb-0">
           <div class="ud-flex ud-flex-wrap">
             <h1
@@ -65,12 +65,12 @@ const posts: Post[] = blog.getPosts();
                 :src="getImageUrl(post, true)"
                 alt="image"
                 class="ud-w-full light:ud-hidden"
-              />
+              >
               <img
                 :src="getImageUrl(post, false)"
                 alt="image"
                 class="ud-w-full dark:ud-hidden"
-              />
+              >
             </router-link>
             <div
               class="ud-p-6 sm:ud-p-8 md:ud-py-8 md:ud-px-6 lg:ud-p-8 xl:ud-py-8 xl:ud-px-5 2xl:ud-p-8"
@@ -99,7 +99,7 @@ const posts: Post[] = blog.getPosts();
                       src="/images/wouter.jpg"
                       alt="author"
                       class="ud-w-full"
-                    />
+                    >
                   </div>
                   <div class="ud-w-full">
                     <h4

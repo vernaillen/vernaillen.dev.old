@@ -1,14 +1,40 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.vite-config.json"
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "es2016",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "vite/client",
+      "vite-plugin-pages/client"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*",
+        "./src/*"
+      ]
     },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
-  ]
+    "allowJs": true
+  }
 }

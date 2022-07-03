@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { defineAsyncComponent } from "vue";
-import svg404 from "@/assets/svg/404.svg";
-const svg404Background = defineAsyncComponent(
-  () => import("@/assets/svg/background-404.svg")
-);
-</script>
-
 <template>
   <header-component />
   <section class="ud-relative ud-z-10 ud-pt-[180px] ud-pb-[120px]">
@@ -14,7 +6,7 @@ const svg404Background = defineAsyncComponent(
         <div class="ud-w-full ud-px-4 animated fadeIn">
           <div class="ud-max-w-[530px] ud-mx-auto ud-text-center">
             <div class="mx-auto ud-mb-9 ud-text-center">
-              <svg404 />
+              <svg-404 />
             </div>
             <h3
               class="ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl sm:ud-text-4xl ud-mb-4"
@@ -40,12 +32,12 @@ const svg404Background = defineAsyncComponent(
     <div
       class="ud-hidden sm:ud-block ud-absolute ud-left-0 ud-bottom-0 ud-z-[-1]"
     >
-      <svg404-background />
+      <svg-404-background />
     </div>
     <div
       class="ud-hidden sm:ud-block ud-absolute ud-top-0 ud-right-0 ud-z-[-1]"
     >
-      <svg404-background />
+      <svg-404-background />
     </div>
   </section>
   <footer-component />

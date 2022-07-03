@@ -1,46 +1,54 @@
-import * as Tone from "tone";
-import { usePlayerState } from "@/stores/playerState";
+import * as Tone from 'tone'
+import { usePlayerState } from '@/stores/playerState'
 
 export class AudioPlayer {
-  private tonePlayer: Tone.Player;
+  private tonePlayer: Tone.Player
   constructor() {
-    this.tonePlayer = new Tone.Player("/music/RackNomad-MeditativeMelody.mp3")
+    this.tonePlayer = new Tone.Player('/music/RackNomad-MeditativeMelody.mp3')
       .toDestination()
       .sync()
-      .start(0);
+      .start(0)
   }
+
   play() {
-    Tone.start();
-    this.tonePlayer.volume.value = -6;
-    Tone.Transport.start();
+    Tone.start()
+    this.tonePlayer.volume.value = -6
+    Tone.Transport.start()
     setInterval(() => {
       usePlayerState().updateTime(
-        parseFloat(Tone.Transport.seconds.toFixed(2))
-      );
-    }, 100);
-    usePlayerState().updatePlaying(true);
+        parseFloat(Tone.Transport.seconds.toFixed(2)),
+      )
+    }, 100)
+    usePlayerState().updatePlaying(true)
   }
+
   stop() {
-    Tone.Transport.stop();
-    usePlayerState().updatePlaying(false);
+    Tone.Transport.stop()
+    usePlayerState().updatePlaying(false)
   }
+
   pause() {
-    Tone.Transport.pause();
-    usePlayerState().updatePlaying(false);
+    Tone.Transport.pause()
+    usePlayerState().updatePlaying(false)
   }
+
   async isLoaded() {
-    return Tone.ToneAudioBuffer.loaded();
+    return Tone.ToneAudioBuffer.loaded()
   }
+
   now() {
-    return Tone.now();
+    return Tone.now()
   }
+
   connectAnalyzer(analyzer: Tone.InputNode) {
-    this.tonePlayer.fan(analyzer);
+    this.tonePlayer.fan(analyzer)
   }
+
   getAudioContext() {
-    return Tone.getContext().rawContext;
+    return Tone.getContext().rawContext
   }
+
   getAudioNode() {
-    return this.tonePlayer;
+    return this.tonePlayer
   }
 }

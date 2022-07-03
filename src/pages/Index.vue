@@ -1,13 +1,3 @@
-<script setup lang="ts">
-import { defineAsyncComponent } from "vue";
-const SVGHomeLeft = defineAsyncComponent(
-  () => import("@/assets/svg/home-left.svg")
-);
-const SVGHomeRight = defineAsyncComponent(
-  () => import("@/assets/svg/home-right.svg")
-);
-</script>
-
 <template>
   <header-component />
   <section
@@ -55,10 +45,10 @@ const SVGHomeRight = defineAsyncComponent(
     </div>
     <!-- <div> -->
     <div class="svg-right ud-absolute ud-top-0 ud-right-0 ud-z-[-1]">
-      <SVGHomeRight />
+      <svg-home-right />
     </div>
     <div class="svg-left ud-absolute ud-bottom-0 ud-left-0 ud-z-[-1]">
-      <SVGHomeLeft />
+      <svg-home-left />
     </div>
   </section>
   <footer-component />

@@ -1,16 +1,16 @@
-import { vi } from "vitest";
+import { vi } from 'vitest'
 
-const getPosts = vi.fn();
-const getImageUrl = vi.fn();
-const getRoutes = vi.fn();
+const getPosts = vi.fn()
+const getImageUrl = vi.fn()
+const getRoutes = vi.fn()
 
-vi.mock("blog", () => ({
-  getPosts: getPosts,
-  getImageUrl: getImageUrl,
-}));
+vi.mock('blog', () => ({
+  getPosts,
+  getImageUrl,
+}))
 
-vi.mock("vue-router", () => ({
+vi.mock('vue-router', () => ({
   useRouter: () => ({
-    getRoutes: getRoutes,
+    getRoutes,
   }),
-}));
+}))

@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import { useRouter, useRoute } from "vue-router";
-import { formatDate } from "@/logics/dayjs";
-import MarkdownGitHub from "./MarkdownGitHub.vue";
-
-useRouter();
-const route = useRoute();
+import { formatDate } from '@/logics/dayjs'
 
 const props = defineProps({
   frontmatter: {
     type: Object,
     required: true,
   },
-});
+})
+useRouter()
+const route = useRoute()
+
 const prose = () => {
-  if (props.frontmatter.disableProse) return "";
-  return "prose";
-};
+  if (props.frontmatter.disableProse)
+    return ''
+  return 'prose'
+}
 </script>
 
 <template>
@@ -54,10 +53,10 @@ const prose = () => {
               class="ud-flex ud-items-center ud-mr-5 ud-mb-5"
             >
               <div
-                v-if="frontmatter.author == 'Wouter Vernaillen'"
+                v-if="frontmatter.author === 'Wouter Vernaillen'"
                 class="ud-max-w-[20px] ud-w-full ud-h-[20px] ud-rounded-full ud-overflow-hidden ud-mr-2"
               >
-                <img src="/images/wouter.jpg" alt="author" class="ud-w-full" />
+                <img src="/images/wouter.jpg" alt="author" class="ud-w-full">
               </div>
               <div class="ud-w-full">
                 <p
@@ -86,7 +85,7 @@ const prose = () => {
               <MarkdownGitHub v-if="!frontmatter.hideGitHub" />
             </client-only>
             <div
-              v-if="false && frontmatter.location"
+              v-if="frontmatter.location"
               class="ud-flex ud-items-center ud-mr-2 ud-mb-5"
             >
               <p
