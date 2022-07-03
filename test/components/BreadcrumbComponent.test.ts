@@ -1,6 +1,5 @@
 import { RouterLinkStub, mount } from '@vue/test-utils'
-import { describe, expect, it } from 'vitest'
-import BreadcrumbComponent from '@/components/BreadcrumbComponent.vue'
+import BreadcrumbComponent from 'src/components/BreadcrumbComponent.vue'
 
 describe('BreadcrumbComponent.vue', () => {
   it('should render only 2 items', () => {

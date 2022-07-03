@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { formatDate } from '@/logics/dayjs'
 import blog, { type Post, getImageUrl } from '@/logics/blog'
-const posts: Post[] = blog.getPosts()
 </script>
 
 <template>
@@ -12,16 +11,12 @@ const posts: Post[] = blog.getPosts()
         <breadcrumb-component page-name="Blog" path="/blog" />
         <div class="ud-px-4 ud-mb-12 md:ud-mb-0">
           <div class="ud-flex ud-flex-wrap">
-            <h1
-              class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated pulse"
-            >
+            <h1 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated pulse">
               Blog
             </h1>
           </div>
           <div class="ud-flex ud-flex-wrapk">
-            <p
-              class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
-            >
+            <p class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8">
               Occasional thoughts and writings
             </p>
           </div>
@@ -40,12 +35,9 @@ const posts: Post[] = blog.getPosts()
   </section>
   <section class="ud-pt-[20px] ud-pb-[100px]">
     <div class="ud-container">
-      <div
-        class="ud-flex ud-flex-wrap ud-mx-[-16px] ud-justify-start ud-py-4 ud-px-2 md:ud-px-6"
-      >
+      <div class="ud-flex ud-flex-wrap ud-mx-[-16px] ud-justify-start ud-py-4 ud-px-2 md:ud-px-6">
         <div
-          v-for="post in posts"
-          :key="post.path"
+          v-for="post in blog.getPosts()" :key="post.path"
           class="ud-w-full md:ud-w-2/3 lg:ud-w-1/2 xl:ud-w-1/3 ud-px-4"
         >
           <div
@@ -61,20 +53,10 @@ const posts: Post[] = blog.getPosts()
               >
                 {{ post.category }}
               </span>
-              <img
-                :src="getImageUrl(post, true)"
-                alt="image"
-                class="ud-w-full light:ud-hidden"
-              >
-              <img
-                :src="getImageUrl(post, false)"
-                alt="image"
-                class="ud-w-full dark:ud-hidden"
-              >
+              <img :src="getImageUrl(post, true)" alt="image" class="ud-w-full light:ud-hidden">
+              <img :src="getImageUrl(post, false)" alt="image" class="ud-w-full dark:ud-hidden">
             </router-link>
-            <div
-              class="ud-p-6 sm:ud-p-8 md:ud-py-8 md:ud-px-6 lg:ud-p-8 xl:ud-py-8 xl:ud-px-5 2xl:ud-p-8"
-            >
+            <div class="ud-p-6 sm:ud-p-8 md:ud-py-8 md:ud-px-6 lg:ud-p-8 xl:ud-py-8 xl:ud-px-5 2xl:ud-p-8">
               <h3>
                 <router-link
                   :to="post.path"
@@ -92,19 +74,11 @@ const posts: Post[] = blog.getPosts()
                 <div
                   class="ud-flex ud-pr-5 ud-mr-5 xl:ud-pr-3 2xl:ud-pr-5 xl:ud-mr-3 2xl:ud-mr-5 ud-border-r ud-border-body-color ud-border-opacity-10 dark:ud-border-white dark:ud-border-opacity-10"
                 >
-                  <div
-                    class="ud-max-w-[20px] ud-w-full ud-h-[20px] ud-rounded-full ud-overflow-hidden ud-mr-4"
-                  >
-                    <img
-                      src="/images/wouter.jpg"
-                      alt="author"
-                      class="ud-w-full"
-                    >
+                  <div class="ud-max-w-[20px] ud-w-full ud-h-[20px] ud-rounded-full ud-overflow-hidden ud-mr-4">
+                    <img src="/images/wouter.jpg" alt="author" class="ud-w-full">
                   </div>
                   <div class="ud-w-full">
-                    <h4
-                      class="ud-text-xs ud-font-medium ud-text-dark dark:ud-text-white ud-mb-1"
-                    >
+                    <h4 class="ud-text-xs ud-font-medium ud-text-dark dark:ud-text-white ud-mb-1">
                       <router-link
                         to="/about"
                         class="ud-text-dark dark:ud-text-white hover:ud-text-primary dark:hover:ud-text-primary"

@@ -80,9 +80,9 @@ export default defineConfig({
       dts: true, // generate TypeScript declaration
     }),
     Components({
-      extensions: ['vue', 'md', 'svg'],
+      extensions: ['vue', 'md', 'svg', 'mock'],
       dts: true,
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.svg$/],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.svg$/, /\.mock$/],
     }),
     Inspect(), // only applies in dev mode
     SVG({
@@ -94,16 +94,16 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // https://github.com/vitest-dev/vitest
   test: {
-    exclude: [...configDefaults.exclude],
     environment: 'jsdom',
+    exclude: [...configDefaults.exclude],
     coverage: {
       reporter: ['text', 'lcov'],
       all: true,
       include: ['src/**/*.vue'],
     },
     globals: true,
+    setupFiles: ['test/vue-router-mock.setup.ts'],
   },
   ssgOptions: {
     script: 'async',

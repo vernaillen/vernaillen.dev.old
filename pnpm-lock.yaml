@@ -73,6 +73,7 @@ specifiers:
   vue-audiomotion-analyzer: ^0.5.0
   vue-easy-lightbox: ^1.4.1
   vue-router: ^4.0.16
+  vue-router-mock: ^0.1.7
   vue-tsc: ~0.38.2
   yup: ^0.32.11
 
@@ -152,6 +153,7 @@ devDependencies:
   vite-ssg: 0.20.2_wg4s6db3v6lculphs24ozvdglm
   vite-svg-loader: 3.4.0
   vitest: 0.16.0_q6gprtkyzjj4btqq77dblf46qi
+  vue-router-mock: 0.1.7_n2lopajdblj3vlk4od6dtonjcq
   vue-tsc: 0.38.2_typescript@4.7.4
 
 packages:
@@ -5400,6 +5402,16 @@ packages:
       semver: 7.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vue-router-mock/0.1.7_n2lopajdblj3vlk4od6dtonjcq:
+    resolution: {integrity: sha512-GOSOJMj80SLke9ZOHpkzJWqHo7oiZfINF04S6fVfWStosyCCb8BeX7uZpsKUYVYnyb/yonCnMcKKr/BSaE1Urg==}
+    peerDependencies:
+      vue: ^3.2.23
+      vue-router: ^4.0.12
+    dependencies:
+      vue: 3.2.37
+      vue-router: 4.0.16_vue@3.2.37
     dev: true
 
   /vue-router/4.0.16_vue@3.2.37:

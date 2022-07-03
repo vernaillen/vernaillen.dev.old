@@ -1,22 +1,37 @@
-import "/test/mocks/matchMedia.mock";
-import "/test/mocks/blog.ts";
-import { shallowMount } from "@vue/test-utils";
-import { beforeEach, describe, expect, it, vi } from "vitest";
-import { createTestingPinia } from "@pinia/testing";
-import days from "@/plugins/days";
-import index from "@/pages/blog/index.vue";
+import '/test/mocks/matchMedia.mock'
+import { mount } from '@vue/test-utils'
+import { createTestingPinia } from '@pinia/testing'
+import { createRouterMock, injectRouterMock } from 'vue-router-mock'
+import index from '@/pages/blog/index.vue'
+import blog from '@/logics/blog'
 
-describe("blog/index.vue", () => {
+const router = createRouterMock({
+  // ...
+})
+beforeEach(() => {
+  injectRouterMock(router)
+})
+/* vi.mock('@/logics/blog', () => {
+  const blog = vi.fn()
+  blog.prototype.getPosts = vi.fn()
+  return { blog }
+}) */
+describe('blog/index.vue', () => {
   beforeEach(() => {
-    vi.resetAllMocks();
-  });
+    vi.resetAllMocks()
+  })
 
-  it("should render", () => {
-    shallowMount(index, {
+  it('should render', () => {
+    const wrapper = mount(index, {
       global: {
-        plugins: [days, createTestingPinia()],
+        plugins: [createTestingPinia()],
+        mocks: {
+          matchMedia,
+        },
       },
-    });
-    expect(getPosts).toHaveBeenCalledTimes(1);
-  });
-});
+    })
+    expect(wrapper.router).toBe(router)
+    // expect(blog.getPosts).toHaveBeenCalledTimes(1)
+    expect(router.getRoutes).toHaveBeenCalledTimes(1)
+  })
+})

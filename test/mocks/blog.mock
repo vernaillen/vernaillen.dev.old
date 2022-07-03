@@ -4,12 +4,12 @@ const getPosts = vi.fn()
 const getImageUrl = vi.fn()
 const getRoutes = vi.fn()
 
-vi.mock('blog', () => ({
+export const blog = vi.mock('blog', () => ({
   getPosts,
   getImageUrl,
 }))
 
-vi.mock('vue-router', () => ({
+export const vueRouter = vi.mock('vue-router', () => ({
   useRouter: () => ({
     getRoutes,
   }),
