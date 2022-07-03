@@ -1,14 +1,7 @@
 <script setup lang="ts">
-const navItems = [
-  { path: '/', title: 'Home' },
-  { path: '/blog', title: 'Blog' },
-  { path: '/career', title: 'Career' },
-  { path: '/music', title: 'Music' },
-  { path: '/about', title: 'About' },
-  { path: '/contact', title: 'Contact' },
-]
+import { navItems } from '@/logics/nav'
 
-const addClasses = (path: string) => {
+const linkClass = (path: string) => {
   const currentRoute = useRoute().path
   let classToAdd = ''
   if (
@@ -22,15 +15,11 @@ const addClasses = (path: string) => {
 
 <template>
   <ul class="ud-block lg:ud-flex">
-    <li
-      v-for="(item, index) in navItems"
-      :key="index"
-      class="ud-relative ud-group"
-    >
+    <li v-for="(item, index) in navItems" :key="index" class="ud-relative ud-group">
       <router-link
         :to="item.path"
         class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-pt-4 lg:ud-pb-6 lg:ud-inline-flex ud-px-7 lg:ud-px-1 ud-flex ud-mr-7"
-        :class="addClasses(item.path)"
+        :class="linkClass(item.path)"
       >
         {{ item.title }}
       </router-link>

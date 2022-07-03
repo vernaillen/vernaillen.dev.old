@@ -1,5 +1,3 @@
-import { useRouter } from 'vue-router'
-
 export interface Post {
   path: string
   title: string
@@ -15,7 +13,7 @@ export interface Post {
 }
 
 export class Blog {
-  getPosts() {
+  getPosts(): Post[] {
     const router = useRouter()
     return router
       .getRoutes()
@@ -40,8 +38,7 @@ export class Blog {
       }))
   }
 }
-const blog = new Blog()
-export default blog
+export default new Blog()
 
 export function getImageUrl(post: Post, isDark: boolean) {
   const imagePath = '/images/blog'

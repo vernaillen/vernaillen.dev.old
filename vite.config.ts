@@ -18,18 +18,19 @@ import SVG from 'vite-svg-loader'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
+import { configDefaults } from 'vitest/config'
 
-/* import "prismjs/components/prism-regex";
-import "prismjs/components/prism-javascript";
-import "prismjs/components/prism-typescript";
-import "prismjs/components/prism-xml-doc";
-import "prismjs/components/prism-yaml";
-import "prismjs/components/prism-json";
-import "prismjs/components/prism-markdown";
-import "prismjs/components/prism-java";
-import "prismjs/components/prism-javadoclike";
-import "prismjs/components/prism-javadoc";
-import "prismjs/components/prism-jsdoc"; */
+import 'prismjs/components/prism-regex'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-xml-doc'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-markdown'
+import 'prismjs/components/prism-java'
+import 'prismjs/components/prism-javadoclike'
+import 'prismjs/components/prism-javadoc'
+import 'prismjs/components/prism-jsdoc'
 
 export default defineConfig({
   plugins: [
@@ -75,10 +76,8 @@ export default defineConfig({
       failOnError: false,
     }),
     AutoImport({
-      imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
-      eslintrc: {
-        enabled: true,
-      },
+      imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head', 'vitest'],
+      dts: true, // generate TypeScript declaration
     }),
     Components({
       extensions: ['vue', 'md', 'svg'],
@@ -97,15 +96,13 @@ export default defineConfig({
   },
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ['test/**/*.test.ts'],
-    excludeNodeModules: true,
+    exclude: [...configDefaults.exclude],
     environment: 'jsdom',
     coverage: {
       reporter: ['text', 'lcov'],
       all: true,
       include: ['src/**/*.vue'],
     },
-    extension: ['.vue'],
     globals: true,
   },
   ssgOptions: {
