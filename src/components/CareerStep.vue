@@ -3,7 +3,11 @@
     <div
       class="company-img ud-bg-primary ud-drop-shadow-md hover:ud-drop-shadow-lg ud-shadow-light-400 ud-flex ud-items-center ud-justify-center ud-rounded-full"
     >
-      <img v-if="careerStep.imageUrl" :src="careerStep.imageUrl" />
+      <img
+        v-if="careerStep.imageUrl"
+        :src="careerStep.imageUrl"
+        :alt="careerStep.project"
+      />
     </div>
     <h4 class="ud-text-gray-800 dark:ud-text-white ud-font-semibold ud--mt-2">
       {{ careerStep.client }}

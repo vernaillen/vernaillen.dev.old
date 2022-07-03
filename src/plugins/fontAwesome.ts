@@ -1,5 +1,5 @@
 import type { UserModule } from "./userModule";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 import {
   faBackwardStep,
   faCalendarDays,
@@ -35,7 +35,6 @@ library.add(
 // where the icons flash from a very large icon down to a properly sized one:
 import "@fortawesome/fontawesome-svg-core/styles.css";
 // Prevent fontawesome from adding its CSS since we did it manually above:
-import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
 export const install: UserModule = ({ app }) => {
