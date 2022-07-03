@@ -20,7 +20,7 @@ jobs:
           command: pnpm run lint
       - run:
           name: Test
-          command: pnpm test
+          command: pnpm coverage
       - sonarcloud/scan
       - run:
           name: Build
@@ -28,7 +28,7 @@ jobs:
             pnpm run build
             ls dist
       - slack/notify:
-          channel: circleci-netlify
+          channel: circleci-netlify-vercel
           event: always
 
 workflows:
