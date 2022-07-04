@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import { createRouterMock, injectRouterMock } from 'vue-router-mock'
-import index from '@/pages/blog/Index.vue'
+import Index from '@/pages/blog/Index.vue'
 
 const router = createRouterMock({
   initialLocation: '/blog',
@@ -28,7 +28,7 @@ describe('blog/Index.vue', () => {
   })
 
   it('should render', () => {
-    const wrapper = mount(index, {
+    const wrapper = mount(Index, {
       global: {
         plugins: [createTestingPinia()],
         mocks: {
