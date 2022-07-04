@@ -4,7 +4,7 @@ import IndexPage from '@/pages/index.vue'
 import SVGHomeLeft from '@/components/svg/svg-home-left.svg'
 import SVGHomeRight from '@/components/svg/svg-home-right.svg'
 
-describe('Index.vue', () => {
+describe('index.vue', () => {
   it('should render', async () => {
     const wrapper = mount(IndexPage, {
       global: {
