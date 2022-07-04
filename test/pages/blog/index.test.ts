@@ -9,7 +9,7 @@ const router = createRouterMock({
 beforeEach(() => {
   injectRouterMock(router)
 })
-describe('blog/index.vue', () => {
+describe('blog/Index.vue', () => {
   beforeEach(() => {
     vi.resetAllMocks()
     Object.defineProperty(window, 'matchMedia', {
