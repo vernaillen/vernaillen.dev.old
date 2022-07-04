@@ -1,4 +1,3 @@
-import '/test/mocks/matchMedia.mock'
 import { RouterLinkStub, shallowMount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import HeaderComponent from '@/components/HeaderComponent.vue'

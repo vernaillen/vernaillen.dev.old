@@ -1,24 +1,30 @@
-import '/test/mocks/matchMedia.mock'
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import { createRouterMock, injectRouterMock } from 'vue-router-mock'
 import index from '@/pages/blog/index.vue'
-import blog from '@/logics/blog'
 
 const router = createRouterMock({
-  // ...
+  initialLocation: '/blog',
 })
 beforeEach(() => {
   injectRouterMock(router)
 })
-/* vi.mock('@/logics/blog', () => {
-  const blog = vi.fn()
-  blog.prototype.getPosts = vi.fn()
-  return { blog }
-}) */
 describe('blog/index.vue', () => {
   beforeEach(() => {
     vi.resetAllMocks()
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: vi.fn(), // Deprecated
+        removeListener: vi.fn(), // Deprecated
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn(),
+      })),
+    })
   })
 
   it('should render', () => {
@@ -27,11 +33,10 @@ describe('blog/index.vue', () => {
         plugins: [createTestingPinia()],
         mocks: {
           matchMedia,
+          router,
         },
       },
     })
     expect(wrapper.router).toBe(router)
-    // expect(blog.getPosts).toHaveBeenCalledTimes(1)
-    expect(router.getRoutes).toHaveBeenCalledTimes(1)
   })
 })

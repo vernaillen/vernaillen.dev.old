@@ -1,4 +1,3 @@
-import '/test/mocks/matchMedia.mock'
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import MarkdownWrapper from '@/components/MarkdownWrapper.vue'

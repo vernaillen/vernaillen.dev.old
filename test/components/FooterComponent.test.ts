@@ -1,4 +1,3 @@
-import '/test/mocks/matchMedia.mock'
 import { shallowMount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import FooterComponent from '@/components/FooterComponent.vue'

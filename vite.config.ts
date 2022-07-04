@@ -103,7 +103,7 @@ export default defineConfig({
       include: ['src/**/*.vue'],
     },
     globals: true,
-    setupFiles: ['test/vue-router-mock.setup.ts'],
+    setupFiles: ['test/vue-router-mock.setup.ts', 'test/matchMedia.setup.ts'],
   },
   ssgOptions: {
     script: 'async',
