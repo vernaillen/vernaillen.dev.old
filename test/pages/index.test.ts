@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
-import IndexPage from '@/pages/index.vue'
+import IndexPage from '@/pages/Index.vue'
 import SVGHomeLeft from '@/components/svg/svg-home-left.svg'
 import SVGHomeRight from '@/components/svg/svg-home-right.svg'
 
