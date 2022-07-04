@@ -21,10 +21,8 @@ describe('FooterComponent.vue', () => {
     const wrapper = shallowMount(FooterComponent)
     expect(wrapper.find('a.back-to-top').exists()).toBe(true)
 
-    const scrollSpy = vi.spyOn(wrapper.vm, 'scrollToTop')
+    const spyOnScroll = vi.spyOn(wrapper.vm, 'scrollToTop')
     wrapper.find('a.back-to-top').trigger('click')
-
-    await nextTick()
-    expect(scrollSpy).toHaveBeenCalledTimes(1)
+    expect(spyOnScroll).toHaveBeenCalledTimes(1)
   })
 })
