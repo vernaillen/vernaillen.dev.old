@@ -16,4 +16,15 @@ describe('FooterComponent.vue', () => {
     expect(wrapper.text()).toContain('Wouter Vernaillen')
     expect(wrapper.find('footer').exists()).toBe(true)
   })
+
+  it('should call scrollToTop', async () => {
+    const wrapper = shallowMount(FooterComponent)
+    expect(wrapper.find('a.back-to-top').exists()).toBe(true)
+
+    const scrollSpy = vi.spyOn(wrapper.vm, 'scrollToTop')
+    wrapper.find('a.back-to-top').trigger('click')
+
+    await nextTick()
+    expect(scrollSpy).toHaveBeenCalledTimes(1)
+  })
 })

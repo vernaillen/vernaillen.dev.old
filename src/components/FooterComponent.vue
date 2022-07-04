@@ -93,7 +93,7 @@ onMounted(() => {
   <a
     href="javascript:void(0)"
     class="ud-hidden ud-items-center ud-justify-center ud-bg-primary ud-text-white ud-w-10 ud-h-10 ud-rounded-md ud-fixed ud-bottom-8 ud-right-8 ud-left-auto ud-z-[999] hover:ud-shadow-signUp hover:ud-bg-opacity-80 ud-transition ud-duration-300 ud-ease-in-out back-to-top ud-shadow-md"
-    @click="scrollToTop"
+    @click="scrollToTop()"
   >
     <span
       class="ud-w-3 ud-h-3 ud-border-t ud-border-l ud-border-white ud-rotate-45 ud-mt-[6px]"

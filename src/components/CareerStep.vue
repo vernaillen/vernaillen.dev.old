@@ -26,7 +26,7 @@ defineProps<{
       class="ud-ml-6 ud-mb-4 ud-pb-4 ud-font-medium ud-text-base ud-text-body-color"
     >
       <div
-        class="ud-ml-1 ud-mb-2 ud-text-primary ud-duration-300 ud-transition ud-ease-in-out ud-text-sm"
+        class="ud-ml-1 ud-mb-2 ud-text-primary ud-text-sm"
       >
         {{ careerStep.date }}
       </div>
