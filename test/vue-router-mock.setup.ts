@@ -9,3 +9,4 @@ beforeEach(() => {
 
 // Add properties to the wrapper
 config.plugins.VueWrapper.install(VueRouterMock)
+export {}

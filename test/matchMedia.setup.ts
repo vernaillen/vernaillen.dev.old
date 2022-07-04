@@ -13,3 +13,4 @@ beforeAll(() => {
     })),
   })
 })
+export {}
