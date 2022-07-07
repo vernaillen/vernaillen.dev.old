@@ -28,7 +28,7 @@ jobs:
             pnpm run build
             ls dist
       - slack/notify:
-          channel: circleci-netlify-vercel
+          channel: circleci
           event: always
 
 workflows:
