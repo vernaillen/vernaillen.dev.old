@@ -70,7 +70,7 @@
     "v8-compile-cache": "^2.3.0",
     "vite": "^2.9.14",
     "vite-plugin-eslint": "^1.6.1",
-    "vite-plugin-inspect": "^0.5.1",
+    "vite-plugin-inspect": "^0.6.0",
     "vite-plugin-pages": "^0.25.0",
     "vite-plugin-pages-sitemap": "^1.2.2",
     "vite-plugin-vue-markdown": "^0.20.1",
