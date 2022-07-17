@@ -1,4 +1,5 @@
 import { ViteSSG } from 'vite-ssg'
+import type { UserModule } from './plugins/userModule'
 import routes from '~pages'
 import '@/css/markdown.css'
 import '@/css/main.css'
@@ -14,8 +15,13 @@ const scrollBehavior = (
   return { top: 0 }
 }
 
-export const createApp = ViteSSG(App, { routes, scrollBehavior }, (ctx) => {
-  Object.values(import.meta.globEager('./plugins/*.ts')).forEach(plugin =>
-    plugin.install?.(ctx),
-  )
-})
+// https://github.com/antfu/vite-ssg
+export const createApp = ViteSSG(
+  App,
+  { routes, scrollBehavior },
+  (ctx) => {
+    // install all modules under `modules/`
+    Object.values(import.meta.glob<{ install: UserModule }>('./plugins/*.ts', { eager: true }))
+      .forEach(i => i.install?.(ctx))
+  },
+)

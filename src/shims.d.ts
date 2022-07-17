@@ -55,3 +55,5 @@ declare module "@vue/runtime-core" {
     audioPlayer: AudioPlayer;
   }
 }
+
+declare module 'vue-audiomotion-analyzer'
