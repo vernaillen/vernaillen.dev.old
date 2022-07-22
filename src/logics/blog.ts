@@ -38,7 +38,8 @@ export class Blog {
       }))
   }
 }
-export default new Blog()
+const blog = new Blog()
+export default blog
 
 export function getImageUrl(post: Post, isDark: boolean) {
   const imagePath = '/images/blog'
@@ -50,4 +51,28 @@ export function getImageUrl(post: Post, isDark: boolean) {
   }
   if (post.thumbnail)
     return imagePath + post.thumbnail
+}
+
+export function getPreviousPost(currentPostPath: string): Post | null {
+  let foundCurrentPost = false
+  let previousPost = null
+  for (const post of blog.getPosts()) {
+    if (foundCurrentPost && previousPost == null)
+      previousPost = post
+
+    if (post.path === currentPostPath)
+      foundCurrentPost = true
+  }
+  return previousPost
+}
+
+export function getNextPost(currentPostPath: string): Post | null {
+  let moreRecentPost = null
+  for (const post of blog.getPosts()) {
+    if (moreRecentPost != null && post.path === currentPostPath)
+      return moreRecentPost
+
+    moreRecentPost = post
+  }
+  return null
 }

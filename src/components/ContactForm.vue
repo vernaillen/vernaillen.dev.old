@@ -18,19 +18,19 @@ const { value: message, errorMessage: messageError } = useField('message')
 
 <template>
   <div
-    class="ud-bg-primary ud-bg-opacity-[3%] dark:ud-bg-dark ud-rounded-md ud-p-6 ud-mb-12 lg:ud-mb-5 md:ud-p-8 lg:ud-p-12"
+    class="bg-primary bg-opacity-[3%] dark:bg-dark rounded-md p-6 mb-12 lg:mb-5 md:p-8 lg:p-12"
   >
     <form
       action="https://formbold.com/s/6l2G3"
       method="POST"
       @submit="submitForm"
     >
-      <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full md:ud-w-1/2 ud-px-4">
-          <div class="ud-mb-8">
+      <div class="flex flex-wrap mx-[-16px]">
+        <div class="w-full md:w-1/2 px-4">
+          <div class="mb-8">
             <label
               for="name"
-              class="ud-block ud-text-sm ud-font-medium ud-text-dark dark:ud-text-white ud-mb-3"
+              class="block text-sm font-medium text-dark dark:text-white mb-3"
             >
               Your name
             </label>
@@ -38,18 +38,18 @@ const { value: message, errorMessage: messageError } = useField('message')
               v-model="name"
               name="name"
               type="text"
-              class="ud-w-full ud-border ud-border-transparent dark:ud-bg-black ud-rounded-md ud-shadow-one dark:ud-shadow-signUp ud-py-3 ud-px-6 ud-text-body-color ud-text-base ud-placeholder-body-color ud-outline-none focus-visible:ud-shadow-none focus:ud-border-primary"
+              class="w-full border border-transparent dark:bg-black rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary"
             >
-            <span v-if="nameError" class="ud-text-primary">
+            <span v-if="nameError" class="text-primary">
               {{ nameError }}
             </span>
           </div>
         </div>
-        <div class="ud-w-full md:ud-w-1/2 ud-px-4">
-          <div class="ud-mb-8">
+        <div class="w-full md:w-1/2 px-4">
+          <div class="mb-8">
             <label
               for="email"
-              class="ud-block ud-text-sm ud-font-medium ud-text-dark dark:ud-text-white ud-mb-3"
+              class="block text-sm font-medium text-dark dark:text-white mb-3"
             >
               Your Email
             </label>
@@ -57,18 +57,18 @@ const { value: message, errorMessage: messageError } = useField('message')
               v-model="email"
               name="email"
               type="email"
-              class="ud-w-full ud-border ud-border-transparent dark:ud-bg-black ud-rounded-md ud-shadow-one dark:ud-shadow-signUp ud-py-3 ud-px-6 ud-text-body-color ud-text-base ud-placeholder-body-color ud-outline-none focus-visible:ud-shadow-none focus:ud-border-primary"
+              class="w-full border border-transparent dark:bg-black rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary"
             >
-            <span v-if="emailError" class="ud-text-primary">
+            <span v-if="emailError" class="text-primary">
               {{ emailError }}
             </span>
           </div>
         </div>
-        <div class="ud-w-full ud-px-4">
-          <div class="ud-mb-5">
+        <div class="w-full px-4">
+          <div class="mb-5">
             <label
               for="message"
-              class="ud-block ud-text-sm ud-font-medium ud-text-dark dark:ud-text-white ud-mb-3"
+              class="block text-sm font-medium text-dark dark:text-white mb-3"
             >
               Your Message
             </label>
@@ -76,17 +76,17 @@ const { value: message, errorMessage: messageError } = useField('message')
               v-model="message"
               name="message"
               rows="5"
-              class="ud-w-full ud-border ud-border-transparent dark:ud-bg-black ud-rounded-md ud-shadow-one dark:ud-shadow-signUp ud-py-3 ud-px-6 ud-text-body-color ud-text-base ud-placeholder-body-color ud-outline-none focus-visible:ud-shadow-none focus:ud-border-primary ud-resize-none"
+              class="w-full border border-transparent dark:bg-black rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary resize-none"
             />
 
-            <span v-if="messageError" class="ud-text-primary">
+            <span v-if="messageError" class="text-primary">
               {{ messageError }}
             </span>
           </div>
         </div>
-        <div class="ud-w-full ud-px-4">
+        <div class="w-full px-4">
           <button
-            class="ud-text-base ud-font-medium ud-text-white ud-bg-primary ud-py-3 ud-px-6 hover:ud-bg-opacity-80 hover:ud-shadow-signUp ud-rounded-md ud-transition ud-duration-300 ud-ease-in-out"
+            class="text-base font-medium text-white bg-primary py-3 px-6 hover:bg-opacity-80 hover:shadow-signUp rounded-md transition duration-300 ease-in-out"
           >
             Submit
           </button>

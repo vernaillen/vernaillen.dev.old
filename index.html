@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="ud-dark">
+<html lang="en" class="dark">
 
   <head>
     <meta charset="UTF-8" />
@@ -15,12 +15,13 @@
       (function () {
         const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
-        if (setting === 'dark' || (prefersDark && setting !== 'light')) document.documentElement.classList.toggle('ud-dark', true)
+        if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
       })()
     </script>
   </head>
 
-  <body class="dark:ud-bg-black">
+  <body class="dark:bg-black">
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

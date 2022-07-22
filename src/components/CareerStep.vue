@@ -7,9 +7,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="ud-flex ud-flex-start ud-items-center">
+  <div class="flex flex-start items-center">
     <div
-      class="company-img ud-bg-primary ud-drop-shadow-md hover:ud-drop-shadow-lg ud-shadow-light-400 ud-flex ud-items-center ud-justify-center ud-rounded-full"
+      class="company-img bg-primary drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full"
     >
       <img
         v-if="careerStep.imageUrl"
@@ -17,55 +17,55 @@ defineProps<{
         :alt="careerStep.project"
       >
     </div>
-    <h4 class="ud-text-gray-800 dark:ud-text-white ud-font-semibold ud--mt-2">
+    <h4 class="text-gray-800 dark:text-white font-semibold -mt-2">
       {{ careerStep.client }}
     </h4>
   </div>
-  <div class="ud-border-l-2 ud-border-primary ud-mt-2">
+  <div class="border-l-2 border-primary mt-2">
     <div
-      class="ud-ml-6 ud-mb-4 ud-pb-4 ud-font-medium ud-text-base ud-text-body-color"
+      class="ml-6 mb-4 pb-4 font-medium text-base text-body-color"
     >
       <div
-        class="ud-ml-1 ud-mb-2 ud-text-primary ud-text-sm"
+        class="ml-1 mb-2 text-primary text-sm"
       >
         {{ careerStep.date }}
       </div>
-      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
-        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">
+      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           project:
         </div>
         <div
-          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
         >
           {{ careerStep.project }}
         </div>
       </div>
-      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
-        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">
+      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           role:
         </div>
         <div
-          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
         >
           {{ careerStep.role }}
         </div>
       </div>
-      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
-        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">
+      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           stack:
         </div>
         <div
-          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
         >
           {{ careerStep.stack }}
         </div>
       </div>
-      <div class="ud-ml-2 ud-mt-1 ud-mb-1 ud-flex ud-flex-wrap">
-        <div class="ud-w-full sm:ud-w-1/5 md:ud-w-1/6 xl:ud-w-1/12">
+      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           contract:
         </div>
         <div
-          class="ud-w-full ud-ml-6 sm:ud-ml-0 sm:ud-w-4/5 md:ud-w-5/6 xl:ud-w-11/12"
+          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
         >
           {{ careerStep.contract }}
         </div>

@@ -1,7 +1,7 @@
 /* https://github.com/antfu/prism-theme-vars */
 @import 'prism-theme-vars/base.css';
 
-html:not(.ud-dark) .prose {
+html:not(.dark) .prose {
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;
   --prism-comment: #a0ada0;
@@ -23,7 +23,7 @@ html:not(.ud-dark) .prose {
   --prism-json-property: #698c96;
 }
 
-html.ud-dark .prose {
+html.dark .prose {
   --prism-foreground: #d4cfbf;
   --prism-background: #151515;
   --prism-comment: #758575;
@@ -56,7 +56,7 @@ html.ud-dark .prose {
 
   color: var(--fg);
 }
-html.ud-dark .prose {
+html.dark .prose {
   --fg: #ccc;
   --fg-deep: #fff;
   --fg-deeper: #9C8E1B;

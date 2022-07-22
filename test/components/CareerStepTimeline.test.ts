@@ -11,7 +11,7 @@ describe('CareerTimeline.vue', () => {
 
   it('should contain careerSteps', async () => {
     const wrapper = mount(CareerTimeline)
-    expect(wrapper.find('div.ud-flex .company-img').exists()).toBe(true)
+    expect(wrapper.find('div.flex .company-img').exists()).toBe(true)
     expect(wrapper.findAll('ol li').entries.length).toBe(careerSteps.entries.length)
   })
 })

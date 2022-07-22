@@ -14,11 +14,11 @@ const linkClass = (path: string) => {
 </script>
 
 <template>
-  <ul class="ud-block lg:ud-flex">
-    <li v-for="(item, index) in navItems" :key="index" class="ud-relative ud-group">
+  <ul class="block lg:flex">
+    <li v-for="(item, index) in navItems" :key="index" class="relative group">
       <router-link
         :to="item.path"
-        class="menu-scroll ud-text-base ud-text-black dark:ud-text-white group-hover:ud-opacity-70 ud-py-2 lg:ud-pt-4 lg:ud-pb-6 lg:ud-inline-flex ud-px-7 lg:ud-px-1 ud-flex ud-mr-7"
+        class="menu-scroll text-base text-black dark:text-white group-hover:opacity-70 py-2 lg:pt-4 lg:pb-6 lg:inline-flex px-7 lg:px-1 flex mr-7"
         :class="linkClass(item.path)"
       >
         {{ item.title }}

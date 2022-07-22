@@ -37,15 +37,15 @@ fetchGitHubInfo()
 </script>
 
 <template>
-  <div class="ud-flex ud-items-center ud-mr-2 ud-mb-5">
+  <div class="flex items-center mr-2 mb-5">
     <p
-      class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-medium ud-mr-2"
+      class="flex items-center text-xs text-body-color font-medium mr-2"
     >
       <a :href="viewLink" target="_blank">
-        <font-awesome-icon :icon="['fab', 'github']" class="ud-mr-2" />
+        <font-awesome-icon :icon="['fab', 'github']" class="mr-2" />
       </a>
       <a :href="editLink" target="_blank">
-        <font-awesome-icon :icon="['fas', 'pen-to-square']" class="ud-mr-3" />
+        <font-awesome-icon :icon="['fas', 'pen-to-square']" class="mr-3" />
       </a>
       last updated:&nbsp;
       <font-awesome-icon

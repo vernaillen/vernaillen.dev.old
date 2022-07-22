@@ -29,17 +29,17 @@ const back = () => {
 }
 
 const labelBase
-  = 'ud-cursor-pointer ud-w-10 ud-h-14 ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white ud-ml-2'
+  = 'cursor-pointer w-10 h-14 items-center justify-center bg-gray-2 dark:bg-dark-bg text-black dark:text-white ml-2'
 const labelClass = props.extended
-  ? `${labelBase} ud-inline`
-  : `${labelBase} ud-flex `
+  ? `${labelBase} inline`
+  : `${labelBase} flex `
 
 const iconClass
-  = 'ud-rounded-full ud-bg-primary ud-bg-opacity-10 dark:ud-bg-opacity-20 ud-p-2 ud-w-4 ud-h-4'
+  = 'rounded-full bg-primary bg-opacity-10 dark:bg-opacity-20 p-2 w-4 h-4'
 </script>
 
 <template>
-  <span class="ud-block">
+  <span class="block">
     <label v-if="props.extended" :class="labelClass">
       <font-awesome-icon
         v-if="playerState.time === 0"
@@ -75,7 +75,7 @@ const iconClass
     </label>
     <label
       v-if="props.extended"
-      class="ud-px-2 ud-inline-block ud-text-gray-500 dark:ud-text-gray-400"
+      class="px-2 inline-block text-gray-500 dark:text-gray-400"
     >
       {{ playerState.time }} sec
     </label>

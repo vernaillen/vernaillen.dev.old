@@ -30,18 +30,18 @@ const openGallery = (i: number) => {
 </script>
 
 <template>
-  <div class="ud-flex ud-flex-wrap ud-justify-start ud-mx-[-16px]">
+  <div class="flex flex-wrap justify-start mx-[-16px]">
     <div
       v-for="(image, index) in images"
       :key="index"
-      class="md:ud-w-2/3 lg:ud-w-1/2 xl:ud-w-1/3 ud-px-4"
+      class="md:w-2/3 lg:w-1/2 xl:w-1/3 px-4"
     >
       <div
-        class="galleryImgWrapper ud-rounded-md ud-overflow-hidden ud-relative ud-mb-8 ud-shadow-md ud-shadow-gray-800"
+        class="galleryImgWrapper rounded-md overflow-hidden relative mb-8 shadow-md shadow-gray-800"
       >
         <img
           :src="image"
-          class="ud-cursor-pointer ud-rounded-md ud-max-w-full ud-p-0 ud-m-0"
+          class="cursor-pointer rounded-md max-w-full p-0 m-0"
           :alt="image"
           @click="openGallery(index)"
         >

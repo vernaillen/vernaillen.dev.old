@@ -19,81 +19,58 @@ const prose = () => {
 
 <template>
   <header-component />
-  <section class="ud-relative ud-z-10 ud-pt-[100px] ud-overflow-hidden">
-    <div class="ud-container">
-      <div class="ud-flex ud-flex-wrap">
-        <breadcrumb-component
-          :page-name="frontmatter.pageName ? frontmatter.title : ''"
-          :path="route.path"
-        />
-        <div class="ud-px-4">
-          <div v-if="frontmatter.title" class="ud-mb-2">
-            <div class="ud-flex ud-flex-wrap">
+  <section class="relative z-10 pt-[100px] overflow-hidden">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <breadcrumb-component :page-name="frontmatter.pageName ? frontmatter.title : ''" :path="route.path" />
+        <div class="px-4">
+          <div v-if="frontmatter.title" class="mb-2">
+            <div class="flex flex-wrap">
               <h1
-                class="ud-font-bold ud-text-black dark:ud-text-white ud-text-2xl sm:ud-text-3xl ud-mb-5 animated pulse"
+                class="font-bold text-black dark:text-white text-2xl sm:text-3xl mb-5 animated pulse"
               >
                 {{ frontmatter.title }}
               </h1>
             </div>
 
-            <div class="ud-flex ud-flex-wrap">
+            <div class="flex flex-wrap">
               <p
-                v-if="frontmatter.desc"
-                :style="`background: ${frontmatter.bgColor};`"
-                class="ud-font-medium ud-text-base ud-text-body-color ud-leading-relaxed ud-mb-8"
+                v-if="frontmatter.desc" :style="`background: ${frontmatter.bgColor};`"
+                class="font-medium text-base text-body-color leading-relaxed mb-8"
               >
                 {{ frontmatter.desc }}
               </p>
             </div>
           </div>
 
-          <div class="ud-flex ud-flex-wrap ud-items-center">
-            <div
-              v-if="frontmatter.author"
-              class="ud-flex ud-items-center ud-mr-5 ud-mb-5"
-            >
+          <div class="flex flex-wrap items-center">
+            <div v-if="frontmatter.author" class="flex items-center mr-5 mb-5">
               <div
                 v-if="frontmatter.author === 'Wouter Vernaillen'"
-                class="ud-max-w-[20px] ud-w-full ud-h-[20px] ud-rounded-full ud-overflow-hidden ud-mr-2"
+                class="max-w-[20px] w-full h-[20px] rounded-full overflow-hidden mr-2"
               >
-                <img src="/images/wouter.jpg" alt="author" class="ud-w-full">
+                <img src="/images/wouter.jpg" alt="author" class="w-full">
               </div>
-              <div class="ud-w-full">
-                <p
-                  class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-small ud-mr-2"
-                >
+              <div class="w-full">
+                <p class="flex items-center text-xs text-body-color font-small mr-2">
                   <router-link to="/about">
                     {{ frontmatter.author }}
                   </router-link>
                 </p>
               </div>
             </div>
-            <div
-              v-if="frontmatter.date"
-              class="ud-flex ud-items-center ud-mr-2 ud-mb-5"
-            >
-              <p
-                class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-medium ud-mr-3"
-              >
-                <font-awesome-icon :icon="['fas', 'calendar-days']" /><span
-                  class="ud-mr-2 fa-solid fa-calendar-days"
-                />
+            <div v-if="frontmatter.date" class="flex items-center mr-2 mb-5">
+              <p class="flex items-center text-xs text-body-color font-medium mr-3">
+                <font-awesome-icon :icon="['fas', 'calendar-days']" /><span class="mr-2 fa-solid fa-calendar-days" />
                 {{ formatDate(frontmatter.date) }}
               </p>
             </div>
             <client-only>
               <MarkdownGitHub v-if="!frontmatter.hideGitHub" />
             </client-only>
-            <div
-              v-if="frontmatter.location"
-              class="ud-flex ud-items-center ud-mr-2 ud-mb-5"
-            >
-              <p
-                class="ud-flex ud-items-center ud-text-xs ud-text-body-color ud-font-medium ud-mr-2"
-              >
-                <font-awesome-icon :icon="['fas', 'location-pin']" /><span
-                  class="ud-mr-2 fa-solid fa-location-pin"
-                />
+            <div v-if="frontmatter.location" class="flex items-center mr-2 mb-5">
+              <p class="flex items-center text-xs text-body-color font-medium mr-2">
+                <font-awesome-icon :icon="['fas', 'location-pin']" /><span class="mr-2 fa-solid fa-location-pin" />
                 {{ frontmatter.location }}
               </p>
             </div>
@@ -102,21 +79,21 @@ const prose = () => {
       </div>
     </div>
     <div>
-      <span class="ud-absolute ud-top-0 ud-left-0 ud-z-[-1] animated fadeIn">
+      <span class="absolute top-0 left-0 z-[-1] animated fadeIn">
         <svg-background-left1 />
       </span>
-      <span class="ud-absolute ud-right-0 ud-top-0 ud-z-[-1] animated fadeIn">
+      <span class="absolute right-0 top-0 z-[-1] animated fadeIn">
         <svg-background-right1 />
       </span>
     </div>
   </section>
-  <section class="ud-relative ud-z-10 ud-py-8">
-    <div class="ud-container">
-      <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full ud-py-4 ud-px-8 md:ud-px-12">
-          <div class="ud-mx-auto">
+  <section class="relative z-10 py-8">
+    <div class="container">
+      <div class="flex flex-wrap mx-[-16px]">
+        <div class="w-full py-4 px-8 md:px-12">
+          <div class="mx-auto">
             <p
-              class="ud-m-auto ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 animated fadeIn"
+              class="m-auto font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 animated fadeIn"
               :class="prose()"
             >
               <slot />
@@ -125,6 +102,7 @@ const prose = () => {
         </div>
       </div>
     </div>
+    <previous-next-post />
   </section>
   <footer-component />
 </template>

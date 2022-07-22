@@ -1,6 +1,6 @@
 <svg
     viewBox="0 0 25 24"
-    class="ud-stroke-current dark:ud-hidden ud-w-5 ud-h-5 md:ud-w-6 md:ud-h-6"
+    class="stroke-current dark:hidden w-5 h-5 md:w-6 md:h-6"
     fill="none"
     >
     <path
@@ -14,7 +14,7 @@
     viewBox="0 0 25 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="ud-hidden dark:ud-block ud-w-5 ud-h-5 md:ud-w-6 md:ud-h-6"
+    class="hidden dark:block w-5 h-5 md:w-6 md:h-6"
     >
     <mask id="path-1-inside-1_977:1934" fill="white">
         <path

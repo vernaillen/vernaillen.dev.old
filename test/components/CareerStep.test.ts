@@ -19,7 +19,7 @@ describe('CareerStep.vue', () => {
         careerStep: testCareerStep,
       },
     })
-    expect(wrapper.find('div.ud-flex .company-img').exists()).toBe(true)
+    expect(wrapper.find('div.flex .company-img').exists()).toBe(true)
   })
 
   it('should contain correct CareerStep details', async () => {
@@ -28,11 +28,11 @@ describe('CareerStep.vue', () => {
         careerStep: testCareerStep,
       },
     })
-    expect(wrapper.find('div.ud-flex div.company-img img').exists()).toBe(true)
-    expect(wrapper.find('div.ud-flex div.company-img img').attributes().src).toBe(testCareerStep.imageUrl)
+    expect(wrapper.find('div.flex div.company-img img').exists()).toBe(true)
+    expect(wrapper.find('div.flex div.company-img img').attributes().src).toBe(testCareerStep.imageUrl)
 
-    expect(wrapper.find('div.ud-flex h4').exists()).toBe(true)
-    expect(wrapper.find('div.ud-flex h4').text()).toBe(testCareerStep.client)
+    expect(wrapper.find('div.flex h4').exists()).toBe(true)
+    expect(wrapper.find('div.flex h4').text()).toBe(testCareerStep.client)
 
     expect(wrapper.html()).toContain(testCareerStep.date)
     expect(wrapper.html()).toContain(testCareerStep.contract)

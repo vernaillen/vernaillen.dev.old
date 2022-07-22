@@ -2,39 +2,39 @@
   <header-component />
   <section
     id="home"
-    class="ud-relative ud-z-10 ud-pt-[160px] ud-pb-[120px] xl:ud-pt-[190px] xl:ud-pb-[160px] 2xl:ud-pt-[220px] 2xl:ud-pb-[200px]"
+    class="relative z-10 pt-[160px] pb-[120px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px]"
   >
-    <div class="ud-container">
-      <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full ud-px-4">
+    <div class="container">
+      <div class="flex flex-wrap mx-[-16px]">
+        <div class="w-full px-4">
           <div
-            class="ud-mx-auto ud-max-w-[570px] ud-text-center animated fadeIn"
+            class="mx-auto max-w-[570px] text-center animated fadeIn"
           >
             <h1
-              class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl sm:ud-text-4xl md:ud-text-5xl ud-leading-tight sm:ud-leading-tight md:ud-leading-tight ud-mb-20 animated pulse"
+              class="text-black dark:text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight mb-20 animated pulse"
             >
               Wouter Vernaillen
             </h1>
             <p
-              class="ud-font-medium ud-text-lg md:ud-text-xl ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 ud-mt-24 ud-mb-10"
+              class="font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mt-24 mb-10"
             >
               Freelance Full Stack Developer
             </p>
             <p
-              class="ud-font-medium ud-text-md md:ud-text-lg ud-leading-relaxed md:ud-leading-relaxed ud-text-body-color dark:ud-text-white dark:ud-opacity-90 ud-mb-10"
+              class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10"
             >
               Java, Spring, Vue & Liferay
             </p>
-            <div class="ud-flex ud-items-center ud-justify-center ud-mt-10">
+            <div class="flex items-center justify-center mt-10">
               <router-link
                 to="/blog"
-                class="ud-text-base ud-font-semibold ud-text-white ud-bg-primary ud-py-3 ud-px-6 hover:ud-bg-opacity-80 ud-mx-2 ud-my-10 ud-rounded-md animated-duration-3s animated fadeIn"
+                class="text-base font-semibold text-white bg-primary py-3 px-6 hover:bg-opacity-80 mx-2 my-10 rounded-md animated-duration-3s animated fadeIn"
               >
                 Blog
               </router-link>
               <router-link
                 to="/about"
-                class="ud-text-base ud-font-semibold ud-text-black ud-bg-black ud-bg-opacity-10 dark:ud-text-white dark:ud-bg-white dark:ud-bg-opacity-20 ud-py-3 ud-px-6 hover:ud-bg-opacity-20 dark:hover:ud-bg-opacity-20 ud-mx-2 ud-my-10 ud-rounded-md animated-duration-3s animated fadeIn"
+                class="text-base font-semibold text-black bg-black bg-opacity-10 dark:text-white dark:bg-white dark:bg-opacity-20 py-3 px-6 hover:bg-opacity-20 dark:hover:bg-opacity-20 mx-2 my-10 rounded-md animated-duration-3s animated fadeIn"
               >
                 About Wouter
               </router-link>
@@ -44,10 +44,10 @@
       </div>
     </div>
     <!-- <div> -->
-    <div class="svg-right ud-absolute ud-top-0 ud-right-0 ud-z-[-1]">
+    <div class="svg-right absolute top-0 right-0 z-[-1]">
       <svg-home-right />
     </div>
-    <div class="svg-left ud-absolute ud-bottom-0 ud-left-0 ud-z-[-1]">
+    <div class="svg-left absolute bottom-0 left-0 z-[-1]">
       <svg-home-left />
     </div>
   </section>

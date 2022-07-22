@@ -27,38 +27,38 @@ h3 a,
     color: #9C8E1B;
 }
 input[type="checkbox"]:checked ~ label span svg {
-  @apply ud-inline-flex;
+  @apply inline-flex;
 }
 .sticky {
-  @apply ud-fixed ud-z-[9995] ud-transition ud-bg-white ud-bg-opacity-80 dark:ud-bg-primary dark:ud-bg-opacity-20;
+  @apply fixed z-[9995] transition bg-white bg-opacity-80 dark:bg-primary dark:bg-opacity-20;
   backdrop-filter: blur(5px);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .sticky .header-logo {
-  @apply ud-py-5 lg:ud-py-2;
+  @apply py-5 lg:py-2;
 }
 
 .sticky .menu-scroll.active {
-  @apply ud-opacity-70;
+  @apply opacity-70;
 }
 
 .navbarTogglerActive > span:nth-child(1) {
-  @apply ud-transform ud-rotate-45 ud-top-[7px];
+  @apply transform rotate-45 top-[7px];
 }
 .navbarTogglerActive > span:nth-child(2) {
-  @apply ud-opacity-0;
+  @apply opacity-0;
 }
 .navbarTogglerActive > span:nth-child(3) {
-  @apply ud-top-[-8px] ud-rotate-[135deg];
+  @apply top-[-8px] rotate-[135deg];
 }
 
 input#togglePlan:checked ~ .dot {
-  @apply ud-translate-x-full;
+  @apply translate-x-full;
 }
 
 input#checkboxLabel:checked ~ .box span {
-  @apply ud-opacity-100;
+  @apply opacity-100;
 }
 
 #nprogress {
@@ -66,7 +66,7 @@ input#checkboxLabel:checked ~ .box span {
 }
 
 #nprogress .bar {
-  @apply ud-bg-primary;
+  @apply bg-primary;
   opacity: 0.75;
   position: fixed;
   z-index: 1031;
@@ -104,7 +104,7 @@ input#checkboxLabel:checked ~ .box span {
   animation-duration: 5s;
 }
 
-.ud-light .light\:ud-hidden {
+.light .light\:hidden {
   display: none;
 }
 

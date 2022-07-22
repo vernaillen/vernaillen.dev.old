@@ -7,15 +7,15 @@ const props = defineProps({
   },
 })
 const isDark = useDark({
-  valueDark: 'ud-dark',
-  valueLight: 'ud-light',
+  valueDark: 'dark',
+  valueLight: 'light',
 })
 const toggleDark = useToggle(isDark)
 const classBase
-  = 'ud-cursor-pointer ud-rounded-full ud-items-center ud-justify-center ud-bg-gray-2 dark:ud-bg-dark-bg ud-text-black dark:ud-text-white'
+  = 'cursor-pointer rounded-full items-center justify-center bg-gray-2 dark:bg-dark-bg text-black dark:text-white'
 const darkTogglerClass = props.inline
-  ? `${classBase} ud-inline-block ud-w-5 ud-h-5`
-  : `${classBase} ud-flex ud-w-10 ud-h-14 `
+  ? `${classBase} inline-block w-5 h-5`
+  : `${classBase} flex w-10 h-14 `
 </script>
 
 <template>

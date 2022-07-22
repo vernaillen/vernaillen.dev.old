@@ -9,7 +9,7 @@ describe('ImageGallery.vue', () => {
         plugins: [createTestingPinia()],
       },
     })
-    expect(wrapper.find('.ud-flex.ud-flex-wrap').exists()).toBe(true)
+    expect(wrapper.find('.flex.flex-wrap').exists()).toBe(true)
   })
 
   it('should open lightbox on image click', async () => {

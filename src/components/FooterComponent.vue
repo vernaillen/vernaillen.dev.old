@@ -63,40 +63,40 @@ onMounted(() => {
 
 <template>
   <footer
-    class="ud-relative ud-z-40 ud-bg-primary ud-bg-opacity-5 ud-pt-[20px]"
+    class="relative z-40 bg-primary bg-opacity-5 pt-[20px]"
   >
-    <div class="ud-container">
-      <div class="ud-flex ud-flex-wrap ud-mx-[-16px]">
-        <div class="ud-w-full ud-px-4">
-          <div class="ud-flex ud-mb-4 ud-justify-center">
+    <div class="container">
+      <div class="flex flex-wrap mx-[-16px]">
+        <div class="w-full px-4">
+          <div class="flex mb-4 justify-center">
             <player-controls />
           </div>
-          <div class="ud-flex ud-mb-8 ud-justify-center">
+          <div class="flex mb-8 justify-center">
             <social-icons />
           </div>
         </div>
       </div>
     </div>
-    <div class="ud-py-8 ud-bg-primary ud-bg-opacity-10">
-      <div class="ud-container">
-        <p class="ud-text-body-color ud-text-base ud-text-center">
+    <div class="py-8 bg-primary bg-opacity-10">
+      <div class="container">
+        <p class="text-body-color text-base text-center">
           &copy; {{ currentYear() }} Wouter Vernaillen - Vernaillen Consulting
           BV -
           <a href="https://harmonics.be" target="_blank" rel="noopener">Harmonics BV</a>
         </p>
       </div>
     </div>
-    <div class="ud-absolute ud-left-0 ud-bottom-[110px] ud-z-[-1]">
+    <div class="absolute left-0 bottom-[110px] z-[-1]">
       <svg-footer />
     </div>
   </footer>
   <a
     href="javascript:void(0)"
-    class="ud-hidden ud-items-center ud-justify-center ud-bg-primary ud-text-white ud-w-10 ud-h-10 ud-rounded-md ud-fixed ud-bottom-8 ud-right-8 ud-left-auto ud-z-[999] hover:ud-shadow-signUp hover:ud-bg-opacity-80 ud-transition ud-duration-300 ud-ease-in-out back-to-top ud-shadow-md"
+    class="hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:shadow-signUp hover:bg-opacity-80 transition duration-300 ease-in-out back-to-top shadow-md"
     @click="scrollToTop()"
   >
     <span
-      class="ud-w-3 ud-h-3 ud-border-t ud-border-l ud-border-white ud-rotate-45 ud-mt-[6px]"
+      class="w-3 h-3 border-t border-l border-white rotate-45 mt-[6px]"
     />
   </a>
 </template>

@@ -40,5 +40,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  prefix: 'ud-',
 }
