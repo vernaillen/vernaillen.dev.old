@@ -65,8 +65,8 @@ const openGallery = (i: number) => {
 }
 
 .galleryImgWrapper:hover img {
-  -moz-transform: scale(1.13);
-  -webkit-transform: scale(1.13);
-  transform: scale(1.13);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 </style>
