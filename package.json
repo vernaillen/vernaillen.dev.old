@@ -38,7 +38,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.25.2",
+    "@antfu/eslint-config": "^0.26.0",
     "@pinia/testing": "^0.0.13",
     "@rushstack/eslint-patch": "^1.1.4",
     "@tailwindcss/typography": "^0.5.4",
