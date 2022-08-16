@@ -17,27 +17,16 @@ const { value: message, errorMessage: messageError } = useField('message')
 </script>
 
 <template>
-  <div
-    class="bg-primary bg-opacity-[3%] dark:bg-dark rounded-md p-6 mb-12 lg:mb-5 md:p-8 lg:p-12"
-  >
-    <form
-      action="https://formbold.com/s/6l2G3"
-      method="POST"
-      @submit="submitForm"
-    >
+  <div class="bg-primary bg-opacity-[3%] dark:bg-dark rounded-md p-6 mb-12 lg:mb-5 md:p-8 lg:p-12">
+    <form action="https://formbold.com/s/6l2G3" method="POST" @submit="submitForm">
       <div class="flex flex-wrap mx-[-16px]">
         <div class="w-full md:w-1/2 px-4">
           <div class="mb-8">
-            <label
-              for="name"
-              class="block text-sm font-medium text-dark dark:text-white mb-3"
-            >
+            <label for="name" class="block text-sm font-medium text-dark dark:text-white mb-3">
               Your name
             </label>
             <input
-              v-model="name"
-              name="name"
-              type="text"
+              v-model="name" name="name" type="text"
               class="w-full border border-transparent dark:bg-black rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary"
             >
             <span v-if="nameError" class="text-primary">
@@ -47,16 +36,11 @@ const { value: message, errorMessage: messageError } = useField('message')
         </div>
         <div class="w-full md:w-1/2 px-4">
           <div class="mb-8">
-            <label
-              for="email"
-              class="block text-sm font-medium text-dark dark:text-white mb-3"
-            >
+            <label for="email" class="block text-sm font-medium text-dark dark:text-white mb-3">
               Your Email
             </label>
             <input
-              v-model="email"
-              name="email"
-              type="email"
+              v-model="email" name="email" type="email"
               class="w-full border border-transparent dark:bg-black rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary"
             >
             <span v-if="emailError" class="text-primary">
@@ -66,16 +50,11 @@ const { value: message, errorMessage: messageError } = useField('message')
         </div>
         <div class="w-full px-4">
           <div class="mb-5">
-            <label
-              for="message"
-              class="block text-sm font-medium text-dark dark:text-white mb-3"
-            >
+            <label for="message" class="block text-sm font-medium text-dark dark:text-white mb-3">
               Your Message
             </label>
             <textarea
-              v-model="message"
-              name="message"
-              rows="5"
+              v-model="message" name="message" rows="5"
               class="w-full border border-transparent dark:bg-black rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary resize-none"
             />
 
@@ -85,6 +64,7 @@ const { value: message, errorMessage: messageError } = useField('message')
           </div>
         </div>
         <div class="w-full px-4">
+          <div class="g-recaptcha" data-sitekey="6LeL37UgAAAAAH0D_-DbYjVUKWkZ7K9G4YUSPLwg" />
           <button
             class="text-base font-medium text-white bg-primary py-3 px-6 hover:bg-opacity-80 hover:shadow-signUp rounded-md transition duration-300 ease-in-out"
           >
