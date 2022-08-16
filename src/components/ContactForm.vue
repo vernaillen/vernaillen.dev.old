@@ -1,4 +1,5 @@
 <script setup>
+import { useReCaptcha } from 'vue-recaptcha-v3'
 import { useField, useForm } from 'vee-validate'
 import * as yup from 'yup'
 
@@ -11,14 +12,26 @@ const schema = yup.object({
 const { submitForm } = useForm({
   validationSchema: schema,
 })
+
 const { value: name, errorMessage: nameError } = useField('name')
 const { value: email, errorMessage: emailError } = useField('email')
 const { value: message, errorMessage: messageError } = useField('message')
+
+const recaptchaResponse = ref(null)
+const { executeRecaptcha, recaptchaLoaded } = useReCaptcha()
+const recaptcha = async () => {
+  await recaptchaLoaded()
+  const token = await executeRecaptcha('login')
+  recaptchaResponse.value.value = token
+}
+onMounted(() => {
+  recaptcha()
+})
 </script>
 
 <template>
   <div class="bg-primary bg-opacity-[3%] dark:bg-dark rounded-md p-6 mb-12 lg:mb-5 md:p-8 lg:p-12">
-    <form action="https://formbold.com/s/6l2G3" method="POST" @submit="submitForm">
+    <form ref="contactForm" action="https://formbold.com/s/6l2G3" method="POST" @submit="submitForm">
       <div class="flex flex-wrap mx-[-16px]">
         <div class="w-full md:w-1/2 px-4">
           <div class="mb-8">
@@ -64,7 +77,7 @@ const { value: message, errorMessage: messageError } = useField('message')
           </div>
         </div>
         <div class="w-full px-4">
-          <div class="g-recaptcha" data-sitekey="6LeL37UgAAAAAH0D_-DbYjVUKWkZ7K9G4YUSPLwg" />
+          <input ref="recaptchaResponse" type="hidden" name="g-recaptcha-response">
           <button
             class="text-base font-medium text-white bg-primary py-3 px-6 hover:bg-opacity-80 hover:shadow-signUp rounded-md transition duration-300 ease-in-out"
           >
