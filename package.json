@@ -49,7 +49,7 @@
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
-    "@vitest/coverage-c8": "^0.22.0",
+    "@vitest/coverage-c8": "^0.23.0",
     "@vitest/ui": "^0.22.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/test-utils": "^2.0.2",
