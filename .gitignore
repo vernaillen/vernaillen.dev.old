@@ -25,6 +25,7 @@ dist-ssr
 coverage/
 **/*.spec.js.snap
 
+.vite-inspect
 .vite-ssg-temp
 components.d.ts
 auto-imports.d.ts

@@ -1,5 +1,6 @@
 import "vue-router";
 import type { AudioPlayer } from "@/logics/audio";
+import { ReCaptchaInstance } from 'recaptcha-v3'
 
 declare module "vue-router" {
   interface RouteMeta {
@@ -53,6 +54,9 @@ declare module "vite-svg-loader" {
 declare module "@vue/runtime-core" {
   interface ComponentCustomProperties {
     audioPlayer: AudioPlayer;
+    $recaptcha: (action: string) => Promise<string>
+    $recaptchaLoaded: () => Promise<boolean>
+    $recaptchaInstance: ReCaptchaInstance
   }
 }
 
