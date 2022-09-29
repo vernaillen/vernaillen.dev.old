@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.0.2
+  node: circleci/node@5.0.3
   sonarcloud: sonarsource/sonarcloud@1.1.1
   codecov: codecov/codecov@3.2.3
   slack: circleci/slack@4.10.1
@@ -9,7 +9,7 @@ orbs:
 jobs:
   build_and_test:
     docker:
-      - image: vernaillen/circleci-pnpm:18.7.0
+      - image: vernaillen/circleci-pnpm:18.9.1
     steps:
       - checkout
       - run:
