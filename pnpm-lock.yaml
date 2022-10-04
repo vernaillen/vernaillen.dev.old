@@ -55,7 +55,7 @@ specifiers:
   vite-plugin-pages: ^0.26.0
   vite-plugin-pages-sitemap: ^1.4.0
   vite-plugin-vue-markdown: ^0.22.1
-  vite-ssg: ^0.20.2
+  vite-ssg: ^0.21.0
   vite-svg-loader: ^3.6.0
   vitest: ^0.23.4
   vue: ^3.2.40
@@ -103,7 +103,7 @@ devDependencies:
   '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.4+vue@3.2.40
   '@vitest/coverage-c8': 0.23.4_@vitest+ui@0.23.4
   '@vitest/ui': 0.23.4
-  '@vue/eslint-config-typescript': 11.0.2_xgc4xirg4ejg2tgchx2nhou42q
+  '@vue/eslint-config-typescript': 11.0.2_ypn2ylkkyfa5i233caldtndbqa
   '@vue/test-utils': 2.1.0_vue@3.2.40
   '@vue/tsconfig': 0.1.3_@types+node@18.8.0
   autoprefixer: 10.4.12_postcss@8.4.17
@@ -111,7 +111,7 @@ devDependencies:
   cross-env: 7.0.3
   cypress: 10.9.0
   eslint: 8.24.0
-  eslint-config-standard: 17.0.0_4ybqc3giaxsbo5btq74wfmkary
+  eslint-config-standard: 17.0.0_eslint@8.24.0
   esno: 0.16.3
   feed: 4.2.2
   markdown-it: 13.0.1
@@ -130,7 +130,7 @@ devDependencies:
   vite-plugin-pages: 0.26.0_vite@3.1.4
   vite-plugin-pages-sitemap: 1.4.0
   vite-plugin-vue-markdown: 0.22.1_vite@3.1.4
-  vite-ssg: 0.20.2_4qrwgnyqtb2f4tpaptiwcos2ve
+  vite-ssg: 0.21.0_4qrwgnyqtb2f4tpaptiwcos2ve
   vite-svg-loader: 3.6.0
   vitest: 0.23.4_@vitest+ui@0.23.4
   vue-router-mock: 0.1.9_c7eza3xvlyb4mo6qeit5ggeo6u
@@ -1224,7 +1224,7 @@ packages:
   /@vue/devtools-api/6.4.2:
     resolution: {integrity: sha512-6hNZ23h1M2Llky+SIAmVhL7s6BjLtZBCzjIz9iRSBUsysjE7kC39ulW0dH4o/eZtycmSt4qEr6RDVGTIuWu+ow==}
 
-  /@vue/eslint-config-typescript/11.0.2_xgc4xirg4ejg2tgchx2nhou42q:
+  /@vue/eslint-config-typescript/11.0.2_ypn2ylkkyfa5i233caldtndbqa:
     resolution: {integrity: sha512-EiKud1NqlWmSapBFkeSrE994qpKx7/27uCGnhdqzllYDpQZroyX/O6bwjEpeuyKamvLbsGdO6PMR2faIf+zFnw==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1238,7 +1238,6 @@ packages:
       '@typescript-eslint/eslint-plugin': 5.38.1_c7qepppml3d4ahu5cnfwqe6ltq
       '@typescript-eslint/parser': 5.38.1_ypn2ylkkyfa5i233caldtndbqa
       eslint: 8.24.0
-      eslint-plugin-vue: 9.5.1_eslint@8.24.0
       typescript: 4.8.4
       vue-eslint-parser: 9.1.0_eslint@8.24.0
     transitivePeerDependencies:
@@ -2641,7 +2640,7 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-standard/17.0.0_4ybqc3giaxsbo5btq74wfmkary:
+  /eslint-config-standard/17.0.0_eslint@8.24.0:
     resolution: {integrity: sha512-/2ks1GKyqSOkH7JFvXJicu0iMpoojkwB+f5Du/1SC0PtBL+s8v30k9njRZ21pm2drKYm2342jFnGWzttxPmZVg==}
     peerDependencies:
       eslint: ^8.0.1
@@ -2650,9 +2649,6 @@ packages:
       eslint-plugin-promise: ^6.0.0
     dependencies:
       eslint: 8.24.0
-      eslint-plugin-import: 2.26.0_gofx6msuqd4luqedfouzks2s4u
-      eslint-plugin-n: 15.3.0_eslint@8.24.0
-      eslint-plugin-promise: 6.0.1_eslint@8.24.0
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
@@ -3027,10 +3023,6 @@ packages:
 
   /eventemitter2/6.4.7:
     resolution: {integrity: sha512-tYUSVOGeQPKt/eC1ABfhHy5Xd96N3oIijJvN3O9+TsC28T5V9yX9oEfEK5faP0EFSNVOG97qtAS68GBrQB2hDg==}
-    dev: true
-
-  /eventemitter3/4.0.7:
-    resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
     dev: true
 
   /execa/4.1.0:
@@ -4438,11 +4430,6 @@ packages:
     resolution: {integrity: sha512-o6E5qJV5zkAbIDNhGSIlyOhScKXgQrSRMilfph0clDfM0nEnBOlKlH4sWDmG95BW/CvwNz0vmm7dJVtU2KlMiA==}
     dev: true
 
-  /p-finally/1.0.0:
-    resolution: {integrity: sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==}
-    engines: {node: '>=4'}
-    dev: true
-
   /p-limit/2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
     engines: {node: '>=6'}
@@ -4476,21 +4463,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       aggregate-error: 3.1.0
-    dev: true
-
-  /p-queue/6.6.2:
-    resolution: {integrity: sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      eventemitter3: 4.0.7
-      p-timeout: 3.2.0
-    dev: true
-
-  /p-timeout/3.2.0:
-    resolution: {integrity: sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==}
-    engines: {node: '>=8'}
-    dependencies:
-      p-finally: 1.0.0
     dev: true
 
   /p-try/2.2.0:
@@ -5697,8 +5669,8 @@ packages:
       vite: 3.1.4
     dev: true
 
-  /vite-ssg/0.20.2_4qrwgnyqtb2f4tpaptiwcos2ve:
-    resolution: {integrity: sha512-XtBgJEDrN9cL6pgzXvThrTS7Pm5zwZZnBt50EmL/O+QbdhD/ZjCbcp4GmIrWFBWjVBFcgfwgPccmWv3DAF6s/w==}
+  /vite-ssg/0.21.0_4qrwgnyqtb2f4tpaptiwcos2ve:
+    resolution: {integrity: sha512-hN8QIdZ8S8PlHFIWz5QMZD3Ile0wxTZJTzlZ1tt/IlediqX+ar9H5jSOMBAQxiWpVnfFX43peW3t3/1bwJiaRA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
@@ -5710,6 +5682,8 @@ packages:
     peerDependenciesMeta:
       critters:
         optional: true
+      vue-router:
+        optional: true
     dependencies:
       '@vueuse/head': 0.7.13_vue@3.2.40
       fs-extra: 10.1.0
@@ -5717,7 +5691,6 @@ packages:
       html5parser: 2.0.2
       jsdom: 20.0.1
       kolorist: 1.6.0
-      p-queue: 6.6.2
       prettier: 2.7.1
       vite: 3.1.4
       vue: 3.2.40
