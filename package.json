@@ -82,7 +82,7 @@
     "vite-plugin-vue-markdown": "^0.22.1",
     "vite-ssg": "^0.20.2",
     "vite-svg-loader": "^3.6.0",
-    "vitest": "^0.23.4",
+    "vitest": "^0.24.0",
     "vue-router-mock": "^0.1.9",
     "vue-tsc": "^0.40.13"
   },
