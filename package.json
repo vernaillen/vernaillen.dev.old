@@ -8,6 +8,7 @@
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "lint:fix": "eslint . --fix",
     "test": "vitest",
+    "cypress:install": "cypress install",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "cypress:local": "start-server-and-test serve http://localhost:3000 cypress:run --config baseUrl=http://localhost:3000",
