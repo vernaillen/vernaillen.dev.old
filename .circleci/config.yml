@@ -37,6 +37,7 @@ jobs:
             - node_modules
             - cypress
             - cypress.config.ts
+            - vite.config.ts
             - tsconfig.json
             - src
             - test
@@ -57,7 +58,7 @@ jobs:
           command: pnpm run lint
       - run:
           name: Test
-          command: pnpm test
+          command: pnpm run coverage
       - sonarcloud/scan
       - slack/notify:
           channel: circleci
