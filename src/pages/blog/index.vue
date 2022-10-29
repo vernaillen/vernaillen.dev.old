@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SvgBackgroundLeft1 from '@/components/svg/svg-background-left-1.svg?component'
+import SvgBackgroundRight1 from '@/components/svg/svg-background-right-1.svg?component'
 import { formatDate } from '@/logics/dayjs'
 import blog, { type Post, getImageUrl } from '@/logics/blog'
 </script>
@@ -26,10 +28,10 @@ import blog, { type Post, getImageUrl } from '@/logics/blog'
 
     <div>
       <span class="absolute top-0 left-0 z-[-1]">
-        <svg-background-left1 />
+        <SvgBackgroundLeft1 />
       </span>
       <span class="absolute right-0 top-0 z-[-1]">
-        <svg-background-right1 />
+        <SvgBackgroundRight1 />
       </span>
     </div>
   </section>

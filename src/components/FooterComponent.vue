@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SvgFooter from '@/components/svg/svg-footer.svg?component'
 import { currentYear } from '@/logics/dayjs'
 
 function easeInOutQuad(
@@ -87,7 +88,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="absolute left-0 bottom-[110px] z-[-1]">
-      <svg-footer />
+      <SvgFooter />
     </div>
   </footer>
   <a

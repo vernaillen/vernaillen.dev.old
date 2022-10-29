@@ -6,40 +6,96 @@ orbs:
   codecov: codecov/codecov@3.2.3
   slack: circleci/slack@4.10.1
 
-jobs:
-  build_and_test:
+executors:
+  pnpm-executor:
     docker:
-      - image: vernaillen/circleci-pnpm:18.9.1
+      - image: vernaillen/circleci-pnpm:19.0.0-browsers
+    working_directory: /tmp/workspace
+
+jobs:
+  build:
+    executor: pnpm-executor
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install packages
           command: pnpm install --frozen-lockfile
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Build
+          command: pnpm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - package.json
+            - pnpm-lock.yaml
+            - node_modules
+            - cypress
+            - cypress.config.ts
+            - tsconfig.json
+            - src
+            - test
+            - dist
+            - .gitignore
+            - sonar-project.properties
+      - slack/notify:
+          channel: circleci
+          event: fail
+
+  test:
+    executor: pnpm-executor
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
       - run:
           name: Lint
           command: pnpm run lint
       - run:
           name: Test
-          command: pnpm coverage
+          command: pnpm test
       - sonarcloud/scan
+      - slack/notify:
+          channel: circleci
+          event: fail
+  e2e:
+    executor: pnpm-executor
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
       - run:
-          name: Build
-          command: |
-            pnpm run build
-            ls dist
+          name: Install Cypress
+          command: pnpm run cypress:install
+      - run:
+          name: Run Cypress
+          command: pnpm run cypress:run 
       - slack/notify:
           channel: circleci
           event: always
 
 workflows:
   version: 2
-  build_test_deploy:
+  flow:
     jobs:
-      - build_and_test:
+      - build:
+          context: 
+            - Slack
+      - test:
+          requires:
+            - build
           context: 
             - SonarCloud
             - Slack
-          post-steps:
-            - codecov/upload:
-                file: ./coverage/lcov.info
+      - e2e:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
+          context: 
+            - Slack
 

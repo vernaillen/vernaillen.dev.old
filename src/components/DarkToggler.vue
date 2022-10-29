@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SvgDarkToggler from '@/components/svg/svg-dark-toggler.svg?component'
 const props = defineProps({
   inline: {
     type: Boolean,
@@ -20,6 +21,6 @@ const darkTogglerClass = props.inline
 
 <template>
   <label for="toggleDark" :class="darkTogglerClass" @click="toggleDark()">
-    <svg-dark-toggler />
+    <SvgDarkToggler />
   </label>
 </template>

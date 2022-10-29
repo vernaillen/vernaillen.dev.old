@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import SvgBackground404 from '@/components/svg/svg-background-404.svg?component'
+import Svg404 from '@/components/svg/svg-404.svg?component'
+</script>
+
 <template>
   <header-component />
   <section class="relative z-10 pt-[180px] pb-[120px]">
@@ -6,7 +11,7 @@
         <div class="w-full px-4 animated fadeIn">
           <div class="max-w-[530px] mx-auto text-center">
             <div class="mx-auto mb-9 text-center">
-              <svg-404 />
+              <Svg404 />
             </div>
             <h3
               class="font-bold text-black dark:text-white text-3xl sm:text-4xl mb-4"
@@ -32,12 +37,12 @@
     <div
       class="hidden sm:block absolute left-0 bottom-0 z-[-1]"
     >
-      <svg-404-background />
+      <SvgBackground404 />
     </div>
     <div
       class="hidden sm:block absolute top-0 right-0 z-[-1]"
     >
-      <svg-404-background />
+      <SvgBackground404 />
     </div>
   </section>
   <footer-component />

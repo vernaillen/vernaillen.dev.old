@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import SvgHomeLeft from '@/components/svg/svg-home-left.svg?component'
+import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
+</script>
+
 <template>
   <header-component />
   <section
@@ -45,10 +50,10 @@
     </div>
     <!-- <div> -->
     <div class="svg-right absolute top-0 right-0 z-[-1]">
-      <svg-home-right />
+      <SvgHomeRight />
     </div>
     <div class="svg-left absolute bottom-0 left-0 z-[-1]">
-      <svg-home-left />
+      <SvgHomeLeft />
     </div>
   </section>
   <footer-component />

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SvgLogo from '@/components/svg/svg-logo.svg?component'
 const navbar = reactive({
   show: false,
 })
@@ -21,7 +22,7 @@ const navbarCollapseClass = computed(() => {
       <div class="flex mx-[-16px] justify-between relative">
         <div class="px-4 w-60 max-w-full">
           <router-link to="/" class="w-full block header-logo">
-            <svg-logo />
+            <SvgLogo />
           </router-link>
         </div>
         <div
