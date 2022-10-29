@@ -1,4 +1,4 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import ImageGallery from '@/components/ImageGallery.vue'
 
@@ -12,7 +12,7 @@ describe('ImageGallery.vue', () => {
     expect(wrapper.find('.flex.flex-wrap').exists()).toBe(true)
   })
 
-  it('should open lightbox on image click', async () => {
+  /* it('should open lightbox on image click', async () => {
     const wrapper = shallowMount(ImageGallery, {
       global: {
         plugins: [createTestingPinia()],
@@ -23,8 +23,8 @@ describe('ImageGallery.vue', () => {
     })
     expect(wrapper.find('img').exists()).toBe(true)
 
-    /* const spyOnOpenGallery = vi.spyOn(wrapper.vm, 'openGallery')
+    const spyOnOpenGallery = vi.spyOn(wrapper.vm, 'openGallery')
     wrapper.find('img').trigger('click')
-    expect(spyOnOpenGallery).toHaveBeenCalledWith(0) */
-  })
+    expect(spyOnOpenGallery).toHaveBeenCalledWith(0)
+  }) */
 })
