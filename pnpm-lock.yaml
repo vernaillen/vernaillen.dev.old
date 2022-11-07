@@ -16,8 +16,8 @@ specifiers:
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue': 3.2.0
   '@vitejs/plugin-vue-jsx': ^2.1.0
-  '@vitest/coverage-c8': ^0.24.3
-  '@vitest/ui': ^0.24.3
+  '@vitest/coverage-c8': ^0.25.0
+  '@vitest/ui': ^0.25.0
   '@vue/eslint-config-typescript': ^11.0.2
   '@vue/test-utils': ^2.2.1
   '@vue/tsconfig': ^0.1.3
@@ -58,7 +58,7 @@ specifiers:
   vite-plugin-vue-markdown: ^0.22.1
   vite-ssg: ^0.21.1
   vite-svg-loader: ^3.6.0
-  vitest: ^0.24.3
+  vitest: ^0.25.0
   vue: ^3.2.41
   vue-audiomotion-analyzer: ^0.6.4
   vue-easy-lightbox: ^1.9.0
@@ -102,8 +102,8 @@ devDependencies:
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 3.2.0_vite@3.2.1+vue@3.2.41
   '@vitejs/plugin-vue-jsx': 2.1.0_vite@3.2.1+vue@3.2.41
-  '@vitest/coverage-c8': 0.24.3_@vitest+ui@0.24.3
-  '@vitest/ui': 0.24.3
+  '@vitest/coverage-c8': 0.25.0_@vitest+ui@0.25.0
+  '@vitest/ui': 0.25.0
   '@vue/eslint-config-typescript': 11.0.2_wyqvi574yv7oiwfeinomdzmc3m
   '@vue/test-utils': 2.2.1_vue@3.2.41
   '@vue/tsconfig': 0.1.3_@types+node@18.11.7
@@ -134,7 +134,7 @@ devDependencies:
   vite-plugin-vue-markdown: 0.22.1_vite@3.2.1
   vite-ssg: 0.21.1_jtqyeakjncovud2ygjcwbt35fq
   vite-svg-loader: 3.6.0
-  vitest: 0.24.3_@vitest+ui@0.24.3
+  vitest: 0.25.0_@vitest+ui@0.25.0
   vue-router-mock: 0.1.9_4dzfggngbcv3f6kocd3r4z3f4q
   vue-tsc: 1.0.9_typescript@4.8.4
 
@@ -1141,11 +1141,11 @@ packages:
       vue: 3.2.41
     dev: true
 
-  /@vitest/coverage-c8/0.24.3_@vitest+ui@0.24.3:
-    resolution: {integrity: sha512-tAmMyHxWYnAwGeJb7QgTuEX8aLasTg4X1/6INobXa/7wYGEJ28CACFO5iLn1HzFVPoLvhsS3luQjiflGjjSMRQ==}
+  /@vitest/coverage-c8/0.25.0_@vitest+ui@0.25.0:
+    resolution: {integrity: sha512-rAeekiideYYvuHk0/nfMvlPiJhyeE9oFFL/Zxp5ZvRF3p2AvQaj8Z6Na//08lIxvm6oi9rDijdkYE0CFMtT7uA==}
     dependencies:
       c8: 7.12.0
-      vitest: 0.24.3_@vitest+ui@0.24.3
+      vitest: 0.25.0_@vitest+ui@0.25.0
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -1160,8 +1160,8 @@ packages:
       - terser
     dev: true
 
-  /@vitest/ui/0.24.3:
-    resolution: {integrity: sha512-f5agYA/sdkiipq42TZayJoeUGjWx+opDjIVeNnb1SG2BNxqObFqh6GuJlzpGHerg4a2+ZSoVo4f4p2+dEyXPmg==}
+  /@vitest/ui/0.25.0:
+    resolution: {integrity: sha512-h+MwM71Hens65+MeLEQQHTjU9K0ELRSGKai7HoEtLh7bBSKfeTmPUzY7b8Mmnf95reKeTdJ9H8m7FMczFMsi6w==}
     dependencies:
       sirv: 2.0.2
     dev: true
@@ -5909,8 +5909,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.24.3_@vitest+ui@0.24.3:
-    resolution: {integrity: sha512-aM0auuPPgMSstWvr851hB74g/LKaKBzSxcG3da7ejfZbx08Y21JpZmbmDYrMTCGhVZKqTGwzcnLMwyfz2WzkhQ==}
+  /vitest/0.25.0_@vitest+ui@0.25.0:
+    resolution: {integrity: sha512-CVgBdKSeA27mowKC/C31Tx7ZBjRoyasq/yW7zoqUaCdKaOsjdzRUH5KgSL3eG36DzaaUsbnwWPUbAOtFz5k6tQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -5934,10 +5934,13 @@ packages:
       '@types/chai': 4.3.3
       '@types/chai-subset': 1.3.3
       '@types/node': 18.11.7
-      '@vitest/ui': 0.24.3
+      '@vitest/ui': 0.25.0
+      acorn: 8.8.1
+      acorn-walk: 8.2.0
       chai: 4.3.6
       debug: 4.3.4
       local-pkg: 0.4.2
+      source-map: 0.6.1
       strip-literal: 0.4.2
       tinybench: 2.3.1
       tinypool: 0.3.0
