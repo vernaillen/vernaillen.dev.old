@@ -19,6 +19,8 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
 import { configDefaults } from 'vitest/config'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import type { ViteSSGOptions } from 'vite-ssg'
 
 import 'prismjs/components/prism-regex'
 import 'prismjs/components/prism-javascript'
