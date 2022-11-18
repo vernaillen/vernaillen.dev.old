@@ -91,7 +91,7 @@ onMounted(() => {
   </footer>
   <a
     href="javascript:void(0)"
-    class="hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:shadow-signUp hover:bg-opacity-80 transition duration-300 ease-in-out back-to-top shadow-md"
+    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:shadow-signUp hover:bg-opacity-80 shadow-md animated slideInUp"
     @click="scrollToTop()"
   >
     <span

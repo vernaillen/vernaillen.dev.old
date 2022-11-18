@@ -31,4 +31,12 @@
   >
     <font-awesome-icon :icon="['fab', 'twitter']" class="animated bounceIn" />
   </a>
+  <a
+    class="text-body-color hover:text-primary mx-3"
+    href="https://vue.land/@wouter"
+    rel="me"
+    target="_blank"
+  >
+    <font-awesome-icon :icon="['fab', 'mastodon']" class="animated bounceIn" />
+  </a>
 </template>

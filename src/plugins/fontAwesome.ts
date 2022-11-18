@@ -13,6 +13,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faMastodon,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -33,6 +34,7 @@ library.add(
   faLinkedin,
   faGithub,
   faTwitter,
+  faMastodon,
 )
 // Prevent fontawesome from adding its CSS since we did it manually above:
 config.autoAddCss = false
