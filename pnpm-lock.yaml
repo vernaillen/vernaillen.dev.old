@@ -56,7 +56,7 @@ specifiers:
   vite-plugin-pages: ^0.27.1
   vite-plugin-pages-sitemap: ^1.4.0
   vite-plugin-vue-markdown: ^0.22.1
-  vite-ssg: ^0.21.2
+  vite-ssg: ^0.22.0
   vite-svg-loader: ^3.6.0
   vitest: ^0.25.2
   vue: ^3.2.45
@@ -104,7 +104,7 @@ devDependencies:
   '@vitejs/plugin-vue-jsx': 2.1.1_vite@3.2.4+vue@3.2.45
   '@vitest/coverage-c8': 0.25.2_@vitest+ui@0.25.2
   '@vitest/ui': 0.25.2
-  '@vue/eslint-config-typescript': 11.0.2_ykuth4hqtpqqhzrv7pgjq6rjby
+  '@vue/eslint-config-typescript': 11.0.2_rmayb2veg2btbq6mbmnyivgasy
   '@vue/test-utils': 2.2.3_vue@3.2.45
   '@vue/tsconfig': 0.1.3_@types+node@18.11.9
   autoprefixer: 10.4.13_postcss@8.4.19
@@ -112,7 +112,7 @@ devDependencies:
   cross-env: 7.0.3
   cypress: 11.1.0
   eslint: 8.27.0
-  eslint-config-standard: 17.0.0_qmmcbu32ybj7ict4ieqqyvwr3m
+  eslint-config-standard: 17.0.0_eslint@8.27.0
   esno: 0.16.3
   feed: 4.2.2
   markdown-it: 13.0.1
@@ -132,7 +132,7 @@ devDependencies:
   vite-plugin-pages: 0.27.1_vite@3.2.4
   vite-plugin-pages-sitemap: 1.4.0
   vite-plugin-vue-markdown: 0.22.1_vite@3.2.4
-  vite-ssg: 0.21.2_2zn3fgarbjdlbpou4fghfpvs7q
+  vite-ssg: 0.22.0_2zn3fgarbjdlbpou4fghfpvs7q
   vite-svg-loader: 3.6.0
   vitest: 0.25.2_@vitest+ui@0.25.2
   vue-router-mock: 0.1.9_xsxatmlnmmg5bcuv3xdnj6fj7y
@@ -1293,7 +1293,7 @@ packages:
   /@vue/devtools-api/6.4.5:
     resolution: {integrity: sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ==}
 
-  /@vue/eslint-config-typescript/11.0.2_ykuth4hqtpqqhzrv7pgjq6rjby:
+  /@vue/eslint-config-typescript/11.0.2_rmayb2veg2btbq6mbmnyivgasy:
     resolution: {integrity: sha512-EiKud1NqlWmSapBFkeSrE994qpKx7/27uCGnhdqzllYDpQZroyX/O6bwjEpeuyKamvLbsGdO6PMR2faIf+zFnw==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1307,7 +1307,6 @@ packages:
       '@typescript-eslint/eslint-plugin': 5.43.0_yy4vf4gcvxiubmg7fqa55dqe2i
       '@typescript-eslint/parser': 5.43.0_rmayb2veg2btbq6mbmnyivgasy
       eslint: 8.27.0
-      eslint-plugin-vue: 9.7.0_eslint@8.27.0
       typescript: 4.8.4
       vue-eslint-parser: 9.1.0_eslint@8.27.0
     transitivePeerDependencies:
@@ -2718,7 +2717,7 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-standard/17.0.0_qmmcbu32ybj7ict4ieqqyvwr3m:
+  /eslint-config-standard/17.0.0_eslint@8.27.0:
     resolution: {integrity: sha512-/2ks1GKyqSOkH7JFvXJicu0iMpoojkwB+f5Du/1SC0PtBL+s8v30k9njRZ21pm2drKYm2342jFnGWzttxPmZVg==}
     peerDependencies:
       eslint: ^8.0.1
@@ -2727,9 +2726,6 @@ packages:
       eslint-plugin-promise: ^6.0.0
     dependencies:
       eslint: 8.27.0
-      eslint-plugin-import: 2.26.0_wbsj7pk5g7hogwvhsif6xntns4
-      eslint-plugin-n: 15.5.1_eslint@8.27.0
-      eslint-plugin-promise: 6.1.1_eslint@8.27.0
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
@@ -5887,12 +5883,12 @@ packages:
       vite: 3.2.4_@types+node@18.11.9
     dev: true
 
-  /vite-ssg/0.21.2_2zn3fgarbjdlbpou4fghfpvs7q:
-    resolution: {integrity: sha512-srcxakrqBaubPr6KuhMmkmrdm1Ye1zIClWOpV3TSk4viyy0QymZWwfPAPXjCwjzmPDY/QVHTffuMTNjoM4xkbA==}
+  /vite-ssg/0.22.0_2zn3fgarbjdlbpou4fghfpvs7q:
+    resolution: {integrity: sha512-GW8hARA4lT4fEAfxfnSEplV5JKQEM15yTVI8SZefYW69xfBVfujZrlqKqory+kHi7rgm7ZEhH8Uv82pdWETiSQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
-      '@vueuse/head': ^0.5.0 || ^0.6.0 || ^0.7.0 || ^0.8.0 || ^0.9.0
+      '@vueuse/head': ^1.0.0
       critters: ^0.0.16
       vite: ^2.0.0 || ^3.0.0-0
       vue: ^3.2.10
@@ -5903,6 +5899,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
+      '@unhead/dom': 1.0.2
       '@vueuse/head': 1.0.16_vue@3.2.45
       fs-extra: 10.1.0
       html-minifier: 4.0.0
