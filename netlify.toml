@@ -31,4 +31,3 @@
   to = "https://mastodon.vernaillen.dev/@wouter"
   status = 301
   force = false
-  query = {path = ":path"}
