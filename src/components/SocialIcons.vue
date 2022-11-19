@@ -33,7 +33,7 @@
   </a>
   <a
     class="text-body-color hover:text-primary mx-3"
-    href="https://vue.land/@wouter"
+    href="https://vernaillen.dev/@wouter"
     rel="me"
     target="_blank"
   >
