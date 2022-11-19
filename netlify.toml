@@ -29,6 +29,6 @@
 [[redirects]]
   from = "/@wouter"
   to = "https://mastodon.vernaillen.dev/@wouter"
-  status = 200
-  force = true
+  status = 301
+  force = false
   query = {path = ":path"}
