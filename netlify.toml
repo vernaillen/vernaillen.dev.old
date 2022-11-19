@@ -20,7 +20,7 @@
     '''
 
 [[redirects]]
-  from = ".well-known/host-meta?"
+  from = "/.well-known/host-meta?"
   to = "https://mastodon.vernaillen.dev/.well-known/host-meta?"
   status = 301
   force = false
