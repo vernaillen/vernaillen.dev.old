@@ -5,9 +5,9 @@ import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
 
 <template>
   <header-component />
-  <section
+  <main
     id="home"
-    class="relative z-10 pt-[160px] pb-[120px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px]"
+    class="flex-grow z-10 pt-[160px] pb-[120px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px]"
   >
     <div class="container">
       <div class="flex flex-wrap mx-[-16px]">
@@ -55,7 +55,7 @@ import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
     <div class="svg-left absolute bottom-0 left-0 z-[-1]">
       <SvgHomeLeft />
     </div>
-  </section>
+  </main>
   <footer-component />
 </template>
 

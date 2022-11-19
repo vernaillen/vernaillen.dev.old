@@ -5,7 +5,7 @@ import Svg404 from '@/components/svg/svg-404.svg?component'
 
 <template>
   <header-component />
-  <section class="relative z-10 pt-[180px] pb-[120px]">
+  <main class="flex-grow z-10 pt-[180px] pb-[120px]">
     <div class="container">
       <div class="flex flex-wrap mx-[-16px]">
         <div class="w-full px-4 animated fadeIn">
@@ -44,6 +44,6 @@ import Svg404 from '@/components/svg/svg-404.svg?component'
     >
       <SvgBackground404 />
     </div>
-  </section>
+  </main>
   <footer-component />
 </template>

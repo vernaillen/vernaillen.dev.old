@@ -7,7 +7,7 @@ import blog, { type Post, getImageUrl } from '@/logics/blog'
 
 <template>
   <header-component />
-  <section class="relative z-10 pt-[100px] overflow-hidden">
+  <main class="flex-grow z-10 pt-[100px] overflow-hidden">
     <div class="container">
       <div class="flex flex-wrap">
         <breadcrumb-component page-name="Blog" path="/blog" />
@@ -34,8 +34,6 @@ import blog, { type Post, getImageUrl } from '@/logics/blog'
         <SvgBackgroundRight1 />
       </span>
     </div>
-  </section>
-  <section class="pt-[20px] pb-[100px]">
     <div class="container">
       <div class="flex flex-wrap mx-[-16px] justify-start py-4 px-2 md:px-6">
         <div
@@ -107,6 +105,6 @@ import blog, { type Post, getImageUrl } from '@/logics/blog'
         </div>
       </div>
     </div>
-  </section>
+  </main>
   <footer-component />
 </template>
