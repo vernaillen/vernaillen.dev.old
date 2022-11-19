@@ -11,7 +11,7 @@ describe('index.vue', () => {
         plugins: [createTestingPinia()],
       },
     })
-    expect(wrapper.find('section#home').exists()).toBe(true)
+    expect(wrapper.find('main#home').exists()).toBe(true)
     expect(wrapper.find('h1').text()).eq('Wouter Vernaillen')
     expect(wrapper.find('p').text()).eq('Freelance Full Stack Developer')
     expect(wrapper.findComponent(SvgHomeLeft).exists()).toBe(true)

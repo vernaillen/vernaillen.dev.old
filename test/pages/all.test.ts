@@ -9,7 +9,7 @@ describe('[...all].vue', () => {
         plugins: [createTestingPinia()],
       },
     })
-    expect(wrapper.find('section').exists()).toBe(true)
+    expect(wrapper.find('main').exists()).toBe(true)
     expect(wrapper.find('h3').text()).eq('Sorry, the page can\’t be found')
   })
 })
