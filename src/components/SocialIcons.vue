@@ -33,7 +33,7 @@
   </a>
   <a
     class="text-body-color hover:text-primary mx-3"
-    href="https://vernaillen.dev/@wouter"
+    href="https://mastodon.vernaillen.dev/@wouter"
     rel="me"
     target="_blank"
   >
