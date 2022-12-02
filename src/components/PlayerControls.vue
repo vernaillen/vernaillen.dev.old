@@ -23,7 +23,7 @@ checkIsBufferLoaded()
 
 const back = () => {
   const wasPlaying = playerState.isPlaying
-  audioPlayer.stop()
+  audioPlayer.load()
   if (wasPlaying)
     audioPlayer.play()
 }

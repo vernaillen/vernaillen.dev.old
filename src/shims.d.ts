@@ -59,5 +59,3 @@ declare module "@vue/runtime-core" {
     $recaptchaInstance: ReCaptchaInstance
   }
 }
-
-declare module 'vue-audiomotion-analyzer'

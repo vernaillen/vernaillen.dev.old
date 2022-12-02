@@ -1,47 +1,53 @@
-import * as Tone from 'tone'
 import { usePlayerState } from '@/stores/playerState'
 
 export class AudioPlayer {
-  private tonePlayer: Tone.Player
+  private audioElement: HTMLAudioElement | undefined
   constructor() {
-    this.tonePlayer = new Tone.Player('/music/RackNomad-MeditativeMelody.mp3')
-      .toDestination()
-      .sync()
-      .start(0)
   }
 
-  play() {
-    Tone.start()
-    this.tonePlayer.volume.value = -6
-    Tone.Transport.start()
-    setInterval(() => {
-      usePlayerState().updateTime(
-        parseFloat(Tone.Transport.seconds.toFixed(2)),
-      )
-    }, 100)
-    usePlayerState().updatePlaying(true)
+  setHTMLAudioElement(audioElement: HTMLAudioElement) {
+    this.audioElement = audioElement
   }
 
-  stop() {
-    Tone.Transport.stop()
-    usePlayerState().updatePlaying(false)
+  async play() {
+    if (this.audioElement) {
+      await this.audioElement.play()
+      setInterval(() => {
+        if (this.audioElement) {
+          usePlayerState().updateTime(
+            this.audioElement.currentTime,
+          )
+        }
+      }, 100)
+      usePlayerState().updatePlaying(true)
+    }
   }
 
-  pause() {
-    Tone.Transport.pause()
-    usePlayerState().updatePlaying(false)
+  async load() {
+    if (this.audioElement) {
+      await this.audioElement.load()
+      usePlayerState().updatePlaying(false)
+    }
+  }
+
+  async pause() {
+    if (this.audioElement) {
+      await this.audioElement.pause()
+      usePlayerState().updatePlaying(false)
+    }
   }
 
   async isLoaded() {
-    return Tone.ToneAudioBuffer.loaded()
+    if (this.audioElement)
+      return this.audioElement.readyState >= 2
   }
-
+/*
   now() {
-    return Tone.now()
+    return this.audioElement.
   }
 
   connectAnalyzer(analyzer: Tone.InputNode) {
-    this.tonePlayer.fan(analyzer)
+    this.aud
   }
 
   getAudioContext() {
@@ -50,5 +56,5 @@ export class AudioPlayer {
 
   getAudioNode() {
     return this.tonePlayer
-  }
+  } */
 }
