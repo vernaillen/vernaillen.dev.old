@@ -29,13 +29,12 @@ describe('homepage', () => {
   })
 
   it('test player & audioMotionAnalyzer', () => {
-    cy.get('#vueAudioMotionAnalyzer').should('have.length', 0)
+    cy.get('#vueAudioMotionAnalyzer').should('have.length', 1)
     cy.get('.fa-play').should('have.length', 2)
     cy.get('.fa-play').first().click()
     cy.get('.fa-play').should('have.length', 0)
     cy.get('.fa-pause').should('have.length', 2)
-    cy.get('#vueAudioMotionAnalyzer').should('have.length', 1)
     cy.get('.fa-pause').last().click()
-    cy.get('#vueAudioMotionAnalyzer').should('have.length', 0)
+    cy.get('.fa-play').should('have.length', 2)
   })
 })
