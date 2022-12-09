@@ -50,7 +50,7 @@
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/node": "^18.11.10",
     "@types/nprogress": "^0.2.0",
-    "@vitejs/plugin-vue": "3.2.0",
+    "@vitejs/plugin-vue": "4.0.0",
     "@vitejs/plugin-vue-jsx": "^2.1.1",
     "@vitest/coverage-c8": "^0.25.3",
     "@vitest/ui": "^0.25.3",
