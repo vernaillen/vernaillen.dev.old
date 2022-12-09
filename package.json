@@ -51,7 +51,7 @@
     "@types/node": "^18.11.10",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "3.2.0",
-    "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vitest/coverage-c8": "^0.25.3",
     "@vitest/ui": "^0.25.3",
     "@vue/eslint-config-typescript": "^11.0.2",
