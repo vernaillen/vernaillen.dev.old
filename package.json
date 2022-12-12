@@ -79,7 +79,7 @@
     "vite": "^4.0.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-inspect": "^0.7.9",
-    "vite-plugin-pages": "^0.27.1",
+    "vite-plugin-pages": "^0.28.0",
     "vite-plugin-pages-sitemap": "^1.4.0",
     "vite-plugin-vue-markdown": "^0.22.1",
     "vite-ssg": "^0.22.0",
