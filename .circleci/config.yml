@@ -1,15 +1,13 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.0.3
   sonarcloud: sonarsource/sonarcloud@1.1.1
-  codecov: codecov/codecov@3.2.4
-  slack: circleci/slack@4.12.0
+  slack: circleci/slack@4.12.1
 
 executors:
   pnpm-executor:
     docker:
-      - image: vernaillen/circleci-pnpm:19.3.0-browsers
+      - image: vernaillen/circleci-pnpm:19.4.0-browsers
     working_directory: /tmp/workspace
 
 jobs:
@@ -79,7 +77,6 @@ jobs:
           event: always
 
 workflows:
-  version: 2
   flow:
     jobs:
       - build:
@@ -100,3 +97,5 @@ workflows:
           context: 
             - Slack
 
+
+# VS Code Extension Version: 1.5.1
