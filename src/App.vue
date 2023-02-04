@@ -12,8 +12,6 @@ useHead({
 
 <template>
   <router-view />
-  <client-only>
-    <my-audio-motion-analyzer />
-  </client-only>
+  <footer-component />
   <easy-lightbox />
 </template>

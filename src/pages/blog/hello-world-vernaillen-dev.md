@@ -10,7 +10,7 @@ tag:
 - netlify
 - circleci
 - markdown
-category: Vue
+# category: Vue
 author: Wouter Vernaillen
 location: Zottegem, Belgium
 thumbnail_dark: /hello-world_dark.png
@@ -42,7 +42,7 @@ The result is a website that is very easy to edit and publish content updates,ca
 * Dark and Light style: <dark-toggler inline/>
 * [Tone.js](https://tonejs.github.io/) and audio visualisation with [vue-audiomotion-analyzer](https://vue-audiomotion-analyzer.dev/):
  <player-controls extended />
- 
+
 * [Pinia](https://pinia.vuejs.org/) is used to keep track of the audio player state
 * Automated deployments / auto publishing on [Netlify](https://www.netlify.com/)
 * Continous integration with [CircleCI](https://app.circleci.com/pipelines/github/vernaillen/vernaillen.dev?filter=all)

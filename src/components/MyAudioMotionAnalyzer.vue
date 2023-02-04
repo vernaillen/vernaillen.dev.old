@@ -22,7 +22,7 @@ onMounted(() => {
 })
 
 let options = {
-  alphaBars: false,
+  alphaBars: true,
   ledBars: false,
   barSpace: 0.1,
   bgAlpha: 0.5,
@@ -34,7 +34,7 @@ let options = {
   showScale: false,
   mode: 3,
   fftSize: 8192,
-  height: 100,
+  height: 60,
   showScaleX: false,
   showScaleY: false,
 }
@@ -51,20 +51,20 @@ const gradientOptions: GradientOptions = {
 </script>
 
 <template>
-  <div>
+  <div class="relative z-20">
     <audio id="audio" ref="audioRef" src="/music/RackNomad-MeditativeMelody.mp3" crossorigin="anonymous" />
     <VueAudioMotionAnalyzer
       :options="options"
       :source="audio"
       :gradient="gradientOptions"
-      class="z-20 bg-transparent"
+      class="bg-transparent opacity-70"
     />
   </div>
 </template>
 
 <style scoped>
 #vueAudioMotionAnalyzer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;

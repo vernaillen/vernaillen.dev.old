@@ -7,7 +7,7 @@ import blog, { getImageUrl } from '@/logics/blog'
 
 <template>
   <header-component />
-  <main class="flex-grow z-10 pt-[100px] overflow-hidden">
+  <main class="flex-grow z-10 pt-[100px] mb-[100px] overflow-hidden">
     <div class="container">
       <div class="flex flex-wrap">
         <breadcrumb-component page-name="Blog" path="/blog" />
@@ -35,17 +35,17 @@ import blog, { getImageUrl } from '@/logics/blog'
       </span>
     </div>
     <div class="container">
-      <div class="flex flex-wrap mx-[-16px] justify-start py-4 px-2 md:px-6">
+      <div class="flex flex-wrap mx-[-16px] justify-start px-2 md:px-6">
         <div
           v-for="post in blog.getPosts()" :key="post.path"
           class="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 px-4"
         >
           <div
-            class="blog-card relative bg-white dark:bg-dark shadow-one rounded-md overflow-hidden mb-10 animated fadeIn"
+            class="blog-card relative bg-[#ffffff] dark:bg-dark dark:bg-opacity-30 shadow-one rounded-md overflow-hidden mb-10 animated fadeIn"
           >
             <router-link
               :to="post.path"
-              class="w-full block relative h-[161px] md:h-[139px] xl:h-[109px] 2xl:h-[128px]"
+              class="w-full block relative md:h-[139px] xl:h-[109px] 2xl:h-[128px]"
             >
               <span
                 v-if="post.category"
@@ -106,5 +106,4 @@ import blog, { getImageUrl } from '@/logics/blog'
       </div>
     </div>
   </main>
-  <footer-component />
 </template>

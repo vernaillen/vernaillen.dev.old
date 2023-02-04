@@ -6,6 +6,8 @@ import '@/css/main.css'
 import '@/css/prose.css'
 import 'animate.css/animate.compat.css'
 import App from '@/App.vue'
+if (typeof window !== 'undefined')
+  import('./pwa')
 
 const scrollBehavior = (
   _to: unknown,

@@ -30,3 +30,9 @@ The pages in this website are generated with vite-ssg, but the vue-audiomotion-a
   </client-only>
 </template>
 ```
+
+pnpm workspace
+
+also created a workflow with multiple jobs in circle, all sharing the same workspace
+
+![Pipeline](/images/blog/vama-pipeline.png)

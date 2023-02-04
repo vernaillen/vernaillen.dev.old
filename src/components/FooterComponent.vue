@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SvgFooter from '@/components/svg/svg-footer.svg?component'
-import { currentYear } from '@/logics/dayjs'
 
 function easeInOutQuad(
   currentTime: number,
@@ -40,11 +39,15 @@ function scrollToTop() {
 onMounted(() => {
   window.onscroll = function () {
     const ud_header = document.querySelector('.header') as HTMLElement
+    // const ud_footer = document.querySelector('footer') as HTMLElement
     if (ud_header) {
       if (window.scrollY > 50)
         ud_header.classList.add('sticky')
+        // ud_footer.classList.add('sticky')
+
       else
         ud_header.classList.remove('sticky')
+        // ud_footer.classList.remove('sticky')
 
       // show or hide the back-top-top button
       const backToTop = document.querySelector('.back-to-top') as HTMLElement
@@ -62,21 +65,21 @@ onMounted(() => {
 
 <template>
   <footer
-    class="relative z-40 bg-primary bg-opacity-5 pt-[20px]"
+    class="sticky bottom-0 left-0 right-0 pt-0"
   >
-    <div class="container">
+    <div>
       <div class="flex flex-wrap mx-[-16px]">
-        <div class="w-full px-4">
-          <div class="flex mb-4 justify-center">
+        <div class="w-full px-4 z-[9999]">
+          <div class="flex justify-center">
             <player-controls />
           </div>
-          <div class="flex mb-8 justify-center">
+          <div class="flex mb-4 justify-center">
             <social-icons />
           </div>
         </div>
       </div>
     </div>
-    <div class="py-8 bg-primary bg-opacity-10">
+    <!-- <div class="py-8 bg-primary bg-opacity-10">
       <div class="container">
         <p class="text-body-color text-base text-center">
           &copy; {{ currentYear() }} Wouter Vernaillen - Vernaillen Consulting
@@ -85,13 +88,20 @@ onMounted(() => {
         </p>
       </div>
     </div>
+    -->
     <div class="absolute left-0 bottom-[110px] z-[-1]">
       <SvgFooter />
+    </div>
+
+    <div class="relative">
+      <client-only>
+        <my-audio-motion-analyzer class="opacity-75" />
+      </client-only>
     </div>
   </footer>
   <a
     href="javascript:void(0)"
-    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-8 left-auto z-[999] hover:shadow-signUp hover:bg-opacity-80 shadow-md animated slideInUp"
+    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-6 left-auto z-[9999] hover:shadow-signUp hover:bg-opacity-80 shadow-md animated slideInUp"
     @click="scrollToTop()"
   >
     <span
@@ -99,3 +109,14 @@ onMounted(() => {
     />
   </a>
 </template>
+
+<style scoped>
+footer.sticky {
+  opacity: 100%;
+  background-color: rgb(255 255 255 / 0.5);
+}
+html.dark footer.sticky {
+  opacity: 100%;
+  background-color: rgb(0 0 0 / 0.6);
+}
+</style>

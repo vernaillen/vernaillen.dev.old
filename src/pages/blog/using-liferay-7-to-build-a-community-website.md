@@ -3,7 +3,7 @@ title: Using Liferay 7 to build a community website
 desc: plans for the devNomads website
 pageName: devNomads website
 date: 07/24/2016
-category: Liferay
+# category: Liferay
 author: Wouter Vernaillen
 location: Zottegem, Belgium
 thumbnail: /devnomads_thumb.png

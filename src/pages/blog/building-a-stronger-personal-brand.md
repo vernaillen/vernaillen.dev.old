@@ -7,7 +7,7 @@ tag:
 - website
 - branding
 - liferay
-category: Branding
+# category: Branding
 author: Wouter Vernaillen
 location: Bali, Indonesia
 thumbnail: /balivolcanosunset_thumb.png

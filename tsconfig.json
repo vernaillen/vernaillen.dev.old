@@ -6,7 +6,8 @@
     "src/**/*.js",
     "src/**/*.vue",
     "test/**/*.ts",
-    "test/*.ts"
+    "test/*.ts",
+    "node_modules/vite-plugin-pwa/client.d.ts"
   ],
   "exclude": [
     "dist",
@@ -29,12 +30,14 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "vite/client",
-      "vite-plugin-pages/client"
+      "vite-plugin-pages/client",
+      "vite-plugin-pwa/client"
     ],
     "paths": {
       "@/*": [
         "src/*",
         "./src/*"
+        
       ]
     },
     "allowJs": true

@@ -6,7 +6,7 @@ date: 11/16/2015
 tag:
 - liferay
 - devcon
-category: Liferay
+# category: Liferay
 author: Wouter Vernaillen
 location: Darmstadt, Germany
 thumbnail: /devcon_thumb.png
