@@ -14,7 +14,7 @@ import Svg404 from '@/components/svg/svg-404.svg?component'
               <Svg404 />
             </div>
             <h3
-              class="font-bold text-black dark:text-white text-3xl sm:text-4xl mb-4"
+              class="font-bold text-dark dark:text-white text-3xl sm:text-4xl mb-4"
             >
               Sorry, the page can’t be found
             </h3>

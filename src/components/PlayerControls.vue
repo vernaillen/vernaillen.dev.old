@@ -29,7 +29,7 @@ const back = () => {
 }
 
 const labelBase
-  = 'cursor-pointer w-10 h-14 items-center justify-center bg-gray-2 dark:bg-dark-bg text-black dark:text-white ml-2'
+  = 'cursor-pointer w-10 h-14 items-center justify-center bg-gray-2 dark:bg-dark-bg text-dark dark:text-white ml-2'
 const labelClass = props.extended
   ? `${labelBase} inline`
   : `${labelBase} flex `

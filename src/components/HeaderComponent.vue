@@ -66,7 +66,7 @@ const navbarCollapseClass = computed(() => {
               <li class="relative group">
                 <label
                   for="rss"
-                  class="cursor-pointer w-10 h-14 rounded-full flex items-center justify-center bg-gray-2 dark:bg-dark-bg text-black dark:text-white"
+                  class="cursor-pointer w-5 h-14 rounded-full flex items-center justify-center bg-gray-2 dark:bg-dark-bg text-dark dark:text-white"
                 >
                   <a href="/feed.xml" target="_blank">
                     <font-awesome-icon :icon="['fas', 'rss']" />

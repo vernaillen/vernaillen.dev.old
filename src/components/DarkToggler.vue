@@ -13,7 +13,7 @@ const isDark = useDark({
 })
 const toggleDark = useToggle(isDark)
 const classBase
-  = 'cursor-pointer rounded-full items-center justify-center bg-gray-2 dark:bg-dark-bg text-black dark:text-white'
+  = 'cursor-pointer rounded-full items-center justify-center bg-gray-2 dark:bg-dark-bg text-dark dark:text-white'
 const darkTogglerClass = props.inline
   ? `${classBase} inline-block w-5 h-5`
   : `${classBase} flex w-10 h-14 `

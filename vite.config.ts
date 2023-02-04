@@ -11,7 +11,6 @@ import Anchor from 'markdown-it-anchor'
 import Prism from 'markdown-it-prism'
 import Pages from 'vite-plugin-pages'
 import generateSitemap from 'vite-plugin-pages-sitemap'
-import eslintPlugin from 'vite-plugin-eslint'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import SVG from 'vite-svg-loader'
@@ -19,8 +18,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
 import { configDefaults } from 'vitest/config'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import type { ViteSSGOptions } from 'vite-ssg'
+import { VitePWA } from 'vite-plugin-pwa'
 
 import 'prismjs/components/prism-regex'
 import 'prismjs/components/prism-javascript'
@@ -71,12 +69,6 @@ export default defineConfig({
       },
       headEnabled: true,
     }),
-
-    eslintPlugin({
-      exclude: ['/node_modules/', '**/vue-audiomotion-analyzer/dist/*.js'],
-      failOnWarning: false,
-      failOnError: false,
-    }),
     AutoImport({
       imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head', 'vitest'],
       dts: true, // generate TypeScript declaration
@@ -89,6 +81,12 @@ export default defineConfig({
     Inspect(), // only applies in dev mode
     SVG({
       svgo: false,
+    }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      devOptions: {
+        enabled: true,
+      },
     }),
   ],
   resolve: {

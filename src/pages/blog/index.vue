@@ -2,7 +2,7 @@
 import SvgBackgroundLeft1 from '@/components/svg/svg-background-left-1.svg?component'
 import SvgBackgroundRight1 from '@/components/svg/svg-background-right-1.svg?component'
 import { formatDate } from '@/logics/dayjs'
-import blog, { type Post, getImageUrl } from '@/logics/blog'
+import blog, { getImageUrl } from '@/logics/blog'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import blog, { type Post, getImageUrl } from '@/logics/blog'
         <breadcrumb-component page-name="Blog" path="/blog" />
         <div class="px-4 mb-12 md:mb-0">
           <div class="flex flex-wrap">
-            <h1 class="font-bold text-black dark:text-white text-2xl sm:text-3xl mb-5 animated pulse">
+            <h1 class="font-bold text-dark dark:text-white text-2xl sm:text-3xl mb-5 animated pulse">
               Blog
             </h1>
           </div>
@@ -60,7 +60,7 @@ import blog, { type Post, getImageUrl } from '@/logics/blog'
               <h3>
                 <router-link
                   :to="post.path"
-                  class="font-bold text-black dark:text-white text-xl sm:text-2xl block mb-4 hover:text-primary dark:hover:text-primary"
+                  class="font-bold text-dark dark:text-white text-xl sm:text-2xl block mb-4 hover:text-primary dark:hover:text-primary"
                 >
                   {{ post.title }}
                 </router-link>

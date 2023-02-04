@@ -5,19 +5,19 @@ module.exports = {
   theme: {
     screens: {
       'sm': '540px',
-      // => @media (min-width: 576px) { ... }
+      // => @media (min-width: 540px) { ... }
 
       'md': '720px',
-      // => @media (min-width: 768px) { ... }
+      // => @media (min-width: 720px) { ... }
 
       'lg': '960px',
-      // => @media (min-width: 992px) { ... }
+      // => @media (min-width: 960px) { ... }
 
       'xl': '1140px',
-      // => @media (min-width: 1200px) { ... }
+      // => @media (min-width: 1140px) { ... }
 
       '2xl': '1320px',
-      // => @media (min-width: 1400px) { ... }
+      // => @media (min-width: 1320px) { ... }
     },
     container: {
       center: true,
@@ -25,8 +25,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        'black': '#231f20',
-        'dark': '#161314',
+        'white': '#ECEAEA',
+        'black': '#0c0c0d',
+        'dark': '#333333',
         'primary': '#9C8E1B',
         'body-color': '#999999',
       },

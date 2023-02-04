@@ -16,7 +16,7 @@ import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
             class="mx-auto max-w-[570px] text-center animated fadeIn"
           >
             <h1
-              class="text-black dark:text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight mb-20 animated pulse"
+              class="text-dark dark:text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight mb-20 animated pulse"
             >
               Wouter Vernaillen
             </h1>
@@ -39,7 +39,7 @@ import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
               </router-link>
               <router-link
                 to="/about"
-                class="text-base font-semibold text-black bg-black bg-opacity-10 dark:text-white dark:bg-white dark:bg-opacity-20 py-3 px-6 hover:bg-opacity-20 dark:hover:bg-opacity-20 mx-2 my-10 rounded-md animated-duration-3s animated fadeIn"
+                class="text-base font-semibold text-dark bg-black bg-opacity-10 dark:text-white dark:bg-white dark:bg-opacity-20 py-3 px-6 hover:bg-opacity-20 dark:hover:bg-opacity-20 mx-2 my-10 rounded-md animated-duration-3s animated fadeIn"
               >
                 About Wouter
               </router-link>

@@ -29,7 +29,7 @@ const prose = () => {
           <div v-if="frontmatter.title" class="mb-2">
             <div class="flex flex-wrap">
               <h1
-                class="font-bold text-black dark:text-white text-2xl sm:text-3xl mb-5 animated pulse"
+                class="font-bold text-dark dark:text-white text-2xl sm:text-3xl mb-5 animated pulse"
               >
                 {{ frontmatter.title }}
               </h1>
