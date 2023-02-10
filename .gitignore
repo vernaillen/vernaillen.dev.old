@@ -29,3 +29,6 @@ coverage/
 .vite-ssg-temp
 components.d.ts
 auto-imports.d.ts
+dev-dist/registerSW.js
+dev-dist/sw.js
+dev-dist/workbox-01d9f47c.js

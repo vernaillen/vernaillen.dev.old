@@ -13,37 +13,37 @@ defineProps({
 
 <template>
   <div class="w-full px-4 mb-10">
-    <div class="">
-      <ul class="flex justify-end">
+    <div>
+      <ul class="flex justify-start">
         <li class="flex">
           <router-link
             to="/"
-            class="font-medium text-base text-body-color pr-2 hover:text-primary"
+            class="font-medium text-sm text-body-color pr-2 hover:text-primary"
           >
             Home
           </router-link>
           <span
-            class="block w-2 h-2 border-t-2 border-r-2 border-body-color rotate-45 mt-2 mr-3"
+            class="block w-[7px] h-[7px] border-t-2 border-r-2 border-body-color rotate-45 mt-[7px] mr-3"
           />
         </li>
         <li
           v-if="path.startsWith('/blog/')"
-          class="flex font-medium text-base text-primary"
+          class="flex"
         >
           <router-link
             to="/blog"
-            class="font-medium text-base text-body-color pr-2 hover:text-primary"
+            class="font-medium text-sm text-body-color pr-2 hover:text-primary"
           >
             Blog
           </router-link>
           <span
             v-if="path.startsWith('/blog')"
-            class="block w-2 h-2 border-t-2 border-r-2 border-body-color rotate-45 mt-2 mr-3"
+            class="block w-[7px] h-[7px] border-t-2 border-r-2 border-body-color rotate-45 mt-[7px] mr-3"
           />
         </li>
         <li
           v-if="pageName"
-          class="flex font-medium text-base text-primary"
+          class="flex font-medium text-sm text-primary"
         >
           {{ pageName }}
         </li>

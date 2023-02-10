@@ -20,7 +20,7 @@ const navbarCollapseClass = computed(() => {
   >
     <div class="container">
       <div class="flex mx-[-16px] justify-between relative">
-        <div class="px-4 w-60 max-w-full">
+        <div class="pl-8 pr-4 w-60 max-w-full">
           <router-link to="/" class="w-full block header-logo">
             <SvgLogo />
           </router-link>

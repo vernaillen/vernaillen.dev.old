@@ -103,6 +103,11 @@ const prose = () => {
               </p>
             </div>
           </div>
+          <div v-if="frontmatter.mastodonPost" class="w-full px-8 text-white prose">
+            <font-awesome-icon :icon="['fas', 'comments']" class="animated bounceIn" /><br>
+            comment on
+            <a :href="frontmatter.mastodonPost" target="_blank">mastodon</a>
+          </div>
         </div>
       </div>
       <previous-next-post />

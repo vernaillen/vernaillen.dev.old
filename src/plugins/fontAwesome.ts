@@ -2,6 +2,7 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
   faBackwardStep,
   faCalendarDays,
+  faComments,
   faLocationPin,
   faPause,
   faPenToSquare,
@@ -24,6 +25,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 library.add(
   faBackwardStep,
   faCalendarDays,
+  faComments,
   faLocationPin,
   faPause,
   faPenToSquare,
