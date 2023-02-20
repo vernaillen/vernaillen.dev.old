@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
-    "@pinia/testing": "^0.0.14",
+    "@pinia/testing": "^0.0.15",
     "@rushstack/eslint-patch": "^1.2.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/markdown-it": "^12.2.3",
