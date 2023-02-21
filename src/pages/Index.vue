@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SvgHomeLeft from '@/components/svg/svg-home-left.svg?component'
 import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
+import SvgNuxtIconGreen from '@/components/svg/svg-nuxt-icon-green.svg?component'
 </script>
 
 <template>
@@ -28,7 +29,7 @@ import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
             <p
               class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10"
             >
-              Java, Spring, Vue & Liferay
+              Java, Spring, Vue & Nuxt <a href="https://nuxt.com" target="_blank"><SvgNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18"/></a>
             </p>
             <div class="flex items-center justify-center mt-10">
               <router-link

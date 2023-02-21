@@ -37,7 +37,10 @@ defineProps<{
         <div
           class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
         >
+          <a v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary">
           {{ careerStep.project }}
+          </a>
+          <span v-else>{{ careerStep.project }}</span>
         </div>
       </div>
       <div class="ml-2 mt-1 mb-1 flex flex-wrap">

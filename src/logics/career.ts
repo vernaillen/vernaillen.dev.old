@@ -3,12 +3,24 @@ export interface CareerStep {
   contract?: string
   date: string
   project: string
+  projectUrl?: string
   role: string
   stack: string
   imageUrl?: string
 }
 
 export const careerSteps: CareerStep[] = [
+  {
+    client: 'Harmonics',
+    contract: 'owner',
+    date: '2023 - present',
+    project: 'Harmonics.be website',
+    projectUrl: 'https://harmonics.be',
+    role: 'web developer, event organizer, ecstatic dance DJ & trancedance facilitator',
+    stack:
+      'Vue 3, Nuxt 3, Nuxt Content, Netlify',
+    imageUrl: '/images/career/harmonics.png',
+  },
   {
     client: 'Opgroeien / Kind & Gezin',
     contract: 'freelance via Cronos Public Services',
