@@ -9,20 +9,20 @@ describe('homepage', () => {
 
     cy.get('#home p').should('have.length', 2)
     cy.get('#home p').first().should('have.text', ' Freelance Full Stack Developer ')
-    cy.get('#home p').last().should('have.text', ' Java, Spring, Vue & Liferay ')
+    cy.get('#home p').last().should('have.text', ' Java, Spring, Vue & Nuxt ')
   })
 
   it('action buttons', () => {
-    cy.get('#home a').should('have.length', 2)
-    cy.get('#home a').first().should('have.text', ' Blog ')
-    cy.get('#home a').last().should('have.text', ' About Wouter ')
+    cy.get('#home #action-buttons a').should('have.length', 2)
+    cy.get('#home #action-buttons a').first().should('have.text', ' Blog ')
+    cy.get('#home #action-buttons a').last().should('have.text', ' About Wouter ')
 
     // navigate
-    cy.get('#home a').first().click()
+    cy.get('#home #action-buttons a').first().click()
     cy.location('pathname').should('include', '/blog')
     cy.go('back')
     cy.location('pathname').should('not.include', '/blog')
-    cy.get('#home a').last().click()
+    cy.get('#home #action-buttons a').last().click()
     cy.location('pathname').should('include', '/about')
     cy.go('back')
     cy.location('pathname').should('not.include', '/about')

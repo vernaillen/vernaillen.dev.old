@@ -10,6 +10,7 @@
     "test": "vitest",
     "cypress:install": "cypress install",
     "cypress:open": "cypress open",
+    "cypress:dev": "start-server-and-test dev http://localhost:5173 'cypress open --config baseUrl=http://localhost:5173'",
     "cypress:run": "cypress run",
     "cypress:local": "start-server-and-test serve http://localhost:3000 cypress:run --config baseUrl=http://localhost:3000",
     "coverage": "vitest run --coverage",

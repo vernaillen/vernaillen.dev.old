@@ -29,9 +29,9 @@ import SvgNuxtIconGreen from '@/components/svg/svg-nuxt-icon-green.svg?component
             <p
               class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10"
             >
-              Java, Spring, Vue & Nuxt <a href="https://nuxt.com" target="_blank"><SvgNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18"/></a>
+              Java, Spring, Vue & Nuxt <a href="https://nuxt.com" target="_blank"><SvgNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" /></a>
             </p>
-            <div class="flex items-center justify-center mt-10">
+            <div id="action-buttons" class="flex items-center justify-center mt-10">
               <router-link
                 to="/blog"
                 class="text-base font-semibold text-white bg-primary py-3 px-6 hover:bg-opacity-80 mx-2 my-10 rounded-md animated-duration-3s animated fadeIn"
