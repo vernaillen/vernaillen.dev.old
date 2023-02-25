@@ -18,7 +18,10 @@
     "serve": "pnpm run build && serve dist",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json --composite false",
     "rss": "esno ./scripts/rss.ts",
-    "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run typecheck && pnpm run coverage && pnpm run cypress:local"
+    "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run typecheck && pnpm run coverage && pnpm run cypress:local",
+    "release:patch": "npx release-it patch --ci",
+    "release:minor": "npx release-it minor --ci",
+    "release:major": "npx release-it major --ci"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -27,9 +30,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@vueuse/core": "^9.13.0",
-    "@vueuse/head": "^1.0.26",
+    "@vueuse/head": "^1.1.5",
     "animate.css": "^4.1.1",
-    "axios": "^1.3.3",
+    "axios": "^1.3.4",
     "dayjs": "^1.11.7",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.32",
@@ -37,31 +40,31 @@
     "vee-validate": "^4.7.4",
     "vite-plugin-vue-audiomotion": "^0.1.3",
     "vue": "^3.2.47",
-    "vue-easy-lightbox": "^1.12.0",
+    "vue-easy-lightbox": "^1.13.0",
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.1.6",
     "yup": "^1.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.35.2",
+    "@antfu/eslint-config": "^0.35.3",
     "@pinia/testing": "^0.0.15",
     "@rushstack/eslint-patch": "^1.2.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/markdown-it": "^12.2.3",
     "@types/markdown-it-link-attributes": "^3.0.1",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
-    "@vitest/coverage-c8": "^0.28.5",
-    "@vitest/ui": "^0.28.5",
+    "@vitest/coverage-c8": "^0.29.1",
+    "@vitest/ui": "^0.29.1",
     "@vue/eslint-config-typescript": "^11.0.2",
     "@vue/test-utils": "^2.3.0",
     "@vue/tsconfig": "^0.1.3",
     "autoprefixer": "^10.4.13",
     "c8": "^7.13.0",
     "cross-env": "^7.0.3",
-    "cypress": "^12.6.0",
+    "cypress": "^12.7.0",
     "eslint": "^8.34.0",
     "eslint-config-standard": "^17.0.0",
     "esno": "^0.16.3",
@@ -74,10 +77,10 @@
     "start-server-and-test": "^1.15.4",
     "tailwindcss": "^3.2.7",
     "typescript": "4.9.5",
-    "unplugin-auto-import": "^0.14.4",
+    "unplugin-auto-import": "^0.15.0",
     "unplugin-vue-components": "^0.24.0",
     "v8-compile-cache": "^2.3.0",
-    "vite": "^4.1.3",
+    "vite": "^4.1.4",
     "vite-plugin-inspect": "^0.7.15",
     "vite-plugin-pages": "^0.28.0",
     "vite-plugin-pages-sitemap": "^1.4.5",
@@ -85,12 +88,26 @@
     "vite-plugin-vue-markdown": "^0.22.4",
     "vite-ssg": "^0.22.1",
     "vite-svg-loader": "^4.0.0",
-    "vitest": "^0.28.5",
+    "vitest": "^0.29.1",
     "vue-router-mock": "^0.1.9",
-    "vue-tsc": "^1.1.5",
+    "vue-tsc": "^1.2.0",
     "workbox-window": "^6.5.4"
   },
   "eslintConfig": {
     "extends": "@antfu"
+  },
+  "release-it": {
+    "git": {
+      "commit": true,
+      "tag": true,
+      "push": true,
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": false
+    },
+    "npm": {
+      "publish": false
+    }
   }
 }
