@@ -34,7 +34,9 @@ jobs:
             - pnpm-lock.yaml
             - node_modules
             - cypress
-            - *.config.ts
+            - cypress.config.ts
+            - nuxt.config.ts
+            - vitest.config.ts
             - tsconfig.json
             - components
             - composables
