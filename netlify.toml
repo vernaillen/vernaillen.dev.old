@@ -1,23 +1,16 @@
 [build.environment]
   NPM_FLAGS = "--version"
-  NODE_VERSION = "16"
+  NODE_VERSION = "19"
   
 [build]
   publish = "dist"
-  command = "npx pnpm install --frozen-lockfile --store=node_modules/.pnpm-store && npx pnpm run coverage && npx pnpm run build"
+  command = "pnpm run build"
 
-[[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
 
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    cache-control = '''
-    max-age=31536000,
-    immutable
-    '''
+  [[plugins.inputs.audits]]
+    url = "https://vernaillen-dev.netlify.app"
 
 [[redirects]]
   from = "/.well-known/host-meta?"
