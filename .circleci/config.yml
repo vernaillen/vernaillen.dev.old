@@ -38,7 +38,9 @@ jobs:
             - nuxt.config.ts
             - vitest.config.ts
             - tsconfig.json
+            - assets
             - components
+            - content
             - composables
             - layouts
             - pages
