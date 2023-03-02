@@ -78,7 +78,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div class="py-8 bg-primary bg-opacity-10">
+    <div class="py-8 bg-primary bg-opacity-5">
       <div class="flex mb-4 justify-center">
         <social-icons />
       </div>

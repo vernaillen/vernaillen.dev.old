@@ -32,7 +32,7 @@ watch(() => colorMode.value, (newColorMode) => {
 
 <template>
   <div
-    class="blog-card relative bg-[#ffffff] dark:bg-dark dark:bg-opacity-30 shadow-one rounded-md overflow-hidden mb-10"
+    class="blog-card relative bg-[#ffffff] dark:bg-dark dark:bg-opacity-50 shadow-lg rounded-md overflow-hidden mb-10"
   >
     <NuxtLink
       :to="post._path"

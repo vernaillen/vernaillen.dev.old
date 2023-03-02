@@ -17,7 +17,7 @@ setMetaData('Home')
     <NuxtLayout>
       <main
         id="home"
-        class="flex flex-col min-h-screen z-10 pt-[160px] pb-[120px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px] mb-100"
+        class="flex flex-col z-10 pt-[160px] pb-[120px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px] mb-100"
       >
         <div class="container">
           <div class="flex flex-wrap mx-[-16px]">
@@ -61,7 +61,7 @@ setMetaData('Home')
           </div>
         </div>
         <!-- <div> -->
-        <div class="svg-right absolute top-0 right-0 z-[-1]">
+        <div class="svg-right absolute top-0 right-0 left-1/2 md:left-auto z-[-1]">
           <SvgHomeRight />
         </div>
         <div class="svg-left absolute bottom-20 left-10 z-[-1] opacity-30 hidden md:block">

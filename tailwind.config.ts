@@ -25,7 +25,7 @@ module.exports = {
         'black': '#0c0c0d',
         'dark': '#333333',
         'primary': '#9C8E1B',
-        'body-color': '#999999',
+        'body-color': '#777777',
       },
       boxShadow: {
         signUp: '0px 5px 10px rgba(4, 10, 34, 0.2)',

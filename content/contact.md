@@ -1,6 +1,6 @@
 ---
 title: Get in touch
-desc: don't be a stranger
+desc: let's connect
 pageName: Contact
 hideGitHub: true
 ---

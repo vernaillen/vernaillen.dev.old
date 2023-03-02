@@ -24,7 +24,7 @@ setMetaData('Blog')
         <div class="container">
           <div class="flex flex-wrap">
             <breadcrumb-component page-name="Blog" path="/blog" />
-            <div class="px-4 mb-12 md:mb-0">
+            <div class="px-4 mb-4 md:mb-0">
               <div class="flex flex-wrap">
                 <h1 class="font-bold text-dark dark:text-white text-2xl sm:text-3xl mb-5 animate__animated animate__pulse">
                   Blog

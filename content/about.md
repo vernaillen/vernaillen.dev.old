@@ -4,20 +4,32 @@ desc: In case you're wondering... who is this guy?
 pageName: About
 ---
 
-I'm an avid traveler, following the sunshine around the world, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
+::FloatingImage
+---
+src: /images/woutervernaillen.jpg
+width: 300
+caption: Wouter Vernaillen
+---
+::
+I'm an avid traveler, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
 
-[Sound and music](/music) is one of my passions, it's a way for me to translate, give and recieve energy. I'm currently following a training as sound healing facilitator.
+[Sound, music & dance](/music) is one of my passions, as I find it the best way to translate, give and recieve energy. 
+Besides being a developer I'm also a sound healing practicioner, ecstatic dance dj and trance dance facilitator.
+You can find more about these activities on my other website [Harmonics.be](https://harmonics.be).
 
 ## Career
 
-My career as an IT consultant started in 1999. The first 14 years I worked as an employee for several IT service companies, and since 2013 I'm working as a freelancer.\
+My career as an IT consultant started in 1999. The first 14 years I worked as an employee for several IT service companies, and since 2013 I'm working as a freelancer.
 By now I have build up more then :YearsOfExperience years of experience in web development and full stack development.
 
-I have strongly specialised in full stack java development on portal platforms.
-Since 2006 this was focussed on IBM WebSphere Portal, as I was working for IBM.\
-Later, when I decided to start freelancing, I changed my focus to open source and [Liferay Portal](https://www.liferay.com/).
+I have strongly specialised in full stack java development on portal platforms. Since 2006 this was focussed on IBM WebSphere Portal, while working for IBM.
 
-Feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/woutervernaillen/) for a more detailed career path.
+In 2013 I decided to start freelancing, and changed my focus to open source platform, like [Liferay Portal](https://www.liferay.com/).
+
+The last few years I got excited about [Vue.js](https://vuejs.org/) and I have build or migrated several websites with [Nuxt 3](https://nuxt.com/) and [Nuxt Content](https://content.nuxtjs.org/). You can read more about that in this [blog post about Nuxt 3](/blog/nuxt)
+
+You can find a detailed overview of the clients and technologies I've worked with on my [career page](/career).
+And feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/woutervernaillen/).
 
 ## About this website
 

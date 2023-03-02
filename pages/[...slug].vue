@@ -60,7 +60,7 @@ if (page.value)
                 <div v-if="page.date" class="inline-flex align-top items-center mx-2">
                   <span class="flex items-center text-xs text-body-color font-medium mr-3">
                     <Icon name="lucide:calendar-days" class="mr-2" />
-                    published on {{ formatDate(page.date) }}
+                    first published on {{ formatDate(page.date) }}
                   </span>
                 </div>
                 <MarkdownGitHub
