@@ -16,7 +16,7 @@ export const setMetaData = (pageTitle: string) => {
     ],
   })
   useSeoMeta({
-    ogTitle: `${pageTitle} - Wouter Vernaillen: Freelance Full Developer`,
+    ogTitle: `${pageTitle} - Wouter Vernaillen: Freelance Full Stack Developer`,
     description: 'Java, Spring, Vue, Nuxt + DevOps',
     ogDescription: 'Java, Spring, Vue, Nuxt + DevOps',
     ogImageUrl: 'https://vernaillen.dev/vernaillendev-website.png',
