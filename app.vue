@@ -1,6 +1,9 @@
 <script setup lang="ts">
 useHead({
-  title: 'Vernaillen.dev',
+  titleTemplate: (title?: string) => `${title} - Wouter Vernaillen: Freelance Full Stack Java, Vue & Nuxt Developer`,
+  htmlAttrs: {
+    lang: 'en',
+  },
   bodyAttrs: {
     class: 'dark:bg-black',
   },
@@ -14,7 +17,19 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Wouter Vernaillen - Freelance Full Stack Java & Vue Developer',
+      content: 'Wouter Vernaillen - Freelance Full Stack Java, Vue & Nuxt Developer',
+    },
+    {
+      property: 'og:title',
+      content: (title?: string) => `${title} - Wouter Vernaille: Freelance Full Stack Java, Vue & Nuxt Developer`,
+    },
+    {
+      property: 'og:description',
+      content: 'Wouter Vernaillen - Freelance Full Stack Java, Vue & Nuxt Developer',
+    },
+    {
+      property: 'og:image',
+      content: 'https://vernaillen.dev/vernaillendev-website.png',
     },
   ],
 })

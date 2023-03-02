@@ -6,10 +6,10 @@ const props = defineProps<{
 }>()
 
 const editLink = computed(() => {
-  return (`https://github.com/vernaillen/vernaillen.nuxt/edit/main/content/${props.page._file}`)
+  return (`https://github.com/vernaillen/vernaillen.dev/edit/master/content/${props.page._file}`)
 })
 const viewLink = computed(() => {
-  return (`https://github.com/vernaillen/vernaillen.nuxt/tree/main/content/${props.page._file}`)
+  return (`https://github.com/vernaillen/vernaillen.dev/tree/master/content/${props.page._file}`)
 })
 
 const lastUpdated = ref()
