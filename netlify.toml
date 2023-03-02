@@ -10,7 +10,7 @@
   package = "@netlify/plugin-lighthouse"
 
   [[plugins.inputs.audits]]
-    url = "https://vernaillen-dev.netlify.app"
+    url = "https://vernaillen.dev"
 
 [[redirects]]
   from = "/.well-known/host-meta?"
