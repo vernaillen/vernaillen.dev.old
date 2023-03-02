@@ -5,6 +5,8 @@ pageName: Contact
 hideGitHub: true
 ---
 
-Leave me a message on [LinkedIn](https://www.linkedin.com/in/woutervernaillen/) or any other platform:
+:ContactForm
+
+Or leave me a message on [LinkedIn](https://www.linkedin.com/in/woutervernaillen/) or any other social platform:
 
 :SocialIcons
