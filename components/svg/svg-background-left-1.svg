@@ -1,0 +1,31 @@
+<svg
+    width="287"
+    height="254"
+    viewBox="0 0 287 254"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="animate__animated animate__fadeIn"
+    >
+    <path
+        opacity="0.1"
+        d="M286.5 0.5L-14.5 254.5V69.5L286.5 0.5Z"
+        fill="url(#paint0_linear_111:578)"
+    />
+    <defs>
+        <linearGradient
+            id="paint0_linear_111:578"
+            x1="-40.5"
+            y1="117"
+            x2="301.926"
+            y2="-97.1485"
+            gradientUnits="userSpaceOnUse"
+            >
+            <stop :stop-color="$primaryColor" />
+            <stop
+                offset="1"
+                :stop-color="$primaryColor"
+                stop-opacity="0"
+            />
+        </linearGradient>
+    </defs>
+</svg>

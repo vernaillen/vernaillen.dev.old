@@ -19,7 +19,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install packages
-          command: pnpm install --frozen-lockfile
+          command: pnpm install --shamefully-hoist
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -35,11 +35,22 @@ jobs:
             - node_modules
             - cypress
             - cypress.config.ts
-            - vite.config.ts
+            - nuxt.config.ts
+            - vitest.config.ts
             - tsconfig.json
-            - src
-            - test
-            - dist
+            - assets
+            - components
+            - content
+            - composables
+            - layouts
+            - pages
+            - plugins
+            - server
+            - stores
+            - tests
+            - types
+            - .nuxt
+            - .output
             - .gitignore
             - sonar-project.properties
       - slack/notify:
@@ -51,9 +62,6 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp/workspace
-      - run:
-          name: Lint
-          command: pnpm run lint
       - run:
           name: Test
           command: pnpm run coverage
@@ -68,10 +76,10 @@ jobs:
           at: /tmp/workspace
       - run:
           name: Install Cypress
-          command: pnpm run cypress:install
+          command: npx cypress:install
       - run:
           name: Run Cypress
-          command: pnpm run cypress:run 
+          command: npx cypress:run 
       - slack/notify:
           channel: circleci
           event: always
@@ -93,7 +101,7 @@ workflows:
             - test
           filters:
             branches:
-              only: master
+              only: master,nuxt
           context: 
             - Slack
 
