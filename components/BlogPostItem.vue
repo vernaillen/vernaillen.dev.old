@@ -8,7 +8,6 @@ const props = defineProps<{
 const colorMode = useColorMode()
 const imageUrl = ref('/images/blog/placeholder.png')
 const imageClass = ref('imgPlaceholder')
-const showImageSpinner = ref(true)
 
 const updateImageUrl = async (colorPref: string) => {
   imageClass.value = 'imgPlaceholder'
@@ -22,7 +21,6 @@ const updateImageUrl = async (colorPref: string) => {
     imageUrl.value = props.post.thumbnail
   await new Promise(res => setTimeout(res, 100))
   imageClass.value = ''
-  showImageSpinner.value = false
 }
 onMounted(() => {
   updateImageUrl(colorMode.value)
@@ -45,16 +43,6 @@ watch(() => colorMode.value, (newColorMode) => {
         class="absolute top-6 right-6 bg-primary rounded-full inline-flex items-center justify-center py-2 px-4 font-semibold text-sm text-white"
       >
         {{ post.category }}
-      </span>
-      <span
-        v-if="showImageSpinner"
-        class="w-full flex items-center justify-center absolute top-0 bottom-0 text-dark dark:text-white text-opacity-50 bg-dark dark:bg-primary bg-opacity-5 dark:bg-opacity-5"
-      >
-        <Icon
-          name="uil:spinner-alt"
-          class="animate-spin"
-          size="24"
-        />
       </span>
       <NuxtImg :src="imageUrl" format="webp" :class="imageClass" class="w-full transition-all" />
     </NuxtLink>
