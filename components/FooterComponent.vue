@@ -90,7 +90,7 @@ onMounted(() => {
         </p>
       </div>
     </div>
-    <div class="absolute left-0 bottom-0 z-[-1]">
+    <div class="absolute left-0 bottom-5 z-[-1]">
       <SvgFooter />
     </div>
 

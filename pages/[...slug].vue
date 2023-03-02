@@ -11,6 +11,9 @@ const prose = () => {
     return ''
   return 'prose'
 }
+
+if (page.value)
+  setMetaData(page.value.title)
 </script>
 
 <template>

@@ -14,24 +14,6 @@ useHead({
       type: 'image/svg+xml',
     },
   ],
-  meta: [
-    {
-      name: 'description',
-      content: 'Wouter Vernaillen - Freelance Full Stack Java, Vue & Nuxt Developer',
-    },
-    {
-      property: 'og:title',
-      content: (title?: string) => `${title} - Wouter Vernaille: Freelance Full Stack Java, Vue & Nuxt Developer`,
-    },
-    {
-      property: 'og:description',
-      content: 'Wouter Vernaillen - Freelance Full Stack Java, Vue & Nuxt Developer',
-    },
-    {
-      property: 'og:image',
-      content: 'https://vernaillen.dev/vernaillendev-website.png',
-    },
-  ],
 })
 </script>
 

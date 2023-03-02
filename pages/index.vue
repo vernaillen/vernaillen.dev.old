@@ -6,6 +6,10 @@ import SvgNuxtIconGreen from '@/components/svg/svg-nuxt-icon-green.svg?component
 definePageMeta({
   documentDriven: false,
 })
+useHead({
+  title: 'Home',
+})
+setMetaData('Home')
 </script>
 
 <template>
@@ -60,7 +64,7 @@ definePageMeta({
         <div class="svg-right absolute top-0 right-0 z-[-1]">
           <SvgHomeRight />
         </div>
-        <div class="svg-left absolute bottom-10 left-10 z-[-1] opacity-30 hidden md:block">
+        <div class="svg-left absolute bottom-20 left-10 z-[-1] opacity-30 hidden md:block">
           <SvgHomeLeft />
         </div>
       </main>

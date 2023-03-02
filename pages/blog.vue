@@ -11,6 +11,10 @@ const { data: posts } = await useLazyAsyncData('posts', () =>
 definePageMeta({
   documentDriven: false,
 })
+useHead({
+  title: 'Blog',
+})
+setMetaData('Blog')
 </script>
 
 <template>
