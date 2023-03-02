@@ -38,9 +38,9 @@ setMetaData('Home')
                 <p
                   class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10"
                 >
-                  Java, Spring, Vue & Nuxt <a href="https://nuxt.com" target="_blank">
+                  Java, Spring, Vue, Nuxt <a href="https://nuxt.com" target="_blank">
                     <SvgNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" viewBox="0 0 900 900" />
-                  </a>
+                  </a> + DevOps
                 </p>
                 <div id="action-buttons" class="flex items-center justify-center mt-10">
                   <NuxtLink

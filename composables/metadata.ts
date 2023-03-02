@@ -1,14 +1,13 @@
 export const setMetaData = (pageTitle: string) => {
-  const { t } = useI18n()
   useHead({
     meta: [
       {
         name: 'og:title',
-        content: `${pageTitle} - Wouter Vernaillen: Freelance Full Stack Java, Vue & Nuxt Developer`,
+        content: `${pageTitle} - Wouter Vernaillen: Freelance Full Stack Developer`,
       },
       {
         property: 'og:description',
-        content: t('website.description'),
+        content: 'Java, Spring, Vue, Nuxt + DevOps',
       },
       {
         property: 'og:image',
@@ -17,9 +16,9 @@ export const setMetaData = (pageTitle: string) => {
     ],
   })
   useSeoMeta({
-    ogTitle: `${pageTitle} - Wouter Vernaillen: Freelance Full Stack Java, Vue & Nuxt Developer`,
-    description: () => t('website.description'),
-    ogDescription: () => t('website.description'),
+    ogTitle: `${pageTitle} - Wouter Vernaillen: Freelance Full Developer`,
+    description: 'Java, Spring, Vue, Nuxt + DevOps',
+    ogDescription: 'Java, Spring, Vue, Nuxt + DevOps',
     ogImageUrl: 'https://vernaillen.dev/vernaillendev-website.png',
   })
 }
