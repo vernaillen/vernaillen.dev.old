@@ -4,22 +4,23 @@ desc: In case you're wondering... who is this guy?
 pageName: About
 ---
 
+I'm an avid traveler, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
+
+[Sound, music & dance](/music) is one of my passions, as I find it the best way to translate, give and recieve energy. 
+Besides being a developer I'm also a sound healing practicioner, ecstatic dance dj and trance dance facilitator. You can find more about these activities on my other website [Harmonics.be](https://harmonics.be).
+
+## Career
+
+My career as an IT consultant started in 1999. The first 14 years I worked as an employee for several IT service companies, and since 2013 I'm working as a freelancer.
+
 ::FloatingImage
 ---
 src: /images/woutervernaillen.jpg
 width: 300
 caption: Wouter Vernaillen
+imageShadow: false
 ---
 ::
-I'm an avid traveler, always open to learn from other cultures and intrigued by cross-cultural movements and tribes.
-
-[Sound, music & dance](/music) is one of my passions, as I find it the best way to translate, give and recieve energy. 
-Besides being a developer I'm also a sound healing practicioner, ecstatic dance dj and trance dance facilitator.
-You can find more about these activities on my other website [Harmonics.be](https://harmonics.be).
-
-## Career
-
-My career as an IT consultant started in 1999. The first 14 years I worked as an employee for several IT service companies, and since 2013 I'm working as a freelancer.
 By now I have build up more then :YearsOfExperience years of experience in web development and full stack development.
 
 I have strongly specialised in full stack java development on portal platforms. Since 2006 this was focussed on IBM WebSphere Portal, while working for IBM.

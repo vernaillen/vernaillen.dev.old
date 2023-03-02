@@ -8,13 +8,7 @@ const { data: posts } = await useLazyAsyncData('posts', () =>
     .sort({ _file: -1 })
     .find())
 
-definePageMeta({
-  documentDriven: false,
-})
-useHead({
-  title: 'Blog',
-})
-setMetaData('Blog')
+setMetaData('Blog', false)
 </script>
 
 <template>

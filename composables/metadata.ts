@@ -1,4 +1,12 @@
-export const setMetaData = (pageTitle: string) => {
+export const setMetaData = (pageTitle: string, mdPage: boolean) => {
+  if (!mdPage) {
+    definePageMeta({
+      documentDriven: false,
+    })
+    useHead({
+      title: 'Home',
+    })
+  }
   useHead({
     meta: [
       {

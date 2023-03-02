@@ -5,9 +5,6 @@ const props = defineProps<{
   page: ParsedContent
 }>()
 
-const editLink = computed(() => {
-  return (`https://github.com/vernaillen/vernaillen.dev/edit/master/content/${props.page._file}`)
-})
 const viewLink = computed(() => {
   return (`https://github.com/vernaillen/vernaillen.dev/tree/master/content/${props.page._file}`)
 })
@@ -28,10 +25,7 @@ watch(gitHubData, (newGHData) => {
 <template>
   <div>
     <a :href="viewLink" target="_blank">
-      <Icon name="mdi:github" class="mr-1" />
-    </a>
-    <a :href="editLink" target="_blank">
-      <Icon name="mdi:pen" class="mr-2" />
+      <Icon name="mdi:github" class="ml-1 mr-2" />
     </a>
     last updated on&nbsp;
     <Icon

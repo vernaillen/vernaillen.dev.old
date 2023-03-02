@@ -3,8 +3,8 @@ import SvgBackgroundLeft1 from '@/components/svg/svg-background-left-1.svg?compo
 import SvgBackgroundRight1 from '@/components/svg/svg-background-right-1.svg?component'
 
 const { page } = useContent()
-useRouter()
 const route = useRoute()
+useRouter()
 
 const prose = () => {
   if (page.value.disableProse)
@@ -13,7 +13,8 @@ const prose = () => {
 }
 
 if (page.value)
-  setMetaData(page.value.title)
+  setMetaData(page.value.title, true)
+else setResponseStatus(404)
 </script>
 
 <template>
@@ -40,6 +41,7 @@ if (page.value)
                     </div>
                   </div>
                 </div>
+                <!--
                 <div v-if="page.author" class="inline-flex align-top items-center mr-2">
                   <div
                     v-if="page.author === 'Wouter Vernaillen'"
@@ -53,12 +55,13 @@ if (page.value)
                     </NuxtLink>
                   </div>
                 </div>
-                <div v-if="page.location" class="inline-flex align-top mr-2 text-xs text-body-color font-medium">
+                -->
+                <div v-if="page.location" class="inline-flex align-top ml-1 mr-2 text-xs text-body-color font-medium">
                   <Icon name="fa6-solid:location-pin" class="mr-2" />
                   {{ page.location }}
                 </div>
-                <div v-if="page.date" class="inline-flex align-top items-center mx-2">
-                  <span class="flex items-center text-xs text-body-color font-medium mr-3">
+                <div v-if="page.date" class="inline-flex align-top items-center">
+                  <span class="flex items-center text-xs text-body-color font-medium ml-1 mr-2">
                     <Icon name="lucide:calendar-days" class="mr-2" />
                     first published on {{ formatDate(page.date) }}
                   </span>
@@ -66,9 +69,10 @@ if (page.value)
                 <MarkdownGitHub
                   v-if="!page.hideGitHub"
                   :page="page"
-                  class="inline-flex align-top text-xs text-body-color font-medium mr-2"
+                  class="inline-flex align-top text-xs text-body-color font-medium"
                 />
               </div>
+              <CommentOnMastodon v-if="page.mastodonPostId" :post-id="page.mastodonPostId" />
             </div>
           </div>
           <div>
@@ -93,15 +97,25 @@ if (page.value)
                   </article>
                 </div>
               </div>
-              <div v-if="page.mastodonPost" class="w-full px-8 text-white prose">
-                <Icon name="fa6-solid:comments" class="animate__animated animate__bounceIn" /><br>
-                comment on
-                <a :href="page.mastodonPost" target="_blank">mastodon</a>
-              </div>
+              <CommentOnMastodon v-if="page.mastodonPostId" :post-id="page.mastodonPostId" />
             </div>
           </div>
           <previous-next-post />
         </section>
+        <section v-else class="relative z-10 py-2">
+          <div class="container">
+            <div class="flex flex-wrap mx-[-16px]">
+              <div class="w-full py-4 px-8 md:px-12">
+                <div class="prose mx-auto">
+                  <article>
+                    <ContentDoc path="/_404" />
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <NextPreviousPost v-if="page && page.isNews" />
       </main>
     </NuxtLayout>
   </div>
