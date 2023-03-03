@@ -3,6 +3,9 @@ import SvgHomeLeft from '@/components/svg/svg-home-left.svg?component'
 import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
 import SvgNuxtIconGreen from '@/components/svg/svg-nuxt-icon-green.svg?component'
 
+definePageMeta({
+  documentDriven: false,
+})
 setMetaData('Home', false)
 </script>
 

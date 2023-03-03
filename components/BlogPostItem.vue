@@ -46,7 +46,7 @@ watch(() => colorMode.value, (newColorMode) => {
       </span>
       <NuxtImg :src="imageUrl" format="webp" :class="imageClass" class="w-full transition-all" />
     </NuxtLink>
-    <div class="p-6 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
+    <div class="p-5 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
       <h3>
         <NuxtLink
           :to="post._path"
@@ -76,15 +76,13 @@ watch(() => colorMode.value, (newColorMode) => {
                 {{ post.author }}
               </NuxtLink>
             </h4>
-            <p class="text-xs text-body-color">
-              Full Stack Developer
-            </p>
           </div>
         </div>
         <div class="inline-block">
           <p class="text-xs text-body-color">
             <Icon name="lucide:calendar-days" class="mr-2" />
-            {{ formatDate(post.date) }}
+            <span class="inline-block sm:hidden align-middle">{{ shortDateFormat(post.date) }}</span>
+            <span class="hidden sm:inline-block align-middle">{{ longDateFormat(post.date) }}</span>
           </p>
         </div>
       </div>

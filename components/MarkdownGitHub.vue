@@ -39,6 +39,6 @@ watch(gitHubData, (newGHData) => {
       :href="viewLink"
       target="_blank"
       class="animate-pulse"
-    >{{ formatDate(lastUpdated) }}</a>
+    >{{ longDateFormat(lastUpdated) }}</a>
   </div>
 </template>

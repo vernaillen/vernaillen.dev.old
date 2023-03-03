@@ -41,7 +41,7 @@ else setResponseStatus(404)
                     </div>
                   </div>
                 </div>
-                <!--
+
                 <div v-if="page.author" class="inline-flex align-top items-center mr-2">
                   <div
                     v-if="page.author === 'Wouter Vernaillen'"
@@ -55,7 +55,7 @@ else setResponseStatus(404)
                     </NuxtLink>
                   </div>
                 </div>
-                -->
+
                 <div v-if="page.location" class="inline-flex align-top ml-1 mr-2 text-xs text-body-color font-medium">
                   <Icon name="fa6-solid:location-pin" class="mr-2" />
                   {{ page.location }}
@@ -63,7 +63,7 @@ else setResponseStatus(404)
                 <div v-if="page.date" class="inline-flex align-top items-center">
                   <span class="flex items-center text-xs text-body-color font-medium ml-1 mr-2">
                     <Icon name="lucide:calendar-days" class="mr-2" />
-                    first published on {{ formatDate(page.date) }}
+                    first published on {{ longDateFormat(page.date) }}
                   </span>
                 </div>
                 <MarkdownGitHub
@@ -72,7 +72,7 @@ else setResponseStatus(404)
                   class="inline-flex align-top text-xs text-body-color font-medium"
                 />
               </div>
-              <CommentOnMastodon v-if="page.mastodonPostId" :post-id="page.mastodonPostId" />
+              <SocialComments :page="page" />
             </div>
           </div>
           <div>
@@ -97,7 +97,7 @@ else setResponseStatus(404)
                   </article>
                 </div>
               </div>
-              <CommentOnMastodon v-if="page.mastodonPostId" :post-id="page.mastodonPostId" />
+              <SocialComments :page="page" />
             </div>
           </div>
           <previous-next-post />
@@ -115,7 +115,7 @@ else setResponseStatus(404)
             </div>
           </div>
         </section>
-        <NextPreviousPost v-if="page && page.isNews" />
+        <PreviousNextPost v-if="page && page.isNews" />
       </main>
     </NuxtLayout>
   </div>
