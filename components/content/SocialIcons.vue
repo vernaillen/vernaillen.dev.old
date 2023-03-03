@@ -39,13 +39,4 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
   >
     <Icon name="mdi:mastodon" alt="Mastodon" class="animate__animated animate__bounceIn" />
   </a>
-  <a
-    :class="cssClass"
-    href="https://wa.me/+32473344656"
-    rel="noopener"
-    target="_blank"
-    title="WhatsApp"
-  >
-    <Icon name="mdi:whatsapp" alt="WhatsApp" class="animate__animated animate__bounceIn" />
-  </a>
 </template>
