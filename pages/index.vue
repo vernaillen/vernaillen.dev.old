@@ -12,7 +12,7 @@ setMetaData('Home', false)
 <template>
   <div>
     <NuxtLayout>
-      <main id="home" class="flex flex-col z-10 pt-[140px] pb-[120px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px]">
+      <main id="home" class="flex flex-col z-10 pt-[160px] pb-[100px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px]">
         <div class="container">
           <div class="flex flex-wrap mx-[-16px]">
             <div class="w-full px-4">
