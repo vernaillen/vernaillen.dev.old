@@ -1,29 +1,32 @@
 <script setup lang="ts">
 import SvgLogo from '~/components/svg/svg-logo.svg?component'
-const navbar = reactive({
-  show: false,
-})
-function navbarToggler() {
-  navbar.show = !navbar.show
-}
+import { useMobileNav } from '@/stores/mobileNav'
+const mobileNav = useMobileNav()
+
 const navbarTogglerClass = computed(() => {
-  return navbar.show ? 'navbarTogglerActive' : ''
+  return mobileNav.visible ? 'navbarTogglerActive' : ''
 })
 const navbarCollapseClass = computed(() => {
-  return navbar.show ? '' : 'hidden'
+  return mobileNav.visible ? '' : 'hidden'
 })
+
+const closeNav = () => {
+  setTimeout(() => {
+    mobileNav.hide()
+  }, 400)
+}
 </script>
 
 <template>
-  <header
-    class="header bg-transparent absolute top-0 left-0 z-20 w-full flex items-center"
-  >
-    <div class="container">
-      <div class="flex mx-[-16px] justify-between relative">
-        <div class="pl-8 pr-4 w-60 max-w-full">
-          <NuxtLink to="/" class="w-full block header-logo">
-            <SvgLogo />
-          </NuxtLink>
+  <header class="header bg-transparent absolute top-0 left-0 z-20 h-16 w-full flex items-center transition-all">
+    <div class="container h-16">
+      <div class="lg:flex mx-[-16px]">
+        <div class="lg:pl-8 lg:pr-4 max-w-full">
+          <div class="w-full flex justify-center">
+            <NuxtLink to="/" class="mx-auto">
+              <SvgLogo class="" />
+            </NuxtLink>
+          </div>
         </div>
         <div
           class="flex px-4 justify-between items-center w-full"
@@ -31,54 +34,50 @@ const navbarCollapseClass = computed(() => {
           <div>
             <button
               id="navbarToggler"
-              class="block absolute right-4 top-1/2 translate-y-[-50%] lg:hidden focus:ring-2 ring-primary px-3 py-[6px] rounded-lg"
+              class="block absolute cursor-pointer left-2 top-7 translate-y-[-50%] lg:hidden focus:ring-2 ring-primary px-3 py-[6px] z-30"
               :class="navbarTogglerClass"
-              @click="navbarToggler"
+              @click="mobileNav.toggle()"
             >
-              <span
-                class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white"
-              />
-              <span
-                class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white"
-              />
-              <span
-                class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white"
-              />
+              <span class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white transition" />
+              <span class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white transition" />
+              <span class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white transition" />
             </button>
             <nav
               id="navbarCollapse"
-              class="absolute py-5 lg:py-0 lg:px-4 xl:px-6 bg-white dark:bg-dark lg:dark:bg-transparent lg:bg-transparent shadow-lg rounded-lg max-w-[250px] w-full lg:max-w-full lg:w-full right-4 top-full lg:block lg:static lg:shadow-none"
+              class="fixed w-screen h-screen left-0 right-0 top-0 bottom-0 justify-start
+              bg-white dark:bg-black z-20
+              lg:hidden transition-all"
+              :class="navbarCollapseClass"
+            >
+              <div class="fixed w-screen h-screen flex justify-center pt-28 pb-5 sm:pt-36">
+                <div class="px-0 sm:w-1/3 lg:pl-20 w-full">
+                  <div class="flex justify-center absolute top-0 left-0 right-0 mx-auto">
+                    <NuxtLink to="/" @click="closeNav">
+                      <SvgLogo />
+                    </NuxtLink>
+                  </div>
+                  <nav-bar />
+                </div>
+              </div>
+            </nav>
+
+            <nav
+              id="navbarCollapse"
+              class="hidden absolute py-5 lg:py-0 lg:px-4 xl:px-6
+                bg-white dark:bg-dark lg:dark:bg-transparent lg:bg-transparent
+                shadow-lg rounded-lg max-w-[250px] w-full
+                lg:max-w-full lg:w-full right-4 top-full
+                lg:block lg:static lg:shadow-none"
               :class="navbarCollapseClass"
             >
               <nav-bar />
             </nav>
           </div>
-          <div
-            class="flex justify-end items-center pr-16 lg:pr-0"
-          >
-            <ul class="flex">
-              <!--
-              <li class="relative group">
-                <player-controls />
-              </li>
-              -->
+          <div class="flex justify-end items-center pr-16 lg:pr-0">
+            <ul class="absolute top-2 right-4 z-20">
               <li>
                 <dark-toggler />
               </li>
-              <!--
-              <li class="relative group">
-                <label
-                  for="rss"
-                  class="cursor-pointer w-5 h-14 rounded-full flex items-center justify-center text-dark dark:text-white"
-                >
-                  <a href="/feed.xml" target="_blank">
-                    <Icon
-                      name="material-symbols:rss-feed" size="24" class=" hover:text-primary hover:fill-primary"
-                    />
-                  </a>
-                </label>
-              </li>
-              -->
             </ul>
           </div>
         </div>
@@ -88,16 +87,6 @@ const navbarCollapseClass = computed(() => {
 </template>
 
 <style scoped>
-.header-logo,
-.sticky .header-logo {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-@media (min-width: 960px) {
-  .header-logo svg {
-    width: 130px;
-  }
-}
 button#navbarToggler:hover,
 button#navbarToggler:active,
 button#navbarToggler:focus {

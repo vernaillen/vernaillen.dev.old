@@ -1,5 +1,10 @@
+<script setup lang="ts">
+import { useMobileNav } from '@/stores/mobileNav'
+const mobileNav = useMobileNav()
+</script>
+
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div v-if="!mobileNav.visible" class="flex flex-col min-h-screen">
     <div class="flex-grow">
       <slot />
     </div>

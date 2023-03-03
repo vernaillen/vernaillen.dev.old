@@ -8,7 +8,7 @@ const props = defineProps({
 })
 const darkTogglerClass = props.inline
   ? 'inline-block w-5 h-5'
-  : 'flex w-10 h-14'
+  : 'flex w-10 h-10'
 
 const colorMode = useColorMode()
 const toggleColorMode = () => {
@@ -33,7 +33,7 @@ const iconClass = (color: string) => {
         :key="color"
         :class="iconClass(color)"
         :name="`material-symbols:${color}-mode`" size="1.5em"
-        class="absolute top-4 right-[80px] cursor-pointer hover:text-primary hover:fill-primary"
+        class="absolute cursor-pointer hover:text-primary hover:fill-primary"
         @click="toggleColorMode"
       />
     </ClientOnly>

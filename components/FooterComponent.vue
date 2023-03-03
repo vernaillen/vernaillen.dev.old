@@ -38,16 +38,16 @@ function scrollToTop() {
 
 onMounted(() => {
   window.onscroll = function () {
-    const ud_header = document.querySelector('.header') as HTMLElement
-    // const ud_footer = document.querySelector('footer') as HTMLElement
-    if (ud_header) {
-      if (window.scrollY > 50)
-        ud_header.classList.add('sticky')
-        // ud_footer.classList.add('sticky')
+    const headerElement = document.querySelector('.header') as HTMLElement
+    // const footerElement = document.querySelector('footer') as HTMLElement
+    if (headerElement) {
+      if (window.scrollY > 40)
+        headerElement.classList.add('sticky')
+        // footerElement.classList.add('sticky')
 
       else
-        ud_header.classList.remove('sticky')
-        // ud_footer.classList.remove('sticky')
+        headerElement.classList.remove('sticky')
+        // footerElement.classList.remove('sticky')
 
       // show or hide the back-top-top button
       const backToTop = document.querySelector('.back-to-top') as HTMLElement
@@ -64,20 +64,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <footer
-    class="bottom-0 left-0 right-0 pt-0"
-  >
-    <div>
-      <div class="flex flex-wrap mx-[-16px]">
-        <div class="w-full px-4 z-[9999]">
-          <!--
-          <div class="flex justify-center">
-            <player-controls />
-          </div>
-          -->
-        </div>
-      </div>
-    </div>
+  <footer class="bottom-0 left-0 right-0 pt-0">
     <div class="py-8 bg-primary bg-opacity-5">
       <div class="flex mb-4 justify-center">
         <social-icons />
@@ -93,18 +80,10 @@ onMounted(() => {
     <div class="absolute left-0 bottom-5 z-[-1]">
       <SvgFooter />
     </div>
-
-    <!--
-    <div class="relative">
-      <client-only>
-        <my-audio-motion-analyzer class="opacity-75" />
-      </client-only>
-    </div>
-        -->
   </footer>
   <a
     href="javascript:void(0)"
-    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-6 left-auto z-[9999] hover:shadow-signUp hover:bg-opacity-80 shadow-md animate__animated animate__slideInUp"
+    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-6 left-auto z-20 hover:shadow-signUp hover:bg-opacity-80 shadow-md animate__animated animate__slideInUp"
     @click="scrollToTop()"
   >
     <span
