@@ -19,6 +19,7 @@
     "vee-validate": "^4.7.4",
     "vite-plugin-vue-audiomotion": "^0.1.4",
     "vue-easy-lightbox": "^1.14.0",
+    "vue-gtag": "^2.0.1",
     "vue-recaptcha-v3": "^2.0.1",
     "yup": "^1.0.2"
   },
