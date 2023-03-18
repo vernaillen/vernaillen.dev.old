@@ -19,7 +19,7 @@ const updateImageUrl = async (colorPref: string) => {
   }
   if (props.post.thumbnail)
     imageUrl.value = props.post.thumbnail
-  await new Promise(res => setTimeout(res, 100))
+  await new Promise(resolve => setTimeout(resolve, 100))
   imageClass.value = ''
 }
 onMounted(() => {

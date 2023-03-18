@@ -1,5 +1,7 @@
 {
   "recommendations": [
-    "antfu.vite"
+    "antfu.vite",
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin"
   ]
 }

@@ -1,4 +1,4 @@
-import { dirname } from 'path'
+import { dirname } from 'node:path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
@@ -31,7 +31,7 @@ async function buildBlogRSS() {
     description: 'Wouter Vernaillen\' Blog',
     id: 'https://vernaillen.dev/',
     link: 'https://vernaillen.dev/',
-    copyright: 'CC BY-NC-SA 4.0 2022 © Wouter Vernaillen',
+    copyright: 'CC BY-NC-SA 4.0 2023 © Wouter Vernaillen',
     feedLinks: {
       json: 'https://vernaillen.dev/feed.json',
       atom: 'https://vernaillen.dev/feed.atom',
