@@ -8,6 +8,7 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     href="https://github.com/vernaillen/"
     target="_blank"
     title="GitHub"
+    rel="me"
   >
     <Icon name="mdi:github" alt="GitHub" class="animate__animated animate__bounceIn" />
   </NuxtLink>
@@ -16,6 +17,7 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     href="https://www.linkedin.com/in/woutervernaillen/"
     target="_blank"
     title="LinkedIn"
+    rel="me"
   >
     <Icon name="mdi:linkedin" alt="LinkedIn" class="animate__animated animate__bounceIn" />
   </NuxtLink>
@@ -24,15 +26,16 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     href="https://twitter.com/vernaillen"
     target="_blank"
     title="Twitter"
+    rel="me"
   >
     <Icon name="mdi:twitter" alt="Twitter" class="animate__animated animate__bounceIn" />
   </NuxtLink>
   <NuxtLink
     :class="cssClass"
     href="https://fosstodon.org/@vernaillen"
-    rel="me"
     target="_blank"
     title="Mastodon"
+    rel="me"
   >
     <Icon name="mdi:mastodon" alt="Mastodon" class="animate__animated animate__bounceIn" />
   </NuxtLink>
