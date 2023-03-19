@@ -24,9 +24,9 @@ watch(gitHubData, (newGHData) => {
 
 <template>
   <div>
-    <a :href="viewLink" target="_blank">
+    <NuxtLink :href="viewLink" target="_blank">
       <Icon name="mdi:github" class="ml-1 mr-2" />
-    </a>
+    </NuxtLink>
     last updated on&nbsp;
     <Icon
       v-if="!lastUpdated"
@@ -34,11 +34,13 @@ watch(gitHubData, (newGHData) => {
       class="animate-spin"
       size="16"
     />
-    <a
+    <NuxtLink
       v-if="lastUpdated"
       :href="viewLink"
       target="_blank"
       class="animate-pulse"
-    >{{ longDateFormat(lastUpdated) }}</a>
+    >
+      {{ longDateFormat(lastUpdated) }}
+    </NuxtLink>
   </div>
 </template>

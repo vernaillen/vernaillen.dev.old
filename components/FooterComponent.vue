@@ -73,7 +73,9 @@ onMounted(() => {
         <p class="text-body-color text-base text-center">
           &copy; {{ currentYear() }} Wouter Vernaillen - Vernaillen Consulting
           BV -
-          <a href="https://harmonics.be" target="_blank" rel="noopener">Harmonics BV</a>
+          <NuxtLink href="https://harmonics.be" target="_blank">
+            Harmonics BV
+          </NuxtLink>
         </p>
       </div>
     </div>
@@ -81,7 +83,7 @@ onMounted(() => {
       <SvgFooter />
     </div>
   </footer>
-  <a
+  <NuxtLink
     href="javascript:void(0)"
     class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-6 left-auto z-20 hover:shadow-signUp hover:bg-opacity-80 shadow-md animate__animated animate__slideInUp"
     @click="scrollToTop()"
@@ -89,7 +91,7 @@ onMounted(() => {
     <span
       class="w-3 h-3 border-t border-l border-white rotate-45 mt-[6px]"
     />
-  </a>
+  </NuxtLink>
 </template>
 
 <style scoped>

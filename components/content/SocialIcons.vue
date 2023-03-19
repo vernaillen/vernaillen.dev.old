@@ -3,34 +3,31 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
 </script>
 
 <template>
-  <a
+  <NuxtLink
     :class="cssClass"
     href="https://github.com/vernaillen/"
-    rel="noopener"
     target="_blank"
     title="GitHub"
   >
     <Icon name="mdi:github" alt="GitHub" class="animate__animated animate__bounceIn" />
-  </a>
-  <a
+  </NuxtLink>
+  <NuxtLink
     :class="cssClass"
     href="https://www.linkedin.com/in/woutervernaillen/"
-    rel="noopener"
     target="_blank"
     title="LinkedIn"
   >
     <Icon name="mdi:linkedin" alt="LinkedIn" class="animate__animated animate__bounceIn" />
-  </a>
-  <a
+  </NuxtLink>
+  <NuxtLink
     :class="cssClass"
     href="https://twitter.com/vernaillen"
-    rel="noopener"
     target="_blank"
     title="Twitter"
   >
     <Icon name="mdi:twitter" alt="Twitter" class="animate__animated animate__bounceIn" />
-  </a>
-  <a
+  </NuxtLink>
+  <NuxtLink
     :class="cssClass"
     href="https://fosstodon.org/@vernaillen"
     rel="me"
@@ -38,5 +35,5 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     title="Mastodon"
   >
     <Icon name="mdi:mastodon" alt="Mastodon" class="animate__animated animate__bounceIn" />
-  </a>
+  </NuxtLink>
 </template>

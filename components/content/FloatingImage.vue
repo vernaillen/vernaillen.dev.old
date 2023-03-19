@@ -20,7 +20,9 @@ withDefaults(defineProps<Props>(), {
   <div :class="cssClass">
     <NuxtImg :modifiers="modifiers" :src="src" :width="width" :height="height" :alt="caption" :title="caption" class="!mt-0 rounded-md" :class="imageShadow ? 'shadow-md shadow-gray-400' : ''" />
     <p v-if="caption" class="caption text-xs w-full text-center mt-0">
-      <a v-if="captionUrl" :href="captionUrl" target="_blank" :alt="caption" :title="caption">{{ caption }}</a>
+      <NuxtLink v-if="captionUrl" :href="captionUrl" target="_blank" :alt="caption" :title="caption">
+        {{ caption }}
+      </NuxtLink>
       <span v-else>{{ caption }}</span>
     </p>
   </div>
