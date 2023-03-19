@@ -48,6 +48,7 @@ const closeNav = () => {
               bg-white dark:bg-black z-20
               lg:hidden transition-all"
               :class="navbarCollapseClass"
+              aria-label="mobile-nav"
             >
               <div class="fixed w-screen h-screen flex justify-center pt-28 pb-5 sm:pt-36">
                 <div class="px-0 sm:w-1/3 lg:pl-20 w-full">
@@ -69,6 +70,7 @@ const closeNav = () => {
                 lg:max-w-full lg:w-full right-4 top-full
                 lg:block lg:static lg:shadow-none"
               :class="navbarCollapseClass"
+              aria-label="desktop-nav"
             >
               <nav-bar />
             </nav>

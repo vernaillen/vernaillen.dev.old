@@ -14,7 +14,7 @@ const audioPlayer = useAudioPlayer()
 const isLoaded = ref(false)
 
 async function checkIsBufferLoaded() {
-  (await audioPlayer) && (await audioPlayer.isLoaded())
+  (audioPlayer) && (await audioPlayer.isLoaded())
   isLoaded.value = true
 }
 checkIsBufferLoaded()
