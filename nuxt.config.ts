@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
+    'nuxt-gtag',
     'nuxt-icon',
     'nuxt-svgo',
     'nuxt-vitest',
@@ -24,6 +25,9 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillendev',
     },
+  },
+  gtag: {
+    id: 'G-7E8842XFRB',
   },
   colorMode: {
     classSuffix: '',
