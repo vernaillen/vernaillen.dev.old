@@ -9,12 +9,6 @@ const navbarTogglerClass = computed(() => {
 const navbarCollapseClass = computed(() => {
   return mobileNav.visible ? '' : 'hidden'
 })
-
-const closeNav = () => {
-  setTimeout(() => {
-    mobileNav.hide()
-  }, 400)
-}
 </script>
 
 <template>
@@ -53,7 +47,7 @@ const closeNav = () => {
               <div class="fixed w-screen h-screen flex justify-center pt-28 pb-5 sm:pt-36">
                 <div class="px-0 sm:w-1/3 lg:pl-20 w-full">
                   <div class="flex justify-center absolute top-0 left-0 right-0 mx-auto">
-                    <NuxtLink to="/" @click="closeNav">
+                    <NuxtLink to="/">
                       <SvgLogo />
                     </NuxtLink>
                   </div>

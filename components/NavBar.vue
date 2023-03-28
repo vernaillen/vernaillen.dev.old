@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useMobileNav } from '@/stores/mobileNav'
-const mobileNav = useMobileNav()
-
 const linkClass = (path: string) => {
   const currentRoute = useRoute().path
   let classToAdd = ''
@@ -11,11 +8,6 @@ const linkClass = (path: string) => {
   )
     classToAdd = 'router-link-active'
   return classToAdd
-}
-const closeNav = () => {
-  setTimeout(() => {
-    mobileNav.hide()
-  }, 400)
 }
 </script>
 
@@ -32,7 +24,6 @@ const closeNav = () => {
         bg-opacity-0
         lg:border-t lg:border-l-0 lg:border-r-0"
         :class="linkClass(item.path)"
-        @click="closeNav"
       >
         {{ item.title }}
       </NuxtLink>
