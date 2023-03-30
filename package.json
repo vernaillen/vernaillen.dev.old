@@ -25,7 +25,7 @@
     "pinia": "^2.0.33",
     "prism-theme-vars": "^0.2.4",
     "vee-validate": "^4.8.4",
-    "vite-plugin-vue-audiomotion": "^0.1.4",
+    "vite-plugin-vue-audiomotion": "^1.0.0",
     "vue-easy-lightbox": "^1.15.0",
     "vue-recaptcha-v3": "^2.0.1",
     "yup": "^1.0.2"
