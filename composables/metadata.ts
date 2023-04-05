@@ -1,4 +1,4 @@
-export const setMetaData = (pageTitle: string, documentDriven: boolean) => {
+export function setMetaData(pageTitle: string, documentDriven: boolean) {
   if (!documentDriven) {
     useHead({
       title: pageTitle,

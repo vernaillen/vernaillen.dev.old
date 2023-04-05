@@ -1,6 +1,6 @@
 import type { CareerStep } from '~~/types'
 
-export const useCareer = (): CareerStep[] => {
+export function useCareer(): CareerStep[] {
   return [
     {
       client: 'Harmonics',

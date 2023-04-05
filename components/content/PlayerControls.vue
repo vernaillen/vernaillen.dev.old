@@ -19,7 +19,7 @@ async function checkIsBufferLoaded() {
 }
 checkIsBufferLoaded()
 
-const back = () => {
+function back() {
   const wasPlaying = playerState.isPlaying
   audioPlayer.load()
   if (wasPlaying)

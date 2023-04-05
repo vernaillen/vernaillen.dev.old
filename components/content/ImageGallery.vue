@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useLightbox } from '@/stores/lightbox'
+
 const props = defineProps({
   folder: {
     type: String,
@@ -23,7 +24,7 @@ Object.values(import.meta.glob('/public/images/**')).forEach((imageModule) => {
     images.push(imageModule.name.substring('/public'.length))
 })
 
-const openGallery = (i: number) => {
+function openGallery(i: number) {
   lightbox.setImages(images)
   lightbox.show(i)
 }

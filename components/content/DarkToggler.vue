@@ -11,10 +11,10 @@ const darkTogglerClass = props.inline
   : 'flex w-10 h-10'
 
 const colorMode = useColorMode()
-const toggleColorMode = () => {
+function toggleColorMode() {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
-const iconClass = (color: string) => {
+function iconClass(color: string) {
   if (colorMode.value === color)
     return 'opacity-50 hover:opacity-100'
   return 'opacity-0 hover:opacity-0'

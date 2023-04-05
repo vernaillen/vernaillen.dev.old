@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SvgLogo from '~/components/svg/svg-logo.svg?component'
 import { useMobileNav } from '@/stores/mobileNav'
+
 const mobileNav = useMobileNav()
 
 const navbarTogglerClass = computed(() => {

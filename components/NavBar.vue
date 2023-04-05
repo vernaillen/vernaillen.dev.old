@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const linkClass = (path: string) => {
+function linkClass(path: string) {
   const currentRoute = useRoute().path
   let classToAdd = ''
   if (

@@ -19,7 +19,7 @@ const { value: message, errorMessage: messageError } = useField('message')
 
 const recaptchaResponse = ref(null)
 const { executeRecaptcha, recaptchaLoaded } = useReCaptcha()
-const recaptcha = async () => {
+async function recaptcha() {
   await recaptchaLoaded()
   const token = await executeRecaptcha('login')
   recaptchaResponse.value.value = token

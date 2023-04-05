@@ -9,7 +9,7 @@ const colorMode = useColorMode()
 const imageUrl = ref('/images/blog/placeholder.png')
 const imageClass = ref('imgPlaceholder')
 
-const updateImageUrl = async (colorPref: string) => {
+async function updateImageUrl(colorPref: string) {
   imageClass.value = 'imgPlaceholder'
   if (props.post.thumbnail_dark && props.post.thumbnail_light) {
     if (colorPref === 'dark')

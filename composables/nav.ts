@@ -1,6 +1,6 @@
 import type { NavItem } from '~~/types'
 
-export const useNavItems = (): NavItem[] => {
+export function useNavItems(): NavItem[] {
   return [
     { path: '/', title: 'Home' },
     { path: '/blog', title: 'Blog' },

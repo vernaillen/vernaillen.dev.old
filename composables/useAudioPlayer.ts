@@ -1,6 +1,6 @@
 import { AudioPlayer } from '~~/types/audio'
 
 const audioPlayer = new AudioPlayer()
-export const useAudioPlayer = () => {
+export function useAudioPlayer() {
   return audioPlayer
 }

@@ -6,7 +6,7 @@ const { page } = useContent()
 const route = useRoute()
 useRouter()
 
-const prose = () => {
+function prose() {
   if (page.value.disableProse)
     return ''
   return 'prose'
