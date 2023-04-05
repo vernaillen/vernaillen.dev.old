@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useMobileNav } from '@/stores/mobileNav'
+
+const mobileNav = useMobileNav()
 useHead({
   titleTemplate: (title?: string) => `${title} - Wouter Vernaillen: Freelance Full Stack Java, Vue & Nuxt Developer`,
   htmlAttrs: {
@@ -14,6 +17,9 @@ useHead({
       type: 'image/svg+xml',
     },
   ],
+})
+onMounted(() => {
+  window.addEventListener('resize', () => mobileNav.hide())
 })
 </script>
 
