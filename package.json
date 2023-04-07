@@ -20,6 +20,7 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run build && pnpm run coverage && pnpm run cy:local"
   },
   "dependencies": {
+    "@nuxtjs/plausible": "^0.2.0",
     "@pinia/nuxt": "^0.4.7",
     "animate.css": "^4.1.1",
     "pinia": "^2.0.33",

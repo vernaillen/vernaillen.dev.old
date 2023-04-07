@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
+    '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'nuxt-gtag',
@@ -28,6 +29,9 @@ export default defineNuxtConfig({
   },
   gtag: {
     id: 'G-7E8842XFRB',
+  },
+  plausible: {
+    apiHost: 'https://www.vernaillen.dev/plio',
   },
   colorMode: {
     classSuffix: '',
