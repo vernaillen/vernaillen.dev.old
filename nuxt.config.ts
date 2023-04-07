@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-gtag',
     'nuxt-icon',
     'nuxt-svgo',
     'nuxt-vitest',
@@ -26,9 +25,6 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillendev',
     },
-  },
-  gtag: {
-    id: 'G-7E8842XFRB',
   },
   plausible: {
     apiHost: 'https://www.vernaillen.dev/plio',

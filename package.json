@@ -43,7 +43,6 @@
     "cypress": "^12.9.0",
     "eslint": "^8.37.0",
     "nuxt": "^3.3.3",
-    "nuxt-gtag": "^0.4.0",
     "nuxt-icon": "^0.3.3",
     "nuxt-svgo": "^1.1.0",
     "nuxt-vitest": "^0.6.9",
