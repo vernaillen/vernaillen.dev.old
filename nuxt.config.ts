@@ -11,27 +11,33 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     'nuxt-vitest',
   ],
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+
   css: [
     '~/assets/css/markdown.css',
     '~/assets/css/main.css',
     '~/assets/css/prose.css',
     'animate.css/animate.min.css',
   ],
+
   image: {
     provider: 'twicpics',
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillendev',
     },
   },
+
   plausible: {
     apiHost: 'https://www.vernaillen.dev/plio',
   },
+
   colorMode: {
     classSuffix: '',
   },
+
   content: {
     documentDriven: true,
     markdown: {
@@ -47,4 +53,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  devtools: { enabled: true },
 })
