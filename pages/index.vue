@@ -46,6 +46,17 @@ setMetaData('Home', false)
             </div>
           </div>
         </div>
+
+        <section id="instagram" class="container mx-auto pt-44 px-10">
+          <div class="flex flex-wrap justify-center">
+            <NuxtLink to="https://www.instagram.com/woutervernaillen/" target="_blank">
+              <Icon name="mdi:instagram" class="block text-gray-500 hover:text-primary" size="24" />
+            </NuxtLink>
+          </div>
+          <div class="flex flex-wrap justify-center mx-[-34px]">
+            <InstagramIframeLocal />
+          </div>
+        </section>
         <div class="svg-right absolute top-0 right-0 left-1/2 lg:left-auto pl-8 sm:pl-14 z-[-1] overflow-hidden">
           <SvgHomeRight />
         </div>
@@ -56,3 +67,10 @@ setMetaData('Home', false)
     </NuxtLayout>
   </div>
 </template>
+
+<style>
+#iframeLoadingSpinner > div > svg {
+ color: white;
+ fill: white;
+}
+</style>

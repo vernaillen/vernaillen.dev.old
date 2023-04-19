@@ -21,14 +21,18 @@ useHead({
 onMounted(() => {
   window.addEventListener('resize', () => mobileNav.hide())
 })
+const route = useRoute()
+const isIG = computed(() => {
+  return route.path.startsWith('/instagram')
+})
 </script>
 
 <template>
-  <NuxtLoadingIndicator color="repeating-linear-gradient(to right,rgb(156 142 27/40%) 0%,rgb(156 142 27/60%) 80%,rgb(156 142 27/40%) 100%)" />
-  <header-component />
+  <NuxtLoadingIndicator v-if="!isIG" color="repeating-linear-gradient(to right,rgb(156 142 27/40%) 0%,rgb(156 142 27/60%) 80%,rgb(156 142 27/40%) 100%)" />
+  <header-component v-if="!isIG" />
   <NuxtPage />
-  <footer-component />
-  <easy-lightbox />
+  <footer-component v-if="!isIG" />
+  <easy-lightbox v-if="!isIG" />
 </template>
 
 <style>
