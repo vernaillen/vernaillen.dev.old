@@ -1,6 +1,6 @@
 [build.environment]
   NPM_FLAGS = "--version"
-  NODE_VERSION = "19"
+  NODE_VERSION = "20"
   
 [build]
   publish = "dist"
@@ -12,9 +12,3 @@
   [[plugins.inputs.audits]]
     url = "https://vernaillen.dev"
 
-[[redirects]]
-  from = "/.well-known/host-meta?"
-  to = "https://mastodon.vernaillen.dev/.well-known/host-meta?"
-  status = 301
-  force = false
-  query = {path = ":path"}
