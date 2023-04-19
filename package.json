@@ -50,7 +50,7 @@
     "nuxt-icon": "^0.3.3",
     "nuxt-svgo": "1.2.1",
     "nuxt-vitest": "^0.6.10",
-    "postcss": "^8.4.22",
+    "postcss": "^8.4.23",
     "remark-breaks": "^3.0.2",
     "remark-directive-rehype": "^0.4.2",
     "start-server-and-test": "^2.0.0",
