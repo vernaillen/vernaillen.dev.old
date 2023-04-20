@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { iframeResize } from 'iframe-resizer'
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue'
 
 const iframeRef = ref()
 onMounted(() => {
@@ -29,3 +29,17 @@ onMounted(() => {
     class="w-full lg:w-2/3 xl:1/2"
   />
 </template>
+
+<style>
+#sb_instagram .sbi_follow_btn a {
+  @apply !text-white !rounded-lg !font-medium !bg-primary !py-2 !px-3 !shadow-none
+}
+
+#sb_instagram .sbi_follow_btn a:hover {
+  @apply !bg-opacity-80
+}
+
+#sb_instagram #sbi_images .sbi_inner_wrap {
+  @apply !rounded-lg !shadow-md
+}
+</style>
