@@ -9,9 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
     '@nuxtjs/plausible',
-    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-icon',
     'nuxt-svgo',
     'nuxt-vitest',
   ],
@@ -24,7 +22,6 @@ export default defineNuxtConfig({
     '~/assets/css/markdown.css',
     '~/assets/css/main.css',
     '~/assets/css/prose.css',
-    'animate.css/animate.min.css',
   ],
 
   image: {
