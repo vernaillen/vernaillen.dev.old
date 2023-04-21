@@ -82,8 +82,8 @@ devDependencies:
     specifier: ^0.3.3
     version: 0.3.3(vue@3.2.47)
   nuxt-svgo:
-    specifier: 1.2.1
-    version: 1.2.1(svgo-loader@4.0.0)(vue-loader@17.0.1)(vue-svg-loader@0.17.0-beta.2)
+    specifier: 2.0.0
+    version: 2.0.0(svgo-loader@4.0.0)(vue-loader@17.0.1)(vue-svg-loader@0.17.0-beta.2)
   nuxt-vitest:
     specifier: ^0.6.10
     version: 0.6.10(@vitejs/plugin-vue-jsx@3.0.1)(@vitejs/plugin-vue@4.1.0)(vite@4.3.0)(vue@3.2.47)
@@ -1116,8 +1116,8 @@ packages:
       nuxt: ^3.3.1
       vite: '*'
     dependencies:
-      '@nuxt/kit': 3.4.1
-      '@nuxt/schema': 3.4.1
+      '@nuxt/kit': 3.4.2
+      '@nuxt/schema': 3.4.2
       execa: 7.1.1
       nuxt: 3.4.2(@types/node@18.15.12)(eslint@8.38.0)(typescript@5.0.4)
       vite: 4.3.0(@types/node@18.15.12)
@@ -1211,11 +1211,11 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/kit-edge@3.4.3-28033322.607bfdcf:
-    resolution: {integrity: sha512-yueCsMPhox0cNpe4lfgk1LL3/nmGKV1jZm8O6vbRDdgloNMd6xyENjWJ6OtbtY6HxZ2o1H0XhJ4FlnVO0nKK8A==}
+  /@nuxt/kit-edge@3.4.3-28033806.f1ded44e:
+    resolution: {integrity: sha512-eQqp9oDLD4kGYBAOZo4dzARwO4o+dT6FZVjwko1xf4MfCLPQ7Q9o5u71tJIUfMcP+ouXBl7qUoumitP/XFL06A==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
-      '@nuxt/schema': /@nuxt/schema-edge@3.4.3-28033322.607bfdcf
+      '@nuxt/schema': /@nuxt/schema-edge@3.4.3-28033806.f1ded44e
       c12: 1.4.1
       consola: 3.1.0
       defu: 6.1.2
@@ -1304,8 +1304,8 @@ packages:
     transitivePeerDependencies:
       - webpack
 
-  /@nuxt/schema-edge@3.4.3-28033322.607bfdcf:
-    resolution: {integrity: sha512-8L86P9e5rxIieNn7qiWYUEznpmn6KKCjQGbUxdux28rlN+3fRJ2w5EL8VVywrZkDJRkrFUBShs0dPcc2n7oPuw==}
+  /@nuxt/schema-edge@3.4.3-28033806.f1ded44e:
+    resolution: {integrity: sha512-jD23RQ1Vjm9XakTcvU+cwXJJgXasqysBV9AYKM4Pk+67nABRrDLExXI2s5Wohx75EZ0MyfDiHrYm5UL4HgNkgQ==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
       defu: 6.1.2
@@ -7567,7 +7567,7 @@ packages:
   /nuxt-config-schema@0.4.5:
     resolution: {integrity: sha512-Y5anu5puDfMJfDP7IYjXsn6Dvj262HtjZqa73jCBbFRCc5jnjrs+BEpJJmtPG32ZsqzO2+RL4oTNb3H6IfKZLQ==}
     dependencies:
-      '@nuxt/kit': 3.4.1
+      '@nuxt/kit': 3.4.2
       changelogen: 0.4.1
       defu: 6.1.2
       jiti: 1.18.2
@@ -7588,16 +7588,17 @@ packages:
       - supports-color
       - vue
 
-  /nuxt-svgo@1.2.1(svgo-loader@4.0.0)(vue-loader@17.0.1)(vue-svg-loader@0.17.0-beta.2):
-    resolution: {integrity: sha512-eucsybsji/nDWS3GkUhTIzvPQiWVgABhVCpJnePlqPiYhMhFd6FccZZ9t4aDBWq/bQwlUuegH2JAY/i0s2Jnbg==}
+  /nuxt-svgo@2.0.0(svgo-loader@4.0.0)(vue-loader@17.0.1)(vue-svg-loader@0.17.0-beta.2):
+    resolution: {integrity: sha512-FsMJlqbxxPXHcmoVUCgrQdH4YuMdrd6qe8ExlKMjH5hW6szUQYCshKKtbhT+XtUK9VMfUwU46lSZ2NSkW0INwA==}
     peerDependencies:
       svgo-loader: ^4.0.0
       vue-loader: ^17.0.0
       vue-svg-loader: 0.17.0-beta.2
     dependencies:
-      '@nuxt/kit': /@nuxt/kit-edge@3.4.3-28033322.607bfdcf
+      '@nuxt/kit': /@nuxt/kit-edge@3.4.3-28033806.f1ded44e
+      '@vue/compiler-sfc': 3.2.47
+      svgo: 3.0.2
       svgo-loader: 4.0.0
-      vite-svg-loader: 4.0.0
       vue-loader: 17.0.1(vue@3.2.47)(webpack@5.80.0)
       vue-svg-loader: 0.17.0-beta.2(vue@3.2.47)
     transitivePeerDependencies:
@@ -10679,13 +10680,6 @@ packages:
       - supports-color
     dev: true
 
-  /vite-svg-loader@4.0.0:
-    resolution: {integrity: sha512-0MMf1yzzSYlV4MGePsLVAOqXsbF5IVxbn4EEzqRnWxTQl8BJg/cfwIzfQNmNQxZp5XXwd4kyRKF1LytuHZTnqA==}
-    dependencies:
-      '@vue/compiler-sfc': 3.2.47
-      svgo: 3.0.2
-    dev: true
-
   /vite@4.2.2(@types/node@18.15.11):
     resolution: {integrity: sha512-PcNtT5HeDxb3QaSqFYkEum8f5sCVe0R3WK20qxgIvNBZPXU/Obxs/+ubBMeE7nLWeCo2LDzv+8hRYSlcaSehig==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -10793,7 +10787,7 @@ packages:
       vitest: ^0.24.5 || ^0.26.0 || ^0.27.0 || ^0.28.0 || ^0.29.0 || ^0.30.0
       vue: ^3.2.45
     dependencies:
-      '@nuxt/kit': 3.4.1
+      '@nuxt/kit': 3.4.2
       '@vue/test-utils': 2.3.2(vue@3.2.47)
       estree-walker: 3.0.3
       h3: 1.6.4
