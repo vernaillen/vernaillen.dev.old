@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useMobileNav } from '@/stores/mobileNav'
+import { useRoute } from '#imports'
 
 const mobileNav = useMobileNav()
 useHead({
