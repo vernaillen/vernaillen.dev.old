@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     './app.vue',
+    './assets/svg/*.svg',
     './components/*.{vue,svg}',
     './components/**/*.{vue,svg}',
     './layouts/**/*.{vue,svg}',

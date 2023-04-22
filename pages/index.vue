@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import SvgHomeLeft from '@/components/svg/svg-home-left.svg?component'
-import SvgHomeRight from '@/components/svg/svg-home-right.svg?component'
-import SvgNuxtIconGreen from '@/components/svg/svg-nuxt-icon-green.svg?component'
-
 definePageMeta({
   documentDriven: false,
 })
@@ -25,7 +21,7 @@ setMetaData('Home', false)
                 </p>
                 <p class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10">
                   Java, Spring, Vue, Nuxt <NuxtLink href="https://nuxt.com" target="_blank">
-                    <SvgNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" viewBox="0 0 900 900" />
+                    <SvgoNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" viewBox="0 0 900 900" />
                   </NuxtLink> + DevOps
                 </p>
                 <div id="action-buttons" class="flex items-center justify-center mt-10">
@@ -47,7 +43,7 @@ setMetaData('Home', false)
           </div>
         </div>
 
-        <section id="instagram" class="container mx-auto pt-44 px-10">
+        <section id="instagram" class="container mx-auto pt-52 px-10">
           <div class="flex flex-wrap justify-center">
             <NuxtLink to="https://www.instagram.com/woutervernaillen/" target="_blank">
               <Icon name="mdi:instagram" class="block text-gray-500 hover:text-primary" size="24" />
@@ -57,11 +53,11 @@ setMetaData('Home', false)
             <InstagramIframeLocal />
           </div>
         </section>
-        <div class="svg-right absolute top-0 right-0 left-1/2 lg:left-auto pl-8 sm:pl-14 z-[-1] overflow-hidden">
-          <SvgHomeRight />
+        <div class="svg-right absolute top-0 right-0 left-1/2 lg:left-2/3 pl-8 sm:pl-14 z-[-1] overflow-hidden">
+          <SvgoHomeRight class="w-full" />
         </div>
-        <div class="svg-left absolute bottom-20 left-10 z-[-1] opacity-30 hidden md:block overflow-hidden">
-          <SvgHomeLeft />
+        <div class="svg-left absolute bottom-24 left-10 z-[-1] opacity-30 block overflow-hidden">
+          <SvgoHomeLeft class="w-full" />
         </div>
       </main>
     </NuxtLayout>

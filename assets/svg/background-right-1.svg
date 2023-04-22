@@ -18,12 +18,12 @@
     />
     <defs>
         <linearGradient
-        id="paint0_linear_0:1"
-        x1="644"
-        y1="221"
-        x2="429.946"
-        y2="37.0429"
-        gradientUnits="userSpaceOnUse"
+            id="paint0_linear_0:1"
+            x1="644"
+            y1="221"
+            x2="429.946"
+            y2="37.0429"
+            gradientUnits="userSpaceOnUse"
         >
         <stop :stop-color="$primaryColor" />
         <stop
@@ -33,12 +33,12 @@
         />
         </linearGradient>
         <linearGradient
-        id="paint1_linear_0:1"
-        x1="18.3648"
-        y1="166.016"
-        x2="105.377"
-        y2="32.3398"
-        gradientUnits="userSpaceOnUse"
+            id="paint1_linear_0:1"
+            x1="18.3648"
+            y1="166.016"
+            x2="105.377"
+            y2="32.3398"
+            gradientUnits="userSpaceOnUse"
         >
         <stop :stop-color="$primaryColor" />
         <stop

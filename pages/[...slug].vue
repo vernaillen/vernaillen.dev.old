@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import SvgBackgroundLeft1 from '@/components/svg/svg-background-left-1.svg?component'
-import SvgBackgroundRight1 from '@/components/svg/svg-background-right-1.svg?component'
-
 const { page } = useContent()
 const route = useRoute()
 useRouter()
@@ -76,11 +73,11 @@ else setResponseStatus(404)
             </div>
           </div>
           <div>
-            <span class="absolute top-0 left-0 z-[-1] animate__animated animate__fadeIn">
-              <SvgBackgroundLeft1 />
+            <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
+              <SvgoBackgroundLeft1 class="w-full" />
             </span>
-            <span class="absolute right-0 top-0 z-[-1] animate__animated animate__fadeIn">
-              <SvgBackgroundRight1 />
+            <span class="absolute right-[-160px] top-10 z-[-1] animate__animated animate__fadeIn">
+              <SvgoBackgroundRight1 class="w-full" />
             </span>
           </div>
         </section>
@@ -116,6 +113,9 @@ else setResponseStatus(404)
           </div>
         </section>
         <PreviousNextPost v-if="page && page.isNews" />
+        <div class="absolute left-0 bottom-5 z-[-1]">
+          <SvgoFooter class="w-20" />
+        </div>
       </main>
     </NuxtLayout>
   </div>

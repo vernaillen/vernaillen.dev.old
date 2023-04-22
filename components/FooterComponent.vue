@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import SvgFooter from '@/components/svg/svg-footer.svg?component'
-
 function easeInOutQuad(
   currentTime: number,
   start: number,
@@ -78,9 +76,6 @@ onMounted(() => {
           </NuxtLink>
         </p>
       </div>
-    </div>
-    <div class="absolute left-0 bottom-5 z-[-1]">
-      <SvgFooter />
     </div>
   </footer>
   <NuxtLink

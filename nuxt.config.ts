@@ -31,6 +31,11 @@ export default defineNuxtConfig({
     },
   },
 
+  svgo: {
+    autoImportPath: './assets/svg/',
+    simpleAutoImport: true,
+  },
+
   plausible: {
     apiHost: 'https://www.vernaillen.dev/plio',
   },

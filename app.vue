@@ -1,3 +1,5 @@
+/// <reference types="vite-svg-loader" />
+
 <script setup lang="ts">
 import { useMobileNav } from '@/stores/mobileNav'
 import { useRoute } from '#imports'

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import SvgBackgroundLeft1 from '@/components/svg/svg-background-left-1.svg?component'
-import SvgBackgroundRight1 from '@/components/svg/svg-background-right-1.svg?component'
-
 const { data: posts } = await useLazyAsyncData('posts', () =>
   queryContent('/blog')
     .where({ news: true })
@@ -37,11 +34,11 @@ setMetaData('Blog', false)
         </div>
 
         <div>
-          <span class="absolute top-0 left-0 z-[-1]">
-            <SvgBackgroundLeft1 />
+          <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
+            <SvgoBackgroundLeft1 class="w-full" />
           </span>
-          <span class="absolute right-0 top-0 z-[-1]">
-            <SvgBackgroundRight1 />
+          <span class="absolute right-[-160px] top-10 z-[-1] animate__animated animate__fadeIn">
+            <SvgoBackgroundRight1 class="w-full" />
           </span>
         </div>
         <div class="container">
