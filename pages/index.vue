@@ -50,7 +50,7 @@ setMetaData('Home', false)
             </NuxtLink>
           </div>
           <div class="flex flex-wrap justify-center mx-[-34px]">
-            <InstagramIframeLocal />
+            <InstagramIframe />
           </div>
         </section>
         <div class="svg-right absolute top-0 right-0 left-1/2 lg:left-2/3 pl-8 sm:pl-14 z-[-1] overflow-hidden">
@@ -63,10 +63,3 @@ setMetaData('Home', false)
     </NuxtLayout>
   </div>
 </template>
-
-<style>
-#iframeLoadingSpinner > div > svg {
- color: white;
- fill: white;
-}
-</style>

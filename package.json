@@ -22,9 +22,8 @@
   "dependencies": {
     "@nuxtjs/plausible": "^0.2.0",
     "@pinia/nuxt": "^0.4.9",
-    "@vernaillen/nuxt-base-layer": "^0.1.9",
+    "@vernaillen/nuxt-base-layer": "^0.1.21",
     "animate.css": "^4.1.1",
-    "iframe-resizer": "^4.3.6",
     "pinia": "^2.0.35",
     "prism-theme-vars": "^0.2.4",
     "vee-validate": "^4.8.6",
@@ -36,7 +35,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.5",
     "@nuxt/content": "^2.6.0",
-    "@nuxt/devtools": "^0.4.1",
+    "@nuxt/devtools": "^0.4.2",
     "@nuxt/image-edge": "1.0.0-28020728.5df24eb",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.6.6",

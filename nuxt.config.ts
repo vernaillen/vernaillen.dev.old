@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/plausible',
     '@pinia/nuxt',
+    '@nuxtjs/tailwindcss',
     'nuxt-svgo',
     'nuxt-vitest',
   ],
@@ -19,8 +20,8 @@ export default defineNuxtConfig({
   },
 
   css: [
-    '~/assets/css/markdown.css',
     '~/assets/css/main.css',
+    '~/assets/css/markdown.css',
     '~/assets/css/prose.css',
   ],
 
