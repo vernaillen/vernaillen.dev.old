@@ -47,7 +47,7 @@
     "cypress": "^12.10.0",
     "eslint": "^8.39.0",
     "nuxt": "^3.4.2",
-    "nuxt-icon": "^0.3.3",
+    "nuxt-icon": "^0.4.0",
     "nuxt-svgo": "2.0.1",
     "nuxt-vitest": "^0.6.10",
     "postcss": "^8.4.23",
@@ -58,5 +58,6 @@
   },
   "eslintConfig": {
     "extends": "@antfu"
-  }
+  },
+  "packageManager": "pnpm@8.3.1"
 }
