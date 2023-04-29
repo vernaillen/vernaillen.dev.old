@@ -46,7 +46,7 @@
     "consola": "^3.1.0",
     "cypress": "^12.11.0",
     "eslint": "^8.39.0",
-    "nuxt": "^3.4.2",
+    "nuxt": "^3.4.3",
     "nuxt-icon": "^0.4.0",
     "nuxt-svgo": "2.0.1",
     "nuxt-vitest": "^0.6.10",
