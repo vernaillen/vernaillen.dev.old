@@ -2,6 +2,7 @@
   "name": "vernaillen.dev",
   "version": "1.0.2",
   "private": true,
+  "packageManager": "pnpm@8.3.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/vernaillen/vernaillen.dev.git"
@@ -58,6 +59,5 @@
   },
   "eslintConfig": {
     "extends": "@antfu"
-  },
-  "packageManager": "pnpm@8.3.1"
+  }
 }
