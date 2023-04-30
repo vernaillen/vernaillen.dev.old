@@ -21,7 +21,7 @@ setMetaData('Home', false)
                 </p>
                 <p class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10">
                   Java, Spring, Vue, Nuxt <NuxtLink href="https://nuxt.com" target="_blank">
-                    <SvgoNuxtIconGreen class="!inline-block !mt-[-1px]" filled="false" width="18" height="18" viewBox="0 0 900 900" />
+                    <SvgoNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" viewBox="0 0 900 900" />
                   </NuxtLink> + DevOps
                 </p>
                 <div id="action-buttons" class="flex items-center justify-center mt-10">
@@ -54,10 +54,10 @@ setMetaData('Home', false)
           </div>
         </section>
         <div class="svg-right absolute top-0 right-0 left-1/2 lg:left-2/3 pl-8 sm:pl-14 z-[-1] overflow-hidden">
-          <SvgoHomeRight class="!w-full !h-screen" filled="false" />
+          <SvgoHomeRight class="w-full h-screen" />
         </div>
         <div class="svg-left absolute bottom-24 left-10 z-[-1] opacity-30 block overflow-hidden">
-          <SvgoHomeLeft class="!w-full !h-auto" filled="false" />
+          <SvgoHomeLeft class="w-full" />
         </div>
       </main>
     </NuxtLayout>

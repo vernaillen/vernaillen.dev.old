@@ -18,7 +18,7 @@ const navbarCollapseClass = computed(() => {
         <div class="lg:pl-8 lg:pr-4 max-w-full">
           <div class="w-full flex justify-center">
             <NuxtLink to="/" class="mx-auto">
-              <SvgoLogo class="!w-28 !h-auto" filled="false" />
+              <SvgoLogo class="w-28" />
             </NuxtLink>
           </div>
         </div>
@@ -48,7 +48,7 @@ const navbarCollapseClass = computed(() => {
                 <div class="px-0 sm:w-1/3 lg:pl-20 w-full">
                   <div class="flex justify-center absolute top-0 left-0 right-0 mx-auto">
                     <NuxtLink to="/">
-                      <SvgoLogo class="!w-28 !h-auto" filled="false" />
+                      <SvgoLogo class="w-28" />
                     </NuxtLink>
                   </div>
                   <nav-bar />
