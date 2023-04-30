@@ -35,10 +35,10 @@ setMetaData('Blog', false)
 
         <div>
           <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
-            <SvgoBackgroundLeft1 class="w-full" />
+            <SvgoBackgroundLeft1 class="!w-full !h-auto" filled="false" />
           </span>
           <span class="absolute right-[-160px] top-10 z-[-1] animate__animated animate__fadeIn">
-            <SvgoBackgroundRight1 class="w-full" />
+            <SvgoBackgroundRight1 class="!w-full !h-auto" filled="false" />
           </span>
         </div>
         <div class="container">

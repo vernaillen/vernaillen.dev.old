@@ -2,10 +2,10 @@ module.exports = {
   content: [
     './app.vue',
     './assets/svg/*.svg',
-    './components/*.{vue,svg}',
-    './components/**/*.{vue,svg}',
-    './layouts/**/*.{vue,svg}',
-    './pages/**/*.{vue,svg}',
+    './components/*.vue',
+    './components/**/*.vue',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
   ],
   mode: 'jit',
   darkMode: 'class', // or 'media' or 'class'

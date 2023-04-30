@@ -74,10 +74,10 @@ else setResponseStatus(404)
           </div>
           <div>
             <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
-              <SvgoBackgroundLeft1 class="w-full" />
+              <SvgoBackgroundLeft1 class="!w-full !h-auto" filled="false" />
             </span>
             <span class="absolute right-[-160px] top-10 z-[-1] animate__animated animate__fadeIn">
-              <SvgoBackgroundRight1 class="w-full" />
+              <SvgoBackgroundRight1 class="!w-full !h-auto" filled="false" />
             </span>
           </div>
         </section>
@@ -114,7 +114,7 @@ else setResponseStatus(404)
         </section>
         <PreviousNextPost v-if="page && page.isNews" />
         <div class="absolute left-0 bottom-5 z-[-1]">
-          <SvgoFooter class="w-20" />
+          <SvgoFooter class="!w-20 !h-auto" filled="false" />
         </div>
       </main>
     </NuxtLayout>
