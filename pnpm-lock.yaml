@@ -46,8 +46,8 @@ devDependencies:
     specifier: ^0.4.4
     version: 0.4.4(nuxt@3.4.3)(vite@4.3.3)
   '@nuxt/image-edge':
-    specifier: 1.0.0-28020728.5df24eb
-    version: 1.0.0-28020728.5df24eb
+    specifier: 1.0.0-28050764.aaee7ac
+    version: 1.0.0-28050764.aaee7ac
   '@nuxtjs/color-mode':
     specifier: ^3.2.0
     version: 3.2.0
@@ -1153,8 +1153,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@nuxt/image-edge@1.0.0-28020728.5df24eb:
-    resolution: {integrity: sha512-3jOeWF7k1u2IVBMP235YtRENU5YA/y8RWKAYqvo18aDBnspt0L3/FnS1PKnRZPjBSEFT9loFCniNl0jyxEfIoQ==}
+  /@nuxt/image-edge@1.0.0-28050764.aaee7ac:
+    resolution: {integrity: sha512-b8HlGepXbCLh2gm3HLMm4P0TjqxGyZB+ryHciSemGGrglg4lUpL7oldNCG5m2c3qtoV6h/NCfNarQH96fc5unQ==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
       '@nuxt/kit': 3.4.3
@@ -1173,11 +1173,11 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/kit-edge@3.5.0-28046831.4e7206bf:
-    resolution: {integrity: sha512-a9AcdGdwCDMVQnsnhA+m5e2XEwGyMuIZapGgBwizIw9uhS6MyscZv4LQI7PVEHSiobryb2z9Oshjix7qyKWh/Q==}
+  /@nuxt/kit-edge@3.5.0-28050576.fb76b393:
+    resolution: {integrity: sha512-reA0G2NDXUU+uQPHP27qObv/8Ie/sYQ2WWCF7iNQuXoqnLBg0LCxVoZkYSkzRJfH/In7iwxW/WklbFiAzZexDQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
-      '@nuxt/schema': /@nuxt/schema-edge@3.5.0-28046831.4e7206bf
+      '@nuxt/schema': /@nuxt/schema-edge@3.5.0-28050576.fb76b393
       c12: 1.4.1
       consola: 3.1.0
       defu: 6.1.2
@@ -1267,8 +1267,8 @@ packages:
     transitivePeerDependencies:
       - webpack
 
-  /@nuxt/schema-edge@3.5.0-28046831.4e7206bf:
-    resolution: {integrity: sha512-fLrdJiDITKK6wdAAyW86fs9Gfm7vsM+nAuaf6CSXIV1n5CT2uOBXkYUiLBZf9FN1ZLXjKucPpa1jnlwAQJvURg==}
+  /@nuxt/schema-edge@3.5.0-28050576.fb76b393:
+    resolution: {integrity: sha512-iPd9meM6GiGEFIACMCvoYBT3RBIh+9AXG9Zzt5emXkBuu7R69S9Iu6j8GPmt+TvIp/VexefX9iRXevsbAksOeQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
       defu: 6.1.2
@@ -7271,7 +7271,7 @@ packages:
       vue-svg-loader:
         optional: true
     dependencies:
-      '@nuxt/kit': /@nuxt/kit-edge@3.5.0-28046831.4e7206bf
+      '@nuxt/kit': /@nuxt/kit-edge@3.5.0-28050576.fb76b393
       '@vue/compiler-sfc': 3.2.47
       svgo: 3.0.2
     transitivePeerDependencies:
