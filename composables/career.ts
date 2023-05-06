@@ -1,6 +1,6 @@
 import type { CareerStep } from '~~/types'
 
-export function useCareer(): CareerStep[] {
+export function useCareer (): CareerStep[] {
   return [
     {
       client: 'Harmonics',
@@ -11,7 +11,7 @@ export function useCareer(): CareerStep[] {
       role: 'web developer, event organizer, ecstatic dance DJ & trancedance facilitator',
       stack:
         'Vue 3, Nuxt 3, Nuxt Content, Netlify',
-      imageUrl: '/images/career/harmonics.png',
+      imageUrl: '/images/career/harmonics.png'
     },
     {
       client: 'Opgroeien / Kind & Gezin',
@@ -21,7 +21,7 @@ export function useCareer(): CareerStep[] {
       role: 'Senior Full Stack Java Developer',
       stack:
         'Java, Spring boot, Angular, Liferay, Docker, Kubernetes, Jenkins, DevOps, Sonar, JaCoCo',
-      imageUrl: '/images/career/kindengezin.jpg',
+      imageUrl: '/images/career/kindengezin.jpg'
     },
     {
       client: 'IDEWE',
@@ -30,7 +30,7 @@ export function useCareer(): CareerStep[] {
       project: 'Customer Portal',
       role: 'Senior Full Stack Java Developer',
       stack: 'Java, Spring, Angular, Liferay',
-      imageUrl: '/images/career/idewe.png',
+      imageUrl: '/images/career/idewe.png'
     },
     {
       client: 'Kind & Gezin',
@@ -40,7 +40,7 @@ export function useCareer(): CareerStep[] {
       role: 'Senior Full Stack Java Developer',
       stack:
         'Liferay 6.2 & Liferay 7, Spring MVC, Spring REST & Web Services, Spring Security, Angular, Ionic, JBoss, JIRA, BitBucket, Jenkins, Sonar',
-      imageUrl: '/images/career/kindengezin.jpg',
+      imageUrl: '/images/career/kindengezin.jpg'
     },
     {
       client: 'Colruyt',
@@ -50,7 +50,7 @@ export function useCareer(): CareerStep[] {
       role: 'Lead Developer',
       stack:
         'WebSphere Portal, IBM Connections, Java EE, EJB3, REST, JSON, jQuery',
-      imageUrl: '/images/career/colruyt.png',
+      imageUrl: '/images/career/colruyt.png'
     },
     {
       client: 'Van Marcke',
@@ -60,7 +60,7 @@ export function useCareer(): CareerStep[] {
       role: 'WebSphere Portal Architect / Project Leader Intranet',
       stack:
         'Spring Portlet MVC, Lotus Web Content Management, WebSphere Portal, Lotus Quickr, Lotus Connections & WebSphere Commerce',
-      imageUrl: '/images/career/vanmarcke.jpg',
+      imageUrl: '/images/career/vanmarcke.jpg'
     },
     {
       client: 'IBM',
@@ -70,7 +70,7 @@ export function useCareer(): CareerStep[] {
         'several projects: UZ Gent: customer portal, VDAB: career portal, European Commission: employment portal, Eandis: energy supplier integration project',
       role: 'WebSphere Portal & J2EE Developer',
       stack: 'WebSphere Portal, Lotus Web Content Management, Java EE, jQuery',
-      imageUrl: '/images/career/ibm.jpg',
+      imageUrl: '/images/career/ibm.jpg'
     },
     {
       client: 'UPM-Kymmene',
@@ -80,7 +80,7 @@ export function useCareer(): CareerStep[] {
       role: 'Java Software Engineer & Lead developer',
       stack:
         'Struts, Hibernate, EJB 2, XML, XSL, Lucene, dom4j, jdom, Oracle DB, jUnit.',
-      imageUrl: '/images/career/upm.jpg',
+      imageUrl: '/images/career/upm.jpg'
     },
     {
       client: 'Atos Origin',
@@ -89,7 +89,7 @@ export function useCareer(): CareerStep[] {
       project: 'Procter & Gamble: Lotus Notes Intranet',
       role: 'Lotus Notes Developer',
       stack: 'Lotus Notes',
-      imageUrl: '/images/career/atos.jpg',
+      imageUrl: '/images/career/atos.jpg'
     },
     {
       client: 'the e-Corporation',
@@ -97,7 +97,7 @@ export function useCareer(): CareerStep[] {
       date: '1999 - 2000',
       project: 'Nashuatec, Daikin, etc',
       role: 'Lotus Notes Developer',
-      stack: 'Lotus Notes',
-    },
+      stack: 'Lotus Notes'
+    }
   ]
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  documentDriven: false,
+  documentDriven: false
 })
 setMetaData('Home', false)
 </script>

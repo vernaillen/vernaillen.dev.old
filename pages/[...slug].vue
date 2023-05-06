@@ -3,15 +3,12 @@ const { page } = useContent()
 const route = useRoute()
 useRouter()
 
-function prose() {
-  if (page.value.disableProse)
-    return ''
+function prose () {
+  if (page.value.disableProse) { return '' }
   return 'prose'
 }
 
-if (page.value)
-  setMetaData(page.value.title, true)
-else setResponseStatus(404)
+if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus(404) }
 </script>
 
 <template>
@@ -31,7 +28,8 @@ else setResponseStatus(404)
                   </div>
                   <div class="flex flex-wrap">
                     <div
-                      v-if="page.desc" :style="`background: ${page.bgColor};`"
+                      v-if="page.desc"
+                      :style="`background: ${page.bgColor};`"
                       class="font-medium text-base text-body-color leading-relaxed mb-8"
                     >
                       {{ page.desc }}

@@ -2,17 +2,17 @@ import { defineStore } from 'pinia'
 
 export const useMobileNav = defineStore('mobileNav', {
   state: () => ({
-    visible: false,
+    visible: false
   }),
   actions: {
-    hide() {
+    hide () {
       this.visible = false
     },
-    show() {
+    show () {
       this.visible = true
     },
-    toggle() {
+    toggle () {
       this.visible = !this.visible
-    },
-  },
+    }
+  }
 })

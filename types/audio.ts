@@ -2,20 +2,18 @@ import { usePlayerState } from '~/stores/playerState'
 
 export class AudioPlayer {
   private audioElement: HTMLAudioElement | undefined
-  constructor() {
-  }
 
-  setHTMLAudioElement(audioElement: HTMLAudioElement) {
+  setHTMLAudioElement (audioElement: HTMLAudioElement) {
     this.audioElement = audioElement
   }
 
-  async play() {
+  async play () {
     if (this.audioElement) {
       await this.audioElement.play()
       setInterval(() => {
         if (this.audioElement) {
           usePlayerState().updateTime(
-            this.audioElement.currentTime,
+            this.audioElement.currentTime
           )
         }
       }, 100)
@@ -23,23 +21,22 @@ export class AudioPlayer {
     }
   }
 
-  async load() {
+  async load () {
     if (this.audioElement) {
       await this.audioElement.load()
       usePlayerState().updatePlaying(false)
     }
   }
 
-  async pause() {
+  async pause () {
     if (this.audioElement) {
       await this.audioElement.pause()
       usePlayerState().updatePlaying(false)
     }
   }
 
-  async isLoaded() {
-    if (this.audioElement)
-      return this.audioElement.readyState >= 2
+  isLoaded () {
+    if (this.audioElement) { return this.audioElement.readyState >= 2 }
   }
 /*
   now() {

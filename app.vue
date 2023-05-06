@@ -8,18 +8,18 @@ const mobileNav = useMobileNav()
 useHead({
   titleTemplate: (title?: string) => `${title} - Wouter Vernaillen: Freelance Full Stack Java, Vue & Nuxt Developer`,
   htmlAttrs: {
-    lang: 'en',
+    lang: 'en'
   },
   bodyAttrs: {
-    class: 'dark:bg-black',
+    class: 'dark:bg-black'
   },
   link: [
     {
       rel: 'icon',
       href: '/favicon.svg',
-      type: 'image/svg+xml',
-    },
-  ],
+      type: 'image/svg+xml'
+    }
+  ]
 })
 onMounted(() => {
   window.addEventListener('resize', () => mobileNav.hide())

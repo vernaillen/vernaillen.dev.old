@@ -1,8 +1,7 @@
-export interface GitHubData {
-  url: string
-  html_url: string
-  comments_url: string
-  commit: GitHubCommit
+export interface GitHubAuthor {
+  name: string
+  email: string
+  date: Date
 }
 
 export interface GitHubCommit {
@@ -12,8 +11,9 @@ export interface GitHubCommit {
   committer: GitHubAuthor
 }
 
-export interface GitHubAuthor {
-  name: string
-  email: string
-  date: Date
+export interface GitHubData {
+  url: string
+  html_url: string
+  comments_url: string
+  commit: GitHubCommit
 }

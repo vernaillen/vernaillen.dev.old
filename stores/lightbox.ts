@@ -4,18 +4,18 @@ export const useLightbox = defineStore('lightbox', {
   state: () => ({
     images: [''],
     visible: false,
-    index: 0,
+    index: 0
   }),
   actions: {
-    setImages(imgs: string[]) {
+    setImages (imgs: string[]) {
       this.images = imgs
     },
-    show(i: number) {
+    show (i: number) {
       this.index = i
       this.visible = true
     },
-    hide() {
+    hide () {
       this.visible = false
-    },
-  },
+    }
+  }
 })

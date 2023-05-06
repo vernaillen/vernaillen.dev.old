@@ -1,4 +1,5 @@
 import { dirname } from 'node:path'
+import { consola } from 'consola'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
@@ -10,20 +11,20 @@ const DOMAIN = 'https://vernaillen.dev'
 const AUTHOR = {
   name: 'Wouter Vernaillen',
   email: 'wouter@vernaillen.com',
-  link: DOMAIN,
+  link: DOMAIN
 }
 const markdown = MarkdownIt({
   html: true,
   breaks: true,
-  linkify: true,
+  linkify: true
 })
 
-async function run() {
+async function run () {
   await buildBlogRSS()
 }
 
-async function buildBlogRSS() {
-  console.log('adding posts to Blog RSS feed:')
+async function buildBlogRSS () {
+  consola.info('adding posts to Blog RSS feed:')
   const files = await fg('src/pages/blog/*.md')
 
   const options = {
@@ -35,8 +36,8 @@ async function buildBlogRSS() {
     feedLinks: {
       json: 'https://vernaillen.dev/feed.json',
       atom: 'https://vernaillen.dev/feed.atom',
-      rss: 'https://vernaillen.dev/feed.xml',
-    },
+      rss: 'https://vernaillen.dev/feed.xml'
+    }
   }
   const posts = (
     await Promise.all(
@@ -45,16 +46,13 @@ async function buildBlogRSS() {
         .map(async (i) => {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
-          console.log(data)
+          consola.info(data)
 
           const html = markdown
             .render(content)
             .replace('src="/', `src="${DOMAIN}/`)
 
-          if (data.thumbnail_dark?.startsWith('/'))
-            data.image = `${DOMAIN}/images/blog${data.thumbnail_dark}`
-          else if (data.thumbnail?.startsWith('/'))
-            data.image = `${DOMAIN}/images/blog${data.thumbnail}`
+          if (data.thumbnail_dark?.startsWith('/')) { data.image = `${DOMAIN}/images/blog${data.thumbnail_dark}` } else if (data.thumbnail?.startsWith('/')) { data.image = `${DOMAIN}/images/blog${data.thumbnail}` }
 
           return {
             ...data,
@@ -62,9 +60,9 @@ async function buildBlogRSS() {
             content: html,
             description: html,
             author: [AUTHOR],
-            link: DOMAIN + i.replace(/^src\/pages(.+)\.md$/, '$1'),
+            link: DOMAIN + i.replace(/^src\/pages(.+)\.md$/, '$1')
           }
-        }),
+        })
     )
   ).filter(Boolean)
 
@@ -73,7 +71,7 @@ async function buildBlogRSS() {
   await writeFeed('feed', options, posts)
 }
 
-async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
+async function writeFeed (name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
   options.image = 'https://vernaillen.dev/avatar.png'
   options.favicon = 'https://vernaillen.dev/logo.png'

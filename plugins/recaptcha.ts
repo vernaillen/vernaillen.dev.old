@@ -5,7 +5,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     siteKey: '6LeL37UgAAAAAH0D_-DbYjVUKWkZ7K9G4YUSPLwg',
     loaderOptions: {
       useRecaptchaNet: true,
-      autoHideBadge: true,
-    },
+      autoHideBadge: true
+    }
   })
 })

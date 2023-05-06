@@ -6,7 +6,7 @@ const { data: posts } = await useLazyAsyncData('posts', () =>
     .find())
 
 definePageMeta({
-  documentDriven: false,
+  documentDriven: false
 })
 setMetaData('Blog', false)
 </script>
@@ -44,7 +44,8 @@ setMetaData('Blog', false)
         <div class="container">
           <div class="flex flex-wrap mx-[-16px] justify-start px-2 md:px-6">
             <div
-              v-for="post in posts" :key="post.path"
+              v-for="post in posts"
+              :key="post.path"
               class="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 px-4"
             >
               <BlogPostItem :post="post" />

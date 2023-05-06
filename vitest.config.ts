@@ -4,7 +4,7 @@ export default defineVitestConfig({
   test: {
     dir: 'tests',
     coverage: {
-      reportsDirectory: 'coverage',
-    },
-  },
+      reportsDirectory: 'coverage'
+    }
+  }
 })

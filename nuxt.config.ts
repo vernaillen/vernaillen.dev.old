@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   extends: [
-    '@vernaillen/nuxt-base-layer',
+    '@vernaillen/nuxt-base-layer'
   ],
 
   modules: [
@@ -12,24 +12,24 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
     'nuxt-svgo',
-    'nuxt-vitest',
+    'nuxt-vitest'
   ],
 
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
 
   css: [
     '~/assets/css/main.css',
     '~/assets/css/markdown.css',
-    '~/assets/css/prose.css',
+    '~/assets/css/prose.css'
   ],
 
   image: {
     provider: 'twicpics',
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/vernaillendev',
-    },
+      baseURL: 'https://vernaillen.twic.pics/vernaillendev'
+    }
   },
 
   svgo: {
@@ -38,16 +38,16 @@ export default defineNuxtConfig({
 
     defaultImport: 'component',
     svgoConfig: {
-      multipass: true,
-    },
+      multipass: true
+    }
   },
 
   plausible: {
-    apiHost: 'https://www.vernaillen.dev/plio',
+    apiHost: 'https://www.vernaillen.dev/plio'
   },
 
   colorMode: {
-    classSuffix: '',
+    classSuffix: ''
   },
 
   content: {
@@ -56,15 +56,15 @@ export default defineNuxtConfig({
       anchorLinks: false,
       remarkPlugins: [
         'remark-breaks',
-        'remark-directive-rehype',
+        'remark-directive-rehype'
       ],
       rehypePlugins: {
         'rehype-external-links': {
-          target: '_blank',
-        },
-      },
-    },
+          target: '_blank'
+        }
+      }
+    }
   },
 
-  devtools: { enabled: true },
+  devtools: { enabled: true }
 })
