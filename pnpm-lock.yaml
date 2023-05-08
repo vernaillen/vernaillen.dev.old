@@ -46,8 +46,8 @@ devDependencies:
     specifier: ^0.4.5
     version: 0.4.5(nuxt@3.4.3)(vite@4.3.5)
   '@nuxt/image-edge':
-    specifier: 1.0.0-28050764.aaee7ac
-    version: 1.0.0-28050764.aaee7ac
+    specifier: 1.0.0-28059208.2abef1b
+    version: 1.0.0-28059208.2abef1b
   '@nuxtjs/color-mode':
     specifier: ^3.2.0
     version: 3.2.0
@@ -1172,9 +1172,9 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@nuxt/image-edge@1.0.0-28050764.aaee7ac:
-    resolution: {integrity: sha512-b8HlGepXbCLh2gm3HLMm4P0TjqxGyZB+ryHciSemGGrglg4lUpL7oldNCG5m2c3qtoV6h/NCfNarQH96fc5unQ==}
-    engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
+  /@nuxt/image-edge@1.0.0-28059208.2abef1b:
+    resolution: {integrity: sha512-pW0C+RdA6d0kRsITMuRXLsXZ6fbzgXqIELkpS3z5ZwR5pWkmRmTbgED4MCajblG0P4nuySQl2r0RU4Ktf1LMAA==}
+    engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.4.3
       consola: 3.1.0
@@ -1235,7 +1235,7 @@ packages:
       lodash.template: 4.5.0
       mlly: 1.2.0
       pathe: 1.1.0
-      pkg-types: 1.0.2
+      pkg-types: 1.0.3
       scule: 1.0.0
       semver: 7.5.0
       unctx: 2.3.0
@@ -1262,7 +1262,7 @@ packages:
       lodash.template: 4.5.0
       mlly: 1.2.0
       pathe: 1.1.0
-      pkg-types: 1.0.2
+      pkg-types: 1.0.3
       scule: 1.0.0
       semver: 7.5.0
       unctx: 2.3.0
@@ -1318,7 +1318,7 @@ packages:
       postcss-import-resolver: 2.0.0
       scule: 1.0.0
       std-env: 3.3.2
-      ufo: 1.1.1
+      ufo: 1.1.2
       unimport: 3.0.6(rollup@3.21.2)
       untyped: 1.3.2
     transitivePeerDependencies:
@@ -1333,10 +1333,10 @@ packages:
       defu: 6.1.2
       hookable: 5.5.3
       pathe: 1.1.0
-      pkg-types: 1.0.2
+      pkg-types: 1.0.3
       postcss-import-resolver: 2.0.0
-      std-env: 3.3.2
-      ufo: 1.1.1
+      std-env: 3.3.3
+      ufo: 1.1.2
       unimport: 3.0.6(rollup@3.21.2)
       untyped: 1.3.2
     transitivePeerDependencies:
@@ -1366,7 +1366,7 @@ packages:
       ofetch: 1.0.1
       parse-git-config: 3.0.0
       rc9: 2.1.0
-      std-env: 3.3.2
+      std-env: 3.3.3
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -1395,21 +1395,21 @@ packages:
       externality: 1.0.0
       fs-extra: 11.1.1
       get-port-please: 3.0.1
-      h3: 1.6.4
+      h3: 1.6.5
       knitwork: 1.0.0
       magic-string: 0.30.0
       mlly: 1.2.0
       ohash: 1.1.2
       pathe: 1.1.0
       perfect-debounce: 0.1.3
-      pkg-types: 1.0.2
+      pkg-types: 1.0.3
       postcss: 8.4.23
       postcss-import: 15.1.0(postcss@8.4.23)
       postcss-url: 10.1.3(postcss@8.4.23)
       rollup-plugin-visualizer: 5.9.0(rollup@3.21.2)
-      std-env: 3.3.2
+      std-env: 3.3.3
       strip-literal: 1.0.1
-      ufo: 1.1.1
+      ufo: 1.1.2
       unplugin: 1.3.1
       vite: 4.3.3(@types/node@20.1.0)
       vite-node: 0.30.1(@types/node@20.1.0)
@@ -3399,7 +3399,6 @@ packages:
 
   /cookie-es@1.0.0:
     resolution: {integrity: sha512-mWYvfOLrfEc996hlKcdABeIiPHUPC6DM2QYZdGGOvhOTbA3tjm2eBwqlJpoFdjC89NI4Qt6h0Pu06Mp+1Pj5OQ==}
-    dev: true
 
   /cookies@0.8.0:
     resolution: {integrity: sha512-8aPsApQfebXnuI+537McwYsDtjVxGm8gTIzQI3FDW6t5t/DAhERxtnbEPN/8RX+uZthoz4eCOgloXaE5cYyNow==}
@@ -5112,7 +5111,7 @@ packages:
       destr: 1.2.2
       iron-webcrypto: 0.6.0
       radix3: 1.0.1
-      ufo: 1.1.1
+      ufo: 1.1.2
       uncrypto: 0.1.2
 
   /h3@1.6.5:
@@ -5125,7 +5124,6 @@ packages:
       radix3: 1.0.1
       ufo: 1.1.2
       uncrypto: 0.1.2
-    dev: true
 
   /happy-dom@9.10.9:
     resolution: {integrity: sha512-3RnOyu6buPMpDAyOpp8yfR5Xi/k2p5MhrDwlG/dgpVHkptFN5IqubdbGOQU5luB7ANh6a08GOuiB+Bo9JCzCBw==}
@@ -6122,7 +6120,7 @@ packages:
       http-shutdown: 1.2.2
       ip-regex: 5.0.0
       node-forge: 1.3.1
-      ufo: 1.1.1
+      ufo: 1.1.2
 
   /listr2@3.14.0(enquirer@2.3.6):
     resolution: {integrity: sha512-TyWI8G99GX9GjE54cJ+RrNMcIFBfwMPxc3XTFiAYGN4s10hWROGtOg7+O6u6LE3mNkyld7RSLE6nrKBvTfcs3g==}
@@ -6974,8 +6972,8 @@ packages:
     dependencies:
       acorn: 8.8.2
       pathe: 1.1.0
-      pkg-types: 1.0.2
-      ufo: 1.1.1
+      pkg-types: 1.0.3
+      ufo: 1.1.2
 
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -7067,7 +7065,7 @@ packages:
       fs-extra: 11.1.1
       globby: 13.1.4
       gzip-size: 7.0.0
-      h3: 1.6.4
+      h3: 1.6.5
       hookable: 5.5.3
       http-proxy: 1.18.1
       is-primitive: 3.0.1
@@ -7083,7 +7081,7 @@ packages:
       ohash: 1.1.2
       pathe: 1.1.0
       perfect-debounce: 0.1.3
-      pkg-types: 1.0.2
+      pkg-types: 1.0.3
       pretty-bytes: 6.1.0
       radix3: 1.0.1
       rollup: 3.21.2
@@ -7093,8 +7091,8 @@ packages:
       serve-placeholder: 2.0.1
       serve-static: 1.15.0
       source-map-support: 0.5.21
-      std-env: 3.3.2
-      ufo: 1.1.1
+      std-env: 3.3.3
+      ufo: 1.1.2
       unenv: 1.4.1
       unimport: 3.0.6(rollup@3.21.2)
       unstorage: 1.5.0
@@ -7537,7 +7535,7 @@ packages:
     dependencies:
       destr: 1.2.2
       node-fetch-native: 1.1.0
-      ufo: 1.1.1
+      ufo: 1.1.2
 
   /ohash@1.1.2:
     resolution: {integrity: sha512-9CIOSq5945rI045GFtcO3uudyOkYVY1nyfFxVQp+9BRgslr8jPNiSSrsFGg/BNTUFOLqx0P5tng6G32brIPw0w==}
@@ -7848,13 +7846,6 @@ packages:
   /pirates@4.0.5:
     resolution: {integrity: sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==}
     engines: {node: '>= 6'}
-
-  /pkg-types@1.0.2:
-    resolution: {integrity: sha512-hM58GKXOcj8WTqUXnsQyJYXdeAPbythQgEF3nTcEo+nkD49chjQ9IKm/QJy9xf6JakXptz86h7ecP2024rrLaQ==}
-    dependencies:
-      jsonc-parser: 3.2.0
-      mlly: 1.2.0
-      pathe: 1.1.0
 
   /pkg-types@1.0.3:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
@@ -9277,10 +9268,10 @@ packages:
 
   /std-env@3.3.2:
     resolution: {integrity: sha512-uUZI65yrV2Qva5gqE0+A7uVAvO40iPo6jGhs7s8keRfHCmtg+uB2X6EiLGCI9IgL1J17xGhvoOqSz79lzICPTA==}
+    dev: true
 
   /std-env@3.3.3:
     resolution: {integrity: sha512-Rz6yejtVyWnVjC1RFvNmYL10kgjC49EOghxWn0RFqlCHGFpQx+Xe7yW3I4ceK1SGrWIGMjD5Kbue8W/udkbMJg==}
-    dev: true
 
   /stdin-discarder@0.1.0:
     resolution: {integrity: sha512-xhV7w8S+bUwlPTb4bAOUQhv8/cSS5offJuX8GQGq32ONF0ZtDWKfkdomM3HMRA+LhX6um/FZ0COqlwsjD53LeQ==}
@@ -9908,7 +9899,7 @@ packages:
       magic-string: 0.30.0
       mlly: 1.2.0
       pathe: 1.1.0
-      pkg-types: 1.0.2
+      pkg-types: 1.0.3
       scule: 1.0.0
       strip-literal: 1.0.1
       unplugin: 1.3.1
@@ -10033,14 +10024,14 @@ packages:
       anymatch: 3.1.3
       chokidar: 3.5.3
       destr: 1.2.2
-      h3: 1.6.4
+      h3: 1.6.5
       ioredis: 5.3.2
       listhen: 1.0.4
       lru-cache: 9.1.1
       mri: 1.2.0
       node-fetch-native: 1.1.0
       ofetch: 1.0.1
-      ufo: 1.1.1
+      ufo: 1.1.2
     transitivePeerDependencies:
       - supports-color
 
@@ -10570,7 +10561,7 @@ packages:
   /vue-bundle-renderer@1.0.3:
     resolution: {integrity: sha512-EfjX+5TTUl70bki9hPuVp+54JiZOvFIfoWBcfXsSwLzKEiDYyHNi5iX8srnqLIv3YRnvxgbntdcG1WPq0MvffQ==}
     dependencies:
-      ufo: 1.1.1
+      ufo: 1.1.2
 
   /vue-demi@0.14.0(vue@3.2.47):
     resolution: {integrity: sha512-gt58r2ogsNQeVoQ3EhoUAvUsH9xviydl0dWJj7dabBC/2L4uBId7ujtCwDRD0JhkGsV1i0CtfLAeyYKBht9oWg==}
