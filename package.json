@@ -21,13 +21,14 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run build && pnpm run coverage && pnpm run cy:local"
   },
   "dependencies": {
-    "@nuxtjs/plausible": "^0.2.0",
+    "@nuxtjs/plausible": "^0.2.1",
     "@pinia/nuxt": "^0.4.9",
+    "@vercel/analytics": "^1.0.1",
     "@vernaillen/nuxt-base-layer": "^0.1.26",
     "animate.css": "^4.1.1",
     "pinia": "^2.0.35",
     "prism-theme-vars": "^0.2.4",
-    "vee-validate": "^4.8.6",
+    "vee-validate": "^4.9.1",
     "vite-plugin-vue-audiomotion": "^1.0.0",
     "vue-easy-lightbox": "^1.16.0",
     "vue-recaptcha-v3": "^2.0.1",
