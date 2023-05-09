@@ -2,7 +2,7 @@
   "name": "vernaillen.dev",
   "version": "1.0.3",
   "private": true,
-  "packageManager": "pnpm@8.4.0",
+  "packageManager": "pnpm@8.5.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/vernaillen/vernaillen.dev.git"
