@@ -2,7 +2,7 @@
   "name": "vernaillen.dev",
   "version": "1.0.3",
   "private": true,
-  "packageManager": "pnpm@8.5.0",
+  "packageManager": "pnpm@8.5.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/vernaillen/vernaillen.dev.git"
@@ -51,7 +51,7 @@
     "nuxt": "3.4.3",
     "nuxt-icon": "^0.4.0",
     "nuxt-svgo": "3.1.0",
-    "nuxt-vitest": "^0.6.12",
+    "nuxt-vitest": "^0.7.0",
     "postcss": "^8.4.23",
     "remark-breaks": "^3.0.2",
     "remark-directive-rehype": "^0.4.2",
