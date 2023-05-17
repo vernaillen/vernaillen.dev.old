@@ -1,3 +1,5 @@
+[![Nuxt][nuxt-src]][nuxt-href]
+
 # vernaillen.dev
 
 [https://vernaillen.dev](https://vernaillen.dev/)
@@ -16,3 +18,6 @@ Wouter Vernaillen's freelance developer website
 
 [![Uptime](https://badgen.net/uptime-robot/month/m784344425-1a8650bdb79223d01d1a32a1?icon=vercel&color=9C8E1B)](https://stats.uptimerobot.com/5J0vsM4vA)
 
+
+[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?style=for-the-badge&logo=nuxt.js&label=based%20on
+[nuxt-href]: https://nuxt.com
