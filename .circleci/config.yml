@@ -18,6 +18,12 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
+          name: Check node version
+          command: node -v
+      - run:
+          name: Check pnpm version
+          command: pnpm -v
+      - run:
           name: Install packages
           command: pnpm install --shamefully-hoist
       - save_cache:
