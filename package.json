@@ -2,7 +2,7 @@
   "name": "vernaillen.dev",
   "version": "1.0.4",
   "private": true,
-  "packageManager": "pnpm@8.6.0",
+  "packageManager": "pnpm@8.6.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/vernaillen/vernaillen.dev.git"
@@ -37,13 +37,13 @@
   "devDependencies": {
     "@nuxt/content": "^2.6.0",
     "@nuxt/devtools": "^0.5.5",
-    "@nuxt/image-edge": "1.0.0-rc.1-28109383.55ca3fc",
+    "@nuxt/image-edge": "1.0.0-rc.1-28110023.6b8ab9c",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "@typescript-eslint/parser": "^5.59.9",
-    "@vitest/coverage-c8": "^0.31.2",
+    "@vitest/coverage-c8": "^0.32.0",
     "@vueuse/nuxt": "^10.1.2",
     "consola": "^3.1.0",
     "cypress": "^12.14.0",

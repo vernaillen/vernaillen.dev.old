@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^0.5.5
     version: 0.5.5(nuxt@3.5.3)(vite@4.3.9)
   '@nuxt/image-edge':
-    specifier: 1.0.0-rc.1-28109383.55ca3fc
-    version: 1.0.0-rc.1-28109383.55ca3fc
+    specifier: 1.0.0-rc.1-28110023.6b8ab9c
+    version: 1.0.0-rc.1-28110023.6b8ab9c
   '@nuxtjs/color-mode':
     specifier: ^3.2.0
     version: 3.2.0
@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^5.59.9
     version: 5.59.9(eslint@8.42.0)(typescript@5.1.3)
   '@vitest/coverage-c8':
-    specifier: ^0.31.2
-    version: 0.31.2(vitest@0.30.1)
+    specifier: ^0.32.0
+    version: 0.32.0(vitest@0.30.1)
   '@vueuse/nuxt':
     specifier: ^10.1.2
     version: 10.1.2(nuxt@3.5.3)(vue@3.3.4)
@@ -1283,8 +1283,8 @@ packages:
       nuxt: ^3.5.1
       vite: '*'
     dependencies:
-      '@nuxt/kit': 3.5.2
-      '@nuxt/schema': 3.5.2
+      '@nuxt/kit': 3.5.3
+      '@nuxt/schema': 3.5.3
       execa: 7.1.1
       nuxt: 3.5.3(@types/node@20.3.0)(eslint@8.42.0)(typescript@5.1.3)
       vite: 4.3.9(@types/node@20.3.0)
@@ -1302,7 +1302,7 @@ packages:
       execa: 7.1.1
       global-dirs: 3.0.1
       magicast: 0.2.8
-      pathe: 1.1.0
+      pathe: 1.1.1
       picocolors: 1.0.0
       pkg-types: 1.0.3
       prompts: 2.4.2
@@ -1360,8 +1360,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@nuxt/image-edge@1.0.0-rc.1-28109383.55ca3fc:
-    resolution: {integrity: sha512-CyqRYNkW88MtCfGnxt4e2mmgRw09YKWUELLTFKHTbYSkHX8e1S3pSAjEgasfA9tdnLnqRT7ctPSsjS4nQJJ1oA==}
+  /@nuxt/image-edge@1.0.0-rc.1-28110023.6b8ab9c:
+    resolution: {integrity: sha512-12a5x9pUGzmLx1vvuEXHgBjz2tMDiRd5yjRYlj/RgT4AuYo1/GB/wdFSaTcjDIgaiLW8F1VbXXQUHBg/exYbNw==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.5.3
@@ -1422,12 +1422,12 @@ packages:
       knitwork: 1.0.0
       lodash.template: 4.5.0
       mlly: 1.3.0
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
       semver: 7.5.1
       unctx: 2.3.1
-      unimport: 3.0.7
+      unimport: 3.0.8(rollup@3.25.1)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1449,12 +1449,12 @@ packages:
       knitwork: 1.0.0
       lodash.template: 4.5.0
       mlly: 1.3.0
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
       semver: 7.5.1
       unctx: 2.3.1
-      unimport: 3.0.7
+      unimport: 3.0.8(rollup@3.25.1)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1526,13 +1526,13 @@ packages:
       defu: 6.1.2
       hookable: 5.5.3
       jiti: 1.18.2
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.3
       postcss-import-resolver: 2.0.0
       scule: 1.0.0
       std-env: 3.3.3
       ufo: 1.1.2
-      unimport: 3.0.7
+      unimport: 3.0.8(rollup@3.25.1)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1545,12 +1545,12 @@ packages:
     dependencies:
       defu: 6.1.2
       hookable: 5.5.3
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.3
       postcss-import-resolver: 2.0.0
       std-env: 3.3.3
       ufo: 1.1.2
-      unimport: 3.0.7
+      unimport: 3.0.8(rollup@3.25.1)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -2314,8 +2314,8 @@ packages:
       vite: 4.3.9(@types/node@20.3.0)
       vue: 3.3.4
 
-  /@vitest/coverage-c8@0.31.2(vitest@0.30.1):
-    resolution: {integrity: sha512-RznxfxFtoV8xYt8e0h57OeulqOfFZJsa5pxXKW+xFW9ZHamSZ0wJC57FS4oh3Xbe0JNaHwSJ0KeClXgnuW1fkw==}
+  /@vitest/coverage-c8@0.32.0(vitest@0.30.1):
+    resolution: {integrity: sha512-FeTzRN5VCL7B6YTRK5ZPQO2iwJzl2x7/mTQ/2uEeKZatAYBtvczeAYnzSUhCPev7p99+5skxMQZwqVcFTrVCdg==}
     peerDependencies:
       vitest: '>=0.30.0 <1'
     dependencies:
@@ -3157,7 +3157,7 @@ packages:
       jiti: 1.18.2
       mlly: 1.3.0
       ohash: 1.1.2
-      pathe: 1.1.0
+      pathe: 1.1.1
       perfect-debounce: 0.1.3
       pkg-types: 1.0.3
       rc9: 2.1.0
@@ -5183,7 +5183,7 @@ packages:
       https-proxy-agent: 5.0.1
       mri: 1.2.0
       node-fetch-native: 1.2.0
-      pathe: 1.1.0
+      pathe: 1.1.1
       tar: 6.1.15
     transitivePeerDependencies:
       - supports-color
@@ -7353,9 +7353,6 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /node-fetch-native@1.1.1:
-    resolution: {integrity: sha512-9VvspTSUp2Sxbl+9vbZTlFGq9lHwE8GDVVekxx6YsNd1YH59sb3Ba8v3Y3cD8PkLNcileGGcA21PFjVl0jzDaw==}
-
   /node-fetch-native@1.2.0:
     resolution: {integrity: sha512-5IAMBTl9p6PaAjYCnMv5FmqIF6GcZnawAVnzaCG0rX2aYZJ4CxEkZNtVPuTRug7fL7wyM5BQYTlAzcyMPi6oTQ==}
 
@@ -7763,7 +7760,7 @@ packages:
     resolution: {integrity: sha512-icBz2JYfEpt+wZz1FRoGcrMigjNKjzvufE26m9+yUiacRQRHwnNlGRPiDnW4op7WX/MR6aniwS8xw8jyVelF2g==}
     dependencies:
       destr: 1.2.2
-      node-fetch-native: 1.1.1
+      node-fetch-native: 1.2.0
       ufo: 1.1.2
 
   /ofetch@1.1.0:
@@ -8105,7 +8102,7 @@ packages:
     dependencies:
       jsonc-parser: 3.2.0
       mlly: 1.3.0
-      pathe: 1.1.0
+      pathe: 1.1.1
 
   /plausible-tracker@0.3.8:
     resolution: {integrity: sha512-lmOWYQ7s9KOUJ1R+YTOR3HrjdbxIS2Z4de0P/Jx2dQPteznJl2eX3tXxKClpvbfyGP59B5bbhW8ftN59HbbFSg==}
@@ -10144,13 +10141,14 @@ packages:
       local-pkg: 0.4.3
       magic-string: 0.30.0
       mlly: 1.3.0
-      pathe: 1.1.0
+      pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
       strip-literal: 1.0.1
       unplugin: 1.3.1
     transitivePeerDependencies:
       - rollup
+    dev: true
 
   /unimport@3.0.8(rollup@3.25.1):
     resolution: {integrity: sha512-AOt6xj3QMwqcTZRPB+NhFkyVEjCKnpTVoPm5x6424zz2NYYtCfym2bpJofzPHIJKPNIh5ko2/t2q46ZIMgdmbw==}
@@ -10324,7 +10322,7 @@ packages:
       listhen: 1.0.4
       lru-cache: 9.1.1
       mri: 1.2.0
-      node-fetch-native: 1.1.1
+      node-fetch-native: 1.2.0
       ofetch: 1.0.1
       ufo: 1.1.2
     transitivePeerDependencies:
