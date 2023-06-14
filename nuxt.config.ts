@@ -1,18 +1,18 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  extends: [
+  /* extends: [
     '@vernaillen/nuxt-base-layer'
-  ],
+  ], */
 
   modules: [
     '@nuxt/content',
-    '@nuxt/image',
+    // '@nuxt/image',
     '@nuxtjs/color-mode',
-    '@nuxtjs/plausible',
+    // '@nuxtjs/plausible',
     '@pinia/nuxt',
-    '@nuxtjs/tailwindcss',
-    'nuxt-svgo',
-    'nuxt-vitest'
+    '@nuxtjs/tailwindcss'
+    // 'nuxt-svgo',
+    // 'nuxt-vitest'
   ],
 
   app: {
