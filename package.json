@@ -23,7 +23,6 @@
   "dependencies": {
     "@nuxtjs/plausible": "^0.2.1",
     "@pinia/nuxt": "^0.4.11",
-    "@vercel/analytics": "^1.0.1",
     "@vernaillen/nuxt-base-layer": "^0.1.29",
     "animate.css": "^4.1.1",
     "pinia": "^2.1.3",

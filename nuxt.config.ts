@@ -66,5 +66,11 @@ export default defineNuxtConfig({
     }
   },
 
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+
+  plugins: [
+    '~/plugins/vueEasyLightbox.ts',
+    '~/plugins/recaptcha.ts',
+    '~/plugins/mobileNavAutoHide.ts'
+  ]
 })
