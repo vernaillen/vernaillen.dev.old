@@ -7,10 +7,10 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     // '@nuxt/image',
-    '@nuxtjs/color-mode',
+    // '@nuxtjs/color-mode',
     // '@nuxtjs/plausible',
-    '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@pinia/nuxt'
+    // '@nuxtjs/tailwindcss'
     // 'nuxt-svgo',
     // 'nuxt-vitest'
   ],
