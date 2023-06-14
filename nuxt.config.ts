@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ], */
 
   modules: [
-    // '@nuxt/content',
+    '@nuxt/content',
     // '@nuxt/image',
     // '@nuxtjs/color-mode',
     // '@nuxtjs/plausible',
@@ -66,7 +66,7 @@ export default defineNuxtConfig({
     }
   },
 
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   plugins: [
     '~/plugins/pageHooks.ts',
