@@ -7,20 +7,24 @@ const props = defineProps<{
 
 const colorMode = useColorMode()
 const imageUrl = ref('/images/blog/placeholder.png')
-const imageClass = ref('imgPlaceholder')
+const imageClass = ref('')
 
-async function updateImageUrl(colorPref: string) {
-  imageClass.value = 'imgPlaceholder'
-  if (props.post.thumbnail_dark && props.post.thumbnail_light) {
-    if (colorPref === 'dark')
-      imageUrl.value = props.post.thumbnail_light
-    else
-      imageUrl.value = props.post.thumbnail_dark
-  }
-  if (props.post.thumbnail)
-    imageUrl.value = props.post.thumbnail
-  await new Promise(resolve => setTimeout(resolve, 100))
+async function updateImageUrl (colorPref: string) {
   imageClass.value = ''
+  if (props.post.thumbnail) { imageUrl.value = props.post.thumbnail }
+  if (props.post.thumbnail_dark && props.post.thumbnail_light) {
+    if (colorPref === 'dark') {
+      imageUrl.value = props.post.thumbnail_light
+    } else {
+      imageUrl.value = props.post.thumbnail_dark
+    }
+  }
+  await new Promise(resolve => setTimeout(resolve, 100))
+  if (props.post.thumbnail_class) {
+    imageClass.value = props.post.thumbnail_class
+  } else {
+    imageClass.value = 'w-full'
+  }
 }
 onMounted(() => {
   updateImageUrl(colorMode.value)
@@ -44,7 +48,7 @@ watch(() => colorMode.value, (newColorMode) => {
       >
         {{ post.category }}
       </span>
-      <NuxtImg :src="imageUrl" format="webp" :class="imageClass" class="w-full transition-all" />
+      <NuxtImg :src="imageUrl" format="webp" :class="imageClass" class="transition-all" />
     </NuxtLink>
     <div class="p-5 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
       <h3>
@@ -89,9 +93,3 @@ watch(() => colorMode.value, (newColorMode) => {
     </div>
   </div>
 </template>
-
-<style scoped>
-img.imgPlaceholder {
-  opacity: 70%;
-}
-</style>

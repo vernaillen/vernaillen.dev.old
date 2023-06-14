@@ -15,6 +15,7 @@ export interface BlogPost {
   thumbnail?: string
   thumbnail_dark?: string
   thumbnail_light?: string
+  thumbnail_class?: string
 }
 
 export interface CareerStep {

@@ -1082,11 +1082,11 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/kit-edge@3.6.0-28108658.05a8c2d9:
-    resolution: {integrity: sha512-VKb25qnnZy1+xZsprcfD4zfKiwLWGzJ7Halju6dkYhQC2/pW3aNEMCpC59c83QdAizzE5Hazdh+/kXA29k5DXw==}
+  /@nuxt/kit-edge@3.6.0-28112314.f97052cb:
+    resolution: {integrity: sha512-TBO5ynY2vOujbXdPT9CnlxDznYFIjdCAQohOzEgXDDvxLPmULduYLIaB9+Qa9AEg6Vj++u38fkmdxKbgzmQGGg==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
-      '@nuxt/schema': /@nuxt/schema-edge@3.6.0-28108658.05a8c2d9
+      '@nuxt/schema': /@nuxt/schema-edge@3.6.0-28112314.f97052cb
       c12: 1.4.1
       consola: 3.1.0
       defu: 6.1.2
@@ -1147,8 +1147,8 @@ packages:
     transitivePeerDependencies:
       - webpack
 
-  /@nuxt/schema-edge@3.6.0-28108658.05a8c2d9:
-    resolution: {integrity: sha512-AqH1DRjd4CRENwQYmE539MlFkYtS3mE6vRp5/EJpr0/nE6ppnGUQYeFJLolSHCzeeAFOjuW9tM39aKsCaOpoyA==}
+  /@nuxt/schema-edge@3.6.0-28112314.f97052cb:
+    resolution: {integrity: sha512-kWyo06Z+ZjdzSOfeSTsMZgVjoOHwALRGnwl9tirwDFpbMSn/+aa8YUlHDRRJZMMHGEBrAfYQzfjC0lgo1a4C7g==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
       defu: 6.1.2
@@ -7214,7 +7214,7 @@ packages:
       vue-svg-loader:
         optional: true
     dependencies:
-      '@nuxt/kit': /@nuxt/kit-edge@3.6.0-28108658.05a8c2d9
+      '@nuxt/kit': /@nuxt/kit-edge@3.6.0-28112314.f97052cb
       '@vue/compiler-sfc': 3.3.4
       svgo: 3.0.2
     transitivePeerDependencies:
