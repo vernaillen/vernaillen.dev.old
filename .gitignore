@@ -7,5 +7,6 @@ test-old
 .nitro
 .cache
 .output
+.vercel
 .env
 dist
