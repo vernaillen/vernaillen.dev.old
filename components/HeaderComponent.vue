@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { useMobileNav } from '@/stores/mobileNav'
 
-const mobileNav = useMobileNav()
+const { isMobileNavOpen } = useMobileNav()
 
 const navbarTogglerClass = computed(() => {
-  return mobileNav.visible ? 'navbarTogglerActive' : ''
+  return isMobileNavOpen.value ? 'navbarTogglerActive' : ''
 })
 const navbarCollapseClass = computed(() => {
-  return mobileNav.visible ? '' : 'hidden'
+  return isMobileNavOpen.value ? '' : 'hidden'
 })
 </script>
 

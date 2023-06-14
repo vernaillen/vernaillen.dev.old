@@ -9,8 +9,8 @@ export default defineNuxtConfig({
     // '@nuxt/image',
     // '@nuxtjs/color-mode',
     // '@nuxtjs/plausible',
-    '@pinia/nuxt'
-    // '@nuxtjs/tailwindcss'
+    // '@pinia/nuxt'
+    '@nuxtjs/tailwindcss'
     // 'nuxt-svgo',
     // 'nuxt-vitest'
   ],
@@ -69,8 +69,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   plugins: [
+    '~/plugins/pageHooks.ts',
     '~/plugins/vueEasyLightbox.ts',
-    '~/plugins/recaptcha.ts',
-    '~/plugins/mobileNavAutoHide.ts'
+    '~/plugins/recaptcha.ts'
   ]
 })

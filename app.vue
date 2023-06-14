@@ -1,10 +1,9 @@
 /// <reference types="vite-svg-loader" />
 
 <script setup lang="ts">
-import { useMobileNav } from '@/stores/mobileNav'
 import { useRoute } from '#imports'
+const { isMobileNavOpen } = useMobileNav()
 
-const mobileNav = useMobileNav()
 useHead({
   titleTemplate: (title?: string) => `${title} - Wouter Vernaillen: Freelance Full Stack Java, Vue & Nuxt Developer`,
   htmlAttrs: {
@@ -22,7 +21,7 @@ useHead({
   ]
 })
 onMounted(() => {
-  window.addEventListener('resize', () => mobileNav.hide())
+  window.addEventListener('resize', () => { isMobileNavOpen.value = false })
 })
 const route = useRoute()
 const isIG = computed(() => {
@@ -35,7 +34,6 @@ const isIG = computed(() => {
   <header-component v-if="!isIG" />
   <NuxtPage />
   <footer-component v-if="!isIG" />
-  <easy-lightbox v-if="!isIG" />
 </template>
 
 <style>

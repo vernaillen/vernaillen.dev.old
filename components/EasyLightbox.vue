@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { useLightbox } from '@/stores/lightbox'
 
 const lightbox = useLightbox()
-function handleHide() {
-  lightbox.hide()
+function handleHide () {
+  lightbox.visible.value = false
 }
 </script>
 
