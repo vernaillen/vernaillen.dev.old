@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ], */
 
   modules: [
-    '@nuxt/content',
+    // '@nuxt/content',
     // '@nuxt/image',
     // '@nuxtjs/color-mode',
     // '@nuxtjs/plausible',
