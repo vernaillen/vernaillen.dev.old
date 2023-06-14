@@ -1,7 +1,7 @@
-import dayjs, { extend } from 'dayjs'
+import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 
-extend(LocalizedFormat)
+dayjs.extend(LocalizedFormat)
 export function longDateFormat (d: string) {
   const appConfig = useAppConfig()
   const date = dayjs(d)
