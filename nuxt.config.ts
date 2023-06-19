@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   },
 
   plausible: {
-    apiHost: 'https://www.vernaillen.dev/plio'
+    apiHost: 'https://vernaillen.dev/plio'
   },
 
   colorMode: {
