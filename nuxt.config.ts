@@ -68,5 +68,9 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  plugins: ['~/plugins/pageHooks.ts', '~/plugins/global.ts']
+  plugins: [
+    '~/plugins/lazyload.ts',
+    '~/plugins/pageHooks.ts',
+    '~/plugins/global.ts'
+  ]
 })

@@ -1,24 +1,43 @@
 <script setup lang="ts">
+const img = useImage()
 export interface Props {
   src: string
-  width: number
+  width?: number
   height?: number
   caption?: string
   captionUrl?: string
   cssClass?: string
   imageShadow?: boolean
-  modifiers?: Record<string, any>
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
+  width: 400,
+  height: 400,
+  caption: '',
+  captionUrl: '',
   cssClass: 'floatRight',
-  imageShadow: true,
+  imageShadow: true
 })
+const imgUrl = img(
+  props.src, {
+    width: props.width,
+    height: props.height,
+    fit: 'cover'
+  }
+)
 </script>
 
 <template>
   <div :class="cssClass">
-    <NuxtImg :modifiers="modifiers" :src="src" :width="width" :height="height" :alt="caption" :title="caption" class="!mt-0 rounded-md" :class="imageShadow ? 'shadow-md shadow-gray-400' : ''" />
+    <img
+      v-lazy="imgUrl"
+      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+      :alt="caption"
+      :width="width"
+      :height="height"
+      :class="imageShadow ? 'shadow-md' : ''"
+      class="!mt-0 rounded-md opacity-0 transform transition-all duration-1000"
+    >
     <p v-if="caption" class="caption text-xs w-full text-center mt-0">
       <NuxtLink v-if="captionUrl" :href="captionUrl" target="_blank" :alt="caption" :title="caption">
         {{ caption }}
@@ -29,6 +48,12 @@ withDefaults(defineProps<Props>(), {
 </template>
 
 <style scoped>
+img[lazy=loading] {
+    opacity: 0;
+}
+img[lazy=loaded] {
+    opacity: 1;
+}
 .prose .floatLeft {
   float: left;
   margin-right: 15px;

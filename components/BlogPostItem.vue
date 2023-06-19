@@ -6,8 +6,23 @@ const props = defineProps<{
 }>()
 
 const colorMode = useColorMode()
-const imageUrl = ref('/images/blog/placeholder.png')
+const imageUrl = ref('')
 const imageClass = ref('')
+
+const imageUrlDark = computed(() => {
+  if (props.post.thumbnail_light) {
+    return props.post.thumbnail_light
+  } else {
+    return props.post.thumbnail
+  }
+})
+const imageUrlLight = computed(() => {
+  if (props.post.thumbnail_dark) {
+    return props.post.thumbnail_dark
+  } else {
+    return props.post.thumbnail
+  }
+})
 
 async function updateImageUrl (colorPref: string) {
   imageClass.value = ''
@@ -30,6 +45,7 @@ onMounted(() => {
   updateImageUrl(colorMode.value)
 })
 watch(() => colorMode.value, (newColorMode) => {
+  console.log('watched cloroMode change to ' + newColorMode)
   updateImageUrl(newColorMode)
 })
 </script>
@@ -40,7 +56,7 @@ watch(() => colorMode.value, (newColorMode) => {
   >
     <NuxtLink
       :to="post._path"
-      class="w-full block relative md:h-[139px] xl:h-[109px] 2xl:h-[128px]"
+      class="w-full block relative md:h-[139px] xl:h-[109px] 2xl:h-[128px] overflow-hidden"
     >
       <span
         v-if="post.category"
@@ -48,7 +64,24 @@ watch(() => colorMode.value, (newColorMode) => {
       >
         {{ post.category }}
       </span>
-      <NuxtImg :src="imageUrl" format="webp" :class="imageClass" class="transition-all" />
+      <Image
+        v-if="imageUrlLight"
+        :src="imageUrlLight"
+        :width="400"
+        :height="139"
+        :alt="post.title"
+        :class="imageClass"
+        class="opacity-100 h-[139px] dark:opacity-0 dark:h-0 transition-opacity transform duration-300"
+      />
+      <Image
+        v-if="imageUrlDark"
+        :src="imageUrlDark"
+        :width="400"
+        :height="139"
+        :alt="post.title"
+        :class="imageClass"
+        class="opacity-0 h-0 dark:opacity-100 dark:h-[139px] transition-opacity transform duration-300"
+      />
     </NuxtLink>
     <div class="p-5 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
       <h3>
@@ -69,7 +102,7 @@ watch(() => colorMode.value, (newColorMode) => {
           class="flex pr-5 mr-5 xl:pr-3 2xl:pr-5 xl:mr-3 2xl:mr-5 border-r border-body-color border-opacity-10 dark:border-white dark:border-opacity-10"
         >
           <div class="max-w-[20px] w-full h-[20px] rounded-full overflow-hidden mr-4">
-            <img src="/images/wouter.jpg" alt="author" class="w-full">
+            <Image src="/images/wouter.jpg" :width="20" :height="20" alt="author" class="w-full" />
           </div>
           <div class="w-full">
             <h4 class="text-xs font-medium text-dark dark:text-white mb-1">

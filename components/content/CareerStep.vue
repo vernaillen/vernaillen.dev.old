@@ -9,13 +9,16 @@ defineProps<{
 <template>
   <div class="flex flex-start items-center">
     <div
-      class="company-img bg-primary drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full"
+      class="company-img bg-primary drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
-      <img
+      <Image
         v-if="careerStep.imageUrl"
         :src="careerStep.imageUrl"
         :alt="careerStep.project"
-      >
+        :width="34"
+        :height="34"
+        class="rounded-full"
+      />
     </div>
     <h4 class="text-gray-800 dark:text-white font-semibold -mt-2">
       {{ careerStep.client }}

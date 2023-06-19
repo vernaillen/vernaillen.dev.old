@@ -17,8 +17,8 @@ My career as an IT consultant started in 1999. The first 14 years I worked as an
 ---
 src: /images/woutervernaillen.jpg
 width: 300
-caption: Wouter Vernaillen
-imageShadow: false
+height: 350
+alt: Wouter Vernaillen
 ---
 ::
 By now I have build up more then :YearsOfExperience years of experience in web development and full stack development.
