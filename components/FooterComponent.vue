@@ -1,18 +1,17 @@
 <script setup lang="ts">
-function easeInOutQuad(
+function easeInOutQuad (
   currentTime: number,
   start: number,
   change: number,
-  duration: number,
+  duration: number
 ) {
   currentTime /= duration / 2
-  if (currentTime < 1)
-    return (change / 2) * currentTime * currentTime + start
+  if (currentTime < 1) { return (change / 2) * currentTime * currentTime + start }
   currentTime--
   return (-change / 2) * (currentTime * (currentTime - 2) - 1) + start
 }
 
-function scrollToTop() {
+function scrollToTop () {
   const to = 0
   const duration = 500
   const element = document.documentElement
@@ -28,8 +27,7 @@ function scrollToTop() {
 
     element.scrollTop = val
 
-    if (currentTime < duration)
-      setTimeout(animateScroll, increment)
+    if (currentTime < duration) { setTimeout(animateScroll, increment) }
   }
   animateScroll()
 }
@@ -39,23 +37,18 @@ onMounted(() => {
     const headerElement = document.querySelector('.header') as HTMLElement
     // const footerElement = document.querySelector('footer') as HTMLElement
     if (headerElement) {
-      if (window.scrollY > 40)
-        headerElement.classList.add('sticky')
-        // footerElement.classList.add('sticky')
+      if (window.scrollY > 40) { headerElement.classList.add('sticky') }
+      // footerElement.classList.add('sticky')
 
-      else
-        headerElement.classList.remove('sticky')
-        // footerElement.classList.remove('sticky')
+      else { headerElement.classList.remove('sticky') }
+      // footerElement.classList.remove('sticky')
 
       // show or hide the back-top-top button
       const backToTop = document.querySelector('.back-to-top') as HTMLElement
       if (
-        document.body.scrollTop > 50
-        || document.documentElement.scrollTop > 50
-      )
-        backToTop.style.display = 'flex'
-      else
-        backToTop.style.display = 'none'
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) { backToTop.style.display = 'flex' } else { backToTop.style.display = 'none' }
     }
   }
 })
@@ -79,7 +72,10 @@ onMounted(() => {
     </div>
   </footer>
   <div
-    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-6 left-auto z-20 hover:shadow-signUp hover:bg-opacity-80 shadow-md animate__animated animate__slideInUp"
+    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed
+      bottom-8 right-6 left-auto z-20 hover:shadow-signUp hover:bg-opacity-80 shadow-md
+      cursor-pointer
+      animate__animated animate__slideInUp"
     @click="scrollToTop()"
   >
     <span

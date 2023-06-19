@@ -45,7 +45,6 @@ onMounted(() => {
       v-if="lastUpdated"
       :href="viewLink"
       target="_blank"
-      class="animate-pulse"
       aria-label="Open source of this page on Github"
     >
       {{ longDateFormat(lastUpdated) }}

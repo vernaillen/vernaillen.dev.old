@@ -22,7 +22,8 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css',
     '~/assets/css/markdown.css',
-    '~/assets/css/prose.css'
+    '~/assets/css/prose.css',
+    'animate.css/animate.min.css'
   ],
 
   image: {

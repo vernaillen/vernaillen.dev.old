@@ -20,7 +20,8 @@ setMetaData('Home', false)
                   Freelance Full Stack Developer
                 </p>
                 <p class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10">
-                  Java, Spring, Vue, Nuxt <NuxtLink href="https://nuxt.com" target="_blank">
+                  Java, Spring, Vue, Nuxt
+                  <NuxtLink href="https://nuxt.com" target="_blank" aria-label="Nuxt">
                     <SvgoNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" viewBox="0 0 900 900" />
                   </NuxtLink> + DevOps
                 </p>
@@ -45,7 +46,7 @@ setMetaData('Home', false)
 
         <section id="instagram" class="container mx-auto pt-52 px-10">
           <div class="flex flex-wrap justify-center">
-            <NuxtLink to="https://www.instagram.com/woutervernaillen/" target="_blank">
+            <NuxtLink to="https://www.instagram.com/woutervernaillen/" target="_blank" aria-label="Wouter's Instagram profile">
               <Icon name="mdi:instagram" class="block text-gray-500 hover:text-primary" size="24" />
             </NuxtLink>
           </div>

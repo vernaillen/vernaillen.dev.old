@@ -24,6 +24,7 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run build && pnpm run coverage && pnpm run cy:local"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "consola": "^3.1.0",
     "prism-theme-vars": "^0.2.4",
     "vue3-lazyload": "^0.3.6"
@@ -37,7 +38,7 @@
     "@nuxtjs/plausible": "^0.2.1",
     "@nuxtjs/tailwindcss": "^6.7.2",
     "@types/node": "^18",
-    "@vernaillen/nuxt-base-layer": "^0.1.29",
+    "@vernaillen/nuxt-base-layer": "^0.2.3",
     "@vitest/coverage-c8": "^0.32.2",
     "@vueuse/nuxt": "^10.2.0",
     "cypress": "^12.14.0",

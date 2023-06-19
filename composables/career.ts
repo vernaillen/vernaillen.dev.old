@@ -6,11 +6,11 @@ export function useCareer (): CareerStep[] {
       client: 'Harmonics',
       contract: 'owner',
       date: '2023 - present',
-      project: 'Harmonics.be website',
+      project: 'Harmonics.be',
       projectUrl: 'https://harmonics.be',
-      role: 'web developer, event organizer, ecstatic dance DJ & trancedance facilitator',
+      role: 'ecstatic dance DJ & trancedance facilitator, event organizer, web developer',
       stack:
-        'Vue 3, Nuxt 3, Nuxt Content, Netlify',
+        'Vue 3, Nuxt 3, Nuxt Content, Netlify/Vercel',
       imageUrl: '/images/career/harmonics.png'
     },
     {

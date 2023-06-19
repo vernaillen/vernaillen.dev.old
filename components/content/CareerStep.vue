@@ -11,17 +11,32 @@ defineProps<{
     <div
       class="company-img bg-primary drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
-      <Image
-        v-if="careerStep.imageUrl"
-        :src="careerStep.imageUrl"
-        :alt="careerStep.project"
-        :width="34"
-        :height="34"
-        class="rounded-full"
-      />
+      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary">
+        <Image
+          v-if="careerStep.imageUrl"
+          :src="careerStep.imageUrl"
+          :alt="careerStep.project"
+          :width="34"
+          :height="34"
+          class="rounded-full"
+        />
+      </NuxtLink>
+      <span v-else>
+        <Image
+          v-if="careerStep.imageUrl"
+          :src="careerStep.imageUrl"
+          :alt="careerStep.project"
+          :width="34"
+          :height="34"
+          class="rounded-full"
+        />
+      </span>
     </div>
     <h4 class="text-gray-800 dark:text-white font-semibold -mt-2">
-      {{ careerStep.client }}
+      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary">
+        {{ careerStep.client }}
+      </NuxtLink>
+      <span v-else>{{ careerStep.client }}</span>
     </h4>
   </div>
   <div class="border-l-2 border-primary mt-2">
