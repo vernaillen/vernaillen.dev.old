@@ -13,7 +13,7 @@ const navbarCollapseClass = computed(() => {
 <template>
   <header class="header bg-transparent absolute top-0 left-0 z-20 h-16 w-full flex items-center transition-all">
     <div class="container h-16">
-      <div class="lg:flex mx-[-16px]">
+      <div class="lg:flex">
         <div class="lg:pl-8 lg:pr-4 max-w-full">
           <div class="w-full flex justify-center">
             <NuxtLink to="/" class="mx-auto">
@@ -22,14 +22,14 @@ const navbarCollapseClass = computed(() => {
           </div>
         </div>
         <div
-          class="flex px-4 justify-between items-center w-full"
+          class="flex px-4 justify-between items-center w-full h-16"
         >
           <div>
             <button
               id="navbarToggler"
               class="block absolute cursor-pointer left-2 top-7 translate-y-[-50%] lg:hidden focus:ring-2 ring-primary px-3 py-[6px] z-30"
               :class="navbarTogglerClass"
-              @click="mobileNav.toggle()"
+              @click="isMobileNavOpen = !isMobileNavOpen"
             >
               <span class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white transition" />
               <span class="relative w-[30px] h-[2px] my-[6px] block bg-dark dark:bg-white transition" />
@@ -59,7 +59,7 @@ const navbarCollapseClass = computed(() => {
               id="navbarCollapse"
               class="hidden absolute py-5 lg:py-0 lg:px-4 xl:px-6
                 bg-white dark:bg-dark lg:dark:bg-transparent lg:bg-transparent
-                shadow-lg rounded-lg max-w-[250px] w-full
+                shadow-lg rounded-lg max-w-[250px] w-full h-16
                 lg:max-w-full lg:w-full right-4 top-full
                 lg:block lg:static lg:shadow-none"
               :class="navbarCollapseClass"
@@ -68,8 +68,8 @@ const navbarCollapseClass = computed(() => {
               <nav-bar />
             </nav>
           </div>
-          <div class="flex justify-end items-center pr-16 lg:pr-0">
-            <ul class="absolute top-2 right-4 z-20">
+          <div class="flex justify-end items-center pr-0">
+            <ul class="absolute top-3 right-4 lg:relative lg:top-0 lg:right-0 z-20">
               <li>
                 <dark-toggler />
               </li>

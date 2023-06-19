@@ -1,17 +1,17 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  /* extends: [
+  extends: [
     '@vernaillen/nuxt-base-layer'
-  ], */
+  ],
 
   modules: [
     '@nuxt/content',
-    // '@nuxt/image',
-    // '@nuxtjs/color-mode',
+    '@nuxt/image',
+    '@nuxtjs/color-mode',
     // '@nuxtjs/plausible',
-    // '@pinia/nuxt'
-    '@nuxtjs/tailwindcss'
-    // 'nuxt-svgo',
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon',
+    'nuxt-svgo'
     // 'nuxt-vitest'
   ],
 
@@ -68,9 +68,5 @@ export default defineNuxtConfig({
 
   devtools: { enabled: false },
 
-  plugins: [
-    '~/plugins/pageHooks.ts',
-    '~/plugins/vueEasyLightbox.ts',
-    '~/plugins/recaptcha.ts'
-  ]
+  plugins: ['~/plugins/pageHooks.ts', '~/plugins/global.ts'],
 })

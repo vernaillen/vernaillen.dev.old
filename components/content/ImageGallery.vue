@@ -30,7 +30,7 @@ function openGallery (i: number) {
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-start mx-[-16px]">
+  <div class="flex flex-wrap justify-start">
     <div
       v-for="(image, index) in images"
       :key="index"

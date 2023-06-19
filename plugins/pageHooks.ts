@@ -5,10 +5,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('page:start', () => {
     isPageLoading.value = true
   })
-  nuxtApp.hook('page:finish', () => {
-    setTimeout(() => {
-      isMobileNavOpen.value = false
-    }, 140) // time for the page transition to finish
+  nuxtApp.hook('page:transition:finish', () => {
+    isMobileNavOpen.value = false
     isPageLoading.value = false
     referrerIsHome.value = false
   })
