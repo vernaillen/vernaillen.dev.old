@@ -1,4 +1,0 @@
-{
-  "vitest.commandLine": "npx vitest",
-  "vitest.enable": true
-}

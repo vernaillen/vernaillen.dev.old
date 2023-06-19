@@ -8,11 +8,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/color-mode',
-    // '@nuxtjs/plausible',
+    '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
-    'nuxt-svgo'
-    // 'nuxt-vitest'
+    'nuxt-svgo',
+    'nuxt-vitest'
   ],
 
   app: {
@@ -66,7 +66,7 @@ export default defineNuxtConfig({
     }
   },
 
-  devtools: { enabled: false },
+  devtools: { enabled: true },
 
-  plugins: ['~/plugins/pageHooks.ts', '~/plugins/global.ts'],
+  plugins: ['~/plugins/pageHooks.ts', '~/plugins/global.ts']
 })

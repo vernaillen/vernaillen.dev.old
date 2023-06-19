@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 
+// eslint-disable-next-line import/no-named-as-default-member
 dayjs.extend(LocalizedFormat)
 export function longDateFormat (d: string) {
   const appConfig = useAppConfig()
