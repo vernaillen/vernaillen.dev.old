@@ -1,4 +1,4 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [
     '@vernaillen/nuxt-base-layer'
@@ -8,11 +8,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/color-mode',
-    '@nuxtjs/plausible',
-    '@pinia/nuxt',
+    // '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
-    'nuxt-svgo',
-    'nuxt-vitest'
+    'nuxt-icon',
+    'nuxt-svgo'
+    // 'nuxt-vitest'
   ],
 
   app: {
@@ -66,13 +66,7 @@ export default defineNuxtConfig({
     }
   },
 
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
-  plugins: [
-    '~/plugins/vueEasyLightbox.ts',
-    '~/plugins/global.ts',
-    '~/plugins/vercel.client.ts',
-    '~/plugins/recaptcha.ts',
-    '~/plugins/mobileNavAutoHide.ts'
-  ]
+  plugins: ['~/plugins/pageHooks.ts', '~/plugins/global.ts'],
 })

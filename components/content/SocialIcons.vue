@@ -10,7 +10,7 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     title="GitHub"
     rel="me"
   >
-    <Icon name="mdi:github" alt="GitHub" class="animate__animated animate__bounceIn" />
+    <Icon name="mdi:github" alt="GitHub" class="animate__animated animate__bounceIn" size="24" />
   </NuxtLink>
   <NuxtLink
     :class="cssClass"
@@ -19,7 +19,7 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     title="LinkedIn"
     rel="me"
   >
-    <Icon name="mdi:linkedin" alt="LinkedIn" class="animate__animated animate__bounceIn" />
+    <Icon name="mdi:linkedin" alt="LinkedIn" class="animate__animated animate__bounceIn" size="24" />
   </NuxtLink>
   <NuxtLink
     :class="cssClass"
@@ -28,7 +28,7 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     title="Twitter"
     rel="me"
   >
-    <Icon name="mdi:twitter" alt="Twitter" class="animate__animated animate__bounceIn" />
+    <Icon name="mdi:twitter" alt="Twitter" class="animate__animated animate__bounceIn" size="24" />
   </NuxtLink>
   <NuxtLink
     :class="cssClass"
@@ -37,6 +37,6 @@ const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-p
     title="Mastodon"
     rel="me"
   >
-    <Icon name="mdi:mastodon" alt="Mastodon" class="animate__animated animate__bounceIn" />
+    <Icon name="mdi:mastodon" alt="Mastodon" class="animate__animated animate__bounceIn" size="24" />
   </NuxtLink>
 </template>

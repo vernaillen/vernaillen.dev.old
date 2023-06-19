@@ -42,7 +42,7 @@ setMetaData('Blog', false)
           </span>
         </div>
         <div class="container">
-          <div class="flex flex-wrap mx-[-16px] justify-start px-2 md:px-6">
+          <div class="flex flex-wrap justify-start px-2 md:px-4">
             <div
               v-for="post in posts"
               :key="post.path"

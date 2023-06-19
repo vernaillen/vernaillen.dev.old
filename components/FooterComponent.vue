@@ -78,15 +78,14 @@ onMounted(() => {
       </div>
     </div>
   </footer>
-  <NuxtLink
-    href="javascript:void(0)"
+  <div
     class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed bottom-8 right-6 left-auto z-20 hover:shadow-signUp hover:bg-opacity-80 shadow-md animate__animated animate__slideInUp"
     @click="scrollToTop()"
   >
     <span
       class="w-3 h-3 border-t border-l border-white rotate-45 mt-[6px]"
     />
-  </NuxtLink>
+  </div>
 </template>
 
 <style scoped>

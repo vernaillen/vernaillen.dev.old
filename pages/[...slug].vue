@@ -81,7 +81,7 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
         </section>
         <section v-if="page" class="relative z-10 py-2">
           <div class="container">
-            <div class="flex flex-wrap mx-[-16px]">
+            <div class="flex flex-wrap">
               <div class="w-full py-4 px-8 md:px-12">
                 <div class="mx-auto">
                   <article
@@ -99,7 +99,7 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
         </section>
         <section v-else class="relative z-10 py-2">
           <div class="container">
-            <div class="flex flex-wrap mx-[-16px]">
+            <div class="flex flex-wrap">
               <div class="w-full py-4 px-8 md:px-12">
                 <div class="prose mx-auto">
                   <article>
