@@ -16,7 +16,7 @@ const navbarCollapseClass = computed(() => {
       <div class="lg:flex">
         <div class="lg:pl-8 lg:pr-4 max-w-full">
           <div class="w-full flex justify-center">
-            <NuxtLink to="/" class="mx-auto">
+            <NuxtLink to="/" class="mx-auto" aria-label="go to Home">
               <SvgoLogo class="w-28" />
             </NuxtLink>
           </div>
@@ -27,6 +27,7 @@ const navbarCollapseClass = computed(() => {
           <div>
             <button
               id="navbarToggler"
+              aria-label="Toggle Mobile Navigation"
               class="block absolute cursor-pointer left-2 top-7 translate-y-[-50%] lg:hidden focus:ring-2 ring-primary px-3 py-[6px] z-30"
               :class="navbarTogglerClass"
               @click="isMobileNavOpen = !isMobileNavOpen"

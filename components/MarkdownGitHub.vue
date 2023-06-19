@@ -13,8 +13,8 @@ const lastUpdated = ref()
 const { data: gitHubData } = await useLazyFetch('/api/github', {
   method: 'post',
   body: JSON.stringify({
-    filename: props.page._file,
-  }),
+    filename: props.page._file
+  })
 })
 function updateGH (ghData: any) {
   if (ghData && ghData[0] && ghData[0].commit.author.date) {
@@ -22,7 +22,7 @@ function updateGH (ghData: any) {
   }
 }
 watch(gitHubData, (newGHData) => {
-  if (newGHData) updateGH(newGHData)
+  if (newGHData) { updateGH(newGHData) }
 })
 onMounted(() => {
   updateGH(gitHubData.value)
@@ -31,7 +31,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <NuxtLink :href="viewLink" target="_blank">
+    <NuxtLink :href="viewLink" target="_blank" aria-label="Open source of this page on Github">
       <Icon name="mdi:github" class="ml-1 mr-2" />
     </NuxtLink>
     last updated on&nbsp;
@@ -46,6 +46,7 @@ onMounted(() => {
       :href="viewLink"
       target="_blank"
       class="animate-pulse"
+      aria-label="Open source of this page on Github"
     >
       {{ longDateFormat(lastUpdated) }}
     </NuxtLink>
