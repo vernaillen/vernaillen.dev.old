@@ -16,9 +16,16 @@ const { data: gitHubData } = await useLazyFetch('/api/github', {
     filename: props.page._file,
   }),
 })
+function updateGH (ghData: any) {
+  if (ghData && ghData[0] && ghData[0].commit.author.date) {
+    lastUpdated.value = ghData[0].commit.author.date
+  }
+}
 watch(gitHubData, (newGHData) => {
-  if (newGHData && newGHData[0] && newGHData[0].commit.author.date)
-    lastUpdated.value = newGHData[0].commit.author.date
+  if (newGHData) updateGH(newGHData)
+})
+onMounted(() => {
+  updateGH(gitHubData.value)
 })
 </script>
 
