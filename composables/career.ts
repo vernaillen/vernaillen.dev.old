@@ -11,7 +11,7 @@ export function useCareer (): CareerStep[] {
       role: 'ecstatic dance DJ & trancedance facilitator, event organizer, web developer',
       stack:
         'Vue 3, Nuxt 3, Nuxt Content, Netlify/Vercel',
-      imageUrl: '/images/career/harmonics.png'
+      imageUrl: '/images/career/harmonics_bol.png'
     },
     {
       client: 'Opgroeien / Kind & Gezin',
