@@ -7,7 +7,7 @@ orbs:
 executors:
   pnpm-executor:
     docker:
-      - image: cimg/node:20.3.1-browsers
+      - image: vernaillen/circleci-pnpm:20.3.1-browsers
     working_directory: /tmp/workspace
 
 jobs:
