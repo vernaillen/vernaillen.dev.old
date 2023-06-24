@@ -56,7 +56,7 @@ watch(() => colorMode.value, (newColorMode) => {
   >
     <NuxtLink
       :to="post._path"
-      class="w-full block relative md:h-[139px] xl:h-[109px] 2xl:h-[128px] overflow-hidden"
+      class="w-full block relative h-[140px] xl:h-[100px] 2xl:h-[130px]  overflow-hidden"
     >
       <span
         v-if="post.category"
@@ -67,20 +67,20 @@ watch(() => colorMode.value, (newColorMode) => {
       <Image
         v-if="imageUrlLight"
         :src="imageUrlLight"
-        :width="400"
-        :height="139"
+        :width="460"
+        :height="160"
         :alt="post.title"
         :class="imageClass"
-        class="opacity-100 h-[139px] dark:opacity-0 dark:h-0 transition-opacity transform duration-300"
+        class="opacity-100 h-[160px] dark:opacity-0 dark:h-0 transition-opacity transform duration-300"
       />
       <Image
         v-if="imageUrlDark"
         :src="imageUrlDark"
-        :width="400"
-        :height="139"
+        :width="460"
+        :height="160"
         :alt="post.title"
         :class="imageClass"
-        class="opacity-0 h-0 dark:opacity-100 dark:h-[139px] transition-opacity transform duration-300"
+        class="opacity-0 h-0 dark:opacity-100 dark:h-[160px] transition-opacity transform duration-300"
       />
     </NuxtLink>
     <div class="p-5 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
@@ -102,17 +102,21 @@ watch(() => colorMode.value, (newColorMode) => {
           class="flex pr-5 mr-5 xl:pr-3 2xl:pr-5 xl:mr-3 2xl:mr-5 border-r border-body-color border-opacity-10 dark:border-white dark:border-opacity-10"
         >
           <div class="max-w-[20px] w-full h-[20px] rounded-full overflow-hidden mr-4">
-            <Image src="/images/wouter.jpg" :width="20" :height="20" alt="author" class="w-full" />
+            <NuxtLink
+              to="/about"
+              aria-label="Author: Wouter Vernaillen"
+            >
+              <Image src="/images/wouter.jpg" :width="20" :height="20" alt="author" class="w-full" />
+            </NuxtLink>
           </div>
           <div class="w-full">
-            <h4 class="text-xs font-medium text-dark dark:text-white mb-1">
-              <NuxtLink
-                to="/about"
-                class="text-dark dark:text-white hover:text-primary dark:hover:text-primary"
-              >
-                {{ post.author }}
-              </NuxtLink>
-            </h4>
+            <NuxtLink
+              to="/about"
+              aria-label="Author: Wouter Vernaillen"
+              class="text-xs font-medium text-dark dark:text-white align-text-top hover:text-primary dark:hover:text-primary"
+            >
+              Wouter Vernaillen
+            </NuxtLink>
           </div>
         </div>
         <div class="inline-block">
