@@ -33,14 +33,9 @@ setMetaData('Blog', false)
           </div>
         </div>
 
-        <div>
-          <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
-            <SvgoBackgroundLeft1 class="w-full" />
-          </span>
-          <span class="absolute right-[-160px] top-10 z-[-1] animate__animated animate__fadeIn">
-            <SvgoBackgroundRight1 class="w-full" />
-          </span>
-        </div>
+        <span class="absolute top-10 left-0 z-[-1] overflow-hidden">
+          <SvgoBackgroundLeft1 class="w-full" />
+        </span>
         <div class="container">
           <div class="flex flex-wrap justify-start px-2 md:px-4">
             <div

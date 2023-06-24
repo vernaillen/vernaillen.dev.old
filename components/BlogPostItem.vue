@@ -45,7 +45,6 @@ onMounted(() => {
   updateImageUrl(colorMode.value)
 })
 watch(() => colorMode.value, (newColorMode) => {
-  console.log('watched cloroMode change to ' + newColorMode)
   updateImageUrl(newColorMode)
 })
 </script>
@@ -56,7 +55,7 @@ watch(() => colorMode.value, (newColorMode) => {
   >
     <NuxtLink
       :to="post._path"
-      class="w-full block relative h-[140px] xl:h-[100px] 2xl:h-[130px]  overflow-hidden"
+      class="w-full block relative h-[140px] overflow-hidden"
     >
       <span
         v-if="post.category"
@@ -68,19 +67,20 @@ watch(() => colorMode.value, (newColorMode) => {
         v-if="imageUrlLight"
         :src="imageUrlLight"
         :width="460"
-        :height="160"
+        :height="140"
+        img-class="h-[140px]"
         :alt="post.title"
         :class="imageClass"
-        class="opacity-100 h-[160px] dark:opacity-0 dark:h-0 transition-opacity transform duration-300"
+        class="object-cover opacity-100 h-[140px] dark:opacity-0 dark:h-0 transition-opacity transform duration-300"
       />
       <Image
         v-if="imageUrlDark"
         :src="imageUrlDark"
         :width="460"
-        :height="160"
+        :height="140"
         :alt="post.title"
         :class="imageClass"
-        class="opacity-0 h-0 dark:opacity-100 dark:h-[160px] transition-opacity transform duration-300"
+        class="object-cover opacity-0 h-0 dark:opacity-100 dark:h-[140px] transition-opacity transform duration-300"
       />
     </NuxtLink>
     <div class="p-5 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
