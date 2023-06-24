@@ -72,7 +72,6 @@ export default defineNuxtConfig({
   plugins: [
     '~/plugins/lazyload.ts',
     '~/plugins/pageHooks.ts',
-    '~/plugins/global.ts',
-    '~/plugins/recaptcha.ts'
+    '~/plugins/global.ts'
   ]
 })

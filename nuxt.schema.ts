@@ -1,5 +1,3 @@
-import type { CareerStep } from '~~/types'
-
 export default defineNuxtSchema({
   appConfig: {
     longDateFormat: 'DD MMMM YYYY',
@@ -7,9 +5,6 @@ export default defineNuxtSchema({
     instagram: {
       enabled: false
     },
-    careerSteps: [
-      ...CareerStep
-    ],
     socials: {
       twitter: {
         name: 'Twitter',
