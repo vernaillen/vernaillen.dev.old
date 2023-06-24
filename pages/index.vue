@@ -13,7 +13,7 @@ setMetaData('Home', false)
           <div class="flex flex-wrap">
             <div class="w-full px-4">
               <div class="mx-auto max-w-[570px] text-center animate__animated animate__fadeIn">
-                <h1 class="text-dark dark:text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight mb-20 animate__animated animate__pulse">
+                <h1 class="text-dark dark:text-white font-bold tracking-wide text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight mb-20 animate__animated animate__pulse">
                   Wouter Vernaillen
                 </h1>
                 <p class="font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mt-24 mb-10">
@@ -28,13 +28,13 @@ setMetaData('Home', false)
                 <div id="action-buttons" class="flex items-center justify-center mt-10">
                   <NuxtLink
                     to="/blog"
-                    class="text-base font-semibold text-white bg-primary py-3 px-6 hover:bg-opacity-80 mx-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
+                    class="text-base font-semibold text-white bg-primary py-3 px-6 hover:bg-opacity-80 mr-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
                   >
                     Blog
                   </NuxtLink>
                   <NuxtLink
                     to="/about"
-                    class="text-base font-semibold text-dark bg-black bg-opacity-10 dark:text-white dark:bg-white dark:bg-opacity-20 py-3 px-6 hover:bg-opacity-20 dark:hover:bg-opacity-20 mx-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
+                    class="text-base truncate font-semibold text-dark bg-black bg-opacity-10 dark:text-white dark:bg-white dark:bg-opacity-20 py-3 px-6 hover:bg-opacity-20 dark:hover:bg-opacity-20 ml-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
                   >
                     About Wouter
                   </NuxtLink>
