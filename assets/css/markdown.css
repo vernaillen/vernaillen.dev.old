@@ -67,8 +67,15 @@ html.dark .prose {
 .prose a {
   font-weight: inherit;
   text-decoration: none;
+  border-bottom: 1px dotted rgba(200, 200, 200, 0.3);
+  transition: border .3s ease-in-out;
+  opacity: 0.8;
+}
+.dark .prose a {
+  opacity: 0.9;
 }
 .prose a:hover {
-  border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+  border-bottom: 1px solid var(--fg-deeper);
   transition: border 0.3s ease-in-out;
+  opacity: 1;
 }

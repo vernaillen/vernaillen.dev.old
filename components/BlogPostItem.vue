@@ -84,14 +84,14 @@ watch(() => colorMode.value, (newColorMode) => {
       />
     </NuxtLink>
     <div class="p-5 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
-      <h3>
+      <h2>
         <NuxtLink
           :to="post._path"
           class="font-bold text-dark dark:text-white text-xl sm:text-2xl block mb-4 hover:text-primary dark:hover:text-primary"
         >
           {{ post.title }}
         </NuxtLink>
-      </h3>
+      </h2>
       <p
         class="text-base text-body-color font-medium pb-6 mb-6 border-b border-body-color border-opacity-10 dark:border-white dark:border-opacity-10"
       >

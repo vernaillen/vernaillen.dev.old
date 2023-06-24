@@ -52,6 +52,9 @@ setMetaData('Blog', false)
             </div>
           </div>
         </div>
+        <div class="container prose font-mono mx-auto p-4 mt-10 mb-20">
+          <GoUp />
+        </div>
       </main>
     </NuxtLayout>
   </div>

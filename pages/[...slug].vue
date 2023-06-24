@@ -110,7 +110,7 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
             </div>
           </div>
         </section>
-        <PreviousNextPost v-if="page && page.isNews" />
+
         <div class="absolute left-0 bottom-5 z-[-1]">
           <SvgoFooter class="w-20" />
         </div>

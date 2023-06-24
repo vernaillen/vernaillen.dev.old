@@ -21,6 +21,10 @@ export default defineNuxtConfig({
   },
 
   css: [
+    '@fontsource/inter/400.css',
+    '@fontsource/inter/500.css',
+    '@fontsource/inter/600.css',
+    '@fontsource/pt-mono/400.css',
     '~/assets/css/main.css',
     '~/assets/css/markdown.css',
     '~/assets/css/prose.css',
@@ -69,10 +73,10 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
-
   plugins: [
     '~/plugins/lazyload.ts',
     '~/plugins/pageHooks.ts',
-    '~/plugins/global.ts'
+    '~/plugins/global.ts',
+    '~/plugins/recaptcha.ts'
   ]
 })

@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 module.exports = {
   content: [
     './app.vue',
@@ -22,6 +24,11 @@ module.exports = {
       padding: '16px'
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Inter', ...defaultTheme.fontFamily.serif],
+        mono: ['PT Mono', ...defaultTheme.fontFamily.mono]
+      },
       colors: {
         white: '#FFFFFF',
         black: '#0c0c0d',
