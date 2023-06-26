@@ -28,7 +28,7 @@
     "consola": "^3.1.0",
     "prism-theme-vars": "^0.2.4",
     "resend": "^0.15.3",
-    "vee-validate": "^4.10.1",
+    "vee-validate": "^4.10.2",
     "vue-recaptcha-v3": "^2.0.1",
     "yup": "^1.2.0"
   },
@@ -47,7 +47,6 @@
     "@vueuse/nuxt": "^10.2.0",
     "cypress": "^12.15.0",
     "dayjs": "^1.11.8",
-    "lightningcss": "^1.21.0",
     "nuxt": "3.6.0",
     "nuxt-icon": "^0.4.1",
     "nuxt-svgo": "^3.1.0",
