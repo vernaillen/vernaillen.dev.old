@@ -18,7 +18,7 @@ const { data: gitHubData } = await useLazyFetch('/api/github', {
 })
 function updateGH (ghData: any) {
   if (ghData && ghData[0] && ghData[0].commit.author.date) {
-    lastUpdated.value = ghData[0].commit.author.date
+    lastUpdated.value = longDateFormat(ghData[0].commit.author.date)
   }
 }
 watch(gitHubData, (newGHData) => {
@@ -35,19 +35,18 @@ onMounted(() => {
       <Icon name="mdi:github" class="ml-1 mr-2" />
     </NuxtLink>
     last updated on&nbsp;
-    <Icon
-      v-if="!lastUpdated"
-      name="uil:spinner-alt"
-      class="animate-spin"
-      size="16"
-    />
     <NuxtLink
-      v-if="lastUpdated"
       :href="viewLink"
       target="_blank"
       aria-label="Open source of this page on Github"
     >
-      {{ longDateFormat(lastUpdated) }}
+      <Icon
+        v-show="!lastUpdated"
+        name="uil:spinner-alt"
+        class="animate-spin"
+        size="16"
+      />
+      {{ lastUpdated }}
     </NuxtLink>
   </div>
 </template>
