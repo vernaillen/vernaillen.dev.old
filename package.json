@@ -30,7 +30,6 @@
     "resend": "^0.15.3",
     "vee-validate": "^4.10.1",
     "vue-recaptcha-v3": "^2.0.1",
-    "vue3-lazyload": "^0.3.6",
     "yup": "^1.2.0"
   },
   "devDependencies": {
@@ -43,7 +42,7 @@
     "@nuxtjs/plausible": "^0.2.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18",
-    "@vernaillen/nuxt-base-layer": "^0.2.3",
+    "@vernaillen/nuxt-base-layer": "^0.2.4",
     "@vitest/coverage-c8": "^0.32.2",
     "@vueuse/nuxt": "^10.2.0",
     "cypress": "^12.15.0",

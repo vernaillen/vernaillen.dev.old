@@ -6,7 +6,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/content',
-    '@nuxt/image',
     '@nuxthq/studio',
     '@nuxtjs/color-mode',
     '@nuxtjs/plausible',
@@ -70,7 +69,6 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
   plugins: [
-    '~/plugins/lazyload.ts',
     '~/plugins/pageHooks.ts',
     '~/plugins/global.ts'
   ]

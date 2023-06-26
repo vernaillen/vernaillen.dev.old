@@ -23,9 +23,6 @@ dependencies:
   vue-recaptcha-v3:
     specifier: ^2.0.1
     version: 2.0.1(vue@3.3.4)
-  vue3-lazyload:
-    specifier: ^0.3.6
-    version: 0.3.6(vue@3.3.4)
   yup:
     specifier: ^1.2.0
     version: 1.2.0
@@ -59,8 +56,8 @@ devDependencies:
     specifier: ^18
     version: 18.16.18
   '@vernaillen/nuxt-base-layer':
-    specifier: ^0.2.3
-    version: 0.2.3(nuxt@3.6.0)(vue@3.3.4)
+    specifier: ^0.2.4
+    version: 0.2.4(nuxt@3.6.0)(vue@3.3.4)
   '@vitest/coverage-c8':
     specifier: ^0.32.2
     version: 0.32.2(vitest@0.30.1)
@@ -2210,12 +2207,12 @@ packages:
       - supports-color
     dev: true
 
-  /@vernaillen/nuxt-base-layer@0.2.3(nuxt@3.6.0)(vue@3.3.4):
-    resolution: {integrity: sha512-CXspUgD78KV/8lWG4i4nsL0MrHJH4DpfPUNo1TvEu2x4Lkt4rKNjN3VbhaZIABVuYnC+Vm1fJ4Q/+Gww6tqLwA==}
-    requiresBuild: true
+  /@vernaillen/nuxt-base-layer@0.2.4(nuxt@3.6.0)(vue@3.3.4):
+    resolution: {integrity: sha512-AGlAjL/vhJ65TtSqkRrcELdq2sSqiTyxHz/h0RJLJjNjE4v+HQ6Hq1nTYIwD72dBqPUs5vA5nKnjwqS/5m9f2Q==}
     dependencies:
       '@vueuse/core': 10.2.0(vue@3.3.4)
       '@vueuse/nuxt': 10.2.0(nuxt@3.6.0)(vue@3.3.4)
+      vue3-lazyload: 0.3.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - nuxt
@@ -11668,7 +11665,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.3.4
-    dev: false
+    dev: true
 
   /vue-demi@0.14.5(vue@3.3.4):
     resolution: {integrity: sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==}
@@ -11743,7 +11740,7 @@ packages:
     dependencies:
       vue: 3.3.4
       vue-demi: 0.12.5(vue@3.3.4)
-    dev: false
+    dev: true
 
   /vue@3.3.4:
     resolution: {integrity: sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==}

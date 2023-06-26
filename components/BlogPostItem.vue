@@ -63,7 +63,7 @@ watch(() => colorMode.value, (newColorMode) => {
       >
         {{ post.category }}
       </span>
-      <Image
+      <VImage
         v-if="imageUrlLight"
         :src="imageUrlLight"
         :width="460"
@@ -73,7 +73,7 @@ watch(() => colorMode.value, (newColorMode) => {
         :class="imageClass"
         class="object-cover opacity-100 h-[140px] dark:opacity-0 dark:h-0 transition-opacity transform duration-300"
       />
-      <Image
+      <VImage
         v-if="imageUrlDark"
         :src="imageUrlDark"
         :width="460"
@@ -106,7 +106,7 @@ watch(() => colorMode.value, (newColorMode) => {
               to="/about"
               aria-label="Author: Wouter Vernaillen"
             >
-              <Image src="/images/wouter.jpg" :width="20" :height="20" alt="author" class="w-full" />
+              <VImage src="/images/wouter.jpg" :width="20" :height="20" alt="author" class="w-full" />
             </NuxtLink>
           </div>
           <div class="w-full">

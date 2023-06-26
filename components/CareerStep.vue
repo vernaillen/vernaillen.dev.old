@@ -12,7 +12,7 @@ defineProps<{
       class="company-img bg-primary drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
       <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary">
-        <Image
+        <VImage
           v-if="careerStep.imageUrl"
           :src="careerStep.imageUrl"
           :alt="careerStep.project"
@@ -22,7 +22,7 @@ defineProps<{
         />
       </NuxtLink>
       <span v-else>
-        <Image
+        <VImage
           v-if="careerStep.imageUrl"
           :src="careerStep.imageUrl"
           :alt="careerStep.project"
