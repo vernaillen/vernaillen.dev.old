@@ -29,7 +29,6 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
                   <div class="flex flex-wrap">
                     <div
                       v-if="page.desc"
-                      :style="`background: ${page.bgColor};`"
                       class="font-medium text-base text-body-color leading-relaxed mb-8"
                     >
                       {{ page.desc }}
@@ -42,7 +41,7 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
                     v-if="page.author === 'Wouter Vernaillen'"
                     class="max-w-[20px] h-[20px] rounded-full overflow-hidden mr-2 mt-[-5px]"
                   >
-                    <img src="/images/wouter.jpg" alt="author" class="w-full">
+                    <VImage src="/images/wouter.jpg" :width="20" :height="20" alt="author" class="w-full" />
                   </div>
                   <div class="flex flex-nowrap items-center text-xs text-body-color hover:text-primary font-small mr-2">
                     <NuxtLink to="/about">

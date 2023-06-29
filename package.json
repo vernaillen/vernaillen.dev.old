@@ -21,7 +21,9 @@
     "cy:local": "start-server-and-test preview http://localhost:3000 'cypress run --config baseUrl=http://localhost:3000'",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run build && pnpm run coverage && pnpm run cy:local"
+    "unlighthouse:dev": "start-server-and-test preview http://localhost:3000 'npx unlighthouse --site localhost:3000'",
+    "unlighthouse:prod": "npx unlighthouse",
+    "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run build && pnpm run coverage && pnpm run cy:local && pnpm run unlighthouse:dev"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

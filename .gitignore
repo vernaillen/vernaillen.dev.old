@@ -21,5 +21,7 @@ logs
 .env
 .env.*
 !.env.example
+
 .vercel
 coverage/
+.unlighthouse

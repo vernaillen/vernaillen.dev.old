@@ -30,10 +30,12 @@ const isIG = computed(() => {
 </script>
 
 <template>
-  <NuxtLoadingIndicator v-if="!isIG" color="repeating-linear-gradient(to right,rgb(156 142 27/40%) 0%,rgb(156 142 27/60%) 80%,rgb(156 142 27/40%) 100%)" />
-  <header-component v-if="!isIG" />
-  <NuxtPage />
-  <footer-component v-if="!isIG" />
+  <div>
+    <NuxtLoadingIndicator v-if="!isIG" color="repeating-linear-gradient(to right,rgb(156 142 27/40%) 0%,rgb(156 142 27/60%) 80%,rgb(156 142 27/40%) 100%)" />
+    <header-component v-if="!isIG" />
+    <NuxtPage />
+    <footer-component v-if="!isIG" />
+  </div>
 </template>
 
 <style>
