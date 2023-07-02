@@ -84,7 +84,7 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
               <div class="w-full py-4 px-8 md:px-12">
                 <div class="mx-auto">
                   <article
-                    class="m-auto font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 animate__animated animate__fadeIn"
+                    class="m-auto font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 slide-enter-content"
                     :class="prose()"
                   >
                     <ContentDoc />

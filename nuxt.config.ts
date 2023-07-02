@@ -15,10 +15,6 @@ export default defineNuxtConfig({
     'nuxt-vitest'
   ],
 
-  app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
-  },
-
   css: [
     '~/assets/css/main.css',
     '~/assets/css/markdown.css',

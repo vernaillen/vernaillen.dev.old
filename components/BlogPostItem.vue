@@ -3,6 +3,7 @@ import type { BlogPost } from '~~/types'
 
 const props = defineProps<{
   post: BlogPost
+  index: number
 }>()
 
 const colorMode = useColorMode()
@@ -51,10 +52,12 @@ watch(() => colorMode.value, (newColorMode) => {
 
 <template>
   <div
-    class="blog-card relative bg-[#ffffff] dark:bg-dark dark:bg-opacity-50 shadow-lg rounded-md overflow-hidden mb-10"
+    class="blog-card relative bg-[#ffffff] dark:bg-dark dark:bg-opacity-50 shadow-lg rounded-md overflow-hidden mb-10 slide-enter"
+    :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
   >
     <NuxtLink
-      :to="post._path"
+      :to="
+        post._path"
       class="w-full block relative h-[140px] overflow-hidden"
     >
       <span

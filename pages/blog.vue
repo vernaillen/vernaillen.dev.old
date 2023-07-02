@@ -37,13 +37,13 @@ setMetaData('Blog', false)
           <SvgoBackgroundLeft1 class="w-full" />
         </span>
         <div class="container">
-          <div class="flex flex-wrap justify-start px-2 md:px-4">
+          <div class="flex flex-wrap justify-start px-2 md:px-4 slide-enter-content">
             <div
-              v-for="post in posts"
-              :key="post.path"
+              v-for="post, index in posts"
+              :key="index"
               class="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 px-4"
             >
-              <BlogPostItem :post="post" />
+              <BlogPostItem :post="post" :index="index" />
             </div>
           </div>
         </div>

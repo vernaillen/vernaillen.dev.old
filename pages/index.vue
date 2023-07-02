@@ -11,21 +11,24 @@ setMetaData('Home', false)
       <main id="home" class="flex flex-col z-10 pt-[160px] pb-[100px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px]">
         <div class="container">
           <div class="flex flex-wrap">
-            <div class="w-full px-4">
+            <div class="w-full px-4 slide-enter-content">
               <div class="mx-auto max-w-[570px] text-center animate__animated animate__fadeIn">
                 <h1 class="text-dark dark:text-white font-bold tracking-wide text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight mb-20 animate__animated animate__pulse">
                   Wouter Vernaillen
                 </h1>
-                <p class="font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mt-24 mb-10">
+                <p
+                  class="font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mt-24 mb-10 slide-enter"
+                  style="--enter-stage:0;--enter-step:60ms;"
+                >
                   Freelance Full Stack Developer
                 </p>
-                <p class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10">
+                <p class="font-medium text-md md:text-lg leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 mb-10 slide-enter" style="--enter-stage:1;--enter-step:60ms;">
                   Java, Spring, Vue, Nuxt
                   <NuxtLink href="https://nuxt.com" target="_blank" aria-label="Nuxt">
                     <SvgoNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" viewBox="0 0 900 900" />
                   </NuxtLink> + DevOps
                 </p>
-                <div id="action-buttons" class="flex items-center justify-center mt-10">
+                <div id="action-buttons" class="flex items-center justify-center mt-10 slide-enter" style="--enter-stage:2;--enter-step:60ms;">
                   <NuxtLink
                     to="/blog"
                     class="text-base font-semibold text-white bg-primary-500 py-3 px-6 hover:bg-opacity-80 mr-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
