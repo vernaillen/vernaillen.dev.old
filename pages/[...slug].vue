@@ -43,7 +43,7 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
                   >
                     <VImage src="/images/wouter.jpg" :width="20" :height="20" alt="author" class="w-full" />
                   </div>
-                  <div class="flex flex-nowrap items-center text-xs text-body-color hover:text-primary font-small mr-2">
+                  <div class="flex flex-nowrap items-center text-xs text-body-color hover:text-primary-500 font-small mr-2">
                     <NuxtLink to="/about">
                       {{ page.author }}
                     </NuxtLink>

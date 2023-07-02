@@ -28,7 +28,7 @@ setMetaData('Home', false)
                 <div id="action-buttons" class="flex items-center justify-center mt-10">
                   <NuxtLink
                     to="/blog"
-                    class="text-base font-semibold text-white bg-primary py-3 px-6 hover:bg-opacity-80 mr-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
+                    class="text-base font-semibold text-white bg-primary-500 py-3 px-6 hover:bg-opacity-80 mr-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
                   >
                     Blog
                   </NuxtLink>
@@ -47,7 +47,7 @@ setMetaData('Home', false)
         <section id="instagram" class="container mx-auto pt-52 px-10">
           <div class="flex flex-wrap justify-center">
             <NuxtLink to="https://www.instagram.com/woutervernaillen/" target="_blank" aria-label="Wouter's Instagram profile">
-              <Icon name="mdi:instagram" class="block text-gray-500 hover:text-primary" size="24" />
+              <Icon name="mdi:instagram" class="block text-gray-500 hover:text-primary-500" size="24" />
             </NuxtLink>
           </div>
           <div class="flex flex-wrap justify-center mx-[-34px]">

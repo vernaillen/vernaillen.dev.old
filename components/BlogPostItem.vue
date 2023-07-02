@@ -59,7 +59,7 @@ watch(() => colorMode.value, (newColorMode) => {
     >
       <span
         v-if="post.category"
-        class="absolute top-6 right-6 bg-primary rounded-full inline-flex items-center justify-center py-2 px-4 font-semibold text-sm text-white"
+        class="absolute top-6 right-6 bg-primary-500 rounded-full inline-flex items-center justify-center py-2 px-4 font-semibold text-sm text-white"
       >
         {{ post.category }}
       </span>
@@ -87,7 +87,7 @@ watch(() => colorMode.value, (newColorMode) => {
       <h2>
         <NuxtLink
           :to="post._path"
-          class="font-bold text-dark dark:text-white text-xl sm:text-2xl block mb-4 hover:text-primary dark:hover:text-primary"
+          class="font-bold text-dark dark:text-white text-xl sm:text-2xl block mb-4 hover:text-primary-500 dark:hover:text-primary-500"
         >
           {{ post.title }}
         </NuxtLink>
@@ -113,7 +113,7 @@ watch(() => colorMode.value, (newColorMode) => {
             <NuxtLink
               to="/about"
               aria-label="Author: Wouter Vernaillen"
-              class="text-xs font-medium text-dark dark:text-white align-text-top hover:text-primary dark:hover:text-primary"
+              class="text-xs font-medium text-dark dark:text-white align-text-top hover:text-primary-500 dark:hover:text-primary-500"
             >
               Wouter Vernaillen
             </NuxtLink>

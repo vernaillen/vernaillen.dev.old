@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxthq/studio',
+    '@nuxthq/ui',
     '@nuxtjs/color-mode',
     '@nuxtjs/plausible',
-    '@nuxtjs/tailwindcss',
     'nuxt-icon',
     'nuxt-svgo',
     'nuxt-vitest'

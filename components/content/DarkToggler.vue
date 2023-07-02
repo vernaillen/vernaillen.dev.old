@@ -33,7 +33,7 @@ function iconClass (color: string) {
         :class="iconClass(color)"
         :name="`material-symbols:${color}-mode`"
         size="1.5em"
-        class="absolute cursor-pointer hover:text-primary hover:fill-primary"
+        class="absolute cursor-pointer hover:text-primary-500 hover:fill-primary-500"
         @click="toggleColorMode"
       />
     </ClientOnly>

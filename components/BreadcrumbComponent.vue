@@ -2,12 +2,12 @@
 defineProps({
   pageName: {
     type: String,
-    required: true,
+    required: true
   },
   path: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 })
 </script>
 
@@ -18,7 +18,7 @@ defineProps({
         <li class="flex">
           <NuxtLink
             to="/"
-            class="font-medium text-sm text-body-color pr-2 hover:text-primary"
+            class="font-medium text-sm text-body-color pr-2 hover:text-primary-500"
           >
             Home
           </NuxtLink>
@@ -32,7 +32,7 @@ defineProps({
         >
           <NuxtLink
             to="/blog"
-            class="font-medium text-sm text-body-color pr-2 hover:text-primary"
+            class="font-medium text-sm text-body-color pr-2 hover:text-primary-500"
           >
             Blog
           </NuxtLink>
@@ -43,7 +43,7 @@ defineProps({
         </li>
         <li
           v-if="pageName"
-          class="flex font-medium text-sm text-primary"
+          class="flex font-medium text-sm text-primary-500"
         >
           {{ pageName }}
         </li>

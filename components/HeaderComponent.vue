@@ -28,7 +28,7 @@ const navbarCollapseClass = computed(() => {
             <button
               id="navbarToggler"
               aria-label="Toggle Mobile Navigation"
-              class="block absolute cursor-pointer left-2 top-7 translate-y-[-50%] lg:hidden focus:ring-2 ring-primary px-3 py-[6px] z-30"
+              class="block absolute cursor-pointer left-2 top-7 translate-y-[-50%] lg:hidden focus:ring-2 ring-primary-500 px-3 py-[6px] z-30"
               :class="navbarTogglerClass"
               @click="isMobileNavOpen = !isMobileNavOpen"
             >

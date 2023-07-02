@@ -1,12 +1,11 @@
 <script setup lang="ts">
-function linkClass(path: string) {
+function linkClass (path: string) {
   const currentRoute = useRoute().path
   let classToAdd = ''
   if (
-    (path !== '/' && currentRoute.startsWith(path))
-    || (currentRoute === '/thanks' && path === '/contact')
-  )
-    classToAdd = 'router-link-active'
+    (path !== '/' && currentRoute.startsWith(path)) ||
+    (currentRoute === '/thanks' && path === '/contact')
+  ) { classToAdd = 'router-link-active' }
   return classToAdd
 }
 </script>
@@ -20,7 +19,7 @@ function linkClass(path: string) {
         text-center items-center justify-center
         flex py-2 my-2 px-10
         lg:inline-flex lg:mt-0 lg:pt-4 lg:pb-6 lg:px-2 lg:mx-2
-        border-[3px] border-transparent bg-primary
+        border-[3px] border-transparent bg-primary-500
         bg-opacity-0
         lg:border-t lg:border-l-0 lg:border-r-0"
         :class="linkClass(item.path)"

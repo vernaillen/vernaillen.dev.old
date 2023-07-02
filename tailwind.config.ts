@@ -6,6 +6,7 @@ module.exports = {
     './assets/svg/*.svg',
     './components/*.vue',
     './components/**/*.vue',
+    './content/**/*.md',
     './layouts/**/*.vue',
     './pages/**/*.vue'
   ],
@@ -33,8 +34,31 @@ module.exports = {
         white: '#FFFFFF',
         black: '#0c0c0d',
         dark: '#333333',
-        primary: '#9C8E1B',
+        vernaillen: {
+          DEFAULT: '#9c8e1b',
+          50: '#faf9f0',
+          100: '#f5f3e1',
+          200: '#e6e2b5',
+          300: '#d6d090',
+          400: '#baaf4e',
+          500: '#9c8e1b',
+          600: '#8c7815',
+          700: '#755d0f',
+          800: '#5e4509',
+          900: '#452e06',
+          950: '#2e1b02'
+        },
         'body-color': '#777777'
+      },
+
+      typography: (theme) => {
+        return {
+          DEFAULT: {
+            css: {
+              maxWidth: '1320px'
+            }
+          }
+        }
       },
       boxShadow: {
         signUp: '0px 5px 10px rgba(4, 10, 34, 0.2)',

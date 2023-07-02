@@ -9,9 +9,9 @@ defineProps<{
 <template>
   <div class="flex flex-start items-center">
     <div
-      class="company-img bg-primary drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
+      class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
-      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary">
+      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
         <VImage
           v-if="careerStep.imageUrl"
           :src="careerStep.imageUrl"
@@ -33,7 +33,7 @@ defineProps<{
       </span>
     </div>
     <h4 class="text-gray-800 dark:text-white font-semibold -mt-2">
-      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary">
+      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
         {{ careerStep.client }}
       </NuxtLink>
       <span v-else>{{ careerStep.client }}</span>
@@ -55,7 +55,7 @@ defineProps<{
         <div
           class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
         >
-          <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary">
+          <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
             {{ careerStep.project }}
           </NuxtLink>
           <span v-else>{{ careerStep.project }}</span>

@@ -5,5 +5,8 @@ export default defineAppConfig({
     enabled: true,
     wpPageId: 10053,
     wpBaseUrl: 'https://wouternew.vernaillen.com/'
+  },
+  ui: {
+    primary: 'vernaillen'
   }
 })

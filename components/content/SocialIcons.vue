@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const cssClass = 'text-dark dark:text-white hover:text-primary dark:hover:text-primary mx-2 transition-all'
+const cssClass = 'text-dark dark:text-white hover:text-primary-500 dark:hover:text-primary-500 mx-2 transition-all'
 </script>
 
 <template>

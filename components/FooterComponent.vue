@@ -56,7 +56,7 @@ onMounted(() => {
 
 <template>
   <footer class="bottom-0 left-0 right-0 pt-0">
-    <div class="py-8 bg-primary bg-opacity-5">
+    <div class="py-8 bg-primary-500 bg-opacity-5">
       <div class="flex mb-4 justify-center">
         <social-icons />
       </div>
@@ -72,7 +72,7 @@ onMounted(() => {
     </div>
   </footer>
   <div
-    class="back-to-top hidden items-center justify-center bg-primary text-white w-10 h-10 rounded-md fixed
+    class="back-to-top hidden items-center justify-center bg-primary-500 text-white w-10 h-10 rounded-md fixed
       bottom-8 right-6 left-auto z-20 hover:shadow-signUp hover:bg-opacity-80 shadow-md
       cursor-pointer
       animate__animated animate__slideInUp"
