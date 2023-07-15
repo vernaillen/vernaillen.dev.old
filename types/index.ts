@@ -28,3 +28,10 @@ export interface CareerStep {
   stack: string
   imageUrl?: string
 }
+
+export interface Project {
+  title: string
+  desc: string
+  url: string
+  githubUrl?: string
+}
