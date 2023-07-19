@@ -50,7 +50,7 @@
     "@vueuse/nuxt": "^10.2.1",
     "cypress": "^12.17.1",
     "dayjs": "^1.11.9",
-    "nuxt": "3.6.3",
+    "nuxt": "3.6.5",
     "nuxt-icon": "^0.4.2",
     "nuxt-svgo": "^3.3.0",
     "nuxt-vitest": "^0.10.0",
