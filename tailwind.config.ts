@@ -51,7 +51,7 @@ module.exports = {
         'body-color': '#777777'
       },
 
-      typography: (theme) => {
+      typography: () => {
         return {
           DEFAULT: {
             css: {
