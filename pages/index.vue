@@ -11,7 +11,7 @@ setMetaData('Home', false)
       <main id="home" class="flex flex-col z-10 pt-[160px] pb-[100px] xl:pt-[190px] xl:pb-[160px] 2xl:pt-[220px] 2xl:pb-[200px]">
         <div class="container">
           <div class="flex flex-wrap">
-            <div class="w-full px-4 slide-enter-content">
+            <div class="w-full px-2 slide-enter-content">
               <div class="mx-auto max-w-[570px] text-center animate__animated animate__fadeIn">
                 <h1 class="text-dark dark:text-white font-bold tracking-wide text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight mb-20 animate__animated animate__pulse">
                   Wouter Vernaillen

@@ -28,13 +28,17 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "consola": "^3.2.3",
+    "masto": "^5.11.4",
+    "nuxt-time": "^0.1.1",
     "prism-theme-vars": "^0.2.4",
     "resend": "^0.17.1",
+    "rollup-plugin-node-polyfills": "^0.2.1",
     "vee-validate": "^4.10.8",
     "vue-recaptcha-v3": "^2.0.1",
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.53",
     "@nuxt/content": "^2.7.1",
     "@nuxt/devtools": "^0.7.1",
     "@nuxt/image": "1.0.0-rc.1",

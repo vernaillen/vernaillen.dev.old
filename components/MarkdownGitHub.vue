@@ -30,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="mx-2">
     <NuxtLink :href="viewLink" target="_blank" aria-label="Open source of this page on Github">
       <Icon name="mdi:github" class="ml-1 mr-2" />
     </NuxtLink>

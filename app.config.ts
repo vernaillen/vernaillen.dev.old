@@ -7,6 +7,7 @@ export default defineAppConfig({
     wpBaseUrl: 'https://wouternew.vernaillen.com/'
   },
   ui: {
-    primary: 'vernaillen'
+    primary: 'vernaillen',
+    gray: 'neutral'
   }
 })

@@ -62,7 +62,7 @@ watch(() => colorMode.value, (newColorMode) => {
     >
       <span
         v-if="post.category"
-        class="absolute top-6 right-6 bg-primary-500 rounded-full inline-flex items-center justify-center py-2 px-4 font-semibold text-sm text-white"
+        class="absolute top-6 right-6 bg-primary-500 rounded-full inline-flex items-center justify-center p-2 font-semibold text-sm text-white"
       >
         {{ post.category }}
       </span>

@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full px-4 mb-10">
+  <div class="w-full px-2 mb-10">
     <div>
       <ul class="flex justify-start">
         <li class="flex">

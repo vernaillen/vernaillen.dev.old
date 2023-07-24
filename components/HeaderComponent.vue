@@ -22,7 +22,7 @@ const navbarCollapseClass = computed(() => {
           </div>
         </div>
         <div
-          class="flex px-4 justify-between items-center w-full h-16"
+          class="flex px-2 justify-between items-center w-full h-16"
         >
           <div>
             <button

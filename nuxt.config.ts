@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     'nuxt-icon',
     'nuxt-svgo',
+    'nuxt-time',
     'nuxt-vitest'
   ],
 
@@ -27,6 +28,18 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillendev'
     }
+  },
+
+  social: {
+    networks: {
+      mastodon: {
+        identifier: 'vernaillen@fosstodon.org'
+      }
+    }
+  },
+
+  ui: {
+    icons: ['mdi']
   },
 
   svgo: {

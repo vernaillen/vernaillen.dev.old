@@ -18,7 +18,7 @@ setMetaData('Blog', false)
         <div class="container">
           <div class="flex flex-wrap">
             <breadcrumb-component page-name="Blog" path="/blog" />
-            <div class="px-4 mb-4 md:mb-0">
+            <div class="px-2 mb-4 md:mb-0">
               <div class="flex flex-wrap">
                 <h1 class="font-bold text-dark dark:text-white text-2xl sm:text-3xl mb-5 animate__animated animate__pulse">
                   Blog
@@ -41,7 +41,7 @@ setMetaData('Blog', false)
             <div
               v-for="post, index in posts"
               :key="index"
-              class="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 px-4"
+              class="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 px-2"
             >
               <BlogPostItem :post="post" :index="index" />
             </div>

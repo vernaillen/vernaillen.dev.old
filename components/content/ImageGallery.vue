@@ -34,7 +34,7 @@ function openGallery (i: number) {
     <div
       v-for="(image, index) in images"
       :key="index"
-      class="md:w-2/3 lg:w-1/2 xl:w-1/3 px-4"
+      class="md:w-2/3 lg:w-1/2 xl:w-1/3 px-2"
     >
       <div
         class="galleryImgWrapper rounded-md overflow-hidden relative mb-8 shadow-md shadow-gray-800"
