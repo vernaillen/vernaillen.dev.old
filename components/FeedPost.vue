@@ -22,13 +22,13 @@ const user = props.handle + ' <span class="text-gray-500 text-sm">@' + props.acc
   <article
     class="p-2 mb-10 relative text-base flex flex-row gap-2 shadow min-h-12 transition-all border-[1px] border-solid border-transparent after:text-transparent flex-[100%]"
   >
-    <nuxt-img
+    <img
       :src="avatar ?? '/images/wouter.jpg'"
       class="rounded-full self-start w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
       height="48"
       width="48"
       alt="Avatar for Wouter Vernaillen"
-    />
+    >
     <div class="flex flex-col gap-4 w-full">
       <header class="flex flex-row items-center text-sm w-full gap-2">
         <a :href="accountLink" target="_blank">
@@ -46,13 +46,13 @@ const user = props.handle + ' <span class="text-gray-500 text-sm">@' + props.acc
         </a>
       </header>
       <div class="prose" v-html="html" />
-      <nuxt-img
+      <img
         v-if="media?.length && media[0].url"
         :src="media[0].url"
         :width="media[0].width"
         :height="media[0].height"
         :alt="media[0].alt || undefined"
-      />
+      >
     </div>
   </article>
 </template>

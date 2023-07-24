@@ -24,7 +24,11 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    domains: ['cdn.fosstodon.org']
+    domains: ['cdn.fosstodon.org'],
+    provider: 'twicpics',
+    twicpics: {
+      baseURL: 'https://vernaillen.twic.pics/vernaillendev'
+    }
   },
 
   social: {

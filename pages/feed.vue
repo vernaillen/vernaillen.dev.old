@@ -20,7 +20,7 @@ setMetaData('Feed', false)
               </div>
               <div class="flex flex-wrapk">
                 <p class="font-medium text-base !text-body-color leading-relaxed mb-4 prose">
-                  fetched from <NuxtLink to="https://elk.zone/fosstodon.org/@vernaillen" target="_blank">
+                  posts fetched from <NuxtLink to="https://elk.zone/fosstodon.org/@vernaillen" target="_blank">
                     Mastodon <span class="flex-shrink-0 h-4 w-4 i-mdi-mastodon" />
                   </NuxtLink>
                 </p>
