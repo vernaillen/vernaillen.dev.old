@@ -1,4 +1,16 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
+import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons'
+
+const customIconSet = {
+  prefix: 'custom',
+  icons: {
+    twitter: {
+      body: '<path d="m1.93 1.93 4.732 6.744L1.93 14.07h.996l4.196-4.768 3.345 4.768h3.603L9.1 7.103l4.546-5.173H12.61L8.638 6.457 5.458 1.93Zm1.477.776h1.627l7.52 10.588H10.91Z" style="stroke:currentColor;stroke-width:.64"/>',
+      width: 16,
+      height: 16
+    }
+  }
+}
 
 module.exports = {
   content: [
@@ -69,5 +81,12 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [
+    iconsPlugin({
+      collections: {
+        custom: customIconSet,
+        ...getIconCollections(['mdi'])
+      }
+    })
+  ]
 }

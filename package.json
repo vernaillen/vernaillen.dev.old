@@ -38,6 +38,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@egoist/tailwindcss-icons": "^1.1.0",
     "@iconify-json/mdi": "^1.1.53",
     "@nuxt/content": "^2.7.2",
     "@nuxt/devtools": "^0.7.1",
