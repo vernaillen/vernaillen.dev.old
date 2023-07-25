@@ -29,22 +29,28 @@ const props = defineProps({
       alt="Avatar for Wouter Vernaillen"
     >
     <div class="flex flex-col gap-4 w-full">
-      <header class="flex flex-row text-sm w-full gap-2">
-        <a :href="accountLink" target="_blank" class="w-full gap-2 flex-wrap">
-          <span class="avatar line-clamp-1 ws-pre-wrap break-all" v-html="handle" />
-          <span class="text-gray-500 text-sm line-clamp-1 ws-pre-wrap break-all">@{{ props.account }}</span>
-        </a>
-        <a class="ml-auto align-top min-w-fit mr-2" :href="permalink" target="_blank">
-          <NuxtTime
-            v-if="datetime"
-            class="text-xs text-gray-500"
-            :datetime="datetime"
-            locale="en-UK"
-            day="numeric"
-            month="long"
-            year="numeric"
-          />
-        </a>
+      <header>
+        <div class="flex flex-row text-sm w-full gap-2">
+          <a :href="accountLink" target="_blank" class="w-full gap-2 flex-wrap">
+            <span class="avatar line-clamp-1 ws-pre-wrap break-all" v-html="handle" />
+          </a>
+          <a class="ml-auto align-top min-w-fit mr-2" :href="permalink" target="_blank">
+            <NuxtTime
+              v-if="datetime"
+              class="text-xs text-gray-500"
+              :datetime="datetime"
+              locale="en-UK"
+              day="numeric"
+              month="long"
+              year="numeric"
+            />
+          </a>
+        </div>
+        <div class="flex flex-row text-sm w-full gap-2">
+          <a :href="accountLink" target="_blank" class="w-full gap-2 flex-wrap">
+            <span class="text-gray-500 text-sm line-clamp-1 ws-pre-wrap break-all">@{{ props.account }}</span>
+          </a>
+        </div>
       </header>
       <div class="prose" v-html="html" />
       <img
