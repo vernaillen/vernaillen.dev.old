@@ -50,7 +50,9 @@ export default defineLazyEventHandler(async () => {
             height: m.meta?.original?.height,
             alt: m.description
           })),
-          html: p.content
+          html: p.content,
+          repliesCount: p.repliesCount,
+          favouritesCount: p.favouritesCount
         }))
     )
   })

@@ -11,6 +11,8 @@
         :permalink="item.permalink"
         :media="item.media"
         :avatar="item.avatar"
+        :replies-count="item.repliesCount"
+        :favourites-count="item.favouritesCount"
         class="slide-enter"
         :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
       />

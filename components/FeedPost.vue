@@ -13,7 +13,9 @@ const props = defineProps({
         width?: number
         height?: number
         alt?: string | null
-    }>
+    }>,
+  repliesCount: Number,
+  favouritesCount: Number
 })
 </script>
 
@@ -31,8 +33,8 @@ const props = defineProps({
     <div class="flex flex-col gap-4 w-full">
       <header>
         <div class="flex flex-row text-sm w-full gap-2">
-          <a :href="accountLink" target="_blank" class="w-full gap-2 flex-wrap">
-            <span class="avatar line-clamp-1 ws-pre-wrap break-all" v-html="handle" />
+          <a :href="accountLink" target="_blank" class="w-full gap-2 flex-wrap text-primary-100 hover:text-primary-300">
+            <span class="avatar text-md line-clamp-1 ws-pre-wrap break-all" v-html="handle" />
           </a>
           <a class="ml-auto align-top min-w-fit mr-2" :href="permalink" target="_blank">
             <NuxtTime
@@ -60,6 +62,14 @@ const props = defineProps({
         :height="media[0].height"
         :alt="media[0].alt || undefined"
       >
+      <div class="grid grid-cols-2 text-sm w-full text-righ">
+        <a :href="permalink" target="_blank" class="text-primary-100 hover:text-primary-300">
+          <Icon name="uil:comment" class=" animate__animated animate__bounceIn -mt-1" size="16" /> {{ repliesCount && repliesCount > 0 ? repliesCount : '' }}
+        </a>
+        <a :href="permalink" target="_blank" class="text-primary-100 hover:text-primary-300">
+          <Icon name="mdi:heart-outline" class=" animate__animated animate__bounceIn -mt-1" size="16" /> {{ favouritesCount && favouritesCount > 0 ? favouritesCount : '' }}
+        </a>
+      </div>
     </div>
   </article>
 </template>
