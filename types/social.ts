@@ -1,5 +1,5 @@
 export interface Social {
   name: string
-  url: URL
+  url: string
   icon: string
 }
