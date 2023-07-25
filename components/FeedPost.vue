@@ -15,7 +15,6 @@ const props = defineProps({
         alt?: string | null
     }>
 })
-const user = props.handle + ' <span class="text-gray-500 text-sm">@' + props.account + '</span>'
 </script>
 
 <template>
@@ -30,15 +29,17 @@ const user = props.handle + ' <span class="text-gray-500 text-sm">@' + props.acc
       alt="Avatar for Wouter Vernaillen"
     >
     <div class="flex flex-col gap-4 w-full">
-      <header class="flex flex-row items-center text-sm w-full gap-2">
-        <a :href="accountLink" target="_blank">
-          <span class="avatar w-full gap-2 max-h-4 line-clamp-1 ws-pre-wrap break-all" v-html="user" />
+      <header class="flex flex-row text-sm w-full gap-2">
+        <a :href="accountLink" target="_blank" class="w-full gap-2 flex-wrap">
+          <span class="avatar line-clamp-1 ws-pre-wrap break-all" v-html="handle" />
+          <span class="text-gray-500 text-sm line-clamp-1 ws-pre-wrap break-all">@{{ props.account }}</span>
         </a>
-        <a class="ml-auto line-clamp-1 ws-pre-wrap break-all" :href="permalink" target="_blank">
+        <a class="ml-auto align-top min-w-fit mr-2" :href="permalink" target="_blank">
           <NuxtTime
             v-if="datetime"
             class="text-xs text-gray-500"
             :datetime="datetime"
+            locale="en-UK"
             day="numeric"
             month="long"
             year="numeric"
