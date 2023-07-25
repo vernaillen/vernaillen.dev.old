@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.53",
-    "@nuxt/content": "^2.7.1",
+    "@nuxt/content": "^2.7.2",
     "@nuxt/devtools": "^0.7.1",
     "@nuxt/image": "1.0.0-rc.1",
     "@nuxthq/studio": "^0.13.4",
