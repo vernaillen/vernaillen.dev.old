@@ -41,7 +41,7 @@ const props = defineProps({
               :datetime="datetime"
               locale="en-UK"
               day="numeric"
-              month="long"
+              month="short"
               year="numeric"
             />
           </a>
