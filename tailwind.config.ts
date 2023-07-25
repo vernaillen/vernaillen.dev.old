@@ -5,9 +5,9 @@ const customIconSet = {
   prefix: 'custom',
   icons: {
     twitter: {
-      body: '<path d="m1.93 1.93 4.732 6.744L1.93 14.07h.996l4.196-4.768 3.345 4.768h3.603L9.1 7.103l4.546-5.173H12.61L8.638 6.457 5.458 1.93Zm1.477.776h1.627l7.52 10.588H10.91Z" style="stroke:currentColor;stroke-width:.64"/>',
-      width: 16,
-      height: 16
+      body: '<g transform="translate(-281.5,-167.31)" id="layer1"><path fill="currentColor" d="M 283.94,167.31 670.33,683.95 281.5,1104 h 87.51 L 709.43,736.24 984.48,1104 h 297.8 L 874.15,558.3 1236.07,167.31 h -87.51 L 835.05,506.01 581.74,167.31 Z m 128.69,64.46 h 136.81 l 604.13,807.76 h -136.81 z" id="path1009" /></g>',
+      width: 936,
+      height: 1000
     }
   }
 }

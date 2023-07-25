@@ -8,7 +8,7 @@
       target="_blank"
       rel="me"
     >
-      <Icon :name="social.icon" :alt="social.name" class="animate__animated animate__bounceIn" size="22" />
+      <span :class="social.icon" :alt="social.name" class="animate__animated animate__bounceIn" size="22" />
     </NuxtLink>
   </span>
 </template>
