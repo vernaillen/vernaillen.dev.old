@@ -1,22 +1,20 @@
 <template>
-  <div class="flex flex-col">
-    <div v-for="item, index in sortedFeed" :key="item.permalink">
-      <FeedPost
-        :html="item.html"
-        :handle="item.handle"
-        :network="item.network"
-        :account="item.account"
-        :account-link="item.accountLink"
-        :datetime="item.createdAt"
-        :permalink="item.permalink"
-        :media="item.media"
-        :avatar="item.avatar"
-        :replies-count="item.repliesCount"
-        :favourites-count="item.favouritesCount"
-        class="slide-enter"
-        :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
-      />
-    </div>
+  <div v-for="item, index in sortedFeed" :key="item.permalink">
+    <FeedPost
+      :html="item.html"
+      :handle="item.handle"
+      :network="item.network"
+      :account="item.account"
+      :account-link="item.accountLink"
+      :datetime="item.createdAt"
+      :permalink="item.permalink"
+      :media="item.media"
+      :avatar="item.avatar"
+      :replies-count="item.repliesCount"
+      :favourites-count="item.favouritesCount"
+      class="slide-enter"
+      :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
+    />
   </div>
 </template>
 

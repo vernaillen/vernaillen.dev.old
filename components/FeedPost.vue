@@ -21,7 +21,7 @@ const props = defineProps({
 
 <template>
   <article
-    class="p-4 mb-8 relative text-base flex flex-row gap-2 rounded-md bg-[#ffffff] dark:bg-dark dark:bg-opacity-50 shadow-lg min-h-12 transition-all border-[1px] border-solid border-transparent after:text-transparent flex-[100%]"
+    class="p-2 sm:p-3 md:p-4 mb-8 relative text-base flex flex-row gap-2 rounded-md bg-[#ffffff] dark:bg-dark dark:bg-opacity-50 shadow-lg min-h-12 transition-all border-[1px] border-solid border-transparent after:text-transparent"
   >
     <img
       :src="avatar ?? '/images/wouter.jpg'"
@@ -30,13 +30,13 @@ const props = defineProps({
       width="48"
       alt="Avatar for Wouter Vernaillen"
     >
-    <div class="flex flex-col gap-4 w-full">
+    <div class="flex flex-col gap-2 md:gap-4 w-full overflow-hidden">
       <header>
         <div class="flex flex-row text-sm w-full gap-2">
           <a :href="accountLink" target="_blank" class="w-full gap-2 flex-wrap dark:text-primary-100 hover:text-primary-500 hover:dark:text-primary-500">
             <span class="avatar text-md line-clamp-1 ws-pre-wrap break-all" v-html="handle" />
           </a>
-          <a class="ml-auto align-top min-w-fit mr-2" :href="permalink" target="_blank">
+          <a class="ml-auto align-top min-w-fit" :href="permalink" target="_blank">
             <NuxtTime
               v-if="datetime"
               class="text-xs text-gray-500 hover:text-primary-500 hover:dark:text-primary-500"
