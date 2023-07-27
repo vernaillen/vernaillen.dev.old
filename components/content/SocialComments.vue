@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div v-if="page.mastodonPost || page.twitterPost" class="w-full px-3 pt-2 !text-sm !text-gray-400 prose">
-    <Icon name="fa6-solid:comments" class="mr-1 animate__animated animate__bounceIn" />
+    <UIcon name="i-mdi-comment-multiple-outline" class="w-4 h-4 -mb-[3px] mr-1 animate__animated animate__bounceIn" />
     comment on
     <NuxtLink v-if="page.mastodonPost" :href="page.mastodonPost" target="_blank">
       mastodon

@@ -40,9 +40,21 @@ devDependencies:
   '@egoist/tailwindcss-icons':
     specifier: ^1.1.0
     version: 1.1.0(tailwindcss@3.3.3)
+  '@iconify-json/lucide':
+    specifier: ^1.1.113
+    version: 1.1.113
+  '@iconify-json/material-symbols':
+    specifier: ^1.1.52
+    version: 1.1.52
   '@iconify-json/mdi':
     specifier: ^1.1.53
     version: 1.1.53
+  '@iconify-json/twemoji':
+    specifier: ^1.1.11
+    version: 1.1.11
+  '@iconify-json/uil':
+    specifier: ^1.1.4
+    version: 1.1.4
   '@nuxt/content':
     specifier: ^2.7.2
     version: 2.7.2
@@ -91,9 +103,6 @@ devDependencies:
   nuxt:
     specifier: 3.6.5
     version: 3.6.5(@types/node@20.4.5)(eslint@8.45.0)(typescript@5.1.6)
-  nuxt-icon:
-    specifier: ^0.4.2
-    version: 0.4.2(vue@3.3.4)
   nuxt-svgo:
     specifier: ^3.4.0
     version: 3.4.0
@@ -1429,8 +1438,32 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify-json/lucide@1.1.113:
+    resolution: {integrity: sha512-Jd1lZcQl/1c+xgfCh74w3WQi4PZAQ27MMaLgZg9KXMXxla43z0HeCHtiyNnQRDofWbCmwC2vLz58oPmZzEIFDA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/material-symbols@1.1.52:
+    resolution: {integrity: sha512-mwkD0ndI3Rd3RcfptcVLfWxlmhMgMEsZ9z5T8hr9ejHObNv25PKpmMX9q9tQif3TxeTgnuT5i/YFNcC3oQW76Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/mdi@1.1.53:
     resolution: {integrity: sha512-qG72Tc9Bd4w7fha+kMEySVTbH4Obgb9xA1mQl+WReFhtZ3PjcVpIWLgZGTewuIfZY8RAbd8zfAqhZ7qEYZWrhg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/twemoji@1.1.11:
+    resolution: {integrity: sha512-ZA2v2AGWPC0rxiZDLqsVD+DoYB3n5Ft5q0YYAsy9QyYvoNWSdh6Vxe5d3yUP4mSpNkE4YW96RAjiZu72uXb7kQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/uil@1.1.4:
+    resolution: {integrity: sha512-ucuFHlUvkfQUnyq4l2Sskrdg8r5DB8IQwMxEpPQ2JG1QTRbUmliddTT9r8/b3h69w+/IySHUy+iJcbfiHoa9zA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -1450,15 +1483,6 @@ packages:
       local-pkg: 0.4.3
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@iconify/vue@4.1.1(vue@3.3.4):
-    resolution: {integrity: sha512-RL85Bm/DAe8y6rT6pux7D2FJSiUEM/TPfyK7GrbAOfTSwrhvwJW+S5yijdGcmtXouA8MtuH9C7l4hiSE4mLMjg==}
-    peerDependencies:
-      vue: '>=3'
-    dependencies:
-      '@iconify/types': 2.0.0
-      vue: 3.3.4
     dev: true
 
   /@ioredis/commands@1.2.0:
@@ -8728,17 +8752,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
-
-  /nuxt-icon@0.4.2(vue@3.3.4):
-    resolution: {integrity: sha512-yFpvDA+FuUz+ixtt1eRzctTfR4sl7egZoXu7LL+CUc42qFlzCMaTZJ9eqFR2FTW8zu9tfLIZ83RJmUa1jNEWgg==}
-    dependencies:
-      '@iconify/vue': 4.1.1(vue@3.3.4)
-      '@nuxt/kit': 3.6.3
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-      - vue
     dev: true
 
   /nuxt-svgo@3.4.0:

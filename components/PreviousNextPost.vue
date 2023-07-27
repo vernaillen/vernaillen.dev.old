@@ -13,12 +13,12 @@ const [prev, next] = await queryContent('/blog')
         class="w-full md:w-1/2 text-end order-1 md:order-2 justify-end "
       >
         <NuxtLink v-if="next" :to="next._path" class="opacity-50 hover:opacity-90">
-          next <Icon name="mdi-arrow-right" />
+          next <UIcon name="i-mdi-arrow-right" class="-mb-[2px]" />
         </NuxtLink>
       </div>
       <div class="w-full md:w-1/2 order-2 md:order-1 justify-start">
         <NuxtLink v-if="prev" :to="prev._path" class="opacity-50 hover:opacity-90">
-          <Icon name="mdi-arrow-left" /> previous
+          <UIcon name="mdi-arrow-left" class="-mb-[2px]" /> previous
         </NuxtLink>
       </div>
     </div>

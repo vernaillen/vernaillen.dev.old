@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     '@nuxthq/ui',
     '@nuxtjs/color-mode',
     '@nuxtjs/plausible',
-    'nuxt-icon',
     'nuxt-svgo',
     'nuxt-time',
     'nuxt-vitest'
@@ -40,7 +39,7 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: ['mdi']
+    icons: ['heroicons', 'lucide', 'mdi', 'twemoji', 'uil']
   },
 
   svgo: {

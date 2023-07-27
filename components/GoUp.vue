@@ -8,7 +8,7 @@ const route = useRoute()
         :to="route.path.split('/').slice(0, -1).join('/') || '/'"
         class="opacity-50 hover:opacity-90"
       >
-        <Icon name="heroicons-arrow-uturn-up" />
+        <UIcon name="i-heroicons-arrow-uturn-up" clas="w-4 h-4 " />
         cd ..
       </NuxtLink>
     </div>

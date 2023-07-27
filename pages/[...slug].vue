@@ -76,12 +76,12 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
               </div>
 
               <div v-if="page.location" class="inline-flex align-top ml-1 mr-2 text-xs text-body-color font-medium">
-                <Icon name="fa6-solid:location-pin" class="mr-2" />
+                <UIcon name="i-mdi-map-marker" class="w-4 h-4 -mb-[3px] mr-1" />
                 {{ page.location }}
               </div>
               <div v-if="page.date" class="inline-flex align-top items-center">
                 <span class="flex items-center text-xs text-body-color font-medium ml-1 mr-2">
-                  <Icon name="lucide:calendar-days" class="mx-2" />
+                  <UIcon name="i-lucide-calendar-days" class="w-4 h-4 mx-1" />
                   first published on {{ longDateFormat(page.date) }}
                 </span>
               </div>

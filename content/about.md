@@ -36,6 +36,7 @@ And feel free to check out my [LinkedIn profile](https://www.linkedin.com/in/wou
 
 I wrote [this blogpost](/blog/hello-world-vernaillen-dev) about why and how I build this new version of this website.
 
-### Some stats and badges ...if anyone is interested :Icon{name=fa6-solid:face-grin-squint size=16}
+### Some stats and badges 
+...not sure if anyone is interested :HIcon{name=i-twemoji-grinning-squinting-face}
 
 [![Last Commit](https://badgen.net/github/last-commit/vernaillen/vernaillen.dev?icon=github)](https://github.com/vernaillen/vernaillen.dev/commits/master) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vernaillen.dev&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vernaillen.dev) [![CodeCov](https://badgen.net/codecov/c/github/vernaillen/vernaillen.dev?icon=codecov)](https://codecov.io/gh/vernaillen/vernaillen.dev) [![CircleCI](https://badgen.net/circleci/github/vernaillen/vernaillen.dev?icon=circleci)](https://circleci.com/gh/vernaillen/vernaillen.dev) [![Uptime](https://badgen.net/uptime-robot/month/m784344425-1a8650bdb79223d01d1a32a1?icon=uptime)](https://stats.uptimerobot.com/5J0vsM4vA)

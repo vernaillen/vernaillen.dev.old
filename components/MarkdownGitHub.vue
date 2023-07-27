@@ -32,7 +32,7 @@ onMounted(() => {
 <template>
   <div class="mx-2">
     <NuxtLink :href="viewLink" target="_blank" aria-label="Open source of this page on Github">
-      <Icon name="mdi:github" class="ml-1 mr-2" />
+      <UIcon name="i-mdi-github" class="w-4 h-4 -mb-[3px] ml-1 mr-2" />
     </NuxtLink>
     last updated on&nbsp;
     <NuxtLink
@@ -40,11 +40,10 @@ onMounted(() => {
       target="_blank"
       aria-label="Open source of this page on Github"
     >
-      <Icon
+      <UIcon
         v-show="!lastUpdated"
-        name="uil:spinner-alt"
-        class="animate-spin"
-        size="16"
+        name="i-uil-spinner-alt"
+        class="animate-spin w-4 h-4 -mb-[3px] "
       />
       {{ lastUpdated }}
     </NuxtLink>

@@ -124,7 +124,7 @@ watch(() => colorMode.value, (newColorMode) => {
         </div>
         <div class="inline-block">
           <p class="text-xs text-body-color">
-            <Icon name="lucide:calendar-days" class="mr-2" />
+            <UIcon name="i-lucide-calendar-days" class="w-3 h-3 mr-2 -mb-[2px]" />
             <span class="inline-block sm:hidden align-middle">{{ shortDateFormat(post.date) }}</span>
             <span class="hidden sm:inline-block align-middle">{{ longDateFormat(post.date) }}</span>
           </p>
