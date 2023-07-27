@@ -1,5 +1,14 @@
+<script lang="ts" setup>
+const [mastodon] = await Promise.all([
+  $fetch('/_social/mastodon')
+])
+const sortedFeed = [...mastodon].sort(
+  (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+)
+</script>
+
 <template>
-  <div v-for="item, index in sortedFeed" :key="item.permalink">
+  <div v-for="item, index in sortedFeed" :key="item.permalink" class="w-full">
     <FeedPost
       :html="item.html"
       :handle="item.handle"
@@ -17,15 +26,6 @@
     />
   </div>
 </template>
-
-<script lang="ts" setup>
-const [mastodon] = await Promise.all([
-  $fetch('/_social/mastodon')
-])
-const sortedFeed = [...mastodon].sort(
-  (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-)
-</script>
 
 <style scoped>
 div :global(.invisible) {
