@@ -21,38 +21,57 @@ export default defineLazyEventHandler(async () => {
   const { id } = await client.v1.accounts.lookup({ acct })
 
   return defineEventHandler(async () => {
-    const posts = await client.v1.accounts.$select(id).statuses.list()
-    // ({ excludeReplies: true, excludeReblogs: false, limit: 100 }
+    const posts = await client.v1.accounts.$select(id).statuses.list(
+      {
+        excludeReplies: true,
+        excludeReblogs: false,
+        limit: 100
+      }
+    )
     return Promise.all(
       posts
-        .filter(p => p.content && !p.inReplyToId)
-        .map(p => ({
-          network: 'mastodon' as const,
-          account: acct,
-          accountLink: `https://elk.zone/${host}/@${p.account.acct}`,
-          avatar: p.account.avatar,
-          handle: p.account.displayName.replace(
-            /:([a-z-]+):/g,
-            (string, shortcode) => {
-              const emoji = p.account.emojis.find(
-                e => e.shortcode === shortcode
-              )
-              if (!emoji) { return string }
-              return `<img src="${emoji.url}" style="height:1em" alt="${shortcode} emoji" />`
-            }
-          ),
-          createdAt: p.createdAt,
-          permalink: p.url?.replace('https://', 'https://elk.zone/') ?? p.uri,
-          media: p.mediaAttachments.map(m => ({
-            url: m.url,
-            width: m.meta?.original?.width,
-            height: m.meta?.original?.height,
-            alt: m.description
-          })),
-          html: p.content,
-          repliesCount: p.repliesCount,
-          favouritesCount: p.favouritesCount
-        }))
+        .map(p => (
+          {
+            network: 'mastodon' as const,
+            account: acct,
+            accountLink: `https://elk.zone/${host}/@${p.account.acct}`,
+            avatar: p.account.avatar,
+            handle: p.account.displayName.replace(
+              /:([a-z-]+):/g,
+              (string, shortcode) => {
+                const emoji = p.account.emojis.find(
+                  e => e.shortcode === shortcode
+                )
+                if (!emoji) { return string }
+                return `<img src="${emoji.url}" style="height:1em" alt="${shortcode} emoji" />`
+              }
+            ),
+            createdAt: p.createdAt,
+            permalink: p.url?.replace('https://', 'https://elk.zone/') ?? p.uri,
+            media: p.mediaAttachments.map(m => ({
+              url: m.url,
+              width: m.meta?.original?.width,
+              height: m.meta?.original?.height,
+              alt: m.description
+            })),
+            html: p.content.length === 0 && p.reblog?.content ? p.reblog.content : p.content,
+            reblogged: p.content.length === 0 && p.reblog?.content,
+            reblogAccount: p.reblog?.account?.acct,
+            reblogAccountLink: `https://elk.zone/${host}/@${p.reblog?.account.acct}`,
+            reblogAvatar: p.reblog?.account?.avatar,
+            reblogHandle: p.reblog?.account.displayName.replace(
+              /:([a-z-]+):/g,
+              (string, shortcode) => {
+                const emoji = p.account.emojis.find(
+                  e => e.shortcode === shortcode
+                )
+                if (!emoji) { return string }
+                return `<img src="${emoji.url}" style="height:1em" alt="${shortcode} emoji" />`
+              }
+            ),
+            repliesCount: p.repliesCount,
+            favouritesCount: p.favouritesCount
+          }))
     )
   })
 })

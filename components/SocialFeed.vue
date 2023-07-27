@@ -21,6 +21,11 @@ const sortedFeed = [...mastodon].sort(
       :avatar="item.avatar"
       :replies-count="item.repliesCount"
       :favourites-count="item.favouritesCount"
+      :reblogged="item.reblogged"
+      :reblog-account="item.reblogAccount"
+      :reblog-account-link="item.reblogAccountLink"
+      :reblog-avatar="item.reblogAvatar"
+      :reblog-handle="item.reblogHandle"
       class="slide-enter"
       :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
     />
