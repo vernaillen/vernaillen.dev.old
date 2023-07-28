@@ -69,8 +69,13 @@ export default defineLazyEventHandler(async () => {
                 return `<img src="${emoji.url}" style="height:1em" alt="${shortcode} emoji" />`
               }
             ),
+            reblogPermalink: p.reblog?.url?.replace('https://', 'https://elk.zone/') ?? p.reblog?.uri,
+            reblogReblogsCount: p.reblog?.reblogsCount,
+            reblogFavouritesCount: p.reblog?.favouritesCount,
+            reblogRepliesCount: p.reblog?.repliesCount,
             repliesCount: p.repliesCount,
-            favouritesCount: p.favouritesCount
+            favouritesCount: p.favouritesCount,
+            reblogsCount: p.reblogsCount
           }))
     )
   })

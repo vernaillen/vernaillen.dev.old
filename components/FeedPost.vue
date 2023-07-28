@@ -16,11 +16,31 @@ const props = defineProps({
     }>,
   repliesCount: Number,
   favouritesCount: Number,
+  reblogsCount: Number,
   reblogged: Boolean,
   reblogAccount: String,
   reblogAccountLink: String,
   reblogAvatar: String,
-  reblogHandle: String
+  reblogHandle: String,
+  reblogPermalink: String,
+  reblogReblogsCount: Number,
+  reblogFavouritesCount: Number,
+  reblogRepliesCount: Number
+})
+const repliesAmount = computed(() => {
+  if (props.reblogged) {
+    if (props.reblogRepliesCount === 0) { return '' } else { return props.reblogRepliesCount }
+  } else if (props.repliesCount === 0) { return '' } else { return props.repliesCount }
+})
+const reblogsAmount = computed(() => {
+  if (props.reblogged) {
+    if (props.reblogReblogsCount === 0) { return '' } else { return props.reblogReblogsCount }
+  } else if (props.reblogsCount === 0) { return '' } else { return props.reblogsCount }
+})
+const favouritesAmount = computed(() => {
+  if (props.reblogged) {
+    if (props.reblogFavouritesCount === 0) { return '' } else { return props.reblogFavouritesCount }
+  } else if (props.favouritesCount === 0) { return '' } else { return props.favouritesCount }
 })
 </script>
 
@@ -86,13 +106,19 @@ const props = defineProps({
         :height="media[0].height"
         :alt="media[0].alt || undefined"
       >
-      <div class="grid grid-cols-2 text-sm w-full text-righ">
-        <a :href="permalink" target="_blank" class="text-gray-500 dark:text-primary-100 hover:text-primary-500 hover:dark:text-primary-500">
-          <UIcon name="i-uil-comment" class="w-4 h-4 -mt-1 -mb-[3px]" /> {{ repliesCount && repliesCount > 0 ? repliesCount : '' }}
-        </a>
-        <a :href="permalink" target="_blank" class="text-gray-500 dark:text-primary-100 hover:text-primary-500 hover:dark:text-primary-500">
-          <UIcon name="i-mdi-heart-outline" class="w-4 h-4 -mb-[3px]" /> {{ favouritesCount && favouritesCount > 0 ? favouritesCount : '' }}
-        </a>
+      <div class="my-1">
+        <div class="flex justify-between items-center text-sm">
+          <UButton icon="i-uil-comment" :to="reblogged ? reblogPermalink : permalink" variant="ghost" size="xs" target="_blank">
+            {{ repliesAmount }}
+          </UButton>
+          <UButton icon="i-mdi-repost" :to="reblogged ? reblogPermalink : permalink" variant="ghost" size="xs" target="_blank">
+            {{ reblogsAmount }}
+          </UButton>
+          <UButton icon="i-mdi-heart-outline" :to="reblogged ? reblogPermalink : permalink" variant="ghost" size="xs" target="_blank">
+            {{ favouritesAmount }}
+          </UButton>
+          <UButton icon="i-mdi-bookmark-outline" :to="reblogged ? reblogPermalink : permalink" variant="ghost" size="xs" target="_blank" />
+        </div>
       </div>
     </div>
   </article>
