@@ -28,7 +28,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "consola": "^3.2.3",
-    "masto": "^6.0.1",
+    "masto": "^6.0.2",
     "nuxt-time": "^0.1.1",
     "prism-theme-vars": "^0.2.4",
     "resend": "^0.17.2",
