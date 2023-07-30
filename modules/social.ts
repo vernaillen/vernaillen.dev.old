@@ -14,7 +14,7 @@ type Network = keyof typeof networks
 
 type NetworkOptions = {
     mastodon?: {
-        identifiers: string[]
+        identifier: string
     }
 }
 

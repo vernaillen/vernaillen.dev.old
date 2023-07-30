@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   social: {
     networks: {
       mastodon: {
-        identifiers: ['vernaillen@fosstodon.org', 'harmonics@mastodon.art']
+        identifier: 'vernaillen@fosstodon.org'
       }
     }
   },
