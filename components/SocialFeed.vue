@@ -22,7 +22,7 @@ watch(() => showReblogs.value, () => {
   filteredFeed.value = null
   setTimeout(() => {
     filterPosts()
-  }, 300)
+  }, 200)
 })
 </script>
 
@@ -31,14 +31,14 @@ watch(() => showReblogs.value, () => {
     <div class="pb-5 -mt-5 text-right">
       Show reblogs: <UToggle v-model="showReblogs" class="-mb-[20px]" />
     </div>
-    <div class="transition-opacity duration-100 ease-in-out" :class="filteredFeed ? 'opacity-100' : 'opacity-0'">
+    <div class="transition-opacity duration-300 ease-in-out" :class="filteredFeed ? 'opacity-100' : 'opacity-0'">
       <FeedPost
         v-for="item, index in filteredFeed"
         :key="index"
         :post="item"
       />
     </div>
-    <div class="transition-opacity duration-100 ease-in-out" :class="filteredFeed ? 'opacity-0' : 'opacity-100'">
+    <div class="transition-opacity duration-300 ease-in-out" :class="filteredFeed ? 'opacity-0' : 'opacity-100'">
       <div class="flex space-x-4 w-full">
         <USkeleton class="h-10 w-10 align-top dark:bg-opacity-100" :ui="{ rounded: 'rounded-full' }" />
         <div class="space-y-2 w-full mb-10">
