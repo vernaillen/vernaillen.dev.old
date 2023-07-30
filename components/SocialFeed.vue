@@ -31,33 +31,38 @@ watch(() => showReblogs.value, () => {
     <div class="pb-5 -mt-5 text-right">
       Show reblogs: <UToggle v-model="showReblogs" class="-mb-[20px]" />
     </div>
-    <div v-if="filteredFeed">
+    <div class="transition-opacity duration-100 ease-in-out" :class="filteredFeed ? 'opacity-100' : 'opacity-0'">
       <FeedPost
         v-for="item, index in filteredFeed"
         :key="index"
         :post="item"
-        class="animate__animated animate__fadeIn animated__faster"
       />
     </div>
-    <div v-else>
-      <article
-        v-for="items, index in [1, 2]"
-        :key="index"
-        class="p-2 sm:p-3 md:p-4 mb-8 relative text-base flex flex-row gap-2 rounded-md shadow-lg min-h-12 transition-all border-[1px] border-solid border-transparent after:text-transparent"
-      >
-        <div class="flex space-x-4 w-full">
-          <USkeleton class="h-10 w-10 align-top" :ui="{ rounded: 'rounded-full' }" />
-          <div class="space-y-2 w-full mb-10">
-            <header class="mb-5">
-              <USkeleton class="h-5 w-[150px] mb-2" />
-              <USkeleton class="h-5 w-[250px]" />
-            </header>
-            <USkeleton class="h-8 w-full my-10 " />
-            <USkeleton class="h-12 w-full my-10" />
-            <USkeleton class="h-16 w-full my-10" />
-          </div>
+    <div class="transition-opacity duration-100 ease-in-out" :class="filteredFeed ? 'opacity-0' : 'opacity-100'">
+      <div class="flex space-x-4 w-full">
+        <USkeleton class="h-10 w-10 align-top dark:bg-opacity-100" :ui="{ rounded: 'rounded-full' }" />
+        <div class="space-y-2 w-full mb-10">
+          <header class="mb-5">
+            <USkeleton class="h-5 w-[150px] mb-2 dark:bg-opacity-100" />
+            <USkeleton class="h-5 w-[250px] dark:bg-opacity-90" />
+          </header>
+          <USkeleton class="h-8 w-full my-10  dark:bg-opacity-80" />
+          <USkeleton class="h-12 w-full my-10 dark:bg-opacity-70" />
+          <USkeleton class="h-16 w-full my-10 dark:bg-opacity-60" />
         </div>
-      </article>
+      </div>
+      <div class="flex space-x-4 w-full">
+        <USkeleton class="h-10 w-10 align-top dark:bg-opacity-50" :ui="{ rounded: 'rounded-full' }" />
+        <div class="space-y-2 w-full mb-10">
+          <header class="mb-5">
+            <USkeleton class="h-5 w-[150px] mb-2 dark:bg-opacity-50" />
+            <USkeleton class="h-5 w-[250px] dark:bg-opacity-40" />
+          </header>
+          <USkeleton class="h-8 w-full my-10  dark:bg-opacity-30" />
+          <USkeleton class="h-12 w-full my-10 dark:bg-opacity-20" />
+          <USkeleton class="h-16 w-full my-10 dark:bg-opacity-10" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
