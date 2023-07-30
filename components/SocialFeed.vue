@@ -10,27 +10,7 @@ const sortedFeed = [...mastodon].sort(
 <template>
   <div v-for="item, index in sortedFeed" :key="item.permalink" class="w-full">
     <FeedPost
-      :html="item.html"
-      :handle="item.handle"
-      :network="item.network"
-      :account="item.account"
-      :account-link="item.accountLink"
-      :datetime="item.createdAt"
-      :permalink="item.permalink"
-      :media="item.media"
-      :avatar="item.avatar"
-      :replies-count="item.repliesCount"
-      :favourites-count="item.favouritesCount"
-      :reblogs-count="item.reblogsCount"
-      :reblogged="item.reblogged"
-      :reblog-account="item.reblogAccount"
-      :reblog-account-link="item.reblogAccountLink"
-      :reblog-avatar="item.reblogAvatar"
-      :reblog-handle="item.reblogHandle"
-      :reblog-permalink="item.reblogPermalink"
-      :reblog-reblogs-count="item.reblogReblogsCount"
-      :reblog-favourites-count="item.reblogFavouritesCount"
-      :reblog-replies-count="item.reblogRepliesCount"
+      :post="item"
       class="slide-enter"
       :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
     />
