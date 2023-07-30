@@ -29,8 +29,8 @@ setMetaData('Feed', false)
               </div>
             </div>
 
-            <div class="container px-0 max-w-[40rem]">
-              <div class="flex flex-wrap justify-start slide-enter-content">
+            <div class="container px-0 max-w-[40rem]  slide-enter-content">
+              <div class="flex flex-wrap justify-start">
                 <SocialFeed />
               </div>
             </div>
