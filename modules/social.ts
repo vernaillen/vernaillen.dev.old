@@ -14,7 +14,12 @@ type Network = keyof typeof networks
 
 type NetworkOptions = {
     mastodon?: {
-        identifier: string
+        identifier: string,
+        options?: {
+            excludeReplies?: boolean,
+            excludeReblogs?: boolean,
+            limit?: number
+        }
     }
 }
 

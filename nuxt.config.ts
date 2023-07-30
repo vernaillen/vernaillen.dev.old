@@ -33,7 +33,12 @@ export default defineNuxtConfig({
   social: {
     networks: {
       mastodon: {
-        identifier: 'vernaillen@fosstodon.org'
+        identifier: 'vernaillen@fosstodon.org',
+        options: {
+          excludeReplies: true,
+          excludeReblogs: false,
+          limit: 100
+        }
       }
     }
   },

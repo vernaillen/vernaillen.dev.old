@@ -3,6 +3,7 @@ import { parseURL, withProtocol } from 'ufo'
 
 export default defineLazyEventHandler(async () => {
   const acct = useRuntimeConfig().social.networks.mastodon.identifier
+  const options = useRuntimeConfig().social.networks.mastodon.options
 
   const data = await $fetch<{ subject: string; aliases: string[] }>(
     '.well-known/webfinger',
@@ -21,13 +22,7 @@ export default defineLazyEventHandler(async () => {
   const { id } = await client.v1.accounts.lookup({ acct })
 
   return defineEventHandler(async () => {
-    const posts = await client.v1.accounts.$select(id).statuses.list(
-      {
-        excludeReplies: true,
-        excludeReblogs: false,
-        limit: 100
-      }
-    )
+    const posts = await client.v1.accounts.$select(id).statuses.list(options)
     return Promise.all(
       posts
         .map(p => (
