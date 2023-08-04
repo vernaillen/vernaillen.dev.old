@@ -44,13 +44,36 @@ const favouritesAmount = computed(() => {
       </div>
     </header>
     <div class="prose" v-html="post.html" />
-    <img
-      v-if="post.media?.length && post.media[0].url"
-      :src="post.media[0].url"
-      :width="post.media[0].width"
-      :height="post.media[0].height"
-      :alt="post.media[0].alt || undefined"
+    <div
+      v-for="media, index in post.media"
+      :key="index"
+      class="relative"
     >
+      <img
+        :src="media.url"
+        :width="media.width"
+        :height="media.height"
+        :alt="media.alt || undefined"
+      >
+      <UDropdown
+        v-if="media.alt"
+        :items="[[{ label: media.alt }]]"
+        :ui="{ width:'w-auto max-w-[65%] !-mt-8 !ml-2', wrapper: 'h-0 relative text-left rtl:text-right' }"
+        :popper="{ placement: 'bottom-start' }"
+        mode="hover"
+      >
+        <UButton
+          color="gray"
+          size="xs"
+          label="ALT"
+          :ui="{ padding: { xs: 'px-2 py-1' }}"
+          class="absolute -top-8 left-2"
+        />
+        <template #item="{ item }">
+          <span class="truncate">{{ item.label }}</span>
+        </template>
+      </UDropdown>
+    </div>
     <div class="my-1">
       <div class="flex justify-between items-center text-sm">
         <UButton icon="i-uil-comment" :to="post.permalink" variant="ghost" size="xs" target="_blank">
