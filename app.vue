@@ -35,6 +35,7 @@ const isIG = computed(() => {
     <header-component v-if="!isIG" />
     <NuxtPage />
     <footer-component v-if="!isIG" />
+    <EasyLightbox v-if="!isIG" />
   </div>
 </template>
 

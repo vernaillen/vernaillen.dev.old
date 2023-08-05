@@ -14,6 +14,14 @@ const reblogsAmount = computed(() => {
 const favouritesAmount = computed(() => {
   if (props.post.favouritesCount === 0) { return '' } else { return props.post.favouritesCount }
 })
+
+const lightbox = useLightbox()
+const images: string[] = props.post.media.map(media => media.url)
+function openGallery (i: number) {
+  lightbox.images = images
+  lightbox.visible.value = true
+  lightbox.index.value = i
+}
 </script>
 
 <template>
@@ -54,6 +62,8 @@ const favouritesAmount = computed(() => {
         :width="media.width"
         :height="media.height"
         :alt="media.alt || undefined"
+        class="cursor-pointer"
+        @click="openGallery(index)"
       >
       <UDropdown
         v-if="media.alt"

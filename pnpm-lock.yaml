@@ -29,6 +29,9 @@ dependencies:
   vee-validate:
     specifier: ^4.11.1
     version: 4.11.1(vue@3.3.4)
+  vue-easy-lightbox:
+    specifier: ^1.16.0
+    version: 1.16.0(vue@3.3.4)
   vue-recaptcha-v3:
     specifier: ^2.0.1
     version: 2.0.1(vue@3.3.4)
@@ -12322,6 +12325,15 @@ packages:
   /vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
+
+  /vue-easy-lightbox@1.16.0(vue@3.3.4):
+    resolution: {integrity: sha512-9ckBIi56kTNkfbxioTBLKR3xnFjmkIs4SOvePn6XUciR+Dzuav0tgNjqDHkfsoo3nxIpUmfpQAT0YDl9TpJ5jA==}
+    engines: {node: '>=14.18.3'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.3.4
+    dev: false
 
   /vue-eslint-parser@9.3.1(eslint@8.46.0):
     resolution: {integrity: sha512-Clr85iD2XFZ3lJ52/ppmUDG/spxQu6+MAeHXjjyI4I1NUYZ9xmenQp4N0oaHJhrA8OOxltCVxMRfANGa70vU0g==}

@@ -84,6 +84,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   plugins: [
     '~/plugins/pageHooks.ts',
+    '~/plugins/easyLightbox.ts',
     '~/plugins/global.ts'
   ]
 })

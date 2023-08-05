@@ -10,8 +10,8 @@ function handleHide () {
   <vue-easy-lightbox
     loop
     move-disabled
-    :index="lightbox.index"
-    :visible="lightbox.visible"
+    :index="lightbox.index.value"
+    :visible="lightbox.visible.value"
     :imgs="lightbox.images"
     @hide="handleHide"
   >
