@@ -51,7 +51,7 @@ function openGallery (i: number) {
         </a>
       </div>
     </header>
-    <div class="prose" v-html="post.html" />
+    <div class="prose prose-primary dark:prose-invert" v-html="post.html" />
     <div
       v-for="media, index in post.media"
       :key="index"

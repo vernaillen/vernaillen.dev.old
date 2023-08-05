@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full px-2 mb-10">
+  <div class="w-full px-2 mb-4">
     <div>
       <ul class="flex justify-start">
         <li class="flex">
@@ -43,9 +43,11 @@ defineProps({
         </li>
         <li
           v-if="pageName"
-          class="flex font-medium text-sm text-primary-500"
+          class="flex flex-nowrap font-medium text-sm text-primary-500 "
         >
-          {{ pageName }}
+          <div class="line-clamp-1 ws-pre-wrap break-all">
+            {{ pageName }}
+          </div>
         </li>
       </ul>
     </div>
