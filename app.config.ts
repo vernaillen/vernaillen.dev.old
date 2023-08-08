@@ -8,6 +8,9 @@ export default defineAppConfig({
   },
   ui: {
     primary: 'vernaillen',
-    gray: 'neutral'
+    gray: 'neutral',
+    skeleton: {
+      base: 'skeleton-loading-bg'
+    }
   }
 })

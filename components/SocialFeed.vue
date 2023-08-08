@@ -31,14 +31,16 @@ watch(() => showReblogs.value, () => {
     <div class="pb-5 -mt-5 text-right">
       Show reblogs: <UToggle v-model="showReblogs" class="-mb-[20px]" />
     </div>
-    <div class="transition-opacity duration-300 ease-in-out" :class="filteredFeed ? 'opacity-100' : 'opacity-0'">
+    <div v-show="filteredFeed">
       <FeedPost
         v-for="item, index in filteredFeed"
         :key="index"
         :post="item"
+        class="animate__animated animate__fadeIn slide-enter"
+        style="--enter-stage:1;--enter-step:60ms;"
       />
     </div>
-    <div class="transition-opacity duration-300 ease-in-out" :class="filteredFeed ? 'opacity-0' : 'opacity-100'">
+    <div v-show="!filteredFeed">
       <div class="flex space-x-4 w-full">
         <USkeleton class="h-10 w-10 align-top dark:bg-opacity-100" :ui="{ rounded: 'rounded-full' }" />
         <div class="space-y-2 w-full mb-10">
