@@ -1,6 +1,9 @@
 export default defineAppConfig({
   longDateFormat: 'DD MMMM YYYY',
   shortDateFormat: 'DD MMM YYYY',
+  github: {
+    repo: 'vernaillen/vernaillen.dev'
+  },
   instagram: {
     enabled: true,
     wpPageId: 10053,
