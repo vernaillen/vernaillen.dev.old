@@ -1,13 +1,13 @@
 version: 2.1
 
 orbs:
-  sonarcloud: sonarsource/sonarcloud@1.1.1
+  sonarcloud: sonarsource/sonarcloud@2.0.0
   slack: circleci/slack@4.12.5
 
 executors:
   pnpm-executor:
     docker:
-      - image: cimg/node:20.5.0-browsers
+      - image: cimg/node:20.5.1-browsers
     working_directory: /tmp/workspace
 
 jobs:
