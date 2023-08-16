@@ -31,7 +31,7 @@
     "masto": "^6.1.0",
     "nuxt-time": "^0.1.1",
     "prism-theme-vars": "^0.2.4",
-    "resend": "^0.17.2",
+    "resend": "^1.0.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "vee-validate": "^4.11.1",
     "vue-easy-lightbox": "^1.16.0",
