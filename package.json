@@ -31,17 +31,17 @@
     "masto": "^6.1.0",
     "nuxt-time": "^0.1.1",
     "prism-theme-vars": "^0.2.4",
-    "resend": "^0.17.2",
+    "resend": "^1.0.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
-    "vee-validate": "^4.11.1",
+    "vee-validate": "^4.11.2",
     "vue-easy-lightbox": "^1.16.0",
     "vue-recaptcha-v3": "^2.0.1",
     "yup": "^1.2.0"
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.1.0",
-    "@iconify-json/lucide": "^1.1.118",
-    "@iconify-json/material-symbols": "^1.1.55",
+    "@iconify-json/lucide": "^1.1.119",
+    "@iconify-json/material-symbols": "^1.1.56",
     "@iconify-json/mdi": "^1.1.54",
     "@iconify-json/twemoji": "^1.1.12",
     "@iconify-json/uil": "^1.1.5",
@@ -54,11 +54,11 @@
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/plausible": "^0.2.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@types/node": "^20.5.0",
+    "@types/node": "^20.5.1",
     "@vernaillen/nuxt-base-layer": "^0.2.17",
-    "@vitest/coverage-v8": "^0.34.1",
+    "@vitest/coverage-v8": "^0.34.2",
     "@vueuse/nuxt": "^10.3.0",
-    "cypress": "^12.17.3",
+    "cypress": "^12.17.4",
     "dayjs": "^1.11.9",
     "nuxt": "3.6.5",
     "nuxt-svgo": "^3.4.0",
@@ -68,6 +68,6 @@
     "remark-directive-rehype": "^0.4.2",
     "start-server-and-test": "^2.0.0",
     "typescript": "^5.1.6",
-    "vitest": "^0.34.1"
+    "vitest": "^0.34.2"
   }
 }
