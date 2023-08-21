@@ -55,7 +55,7 @@
     "@nuxtjs/plausible": "^0.2.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^20.5.1",
-    "@vernaillen/nuxt-base-layer": "^0.2.17",
+    "@vernaillen/nuxt-base-layer": "^0.2.18",
     "@vitest/coverage-v8": "^0.34.2",
     "@vueuse/nuxt": "^10.3.0",
     "cypress": "^12.17.4",

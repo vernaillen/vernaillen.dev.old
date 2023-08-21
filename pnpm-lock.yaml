@@ -89,8 +89,8 @@ devDependencies:
     specifier: ^20.5.1
     version: 20.5.1
   '@vernaillen/nuxt-base-layer':
-    specifier: ^0.2.17
-    version: 0.2.17(nuxt@3.6.5)(vue@3.3.4)
+    specifier: ^0.2.18
+    version: 0.2.18(nuxt@3.6.5)(vue@3.3.4)
   '@vitest/coverage-v8':
     specifier: ^0.34.2
     version: 0.34.2(vitest@0.34.2)
@@ -111,7 +111,7 @@ devDependencies:
     version: 3.4.0
   nuxt-vitest:
     specifier: ^0.10.2
-    version: 0.10.2(@vitejs/plugin-vue-jsx@3.0.2)(@vitejs/plugin-vue@4.3.1)(vite@4.4.9)(vitest@0.34.2)(vue-router@4.2.4)(vue@3.3.4)
+    version: 0.10.2(@vitejs/plugin-vue-jsx@3.0.2)(@vitejs/plugin-vue@4.3.2)(vite@4.4.9)(vitest@0.34.2)(vue-router@4.2.4)(vue@3.3.4)
   remark-breaks:
     specifier: ^3.0.3
     version: 3.0.3
@@ -2785,15 +2785,15 @@ packages:
       - supports-color
     dev: true
 
-  /@vernaillen/nuxt-base-layer@0.2.17(nuxt@3.6.5)(vue@3.3.4):
-    resolution: {integrity: sha512-P78fFT4aKqWJuwk0hNOb/6jYsgmY4eCyjUjty51Km+m/Ga+RrSuBNGpefLBMhoO4/D8s27qlfqq3f7JhINZt5A==}
+  /@vernaillen/nuxt-base-layer@0.2.18(nuxt@3.6.5)(vue@3.3.4):
+    resolution: {integrity: sha512-FCdt7WtM4VlSna8JfBEY6QpB6kcL6CxfmdlkToqLcg9SbsEzZJSeoD5wVzA/jt3/sQrwapTXXleVeaLbM8TZtg==}
     requiresBuild: true
     dependencies:
       '@nuxt/image': 1.0.0-rc.1
       '@vueuse/core': 10.3.0(vue@3.3.4)
       '@vueuse/nuxt': 10.3.0(nuxt@3.6.5)(vue@3.3.4)
       nuxt-time: 0.1.1
-      vue3-lazyload: 0.3.6(vue@3.3.4)
+      vue3-lazyload: 0.3.8(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - nuxt
@@ -2845,8 +2845,8 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@vitejs/plugin-vue@4.3.1(vite@4.4.9)(vue@3.3.4):
-    resolution: {integrity: sha512-tUBEtWcF7wFtII7ayNiLNDTCE1X1afySEo+XNVMNkFXaThENyCowIEX095QqbJZGTgoOcSVDJGlnde2NG4jtbQ==}
+  /@vitejs/plugin-vue@4.3.2(vite@4.4.9)(vue@3.3.4):
+    resolution: {integrity: sha512-iDDhGruwhKkwNwT5qgtGaeTxF4ULs52xpQbsC27F01kf3aQBHtrDP738pmHw4oclVAUA3m+Vk8gxhDV5KbfM+A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
@@ -8877,7 +8877,7 @@ packages:
       - rollup
       - supports-color
 
-  /nuxt-vitest@0.10.2(@vitejs/plugin-vue-jsx@3.0.2)(@vitejs/plugin-vue@4.3.1)(vite@4.4.9)(vitest@0.34.2)(vue-router@4.2.4)(vue@3.3.4):
+  /nuxt-vitest@0.10.2(@vitejs/plugin-vue-jsx@3.0.2)(@vitejs/plugin-vue@4.3.2)(vite@4.4.9)(vitest@0.34.2)(vue-router@4.2.4)(vue@3.3.4):
     resolution: {integrity: sha512-cYEvFY5iU0fV3xccdunV1vAlgyda3Tf7HEyPGrI/4KMAouwtIDIyuu2SgU3WOFqpNbhbAQbI5COLISodOeUHBQ==}
     peerDependencies:
       '@vitejs/plugin-vue': '*'
@@ -8886,7 +8886,7 @@ packages:
       vitest: ^0.24.5 || ^0.26.0 || ^0.27.0 || ^0.28.0 || ^0.29.0 || ^0.30.0 || ^0.33.0
     dependencies:
       '@nuxt/kit': 3.6.5
-      '@vitejs/plugin-vue': 4.3.1(vite@4.4.9)(vue@3.3.4)
+      '@vitejs/plugin-vue': 4.3.2(vite@4.4.9)(vue@3.3.4)
       '@vitejs/plugin-vue-jsx': 3.0.2(vite@4.4.9)(vue@3.3.4)
       '@vitest/ui': 0.33.0(vitest@0.34.2)
       defu: 6.1.2
@@ -12663,8 +12663,8 @@ packages:
       he: 1.2.0
     dev: true
 
-  /vue3-lazyload@0.3.6(vue@3.3.4):
-    resolution: {integrity: sha512-UcVnEN9JzxeFBa7nNAPWKXHTtvVAzWYhBSvRU+Gmx9MdTGLWKwjZiNSyB1Os25jr9HaFHWY0DaU8uugXkGu9Gw==}
+  /vue3-lazyload@0.3.8(vue@3.3.4):
+    resolution: {integrity: sha512-UiJHRT7mzry102WbhtrRgJh+f8Z8u4Z+H1RU4dvPmQeq7wFSDFxZB9iJOWGihH2FscXN/8rMGLDOQJAmjwqpCg==}
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
       vue: ^2.0.0 || >=3.0.0
