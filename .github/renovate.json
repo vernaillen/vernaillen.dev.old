@@ -5,5 +5,13 @@
   ],
   "assignees": [
     "vernaillen"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "micromark"
+      ],
+      "allowedVersions": "<=3.2"
+    }
   ]
 }
