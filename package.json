@@ -58,7 +58,7 @@
     "@vernaillen/nuxt-base-layer": "^0.2.18",
     "@vitest/coverage-v8": "^0.34.3",
     "@vueuse/nuxt": "^10.4.0",
-    "cypress": "^12.17.4",
+    "cypress": "^13.0.0",
     "dayjs": "^1.11.9",
     "nuxt": "3.7.0",
     "nuxt-svgo": "^3.4.1",
