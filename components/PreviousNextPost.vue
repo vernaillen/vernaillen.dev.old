@@ -1,9 +1,20 @@
 <script setup lang="ts">
+import { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
 useRouter()
 const route = useRoute()
-const [prev, next] = await queryContent('/blog')
+const prev = ref<ParsedContent | null>(null)
+const next = ref<ParsedContent | null>(null)
+const [foundPrev, foundNext] = await queryContent('/blog')
   .where({ news: true })
   .findSurround(route.path)
+
+if (foundPrev?._path?.startsWith('/blog')) {
+  prev.value = foundPrev
+}
+if (foundNext?._path?.startsWith('/blog')) {
+  next.value = foundNext
+}
 </script>
 
 <template>

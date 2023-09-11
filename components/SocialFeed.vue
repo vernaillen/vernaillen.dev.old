@@ -27,7 +27,7 @@ watch(() => showReblogs.value, () => {
 </script>
 
 <template>
-  <div class="w-full slide-enter" style="--enter-stage:1;--enter-step:60ms;">
+  <div class="w-full">
     <div class="pb-5 -mt-5 text-right">
       Show reblogs: <UToggle v-model="showReblogs" class="-mb-[20px]" />
     </div>
@@ -37,7 +37,7 @@ watch(() => showReblogs.value, () => {
         :key="index"
         :post="item"
         class="animate__animated animate__fadeIn slide-enter"
-        style="--enter-stage:1;--enter-step:60ms;"
+        style="--enter-stage:0;--enter-step:10ms;"
       />
     </div>
     <div v-show="!filteredFeed">
