@@ -10,6 +10,10 @@ const darkTogglerClass = props.inline
   ? 'inline-block w-5 h-5'
   : 'flex w-10 h-10'
 
+const showSpinner = ref(true)
+onMounted(() => {
+  showSpinner.value = false
+})
 </script>
 
 <template>
@@ -37,6 +41,7 @@ const darkTogglerClass = props.inline
       />
       <template #fallback>
         <UButton
+          v-if="showSpinner"
           variant="soft"
           aria-label="Loading Color Mode..."
           icon="i-uil-spinner-alt"
