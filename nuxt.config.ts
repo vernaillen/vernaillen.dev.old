@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: ['heroicons', 'lucide', 'mdi', 'twemoji', 'uil']
+    icons: ['heroicons', 'lucide', 'mdi', 'twemoji', 'uil', 'logos']
   },
 
   svgo: {
