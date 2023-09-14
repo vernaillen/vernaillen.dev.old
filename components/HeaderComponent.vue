@@ -70,8 +70,8 @@ const navbarCollapseClass = computed(() => {
             </nav>
           </div>
           <div class="flex justify-end items-center pr-0">
-            <div class="absolute w-24 top-3 right-0 lg:relative lg:top-0 z-20">
-              <div class="inline-block mr-2">
+            <div class="absolute w-24 top-3 -right-6 sm:right-0 lg:relative lg:top-0 lg:right-0 z-20">
+              <div class="inline-block mr-1 sm:mr-2">
                 <dark-toggler />
               </div>
               <WhatsAppLink nr="+32473344656" size="xs" />
