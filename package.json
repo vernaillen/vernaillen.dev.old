@@ -64,7 +64,7 @@
     "nuxt-svgo": "^3.5.3",
     "nuxt-vitest": "^0.10.5",
     "prism-theme-vars": "^0.2.4",
-    "remark-breaks": "^3.0.3",
+    "remark-breaks": "^4.0.0",
     "remark-directive-rehype": "^0.4.2",
     "start-server-and-test": "^2.0.0",
     "typescript": "^5.2.2",
