@@ -49,7 +49,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "1.0.0-rc.3",
     "@nuxt/ui": "^2.9.0",
-    "@nuxthq/studio": "^1.0.0",
+    "@nuxthq/studio": "^1.0.2",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/plausible": "^0.2.3",
