@@ -11,8 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/plausible',
     'nuxt-svgo',
-    'nuxt-time',
-    'nuxt-vitest'
+    'nuxt-time'
   ],
 
   css: [
