@@ -5,5 +5,16 @@
   ],
   "assignees": [
     "vernaillen"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "cimg/node"
+      ],
+      "allowedVersions": "<=18.18"
+    }
   ]
 }
