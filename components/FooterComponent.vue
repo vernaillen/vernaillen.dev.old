@@ -62,8 +62,7 @@ onMounted(() => {
       </div>
       <div class="container prose dark:prose-invert text-center">
         <p class="text-sm">
-          &copy; {{ currentYear() }} Wouter Vernaillen - Vernaillen Consulting
-          BV -
+          &copy; {{ currentYear() }} Wouter Vernaillen -
           <NuxtLink href="https://harmonics.be" target="_blank">
             Harmonics BV
           </NuxtLink>
