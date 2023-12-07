@@ -1,6 +1,7 @@
 /// <reference types="vite-svg-loader" />
 
 <script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 import { useRoute } from '#imports'
 const { isMobileNavOpen } = useMobileNav()
 
@@ -36,13 +37,11 @@ const isIG = computed(() => {
     <NuxtPage />
     <footer-component v-if="!isIG" />
     <EasyLightbox v-if="!isIG" />
+    <SpeedInsights v-if="!isIG" />
   </div>
 </template>
 
 <style>
-.nuxt-loading-indicator {
-  opacity: 100% !important;
-}
 
 @keyframes slide-enter {
   0% {
@@ -61,7 +60,7 @@ const isIG = computed(() => {
     --enter-stage: 0;
     --enter-step: 30ms;
     --enter-initial: 0ms;
-    animation: slide-enter 1s both 1s;
+    animation: slide-enter 0.1s both 0.1s;
     animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
   }
 }
@@ -74,7 +73,7 @@ const isIG = computed(() => {
     rgba(190, 190, 190, 0.1) 63%
   );
   background-size: 400% 100%;
-  animation: skeleton-loading 1.4s ease infinite;
+  animation: skeleton-loading 0.4s ease infinite;
 }
 
 @keyframes skeleton-loading {
