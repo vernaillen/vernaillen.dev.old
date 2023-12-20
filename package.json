@@ -2,6 +2,7 @@
   "name": "vernaillen.dev",
   "version": "1.1.0",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/vernaillen/vernaillen.dev.git"
@@ -40,15 +41,11 @@
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.7.1",
-    "@iconify-json/logos": "^1.1.41",
-    "@iconify-json/lucide": "^1.1.147",
-    "@iconify-json/material-symbols": "^1.1.68",
-    "@iconify-json/mdi": "^1.1.63",
-    "@iconify-json/twemoji": "^1.1.15",
-    "@iconify-json/uil": "^1.1.8",
+    "@iconify/json": "^2.2.159",
     "@nuxt/content": "^2.9.0",
     "@nuxt/devtools": "^1.0.6",
     "@nuxt/image": "1.1.0",
+    "@nuxt/test-utils": "^3.9.0",
     "@nuxt/ui": "^2.11.1",
     "@nuxthq/studio": "^1.0.6",
     "@nuxtjs/color-mode": "^3.3.2",
@@ -57,17 +54,20 @@
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@types/node": "^20.10.5",
     "@vernaillen/nuxt-base-layer": "^0.2.21",
-    "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/coverage-v8": "^1.1.0",
+    "@vue/test-utils": "^2.4.3",
     "@vueuse/nuxt": "^10.7.0",
     "cypress": "^13.6.1",
     "dayjs": "^1.11.10",
+    "happy-dom": "^12.10.3",
     "nuxt": "3.8.2",
     "nuxt-svgo": "^3.7.0",
+    "playwright-core": "^1.40.1",
     "prism-theme-vars": "^0.2.4",
     "remark-breaks": "^4.0.0",
     "remark-directive-rehype": "^0.4.2",
     "start-server-and-test": "^2.0.3",
     "typescript": "^5.3.3",
-    "vitest": "^1.0.4"
+    "vitest": "^1.1.0"
   }
 }

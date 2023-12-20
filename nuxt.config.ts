@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/content',
+    '@nuxt/test-utils/module',
     '@nuxt/ui',
     '@nuxthq/studio',
     '@nuxtjs/color-mode',

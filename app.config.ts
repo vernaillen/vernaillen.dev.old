@@ -5,7 +5,7 @@ export default defineAppConfig({
     repo: 'vernaillen/vernaillen.dev'
   },
   instagram: {
-    enabled: true,
+    enabled: false,
     wpPageId: 10053,
     wpBaseUrl: 'https://wouternew.vernaillen.com/'
   },
