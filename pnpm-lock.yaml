@@ -104,8 +104,8 @@ devDependencies:
     specifier: 3.9.1
     version: 3.9.1(@types/node@20.10.6)(eslint@8.56.0)(typescript@5.3.3)(vite@5.0.11)
   nuxt-svgo:
-    specifier: ^3.7.0
-    version: 3.7.0
+    specifier: ^4.0.0
+    version: 4.0.0(vue@3.4.5)
   playwright-core:
     specifier: ^1.40.1
     version: 1.40.1
@@ -7987,10 +7987,11 @@ packages:
       - vue
     dev: true
 
-  /nuxt-svgo@3.7.0:
-    resolution: {integrity: sha512-WXCUvtla4wDMHlpsNVBefTjpFZid7479oduoU57ixIfqVFo57vhOl50jTNomvLxmRgTrV0qOcNzyQNWzRIuUvA==}
+  /nuxt-svgo@4.0.0(vue@3.4.5):
+    resolution: {integrity: sha512-Oeeexe6F+z64RlYl++0JaiCqiTazrnGO/Xtg8Nw1knhcb+qnzOxm12tiHKDyt8PRvbSGUo8rgjggdbRuossLxA==}
     peerDependencies:
       svgo-loader: ^4.0.0
+      vue: '>=3.2.13'
       vue-loader: ^17.0.0
       vue-svg-loader: 0.17.0-beta.2
     peerDependenciesMeta:
@@ -8002,9 +8003,9 @@ packages:
         optional: true
     dependencies:
       '@nuxt/kit': 3.9.1
-      '@vue/compiler-sfc': 3.4.5
       mini-svg-data-uri: 1.4.4
       svgo: 3.2.0
+      vue: 3.4.5(typescript@5.3.3)
     transitivePeerDependencies:
       - rollup
       - supports-color
