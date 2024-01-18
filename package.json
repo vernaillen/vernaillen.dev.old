@@ -32,7 +32,7 @@
     "consola": "^3.2.3",
     "masto": "^6.5.2",
     "nuxt-time": "^0.1.1",
-    "resend": "^2.1.0",
+    "resend": "^3.0.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "vee-validate": "^4.12.4",
     "vue-easy-lightbox": "^1.17.0",
