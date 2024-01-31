@@ -10,6 +10,5 @@ defineProps<{ nr: string, size?: string }>()
     variant="soft"
     target="_blank"
     aria-label="contact me on WhatsApp"
-    class="!mx-0"
   />
 </template>
