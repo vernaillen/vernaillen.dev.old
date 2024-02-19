@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^20.11.19
     version: 20.11.19
   '@vernaillen/nuxt-base-layer':
-    specifier: ^0.2.25
-    version: 0.2.25(nuxt@3.10.2)(vue@3.4.19)
+    specifier: ^0.2.27
+    version: 0.2.27(nuxt@3.10.2)(vue@3.4.19)
   '@vitest/coverage-v8':
     specifier: ^1.3.0
     version: 1.3.0(vitest@1.3.0)
@@ -3543,8 +3543,8 @@ packages:
       vue-router: 4.2.5(vue@3.4.19)
     dev: false
 
-  /@vernaillen/nuxt-base-layer@0.2.25(nuxt@3.10.2)(vue@3.4.19):
-    resolution: {integrity: sha512-Da5NZWYwoac4kHLbACmJDYPBTJOd+7UnPu6xBDzViS7VxQ/hSwSAsY3f7paMuWJ5b2fQk0TwzhL4pxDlCyK4cw==}
+  /@vernaillen/nuxt-base-layer@0.2.27(nuxt@3.10.2)(vue@3.4.19):
+    resolution: {integrity: sha512-Bg2RcN5nAjxnuS0NPZJ1iHT+raeG0281Fn6y87QBCIOe+LL48OdaDMrMnaF4GY97/6fy/+utfSMJMwPhviJbYA==}
     requiresBuild: true
     dependencies:
       '@nuxt/image': 1.3.0
