@@ -60,7 +60,7 @@
     "cypress": "^13.6.4",
     "dayjs": "^1.11.10",
     "happy-dom": "^13.3.8",
-    "nuxt": "3.10.2",
+    "nuxt": "3.10.3",
     "nuxt-svgo": "^4.0.0",
     "playwright-core": "^1.41.2",
     "prism-theme-vars": "^0.2.4",
