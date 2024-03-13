@@ -7,7 +7,7 @@ orbs:
 executors:
   pnpm-executor:
     docker:
-      - image: cimg/node:20-browsers
+      - image: cimg/node:lts-browsers
     working_directory: /tmp/workspace
 
 jobs:
