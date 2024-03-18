@@ -13,8 +13,6 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lagon:dev": "NITRO_PRESET=lagon NUXT_IMAGE_PROVIDER=twicpics pnpm build && npx -p esbuild -p @lagon/cli lagon dev",
-    "lagon:deploy": "NITRO_PRESET=lagon NUXT_IMAGE_PROVIDER=twicpics pnpm build && npx -p esbuild -p @lagon/cli lagon deploy",
     "vercel:deploy": "NITRO_PRESET=vercel-edge NUXT_IMAGE_PROVIDER=twicpics vercel deploy",
     "test": "vitest",
     "coverage": "vitest run --coverage",
