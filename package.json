@@ -58,7 +58,7 @@
     "cypress": "^13.7.0",
     "dayjs": "^1.11.10",
     "happy-dom": "^13.9.0",
-    "nuxt": "3.11.0",
+    "nuxt": "3.11.1",
     "nuxt-svgo": "^4.0.0",
     "playwright-core": "^1.42.1",
     "prism-theme-vars": "^0.2.4",
