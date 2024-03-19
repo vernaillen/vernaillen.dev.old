@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.7.4",
-    "@iconify/json": "^2.2.192",
+    "@iconify/json": "^2.2.193",
     "@nuxt/content": "^2.12.1",
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/image": "^1.4.0",

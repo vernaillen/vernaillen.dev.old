@@ -44,7 +44,7 @@ devDependencies:
     specifier: ^1.7.4
     version: 1.7.4(tailwindcss@3.4.1)
   '@iconify/json':
-    specifier: ^2.2.192
+    specifier: ^2.2.193
     version: 2.2.193
   '@nuxt/content':
     specifier: ^2.12.1
