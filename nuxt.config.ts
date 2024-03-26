@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    '@hypernym/nuxt-anime',
     '@nuxt/content',
     '@nuxt/test-utils/module',
     '@nuxt/ui',
@@ -28,6 +29,10 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillendev'
     }
+  },
+
+  anime: {
+    composables: true
   },
 
   social: {
@@ -81,7 +86,7 @@ export default defineNuxtConfig({
     }
   },
 
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   plugins: [
     '~/plugins/pageHooks.ts',
     '~/plugins/easyLightbox.ts',
