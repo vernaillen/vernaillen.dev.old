@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  sonarcloud: sonarsource/sonarcloud@2.0.0
-  slack: circleci/slack@4.13.1
+  sonarcloud: sonarsource/sonarcloud@2
+  slack: circleci/slack@4
 
 executors:
   pnpm-executor:
