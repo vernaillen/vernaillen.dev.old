@@ -28,19 +28,28 @@ setMetaData('Home', false)
                     <SvgoNuxtIconGreen class="inline-block mt-[-1px]" width="18" height="18" viewBox="0 0 900 900" />
                   </NuxtLink> + DevOps
                 </p>
-                <div id="action-buttons" class="flex items-center justify-center mt-10 slide-enter" style="--enter-stage:2;--enter-step:60ms;">
-                  <NuxtLink
+                <div id="action-buttons" class="flex items-center justify-center mt-20 slide-enter" style="--enter-stage:2;--enter-step:60ms;">
+                  <UButton
                     to="/blog"
-                    class="text-base font-semibold text-white bg-primary-500 py-3 px-6 hover:bg-opacity-80 mr-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
-                  >
-                    Blog
-                  </NuxtLink>
-                  <NuxtLink
+                    label="Blog"
+                    variant="soft"
+                    size="xl"
+                    class="mx-2"
+                  />
+                  <UButton
+                    to="/projects"
+                    label="Projects"
+                    variant="solid"
+                    size="xl"
+                    class="mx-2"
+                  />
+                  <UButton
                     to="/about"
-                    class="text-base truncate font-semibold text-dark bg-black bg-opacity-10 dark:text-white dark:bg-white dark:bg-opacity-20 py-3 px-6 hover:bg-opacity-20 dark:hover:bg-opacity-20 ml-2 my-10 rounded-md animated-duration-3s animate__animated animate__fadeIn"
-                  >
-                    About Wouter
-                  </NuxtLink>
+                    label="About Wouter"
+                    variant="soft"
+                    size="xl"
+                    class="mx-2"
+                  />
                 </div>
               </div>
             </div>
