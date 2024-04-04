@@ -19,7 +19,7 @@ projects:
     badge:
       label: harmonics.be
     image:
-      src: https://harmonics.be/__og-image__/image/en/og.png
+      src: /images/harmonics.png
       alt: Harmonics
   - title: Vernaillen.dev
     description: My website and blog as freelance developer.
@@ -37,7 +37,7 @@ projects:
     badge:
       label: vue-audiomotion-analyzer.dev
     image:
-      src: https://vue-audiomotion-analyzer.dev/analyzerscreenreording.gif
+      src: /images/vue-audiomotion-analyzer.gif
       alt: Vue Audiomotion Analyzer
   - title: Radio app
     description: App made with Nuxt & Vue Audiomotion Analyzer to play my favourite internet radio channels

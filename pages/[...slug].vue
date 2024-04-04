@@ -49,12 +49,14 @@ if (page.value) { setMetaData(page.value.title, true) } else { setResponseStatus
             <div class="flex flex-wrap">
               <div class="w-full px-4 md:px-8">
                 <div class="mx-auto">
-                  <article
-                    class="m-auto font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 slide-enter-content"
-                    :class="page.disableProse ? '' : 'prose prose-primary dark:prose-invert'"
-                  >
-                    <ContentDoc />
-                  </article>
+                  <LazyContentDoc v-slot="{ doc }">
+                    <article
+                      class="m-auto font-medium text-lg md:text-xl leading-relaxed md:leading-relaxed text-body-color dark:text-white dark:opacity-90 slide-enter-content"
+                      :class="page.disableProse ? '' : 'prose prose-primary dark:prose-invert'"
+                    >
+                      <ContentRenderer :value="doc" />
+                    </article>
+                  </LazyContentDoc>
                 </div>
               </div>
               <div v-if="page.author" class="inline-flex align-top items-center mx-2">
