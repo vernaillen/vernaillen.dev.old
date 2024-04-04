@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [
+    '@nuxt/ui-pro',
     '@vernaillen/nuxt-base-layer'
   ],
 
@@ -49,7 +50,7 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: ['heroicons', 'lucide', 'mdi', 'twemoji', 'uil', 'logos']
+    icons: ['heroicons', 'lucide', 'mdi', 'twemoji', 'uil', 'logos', 'ci']
   },
 
   svgo: {

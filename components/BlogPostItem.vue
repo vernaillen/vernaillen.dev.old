@@ -81,6 +81,7 @@ watch(() => colorMode.value, (newColorMode) => {
         :src="imageUrlDark"
         :width="460"
         :height="140"
+        img-class="h-[140px]"
         :alt="post.title"
         :class="imageClass"
         class="object-cover opacity-0 h-0 dark:opacity-100 dark:h-[140px] transition-opacity transform duration-300"
