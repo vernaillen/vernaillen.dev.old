@@ -6,6 +6,7 @@ export function useNavItems (): NavItem[] {
     { path: '/blog', title: 'Blog' },
     { path: '/feed', title: 'Feed' },
     { path: '/career', title: 'Career' },
+    { path: '/projects', title: 'Projects' },
     { path: '/about', title: 'About' },
     { path: '/contact', title: 'Contact' }
   ]
