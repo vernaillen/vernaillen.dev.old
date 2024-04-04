@@ -25,6 +25,7 @@
     "fulltest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run build && pnpm run coverage && pnpm run cy:local && pnpm run unlighthouse:dev"
   },
   "dependencies": {
+    "@nuxt/ui-pro": "^1.1.0",
     "@vercel/speed-insights": "^1.0.10",
     "animate.css": "^4.1.1",
     "consola": "^3.2.3",
@@ -40,7 +41,7 @@
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.7.4",
     "@hypernym/nuxt-anime": "^2.1.1",
-    "@iconify/json": "^2.2.196",
+    "@iconify/json": "^2.2.197",
     "@nuxt/content": "^2.12.1",
     "@nuxt/devtools": "^1.1.5",
     "@nuxt/image": "^1.5.0",
