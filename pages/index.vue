@@ -32,7 +32,7 @@ setMetaData('Home', false)
                   <UButton
                     to="/blog"
                     label="Blog"
-                    variant="soft"
+                    variant="outline"
                     size="xl"
                     class="mx-2"
                   />
