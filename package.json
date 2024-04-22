@@ -59,7 +59,7 @@
     "@vueuse/nuxt": "^10.9.0",
     "cypress": "^13.7.2",
     "dayjs": "^1.11.10",
-    "eslint": "^8.0.0",
+    "eslint": "^9.1.1",
     "happy-dom": "^13.0.0",
     "nuxt": "3.11.2",
     "nuxt-svgo": "^4.0.0",
